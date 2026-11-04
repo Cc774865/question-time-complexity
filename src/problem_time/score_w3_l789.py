@@ -81,7 +81,7 @@ def _hash(stem: str) -> str:
 
 def _score(rows: list[tuple]) -> list[dict]:
     return [
-        score_calibrated_problem(label, stem, counts, star=star, role=role)
+        score_calibrated_problem(label, stem, counts, role=role)
         for _idx, label, star, role, stem, counts in rows
     ]
 
@@ -103,8 +103,8 @@ def main() -> None:
     shuffled_match = all(abs(by_id[record["problem_id"]] - record["tau"]) < 1e-12 for record in shuffled_scored)
 
     by_star: dict[int, list[float]] = {}
-    for record in scored:
-        by_star.setdefault(record["star"], []).append(record["tau"])
+    for item, record in zip(ITEMS, scored):
+        by_star.setdefault(item[1], []).append(record["tau"])
     star_means = {star: sum(vals) / len(vals) for star, vals in sorted(by_star.items())}
     stars = list(star_means)
     mono = all(star_means[stars[i]] < star_means[stars[i + 1]] for i in range(len(stars) - 1))

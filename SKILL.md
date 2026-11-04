@@ -1,6 +1,6 @@
 ---
 name: question-time-complexity
-description: Extracts every math question from a Word (.docx) file and estimates per-question time complexity τ without using document order. Uses the four calibration dimensions (prereq, reasoning, compute, error) plus three-factor relative-time weighting. Use whenever the user sends a Word question paper and asks for calculation time, estimated time, time complexity τ, difficulty calibration, or 2-to-8-star ranking.
+description: Extracts every math question from a Word (.docx) file and estimates per-question time complexity τ without using document order. Uses the four calibration dimensions (prereq, reasoning, compute, error) plus three-factor relative-time weighting. Use whenever the user sends a Word question paper and asks for calculation time, estimated time, time complexity τ, or difficulty calibration.
 ---
 
 # 题目时间复杂度（四维结构校准 × 三因子加权）
@@ -56,5 +56,5 @@ r_{g-1}=\min(1.28+0.0072D,\,3)
 
 1. 题目清单与 `detected / scored / blocked`。
 2. 每题的 \((P,R,C,E)\)、\(D\)、\(t_g\)、\(r_{\mathrm{AI}}\)、\(r_{g-1}\)、τ 和结构证据。来源写 `derived_from_question_structure`。
-3. 卷面若有星级，核验星级均值是否递增。不递增时说明哪几题的结构比标签轻或重，不要改计数去贴星级。
+3. 卷面若自带星级，仅作事后对照，不参与计分。不递增时说明哪几题的结构比标签轻或重，不要改计数去贴星级。
 4. 题序打乱后的等价性结论。

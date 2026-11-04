@@ -144,17 +144,19 @@ def run_benchmark() -> dict[str, Any]:
     summary: dict[str, Any] = {}
     for name, items in papers.items():
         scored = [
-            score_calibrated_problem(pid, stem, counts, star=star, role=role)
+            score_calibrated_problem(pid, stem, counts, role=role)
             for pid, star, role, stem, counts in items
         ]
         results = [r.pop("_result") for r in scored]
         set_tau = aggregate_set(results)
         rev_tau = aggregate_set(list(reversed(results)))
 
-        # Group by star (2..8) and check monotonicity of star-mean τ
+        # Star is kept in the benchmark items for the monotonicity cross-check;
+        # it never enters score_calibrated_problem.
         by_star: dict[int, list[float]] = {}
-        for r in scored:
-            by_star.setdefault(int(r["star"]), []).append(r["tau"])
+        for item, r in zip(items, scored):
+            star = item[1]
+            by_star.setdefault(int(star), []).append(r["tau"])
         star_means = {s: sum(v) / len(v) for s, v in sorted(by_star.items())}
         stars = sorted(star_means)
         strictly_increasing = all(

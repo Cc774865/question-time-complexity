@@ -84,9 +84,12 @@ def score_calibrated_problem(
     stem: str,
     counts: FourDimCounts,
     *,
-    star: int | None = None,
     role: str = "",
 ) -> dict[str, Any]:
+    """Score one problem from its four structural counts alone.
+
+    No star rating, document order, or answer-text length enters the formula.
+    """
     t_g = counts.grade_seconds()
     r_ai, r_lower = counts.ratios()
     payload = {
@@ -101,7 +104,6 @@ def score_calibrated_problem(
     norm = counts.normalized()
     return {
         "problem_id": problem_id,
-        "star": star,
         "role": role,
         "stem": stem,
         "counts": asdict(counts),

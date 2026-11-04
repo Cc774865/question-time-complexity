@@ -77,7 +77,7 @@ ITEMS = [
 
 def main() -> None:
     scored = [
-        score_calibrated_problem(pid, stem, counts, star=star, role=role)
+        score_calibrated_problem(pid, stem, counts, role=role)
         for pid, star, role, stem, counts in ITEMS
     ]
     results = [r.pop("_result") for r in scored]
@@ -89,7 +89,7 @@ def main() -> None:
     random.seed(2026)
     random.shuffle(shuffled_items)
     shuffled_scored = [
-        score_calibrated_problem(pid, stem, counts, star=star, role=role)
+        score_calibrated_problem(pid, stem, counts, role=role)
         for pid, star, role, stem, counts in shuffled_items
     ]
     shuffled_results = [r["_result"] for r in shuffled_scored]
