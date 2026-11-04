@@ -2,7 +2,7 @@
 
 独立项目：按题面数学结构估计一道数学题的相对时间指标 τ。小学、初中、高中都能计。文档顺序、解析字数都不进入公式。星级标签也不进入公式——以后拿到的模板不再带星级。
 
-计算过程的正本是 [`docs/计算方法.md`](docs/计算方法.md)。甄别细则与对照表在 [`spec/type-rules.md`](spec/type-rules.md)。样本索引在 [`docs/样本参考.md`](docs/样本参考.md)。
+计算过程的正本是 [`docs/计算方法.md`](docs/计算方法.md)。题目文件版式见 [`docs/题目导入模板.md`](docs/题目导入模板.md)。甄别细则与对照表在 [`spec/type-rules.md`](spec/type-rules.md)。样本索引在 [`docs/样本参考.md`](docs/样本参考.md)。
 
 ## 指标
 
@@ -25,6 +25,8 @@
 ├── SKILL.md                 # Cursor 技能入口
 ├── docs/计算方法.md          # 公式、计数规则、手算例
 ├── docs/样本参考.md
+├── docs/题目导入模板.md
+├── templates/题目导入模板.docx
 ├── spec/type-rules.md
 ├── scripts/extract_docx.py  # Word 段落 / 表格 / 图片清单
 ├── src/problem_time/        # 聚合、清洗、四维计分
