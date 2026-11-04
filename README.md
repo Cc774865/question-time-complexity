@@ -65,5 +65,5 @@ Word 里若有 OMML 或 MathType 公式，先看 `examples/W9-zkcc-18/build_cali
 
 - `knowledge/`：给前置深度命名。先修链不重复加进 \(P\)。来源说明见 `knowledge/README.md`。
 - `references/cmath/`：1–6 年级题面，CC BY 4.0，没有作答秒数。
-- `examples/benchmark_7papers_2to8star.json`：98 题刻度对照，星级均值严格递增。
-- `examples/W3-L5L6-4-stem-summary.json`、`examples/W3-L7L8L9-4-stem-summary.json`：不看星级算出的应用结果，星级均值不单调。
+- `examples/benchmark_7papers_2to8star.json`：98 题结构计数结果。
+- `examples/W3-L5L6-4-stem-summary.json`、`examples/W3-L7L8L9-4-stem-summary.json`：两套应用卷的结构计数结果。
