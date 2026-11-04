@@ -1,0 +1,2669 @@
+{
+  "W5-L3L4-7": {
+    "question_count": 14,
+    "set_tau": 0.972741,
+    "order_invariant": true,
+    "star_mean_tau": {
+      "2": 0.873787,
+      "3": 0.906365,
+      "4": 0.939014,
+      "5": 0.968961,
+      "6": 1.008509,
+      "7": 1.034045,
+      "8": 1.078502
+    },
+    "strictly_increasing_by_star": true,
+    "problems": [
+      {
+        "problem_id": "2星-例",
+        "star": 2,
+        "role": "例",
+        "stem": "124×3，235×2，317×3",
+        "counts": {
+          "prereq": 1.5,
+          "reasoning": 2.0,
+          "compute": 3.0,
+          "error": 0.5,
+          "evidence": "一位数乘三位数3道，单次进位共3次"
+        },
+        "normalized": {
+          "prereq": 0.25,
+          "reasoning": 0.1667,
+          "compute": 0.3,
+          "error": 0.0833
+        },
+        "composite_D": 19.33,
+        "t_g": 83.0,
+        "r_AI": 0.1822,
+        "r_lower": 1.4192,
+        "tau": 0.8737873015873019,
+        "grade_equivalent_seconds": 72.52,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "2星-练",
+        "star": 2,
+        "role": "练",
+        "stem": "218×4，415×2，214×3",
+        "counts": {
+          "prereq": 1.5,
+          "reasoning": 2.0,
+          "compute": 3.0,
+          "error": 0.5,
+          "evidence": "一位数乘三位数3道，单次进位共3次"
+        },
+        "normalized": {
+          "prereq": 0.25,
+          "reasoning": 0.1667,
+          "compute": 0.3,
+          "error": 0.0833
+        },
+        "composite_D": 19.33,
+        "t_g": 83.0,
+        "r_AI": 0.1822,
+        "r_lower": 1.4192,
+        "tau": 0.8737873015873019,
+        "grade_equivalent_seconds": 72.52,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-例",
+        "star": 3,
+        "role": "例",
+        "stem": "275×3，186×4，386×2",
+        "counts": {
+          "prereq": 1.5,
+          "reasoning": 2.5,
+          "compute": 4.5,
+          "error": 1.0,
+          "evidence": "一位数乘三位数3道，连续进位共6次"
+        },
+        "normalized": {
+          "prereq": 0.25,
+          "reasoning": 0.2083,
+          "compute": 0.45,
+          "error": 0.1667
+        },
+        "composite_D": 26.54,
+        "t_g": 106.0,
+        "r_AI": 0.201663,
+        "r_lower": 1.4711,
+        "tau": 0.8983986111111115,
+        "grade_equivalent_seconds": 95.23,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-练",
+        "star": 3,
+        "role": "练",
+        "stem": "354×3，465×4，624×5",
+        "counts": {
+          "prereq": 1.5,
+          "reasoning": 2.5,
+          "compute": 5.5,
+          "error": 1.5,
+          "evidence": "一位数乘三位数3道，进位共9次且积升四位数"
+        },
+        "normalized": {
+          "prereq": 0.25,
+          "reasoning": 0.2083,
+          "compute": 0.55,
+          "error": 0.25
+        },
+        "composite_D": 31.21,
+        "t_g": 119.0,
+        "r_AI": 0.214263,
+        "r_lower": 1.5047,
+        "tau": 0.9143319444444438,
+        "grade_equivalent_seconds": 108.81,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-例",
+        "star": 4,
+        "role": "例",
+        "stem": "9□2×□=6□5□",
+        "counts": {
+          "prereq": 2.5,
+          "reasoning": 4.5,
+          "compute": 4.0,
+          "error": 2.0,
+          "evidence": "首位估值缩到3候选+个位十位逆推3空位"
+        },
+        "normalized": {
+          "prereq": 0.4167,
+          "reasoning": 0.375,
+          "compute": 0.4,
+          "error": 0.3333
+        },
+        "composite_D": 37.79,
+        "t_g": 144.0,
+        "r_AI": 0.232038,
+        "r_lower": 1.5521,
+        "tau": 0.9368093253968255,
+        "grade_equivalent_seconds": 134.9,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-练",
+        "star": 4,
+        "role": "练",
+        "stem": "7□6×□=6□1□",
+        "counts": {
+          "prereq": 2.5,
+          "reasoning": 5.0,
+          "compute": 4.0,
+          "error": 2.0,
+          "evidence": "首位估值+奇偶筛4候选+逆推3空位"
+        },
+        "normalized": {
+          "prereq": 0.4167,
+          "reasoning": 0.4167,
+          "compute": 0.4,
+          "error": 0.3333
+        },
+        "composite_D": 39.08,
+        "t_g": 150.0,
+        "r_AI": 0.235525,
+        "r_lower": 1.5614,
+        "tau": 0.9412194444444446,
+        "grade_equivalent_seconds": 141.18,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-例",
+        "star": 5,
+        "role": "例",
+        "stem": "□4□8□7×□=4□8□71",
+        "counts": {
+          "prereq": 3.0,
+          "reasoning": 6.5,
+          "compute": 5.0,
+          "error": 2.5,
+          "evidence": "个位唯一锁定乘数+6位链式进位递推"
+        },
+        "normalized": {
+          "prereq": 0.5,
+          "reasoning": 0.5417,
+          "compute": 0.5,
+          "error": 0.4167
+        },
+        "composite_D": 49.12,
+        "t_g": 185.0,
+        "r_AI": 0.262638,
+        "r_lower": 1.6337,
+        "tau": 0.9755045634920636,
+        "grade_equivalent_seconds": 180.47,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-练",
+        "star": 5,
+        "role": "练",
+        "stem": "□2□9×□=5□96",
+        "counts": {
+          "prereq": 3.0,
+          "reasoning": 5.5,
+          "compute": 4.5,
+          "error": 2.5,
+          "evidence": "个位双候选分支+4位进位逆推"
+        },
+        "normalized": {
+          "prereq": 0.5,
+          "reasoning": 0.4583,
+          "compute": 0.45,
+          "error": 0.4167
+        },
+        "composite_D": 45.29,
+        "t_g": 169.0,
+        "r_AI": 0.252287,
+        "r_lower": 1.6061,
+        "tau": 0.9624164682539684,
+        "grade_equivalent_seconds": 162.65,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-例",
+        "star": 6,
+        "role": "例",
+        "stem": "车马×车=马车车",
+        "counts": {
+          "prereq": 3.5,
+          "reasoning": 7.5,
+          "compute": 5.5,
+          "error": 3.5,
+          "evidence": "汉字数字谜同字同数约束+自乘尾数5分支筛14候选"
+        },
+        "normalized": {
+          "prereq": 0.5833,
+          "reasoning": 0.625,
+          "compute": 0.55,
+          "error": 0.5833
+        },
+        "composite_D": 58.79,
+        "t_g": 215.0,
+        "r_AI": 0.288737,
+        "r_lower": 1.7033,
+        "tau": 1.0085093253968251,
+        "grade_equivalent_seconds": 216.83,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-练",
+        "star": 6,
+        "role": "练",
+        "stem": "学习×学=好习学",
+        "counts": {
+          "prereq": 3.5,
+          "reasoning": 7.5,
+          "compute": 5.5,
+          "error": 3.5,
+          "evidence": "汉字数字谜同字同数约束+自乘尾数筛14候选"
+        },
+        "normalized": {
+          "prereq": 0.5833,
+          "reasoning": 0.625,
+          "compute": 0.55,
+          "error": 0.5833
+        },
+        "composite_D": 58.79,
+        "t_g": 215.0,
+        "r_AI": 0.288737,
+        "r_lower": 1.7033,
+        "tau": 1.0085093253968251,
+        "grade_equivalent_seconds": 216.83,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-例",
+        "star": 7,
+        "role": "例",
+        "stem": "4□×□□，3个位置为4",
+        "counts": {
+          "prereq": 4.0,
+          "reasoning": 8.5,
+          "compute": 6.5,
+          "error": 4.0,
+          "evidence": "两位数乘两位数双部分积+首位界定5候选+十位和约束"
+        },
+        "normalized": {
+          "prereq": 0.6667,
+          "reasoning": 0.7083,
+          "compute": 0.65,
+          "error": 0.6667
+        },
+        "composite_D": 67.54,
+        "t_g": 244.0,
+        "r_AI": 0.312362,
+        "r_lower": 1.7663,
+        "tau": 1.0383843253968261,
+        "grade_equivalent_seconds": 253.37,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-练",
+        "star": 7,
+        "role": "练",
+        "stem": "7□×□□，3个位置为7",
+        "counts": {
+          "prereq": 4.0,
+          "reasoning": 8.0,
+          "compute": 6.0,
+          "error": 4.0,
+          "evidence": "两位数乘两位数双部分积+首位界定2候选+奇偶校验"
+        },
+        "normalized": {
+          "prereq": 0.6667,
+          "reasoning": 0.6667,
+          "compute": 0.6,
+          "error": 0.6667
+        },
+        "composite_D": 65.0,
+        "t_g": 234.0,
+        "r_AI": 0.3055,
+        "r_lower": 1.748,
+        "tau": 1.0297063492063494,
+        "grade_equivalent_seconds": 240.95,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-例",
+        "star": 8,
+        "role": "例",
+        "stem": "△△×△2，部分积与和十位为5",
+        "counts": {
+          "prereq": 4.5,
+          "reasoning": 9.5,
+          "compute": 7.5,
+          "error": 4.5,
+          "evidence": "双部分积位数界定被乘数≥50与十位=1+5候选试算"
+        },
+        "normalized": {
+          "prereq": 0.75,
+          "reasoning": 0.7917,
+          "compute": 0.75,
+          "error": 0.75
+        },
+        "composite_D": 76.29,
+        "t_g": 273.0,
+        "r_AI": 0.335987,
+        "r_lower": 1.8293,
+        "tau": 1.0682593253968258,
+        "grade_equivalent_seconds": 291.63,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-练",
+        "star": 8,
+        "role": "练",
+        "stem": "△△×△3，第二行个位8且和十位2",
+        "counts": {
+          "prereq": 4.5,
+          "reasoning": 10.5,
+          "compute": 8.0,
+          "error": 5.0,
+          "evidence": "双部分积位数上下界+乘积尾数8联动筛11候选"
+        },
+        "normalized": {
+          "prereq": 0.75,
+          "reasoning": 0.875,
+          "compute": 0.8,
+          "error": 0.8333
+        },
+        "composite_D": 82.29,
+        "t_g": 294.0,
+        "r_AI": 0.352187,
+        "r_lower": 1.8725,
+        "tau": 1.0887450396825398,
+        "grade_equivalent_seconds": 320.09,
+        "source": "derived_from_question_structure"
+      }
+    ]
+  },
+  "W6-L3L4-8": {
+    "question_count": 14,
+    "set_tau": 0.961986,
+    "order_invariant": true,
+    "star_mean_tau": {
+      "2": 0.869519,
+      "3": 0.903805,
+      "4": 0.936809,
+      "5": 0.962416,
+      "6": 0.98626,
+      "7": 1.015679,
+      "8": 1.059411
+    },
+    "strictly_increasing_by_star": true,
+    "problems": [
+      {
+        "problem_id": "2星-例",
+        "star": 2,
+        "role": "例",
+        "stem": "25×8×4；20×9×5；125×2×4",
+        "counts": {
+          "prereq": 1.5,
+          "reasoning": 2.0,
+          "compute": 2.5,
+          "error": 0.5,
+          "evidence": "直接配对25×4、20×5、125×8凑整"
+        },
+        "normalized": {
+          "prereq": 0.25,
+          "reasoning": 0.1667,
+          "compute": 0.25,
+          "error": 0.0833
+        },
+        "composite_D": 18.08,
+        "t_g": 79.0,
+        "r_AI": 0.178825,
+        "r_lower": 1.4102,
+        "tau": 0.8695194444444443,
+        "grade_equivalent_seconds": 68.69,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "2星-练",
+        "star": 2,
+        "role": "练",
+        "stem": "25×6×4；20×8×5；125×2×5",
+        "counts": {
+          "prereq": 1.5,
+          "reasoning": 2.0,
+          "compute": 2.5,
+          "error": 0.5,
+          "evidence": "直接交换结合凑整3小题"
+        },
+        "normalized": {
+          "prereq": 0.25,
+          "reasoning": 0.1667,
+          "compute": 0.25,
+          "error": 0.0833
+        },
+        "composite_D": 18.08,
+        "t_g": 79.0,
+        "r_AI": 0.178825,
+        "r_lower": 1.4102,
+        "tau": 0.8695194444444443,
+        "grade_equivalent_seconds": 68.69,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-例",
+        "star": 3,
+        "role": "例",
+        "stem": "125×(8+16)；(200+4)×25",
+        "counts": {
+          "prereq": 2.0,
+          "reasoning": 3.5,
+          "compute": 3.5,
+          "error": 1.0,
+          "evidence": "标准正向乘法分配律展开2小题"
+        },
+        "normalized": {
+          "prereq": 0.3333,
+          "reasoning": 0.2917,
+          "compute": 0.35,
+          "error": 0.1667
+        },
+        "composite_D": 28.12,
+        "t_g": 114.0,
+        "r_AI": 0.205937,
+        "r_lower": 1.4825,
+        "tau": 0.9038045634920635,
+        "grade_equivalent_seconds": 103.03,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-练",
+        "star": 3,
+        "role": "练",
+        "stem": "(80+8)×125；(125+25)×8",
+        "counts": {
+          "prereq": 2.0,
+          "reasoning": 3.5,
+          "compute": 3.5,
+          "error": 1.0,
+          "evidence": "标准正向乘法分配律展开2小题"
+        },
+        "normalized": {
+          "prereq": 0.3333,
+          "reasoning": 0.2917,
+          "compute": 0.35,
+          "error": 0.1667
+        },
+        "composite_D": 28.12,
+        "t_g": 114.0,
+        "r_AI": 0.205937,
+        "r_lower": 1.4825,
+        "tau": 0.9038045634920635,
+        "grade_equivalent_seconds": 103.03,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-例",
+        "star": 4,
+        "role": "例",
+        "stem": "125×10-125×2；25+25×3",
+        "counts": {
+          "prereq": 2.5,
+          "reasoning": 4.5,
+          "compute": 4.0,
+          "error": 2.0,
+          "evidence": "逆向提取公因数+隐含×1补项"
+        },
+        "normalized": {
+          "prereq": 0.4167,
+          "reasoning": 0.375,
+          "compute": 0.4,
+          "error": 0.3333
+        },
+        "composite_D": 37.79,
+        "t_g": 144.0,
+        "r_AI": 0.232038,
+        "r_lower": 1.5521,
+        "tau": 0.9368093253968255,
+        "grade_equivalent_seconds": 134.9,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-练",
+        "star": 4,
+        "role": "练",
+        "stem": "125×7+125；25×2+25×4",
+        "counts": {
+          "prereq": 2.5,
+          "reasoning": 4.5,
+          "compute": 4.0,
+          "error": 2.0,
+          "evidence": "逆向提取公因数+隐含×1补项"
+        },
+        "normalized": {
+          "prereq": 0.4167,
+          "reasoning": 0.375,
+          "compute": 0.4,
+          "error": 0.3333
+        },
+        "composite_D": 37.79,
+        "t_g": 144.0,
+        "r_AI": 0.232038,
+        "r_lower": 1.5521,
+        "tau": 0.9368093253968255,
+        "grade_equivalent_seconds": 134.9,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-例",
+        "star": 5,
+        "role": "例",
+        "stem": "101×9；98×7",
+        "counts": {
+          "prereq": 3.0,
+          "reasoning": 5.5,
+          "compute": 4.5,
+          "error": 2.5,
+          "evidence": "接近整百数拆成(100±a)再分配律，含减法符号易错"
+        },
+        "normalized": {
+          "prereq": 0.5,
+          "reasoning": 0.4583,
+          "compute": 0.45,
+          "error": 0.4167
+        },
+        "composite_D": 45.29,
+        "t_g": 169.0,
+        "r_AI": 0.252287,
+        "r_lower": 1.6061,
+        "tau": 0.9624164682539684,
+        "grade_equivalent_seconds": 162.65,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-练",
+        "star": 5,
+        "role": "练",
+        "stem": "99×8；102×9",
+        "counts": {
+          "prereq": 3.0,
+          "reasoning": 5.5,
+          "compute": 4.5,
+          "error": 2.5,
+          "evidence": "接近整百数拆成(100±a)再分配律"
+        },
+        "normalized": {
+          "prereq": 0.5,
+          "reasoning": 0.4583,
+          "compute": 0.45,
+          "error": 0.4167
+        },
+        "composite_D": 45.29,
+        "t_g": 169.0,
+        "r_AI": 0.252287,
+        "r_lower": 1.6061,
+        "tau": 0.9624164682539684,
+        "grade_equivalent_seconds": 162.65,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-例",
+        "star": 6,
+        "role": "例",
+        "stem": "34×7；56×4；78×9",
+        "counts": {
+          "prereq": 3.2,
+          "reasoning": 6.5,
+          "compute": 5.5,
+          "error": 2.8,
+          "evidence": "任意两位数按十位个位分拆口算3小题，多次进位"
+        },
+        "normalized": {
+          "prereq": 0.5333,
+          "reasoning": 0.5417,
+          "compute": 0.55,
+          "error": 0.4667
+        },
+        "composite_D": 52.28,
+        "t_g": 193.6,
+        "r_AI": 0.271143,
+        "r_lower": 1.65638,
+        "tau": 0.9862595634920639,
+        "grade_equivalent_seconds": 190.94,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-练",
+        "star": 6,
+        "role": "练",
+        "stem": "43×6；65×3；87×8",
+        "counts": {
+          "prereq": 3.2,
+          "reasoning": 6.5,
+          "compute": 5.5,
+          "error": 2.8,
+          "evidence": "任意两位数按十位个位分拆口算3小题，多次进位"
+        },
+        "normalized": {
+          "prereq": 0.5333,
+          "reasoning": 0.5417,
+          "compute": 0.55,
+          "error": 0.4667
+        },
+        "composite_D": 52.28,
+        "t_g": 193.6,
+        "r_AI": 0.271143,
+        "r_lower": 1.65638,
+        "tau": 0.9862595634920639,
+        "grade_equivalent_seconds": 190.94,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-例",
+        "star": 7,
+        "role": "例",
+        "stem": "123×4；456×2",
+        "counts": {
+          "prereq": 3.8,
+          "reasoning": 7.5,
+          "compute": 6.5,
+          "error": 3.2,
+          "evidence": "三位数按百十个三段分拆分配律求和2小题"
+        },
+        "normalized": {
+          "prereq": 0.6333,
+          "reasoning": 0.625,
+          "compute": 0.65,
+          "error": 0.5333
+        },
+        "composite_D": 60.89,
+        "t_g": 222.4,
+        "r_AI": 0.294407,
+        "r_lower": 1.71842,
+        "tau": 1.0156793253968253,
+        "grade_equivalent_seconds": 225.89,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-练",
+        "star": 7,
+        "role": "练",
+        "stem": "345×2；678×5",
+        "counts": {
+          "prereq": 3.8,
+          "reasoning": 7.5,
+          "compute": 6.5,
+          "error": 3.2,
+          "evidence": "三位数按百十个三段分拆分配律求和2小题"
+        },
+        "normalized": {
+          "prereq": 0.6333,
+          "reasoning": 0.625,
+          "compute": 0.65,
+          "error": 0.5333
+        },
+        "composite_D": 60.89,
+        "t_g": 222.4,
+        "r_AI": 0.294407,
+        "r_lower": 1.71842,
+        "tau": 1.0156793253968253,
+        "grade_equivalent_seconds": 225.89,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-例",
+        "star": 8,
+        "role": "例",
+        "stem": "125×8-125×3×2；25×4×9+25×4",
+        "counts": {
+          "prereq": 4.5,
+          "reasoning": 9.0,
+          "compute": 7.5,
+          "error": 4.2,
+          "evidence": "结合律与分配律复合+先合一积再提公因数+隐含×1"
+        },
+        "normalized": {
+          "prereq": 0.75,
+          "reasoning": 0.75,
+          "compute": 0.75,
+          "error": 0.7
+        },
+        "composite_D": 73.7,
+        "t_g": 264.0,
+        "r_AI": 0.32899,
+        "r_lower": 1.81064,
+        "tau": 1.0594106349206347,
+        "grade_equivalent_seconds": 279.68,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-练",
+        "star": 8,
+        "role": "练",
+        "stem": "25×8+25×3×4；125×9-125×2×4",
+        "counts": {
+          "prereq": 4.5,
+          "reasoning": 9.0,
+          "compute": 7.5,
+          "error": 4.2,
+          "evidence": "拆8=4×2构造复合公因数25×4及125×8"
+        },
+        "normalized": {
+          "prereq": 0.75,
+          "reasoning": 0.75,
+          "compute": 0.75,
+          "error": 0.7
+        },
+        "composite_D": 73.7,
+        "t_g": 264.0,
+        "r_AI": 0.32899,
+        "r_lower": 1.81064,
+        "tau": 1.0594106349206347,
+        "grade_equivalent_seconds": 279.68,
+        "source": "derived_from_question_structure"
+      }
+    ]
+  },
+  "W8-L3L4-11": {
+    "question_count": 14,
+    "set_tau": 0.972354,
+    "order_invariant": true,
+    "star_mean_tau": {
+      "2": 0.878368,
+      "3": 0.906764,
+      "4": 0.938203,
+      "5": 0.967851,
+      "6": 1.002221,
+      "7": 1.041742,
+      "8": 1.071332
+    },
+    "strictly_increasing_by_star": true,
+    "problems": [
+      {
+        "problem_id": "2星-例",
+        "star": 2,
+        "role": "例",
+        "stem": "325÷25；55500÷300",
+        "counts": {
+          "prereq": 1.5,
+          "reasoning": 2.5,
+          "compute": 2.5,
+          "error": 0.8,
+          "evidence": "商不变性质同乘4或同消0"
+        },
+        "normalized": {
+          "prereq": 0.25,
+          "reasoning": 0.2083,
+          "compute": 0.25,
+          "error": 0.1333
+        },
+        "composite_D": 20.67,
+        "t_g": 88.0,
+        "r_AI": 0.185823,
+        "r_lower": 1.42886,
+        "tau": 0.8783681349206351,
+        "grade_equivalent_seconds": 77.3,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "2星-练",
+        "star": 2,
+        "role": "练",
+        "stem": "360÷20；44400÷200",
+        "counts": {
+          "prereq": 1.5,
+          "reasoning": 2.5,
+          "compute": 2.5,
+          "error": 0.8,
+          "evidence": "商不变性质同除以200/20"
+        },
+        "normalized": {
+          "prereq": 0.25,
+          "reasoning": 0.2083,
+          "compute": 0.25,
+          "error": 0.1333
+        },
+        "composite_D": 20.67,
+        "t_g": 88.0,
+        "r_AI": 0.185823,
+        "r_lower": 1.42886,
+        "tau": 0.8783681349206351,
+        "grade_equivalent_seconds": 77.3,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-例",
+        "star": 3,
+        "role": "例",
+        "stem": "(330+135)÷5；(606-87+312)÷3",
+        "counts": {
+          "prereq": 2.0,
+          "reasoning": 3.5,
+          "compute": 3.5,
+          "error": 1.2,
+          "evidence": "除法分配律拆括号分别相除含加减混合"
+        },
+        "normalized": {
+          "prereq": 0.3333,
+          "reasoning": 0.2917,
+          "compute": 0.35,
+          "error": 0.2
+        },
+        "composite_D": 28.99,
+        "t_g": 116.0,
+        "r_AI": 0.208278,
+        "r_lower": 1.48874,
+        "tau": 0.9067636111111117,
+        "grade_equivalent_seconds": 105.18,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-练",
+        "star": 3,
+        "role": "练",
+        "stem": "(240+120)÷6；(408-72+144)÷8",
+        "counts": {
+          "prereq": 2.0,
+          "reasoning": 3.5,
+          "compute": 3.5,
+          "error": 1.2,
+          "evidence": "除法分配律拆括号分别相除含加减混合"
+        },
+        "normalized": {
+          "prereq": 0.3333,
+          "reasoning": 0.2917,
+          "compute": 0.35,
+          "error": 0.2
+        },
+        "composite_D": 28.99,
+        "t_g": 116.0,
+        "r_AI": 0.208278,
+        "r_lower": 1.48874,
+        "tau": 0.9067636111111117,
+        "grade_equivalent_seconds": 105.18,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-例",
+        "star": 4,
+        "role": "例",
+        "stem": "1016÷8；5445÷55",
+        "counts": {
+          "prereq": 2.5,
+          "reasoning": 4.8,
+          "compute": 4.2,
+          "error": 1.8,
+          "evidence": "无括号被除数自主拆成整千/整百倍再分配"
+        },
+        "normalized": {
+          "prereq": 0.4167,
+          "reasoning": 0.4,
+          "compute": 0.42,
+          "error": 0.3
+        },
+        "composite_D": 38.2,
+        "t_g": 147.2,
+        "r_AI": 0.23314,
+        "r_lower": 1.55504,
+        "tau": 0.9382034920634925,
+        "grade_equivalent_seconds": 138.1,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-练",
+        "star": 4,
+        "role": "练",
+        "stem": "1218÷6；4356÷44",
+        "counts": {
+          "prereq": 2.5,
+          "reasoning": 4.8,
+          "compute": 4.2,
+          "error": 1.8,
+          "evidence": "无括号被除数自主拆成易除数之差/和"
+        },
+        "normalized": {
+          "prereq": 0.4167,
+          "reasoning": 0.4,
+          "compute": 0.42,
+          "error": 0.3
+        },
+        "composite_D": 38.2,
+        "t_g": 147.2,
+        "r_AI": 0.23314,
+        "r_lower": 1.55504,
+        "tau": 0.9382034920634925,
+        "grade_equivalent_seconds": 138.1,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-例",
+        "star": 5,
+        "role": "例",
+        "stem": "360×140÷60×15÷14÷50",
+        "counts": {
+          "prereq": 3.0,
+          "reasoning": 5.8,
+          "compute": 5.0,
+          "error": 2.4,
+          "evidence": "6项乘除混合带符号搬家配对3组整除"
+        },
+        "normalized": {
+          "prereq": 0.5,
+          "reasoning": 0.4833,
+          "compute": 0.5,
+          "error": 0.4
+        },
+        "composite_D": 46.88,
+        "t_g": 175.6,
+        "r_AI": 0.256585,
+        "r_lower": 1.61756,
+        "tau": 0.9678508730158735,
+        "grade_equivalent_seconds": 169.95,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-练",
+        "star": 5,
+        "role": "练",
+        "stem": "240×180÷80×16÷18÷40",
+        "counts": {
+          "prereq": 3.0,
+          "reasoning": 5.8,
+          "compute": 5.0,
+          "error": 2.4,
+          "evidence": "6项乘除混合带符号搬家配对3组整除"
+        },
+        "normalized": {
+          "prereq": 0.5,
+          "reasoning": 0.4833,
+          "compute": 0.5,
+          "error": 0.4
+        },
+        "composite_D": 46.88,
+        "t_g": 175.6,
+        "r_AI": 0.256585,
+        "r_lower": 1.61756,
+        "tau": 0.9678508730158735,
+        "grade_equivalent_seconds": 169.95,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-例",
+        "star": 6,
+        "role": "例",
+        "stem": "9600÷(48×5÷37)；3600000÷8÷125÷4÷25",
+        "counts": {
+          "prereq": 3.5,
+          "reasoning": 7.0,
+          "compute": 5.8,
+          "error": 3.2,
+          "evidence": "除号后去括号变号+连续除添括号凑1000×100"
+        },
+        "normalized": {
+          "prereq": 0.5833,
+          "reasoning": 0.5833,
+          "compute": 0.58,
+          "error": 0.5333
+        },
+        "composite_D": 56.95,
+        "t_g": 208.4,
+        "r_AI": 0.283765,
+        "r_lower": 1.69004,
+        "tau": 1.0022213492063499,
+        "grade_equivalent_seconds": 208.86,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-练",
+        "star": 6,
+        "role": "练",
+        "stem": "8400÷(21×4÷16)；2500000÷8÷125÷5÷20",
+        "counts": {
+          "prereq": 3.5,
+          "reasoning": 7.0,
+          "compute": 5.8,
+          "error": 3.2,
+          "evidence": "除号后去括号变号+连续除添括号凑1000×100"
+        },
+        "normalized": {
+          "prereq": 0.5833,
+          "reasoning": 0.5833,
+          "compute": 0.58,
+          "error": 0.5333
+        },
+        "composite_D": 56.95,
+        "t_g": 208.4,
+        "r_AI": 0.283765,
+        "r_lower": 1.69004,
+        "tau": 1.0022213492063499,
+        "grade_equivalent_seconds": 208.86,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-例",
+        "star": 7,
+        "role": "例",
+        "stem": "2×3×4×5×6×7×8×9×10×11÷(22×24×25×28)",
+        "counts": {
+          "prereq": 4.2,
+          "reasoning": 8.5,
+          "compute": 7.0,
+          "error": 3.8,
+          "evidence": "去括号后10个因数与4个合数分母交叉拆解约分"
+        },
+        "normalized": {
+          "prereq": 0.7,
+          "reasoning": 0.7083,
+          "compute": 0.7,
+          "error": 0.6333
+        },
+        "composite_D": 68.53,
+        "t_g": 247.6,
+        "r_AI": 0.315018,
+        "r_lower": 1.77338,
+        "tau": 1.0417417063492065,
+        "grade_equivalent_seconds": 257.94,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-练",
+        "star": 7,
+        "role": "练",
+        "stem": "2×3×4×5×6×7×8×9×10×11÷(54×16×21×20)",
+        "counts": {
+          "prereq": 4.2,
+          "reasoning": 8.5,
+          "compute": 7.0,
+          "error": 3.8,
+          "evidence": "去括号后10个因数与4个合数分母交叉拆解约分"
+        },
+        "normalized": {
+          "prereq": 0.7,
+          "reasoning": 0.7083,
+          "compute": 0.7,
+          "error": 0.6333
+        },
+        "composite_D": 68.53,
+        "t_g": 247.6,
+        "r_AI": 0.315018,
+        "r_lower": 1.77338,
+        "tau": 1.0417417063492065,
+        "grade_equivalent_seconds": 257.94,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-例",
+        "star": 8,
+        "role": "例",
+        "stem": "1291290÷43043",
+        "counts": {
+          "prereq": 4.8,
+          "reasoning": 9.5,
+          "compute": 7.5,
+          "error": 4.5,
+          "evidence": "识别ABCABC=ABC×1001周期数结构分解约分"
+        },
+        "normalized": {
+          "prereq": 0.8,
+          "reasoning": 0.7917,
+          "compute": 0.75,
+          "error": 0.75
+        },
+        "composite_D": 77.19,
+        "t_g": 275.4,
+        "r_AI": 0.338418,
+        "r_lower": 1.83578,
+        "tau": 1.0713321825396827,
+        "grade_equivalent_seconds": 295.04,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-练",
+        "star": 8,
+        "role": "练",
+        "stem": "1481480÷37037",
+        "counts": {
+          "prereq": 4.8,
+          "reasoning": 9.5,
+          "compute": 7.5,
+          "error": 4.5,
+          "evidence": "识别ABCABC=ABC×1001周期数结构分解约分"
+        },
+        "normalized": {
+          "prereq": 0.8,
+          "reasoning": 0.7917,
+          "compute": 0.75,
+          "error": 0.75
+        },
+        "composite_D": 77.19,
+        "t_g": 275.4,
+        "r_AI": 0.338418,
+        "r_lower": 1.83578,
+        "tau": 1.0713321825396827,
+        "grade_equivalent_seconds": 295.04,
+        "source": "derived_from_question_structure"
+      }
+    ]
+  },
+  "W9-L4-5": {
+    "question_count": 14,
+    "set_tau": 0.969678,
+    "order_invariant": true,
+    "star_mean_tau": {
+      "2": 0.880132,
+      "3": 0.906251,
+      "4": 0.938175,
+      "5": 0.971151,
+      "6": 0.994326,
+      "7": 1.033064,
+      "8": 1.064646
+    },
+    "strictly_increasing_by_star": true,
+    "problems": [
+      {
+        "problem_id": "2星-例",
+        "star": 2,
+        "role": "例",
+        "stem": "校服387元×28套，12000元够吗？选合适估法",
+        "counts": {
+          "prereq": 1.8,
+          "reasoning": 2.5,
+          "compute": 2.0,
+          "error": 1.0,
+          "evidence": "同向往大估与上界12000比较"
+        },
+        "normalized": {
+          "prereq": 0.3,
+          "reasoning": 0.2083,
+          "compute": 0.2,
+          "error": 0.1667
+        },
+        "composite_D": 21.19,
+        "t_g": 88.4,
+        "r_AI": 0.187218,
+        "r_lower": 1.43258,
+        "tau": 0.8801321825396833,
+        "grade_equivalent_seconds": 77.8,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "2星-练",
+        "star": 2,
+        "role": "练",
+        "stem": "文具198元×32盒，5000元够吗？选合适估法",
+        "counts": {
+          "prereq": 1.8,
+          "reasoning": 2.5,
+          "compute": 2.0,
+          "error": 1.0,
+          "evidence": "同向往小估与下界5000比较"
+        },
+        "normalized": {
+          "prereq": 0.3,
+          "reasoning": 0.2083,
+          "compute": 0.2,
+          "error": 0.1667
+        },
+        "composite_D": 21.19,
+        "t_g": 88.4,
+        "r_AI": 0.187218,
+        "r_lower": 1.43258,
+        "tau": 0.8801321825396833,
+        "grade_equivalent_seconds": 77.8,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-例",
+        "star": 3,
+        "role": "例",
+        "stem": "125×32×25",
+        "counts": {
+          "prereq": 2.2,
+          "reasoning": 3.5,
+          "compute": 3.2,
+          "error": 1.2,
+          "evidence": "拆32=8×4双凑整125×8与25×4"
+        },
+        "normalized": {
+          "prereq": 0.3667,
+          "reasoning": 0.2917,
+          "compute": 0.32,
+          "error": 0.2
+        },
+        "composite_D": 28.84,
+        "t_g": 115.2,
+        "r_AI": 0.207873,
+        "r_lower": 1.48766,
+        "tau": 0.9062514682539684,
+        "grade_equivalent_seconds": 104.4,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-练",
+        "star": 3,
+        "role": "练",
+        "stem": "125×48×25",
+        "counts": {
+          "prereq": 2.2,
+          "reasoning": 3.5,
+          "compute": 3.2,
+          "error": 1.2,
+          "evidence": "拆48=8×6或8×4×...双凑整"
+        },
+        "normalized": {
+          "prereq": 0.3667,
+          "reasoning": 0.2917,
+          "compute": 0.32,
+          "error": 0.2
+        },
+        "composite_D": 28.84,
+        "t_g": 115.2,
+        "r_AI": 0.207873,
+        "r_lower": 1.48766,
+        "tau": 0.9062514682539684,
+        "grade_equivalent_seconds": 104.4,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-例",
+        "star": 4,
+        "role": "例",
+        "stem": "□37×□6的积可能是（892/3562/105482/5623）",
+        "counts": {
+          "prereq": 2.8,
+          "reasoning": 4.5,
+          "compute": 3.8,
+          "error": 2.0,
+          "evidence": "尾数7×6定个位+三位数×两位数位数上下界双筛"
+        },
+        "normalized": {
+          "prereq": 0.4667,
+          "reasoning": 0.375,
+          "compute": 0.38,
+          "error": 0.3333
+        },
+        "composite_D": 38.19,
+        "t_g": 144.8,
+        "r_AI": 0.233118,
+        "r_lower": 1.55498,
+        "tau": 0.9381750396825401,
+        "grade_equivalent_seconds": 135.85,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-练",
+        "star": 4,
+        "role": "练",
+        "stem": "□52×□7的积可能是（784/4538/148924/5624）",
+        "counts": {
+          "prereq": 2.8,
+          "reasoning": 4.5,
+          "compute": 3.8,
+          "error": 2.0,
+          "evidence": "尾数2×7定个位+位数上下界双筛"
+        },
+        "normalized": {
+          "prereq": 0.4667,
+          "reasoning": 0.375,
+          "compute": 0.38,
+          "error": 0.3333
+        },
+        "composite_D": 38.19,
+        "t_g": 144.8,
+        "r_AI": 0.233118,
+        "r_lower": 1.55498,
+        "tau": 0.9381750396825401,
+        "grade_equivalent_seconds": 135.85,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-例",
+        "star": 5,
+        "role": "例",
+        "stem": "196×24+96",
+        "counts": {
+          "prereq": 3.2,
+          "reasoning": 5.8,
+          "compute": 4.8,
+          "error": 2.6,
+          "evidence": "把96拆成24×4构造隐藏公因数24再凑200"
+        },
+        "normalized": {
+          "prereq": 0.5333,
+          "reasoning": 0.4833,
+          "compute": 0.48,
+          "error": 0.4333
+        },
+        "composite_D": 47.85,
+        "t_g": 177.6,
+        "r_AI": 0.259195,
+        "r_lower": 1.62452,
+        "tau": 0.9711513492063497,
+        "grade_equivalent_seconds": 172.48,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-练",
+        "star": 5,
+        "role": "练",
+        "stem": "198×16+32",
+        "counts": {
+          "prereq": 3.2,
+          "reasoning": 5.8,
+          "compute": 4.8,
+          "error": 2.6,
+          "evidence": "把32拆成16×2构造隐藏公因数16再凑200"
+        },
+        "normalized": {
+          "prereq": 0.5333,
+          "reasoning": 0.4833,
+          "compute": 0.48,
+          "error": 0.4333
+        },
+        "composite_D": 47.85,
+        "t_g": 177.6,
+        "r_AI": 0.259195,
+        "r_lower": 1.62452,
+        "tau": 0.9711513492063497,
+        "grade_equivalent_seconds": 172.48,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-例",
+        "star": 6,
+        "role": "例",
+        "stem": "□04×26，积是四位数最大填几；五位数最小填几",
+        "counts": {
+          "prereq": 3.6,
+          "reasoning": 6.8,
+          "compute": 5.5,
+          "error": 3.2,
+          "evidence": "10000临界值双向估算+精确乘积边界核验两问"
+        },
+        "normalized": {
+          "prereq": 0.6,
+          "reasoning": 0.5667,
+          "compute": 0.55,
+          "error": 0.5333
+        },
+        "composite_D": 55.98,
+        "t_g": 204.4,
+        "r_AI": 0.281155,
+        "r_lower": 1.68308,
+        "tau": 0.9989208730158734,
+        "grade_equivalent_seconds": 204.18,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-练",
+        "star": 6,
+        "role": "练",
+        "stem": "296×□0的积是四位数，□最大填几",
+        "counts": {
+          "prereq": 3.5,
+          "reasoning": 6.5,
+          "compute": 5.2,
+          "error": 3.0,
+          "evidence": "末尾0转化为2960×□+10000临界点上下试算"
+        },
+        "normalized": {
+          "prereq": 0.5833,
+          "reasoning": 0.5417,
+          "compute": 0.52,
+          "error": 0.5
+        },
+        "composite_D": 53.29,
+        "t_g": 195.6,
+        "r_AI": 0.273888,
+        "r_lower": 1.6637,
+        "tau": 0.9897307539682538,
+        "grade_equivalent_seconds": 193.59,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-例",
+        "star": 7,
+        "role": "例",
+        "stem": "396×29-394×28",
+        "counts": {
+          "prereq": 4.2,
+          "reasoning": 8.0,
+          "compute": 6.5,
+          "error": 3.8,
+          "evidence": "拆椅子法把396×29拆成(394+2)×29或396×(28+1)造公因数"
+        },
+        "normalized": {
+          "prereq": 0.7,
+          "reasoning": 0.6667,
+          "compute": 0.65,
+          "error": 0.6333
+        },
+        "composite_D": 65.98,
+        "t_g": 237.6,
+        "r_AI": 0.308155,
+        "r_lower": 1.75508,
+        "tau": 1.03306373015873,
+        "grade_equivalent_seconds": 245.46,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-练",
+        "star": 7,
+        "role": "练",
+        "stem": "105×27-104×26",
+        "counts": {
+          "prereq": 4.2,
+          "reasoning": 8.0,
+          "compute": 6.5,
+          "error": 3.8,
+          "evidence": "拆椅子法构造公因数两次分配"
+        },
+        "normalized": {
+          "prereq": 0.7,
+          "reasoning": 0.6667,
+          "compute": 0.65,
+          "error": 0.6333
+        },
+        "composite_D": 65.98,
+        "t_g": 237.6,
+        "r_AI": 0.308155,
+        "r_lower": 1.75508,
+        "tau": 1.03306373015873,
+        "grade_equivalent_seconds": 245.46,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-例",
+        "star": 8,
+        "role": "例",
+        "stem": "196×28-194×26",
+        "counts": {
+          "prereq": 4.8,
+          "reasoning": 9.2,
+          "compute": 7.2,
+          "error": 4.4,
+          "evidence": "相差2的双积拆分+一次提公因数+二次凑整"
+        },
+        "normalized": {
+          "prereq": 0.8,
+          "reasoning": 0.7667,
+          "compute": 0.72,
+          "error": 0.7333
+        },
+        "composite_D": 75.23,
+        "t_g": 268.4,
+        "r_AI": 0.33313,
+        "r_lower": 1.82168,
+        "tau": 1.0646458730158734,
+        "grade_equivalent_seconds": 285.75,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-练",
+        "star": 8,
+        "role": "练",
+        "stem": "148×26-146×24",
+        "counts": {
+          "prereq": 4.8,
+          "reasoning": 9.2,
+          "compute": 7.2,
+          "error": 4.4,
+          "evidence": "相差2的双积拆分+一次提公因数+二次凑整"
+        },
+        "normalized": {
+          "prereq": 0.8,
+          "reasoning": 0.7667,
+          "compute": 0.72,
+          "error": 0.7333
+        },
+        "composite_D": 75.23,
+        "t_g": 268.4,
+        "r_AI": 0.33313,
+        "r_lower": 1.82168,
+        "tau": 1.0646458730158734,
+        "grade_equivalent_seconds": 285.75,
+        "source": "derived_from_question_structure"
+      }
+    ]
+  },
+  "W6-L5L6-9": {
+    "question_count": 14,
+    "set_tau": 0.986382,
+    "order_invariant": true,
+    "star_mean_tau": {
+      "2": 0.893363,
+      "3": 0.917319,
+      "4": 0.9596,
+      "5": 0.986971,
+      "6": 1.010473,
+      "7": 1.055883,
+      "8": 1.081063
+    },
+    "strictly_increasing_by_star": true,
+    "problems": [
+      {
+        "problem_id": "2星-例",
+        "star": 2,
+        "role": "例",
+        "stem": "3(1/2)+4.25-2(3/4)+1.5",
+        "counts": {
+          "prereq": 2.0,
+          "reasoning": 2.8,
+          "compute": 3.0,
+          "error": 1.0,
+          "evidence": "分数小数分类交换结合凑整"
+        },
+        "normalized": {
+          "prereq": 0.3333,
+          "reasoning": 0.2333,
+          "compute": 0.3,
+          "error": 0.1667
+        },
+        "composite_D": 25.07,
+        "t_g": 101.6,
+        "r_AI": 0.19768,
+        "r_lower": 1.46048,
+        "tau": 0.8933625396825402,
+        "grade_equivalent_seconds": 90.77,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "2星-练",
+        "star": 2,
+        "role": "练",
+        "stem": "5(1/3)-2.5+1(2/3)-0.5",
+        "counts": {
+          "prereq": 2.0,
+          "reasoning": 2.8,
+          "compute": 3.0,
+          "error": 1.0,
+          "evidence": "同分母带分数与小数分别合并凑整"
+        },
+        "normalized": {
+          "prereq": 0.3333,
+          "reasoning": 0.2333,
+          "compute": 0.3,
+          "error": 0.1667
+        },
+        "composite_D": 25.07,
+        "t_g": 101.6,
+        "r_AI": 0.19768,
+        "r_lower": 1.46048,
+        "tau": 0.8933625396825402,
+        "grade_equivalent_seconds": 90.77,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-例",
+        "star": 3,
+        "role": "例",
+        "stem": "8(3/4)×0.6+1(1/4)×0.6",
+        "counts": {
+          "prereq": 2.4,
+          "reasoning": 3.8,
+          "compute": 3.6,
+          "error": 1.4,
+          "evidence": "分小混合提取公因数0.6凑10"
+        },
+        "normalized": {
+          "prereq": 0.4,
+          "reasoning": 0.3167,
+          "compute": 0.36,
+          "error": 0.2333
+        },
+        "composite_D": 32.08,
+        "t_g": 125.6,
+        "r_AI": 0.216625,
+        "r_lower": 1.511,
+        "tau": 0.9173194444444444,
+        "grade_equivalent_seconds": 115.22,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-练",
+        "star": 3,
+        "role": "练",
+        "stem": "3.7×(5/9)+6.3×(5/9)",
+        "counts": {
+          "prereq": 2.4,
+          "reasoning": 3.8,
+          "compute": 3.6,
+          "error": 1.4,
+          "evidence": "分小混合提取公因数5/9凑10"
+        },
+        "normalized": {
+          "prereq": 0.4,
+          "reasoning": 0.3167,
+          "compute": 0.36,
+          "error": 0.2333
+        },
+        "composite_D": 32.08,
+        "t_g": 125.6,
+        "r_AI": 0.216625,
+        "r_lower": 1.511,
+        "tau": 0.9173194444444444,
+        "grade_equivalent_seconds": 115.22,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-例",
+        "star": 4,
+        "role": "例",
+        "stem": "1.2÷[3/4×(2(1/3)+1(2/3))-1.5]+0.25",
+        "counts": {
+          "prereq": 3.0,
+          "reasoning": 5.2,
+          "compute": 5.0,
+          "error": 2.2,
+          "evidence": "小括号+中括号+分小互化5步四则混合"
+        },
+        "normalized": {
+          "prereq": 0.5,
+          "reasoning": 0.4333,
+          "compute": 0.5,
+          "error": 0.3667
+        },
+        "composite_D": 44.47,
+        "t_g": 166.4,
+        "r_AI": 0.25006,
+        "r_lower": 1.60016,
+        "tau": 0.9595996825396829,
+        "grade_equivalent_seconds": 159.68,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-练",
+        "star": 4,
+        "role": "练",
+        "stem": "2.4÷[5/6×(1(1/4)+1(3/4))-2]+0.5",
+        "counts": {
+          "prereq": 3.0,
+          "reasoning": 5.2,
+          "compute": 5.0,
+          "error": 2.2,
+          "evidence": "小括号+中括号+分小互化5步四则混合"
+        },
+        "normalized": {
+          "prereq": 0.5,
+          "reasoning": 0.4333,
+          "compute": 0.5,
+          "error": 0.3667
+        },
+        "composite_D": 44.47,
+        "t_g": 166.4,
+        "r_AI": 0.25006,
+        "r_lower": 1.60016,
+        "tau": 0.9595996825396829,
+        "grade_equivalent_seconds": 159.68,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-例",
+        "star": 5,
+        "role": "例",
+        "stem": "(5/6÷5/9-1/4÷3/4)÷(2/3+1/6÷1/2)",
+        "counts": {
+          "prereq": 3.4,
+          "reasoning": 6.2,
+          "compute": 6.0,
+          "error": 2.6,
+          "evidence": "双括号内3次分数除法倒数转化+通分加减+终除"
+        },
+        "normalized": {
+          "prereq": 0.5667,
+          "reasoning": 0.5167,
+          "compute": 0.6,
+          "error": 0.4333
+        },
+        "composite_D": 52.48,
+        "t_g": 193.6,
+        "r_AI": 0.271705,
+        "r_lower": 1.65788,
+        "tau": 0.9869708730158739,
+        "grade_equivalent_seconds": 191.08,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-练",
+        "star": 5,
+        "role": "练",
+        "stem": "(0.75÷3/8+1.2÷4/5)÷(2/3×3/4-1/6)",
+        "counts": {
+          "prereq": 3.4,
+          "reasoning": 6.2,
+          "compute": 6.0,
+          "error": 2.6,
+          "evidence": "双括号内小数除分数互化+分数乘减+终除"
+        },
+        "normalized": {
+          "prereq": 0.5667,
+          "reasoning": 0.5167,
+          "compute": 0.6,
+          "error": 0.4333
+        },
+        "composite_D": 52.48,
+        "t_g": 193.6,
+        "r_AI": 0.271705,
+        "r_lower": 1.65788,
+        "tau": 0.9869708730158739,
+        "grade_equivalent_seconds": 191.08,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-例",
+        "star": 6,
+        "role": "例",
+        "stem": "0.8×3/4+1.2÷4/3-0.25",
+        "counts": {
+          "prereq": 3.8,
+          "reasoning": 7.2,
+          "compute": 6.2,
+          "error": 3.2,
+          "evidence": "除以4/3转乘3/4隐含公因数+三项分小互化合并"
+        },
+        "normalized": {
+          "prereq": 0.6333,
+          "reasoning": 0.6,
+          "compute": 0.62,
+          "error": 0.5333
+        },
+        "composite_D": 59.37,
+        "t_g": 216.4,
+        "r_AI": 0.29029,
+        "r_lower": 1.70744,
+        "tau": 1.01047253968254,
+        "grade_equivalent_seconds": 218.67,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-练",
+        "star": 6,
+        "role": "练",
+        "stem": "1.25×7/9+2.75÷9/7-1/3",
+        "counts": {
+          "prereq": 3.8,
+          "reasoning": 7.2,
+          "compute": 6.2,
+          "error": 3.2,
+          "evidence": "除以9/7转乘7/9构造公因数(1.25+2.75)×7/9-1/3"
+        },
+        "normalized": {
+          "prereq": 0.6333,
+          "reasoning": 0.6,
+          "compute": 0.62,
+          "error": 0.5333
+        },
+        "composite_D": 59.37,
+        "t_g": 216.4,
+        "r_AI": 0.29029,
+        "r_lower": 1.70744,
+        "tau": 1.01047253968254,
+        "grade_equivalent_seconds": 218.67,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-例",
+        "star": 7,
+        "role": "例",
+        "stem": "(1993+1992×1994)/(1993×1994-1)",
+        "counts": {
+          "prereq": 4.5,
+          "reasoning": 8.8,
+          "compute": 7.0,
+          "error": 4.0,
+          "evidence": "大数繁分数把1992写成1993-1展开与分母整体约分"
+        },
+        "normalized": {
+          "prereq": 0.75,
+          "reasoning": 0.7333,
+          "compute": 0.7,
+          "error": 0.6667
+        },
+        "composite_D": 71.07,
+        "t_g": 255.6,
+        "r_AI": 0.32188,
+        "r_lower": 1.79168,
+        "tau": 1.050419682539682,
+        "grade_equivalent_seconds": 268.49,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-练",
+        "star": 7,
+        "role": "练",
+        "stem": "(205+794×2030)/(2031×794-589)-5/17",
+        "counts": {
+          "prereq": 4.6,
+          "reasoning": 9.2,
+          "compute": 7.4,
+          "error": 4.2,
+          "evidence": "拆2031=2030+1使分母化为分子整体约分再减5/17"
+        },
+        "normalized": {
+          "prereq": 0.7667,
+          "reasoning": 0.7667,
+          "compute": 0.74,
+          "error": 0.7
+        },
+        "composite_D": 74.27,
+        "t_g": 266.4,
+        "r_AI": 0.33052,
+        "r_lower": 1.81472,
+        "tau": 1.0613453968253967,
+        "grade_equivalent_seconds": 282.74,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-例",
+        "star": 8,
+        "role": "例",
+        "stem": "1/(1×2)+1/(2×3)+1/(3×4)+1/(4×5)+1/(5×6)",
+        "counts": {
+          "prereq": 5.0,
+          "reasoning": 9.8,
+          "compute": 7.8,
+          "error": 4.5,
+          "evidence": "5项单位分数裂项相消1/n-1/(n+1)"
+        },
+        "normalized": {
+          "prereq": 0.8333,
+          "reasoning": 0.8167,
+          "compute": 0.78,
+          "error": 0.75
+        },
+        "composite_D": 79.32,
+        "t_g": 283.0,
+        "r_AI": 0.344155,
+        "r_lower": 1.85108,
+        "tau": 1.07858753968254,
+        "grade_equivalent_seconds": 305.24,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-练",
+        "star": 8,
+        "role": "练",
+        "stem": "1/(2×3)+1/(3×4)+1/(4×5)+…+1/(9×10)",
+        "counts": {
+          "prereq": 5.0,
+          "reasoning": 10.0,
+          "compute": 8.0,
+          "error": 4.6,
+          "evidence": "含省略号8项裂项相消首尾保留1/2-1/10"
+        },
+        "normalized": {
+          "prereq": 0.8333,
+          "reasoning": 0.8333,
+          "compute": 0.8,
+          "error": 0.7667
+        },
+        "composite_D": 80.77,
+        "t_g": 288.0,
+        "r_AI": 0.34807,
+        "r_lower": 1.86152,
+        "tau": 1.0835382539682548,
+        "grade_equivalent_seconds": 312.06,
+        "source": "derived_from_question_structure"
+      }
+    ]
+  },
+  "W7-L5L6-10": {
+    "question_count": 14,
+    "set_tau": 0.984124,
+    "order_invariant": true,
+    "star_mean_tau": {
+      "2": 0.884855,
+      "3": 0.918913,
+      "4": 0.963697,
+      "5": 0.980199,
+      "6": 0.998025,
+      "7": 1.045042,
+      "8": 1.098134
+    },
+    "strictly_increasing_by_star": true,
+    "problems": [
+      {
+        "problem_id": "2星-例",
+        "star": 2,
+        "role": "例",
+        "stem": "彩带7/8米，用去1/4米、2/5米，还剩多少米",
+        "counts": {
+          "prereq": 1.8,
+          "reasoning": 2.5,
+          "compute": 3.0,
+          "error": 0.8,
+          "evidence": "带单位具体量连续减法，公分母40通分"
+        },
+        "normalized": {
+          "prereq": 0.3,
+          "reasoning": 0.2083,
+          "compute": 0.3,
+          "error": 0.1333
+        },
+        "composite_D": 22.82,
+        "t_g": 94.4,
+        "r_AI": 0.191628,
+        "r_lower": 1.44434,
+        "tau": 0.8857088492063487,
+        "grade_equivalent_seconds": 83.61,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "2星-练",
+        "star": 2,
+        "role": "练",
+        "stem": "铜管4/5米，第一次用3/10米，剩1/5米，第二次用多少",
+        "counts": {
+          "prereq": 1.8,
+          "reasoning": 2.5,
+          "compute": 2.8,
+          "error": 0.8,
+          "evidence": "带单位具体量两步减法通分"
+        },
+        "normalized": {
+          "prereq": 0.3,
+          "reasoning": 0.2083,
+          "compute": 0.28,
+          "error": 0.1333
+        },
+        "composite_D": 22.32,
+        "t_g": 92.8,
+        "r_AI": 0.190278,
+        "r_lower": 1.44074,
+        "tau": 0.8840017063492069,
+        "grade_equivalent_seconds": 82.04,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-例",
+        "star": 3,
+        "role": "例",
+        "stem": "鸡蛋重1/20千克，蛋黄占2/5，蛋清占1/2，蛋壳占几分之几",
+        "counts": {
+          "prereq": 2.4,
+          "reasoning": 3.6,
+          "compute": 3.2,
+          "error": 1.8,
+          "evidence": "区分具体量1/20千克干扰项与单位1分率相减"
+        },
+        "normalized": {
+          "prereq": 0.4,
+          "reasoning": 0.3,
+          "compute": 0.32,
+          "error": 0.3
+        },
+        "composite_D": 32.3,
+        "t_g": 124.0,
+        "r_AI": 0.21721,
+        "r_lower": 1.51256,
+        "tau": 0.9180592063492072,
+        "grade_equivalent_seconds": 113.84,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-练",
+        "star": 3,
+        "role": "练",
+        "stem": "210页书，第一天看2/5，第二天看2/7，还剩几分之几",
+        "counts": {
+          "prereq": 2.4,
+          "reasoning": 3.6,
+          "compute": 3.4,
+          "error": 1.8,
+          "evidence": "区分210页干扰项与单位1减两分率和"
+        },
+        "normalized": {
+          "prereq": 0.4,
+          "reasoning": 0.3,
+          "compute": 0.34,
+          "error": 0.3
+        },
+        "composite_D": 32.8,
+        "t_g": 125.6,
+        "r_AI": 0.21856,
+        "r_lower": 1.51616,
+        "tau": 0.919766349206349,
+        "grade_equivalent_seconds": 115.52,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-例",
+        "star": 4,
+        "role": "例",
+        "stem": "等腰三角形两边1/3m和5/6m，求周长",
+        "counts": {
+          "prereq": 3.2,
+          "reasoning": 5.2,
+          "compute": 4.2,
+          "error": 2.8,
+          "evidence": "等腰两情况分类讨论+三角形三边关系检验剔除伪解"
+        },
+        "normalized": {
+          "prereq": 0.5333,
+          "reasoning": 0.4333,
+          "compute": 0.42,
+          "error": 0.4667
+        },
+        "composite_D": 45.67,
+        "t_g": 167.6,
+        "r_AI": 0.2533,
+        "r_lower": 1.6088,
+        "tau": 0.9636968253968259,
+        "grade_equivalent_seconds": 161.52,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-练",
+        "star": 4,
+        "role": "练",
+        "stem": "等腰三角形两边9/5m和1/2m，求周长",
+        "counts": {
+          "prereq": 3.2,
+          "reasoning": 5.2,
+          "compute": 4.2,
+          "error": 2.8,
+          "evidence": "等腰两情况分类讨论+三角形三边关系检验剔除伪解"
+        },
+        "normalized": {
+          "prereq": 0.5333,
+          "reasoning": 0.4333,
+          "compute": 0.42,
+          "error": 0.4667
+        },
+        "composite_D": 45.67,
+        "t_g": 167.6,
+        "r_AI": 0.2533,
+        "r_lower": 1.6088,
+        "tau": 0.9636968253968259,
+        "grade_equivalent_seconds": 161.52,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-例",
+        "star": 5,
+        "role": "例",
+        "stem": "一二等奖占21/40，二三等奖占7/8，求二等奖占比",
+        "counts": {
+          "prereq": 3.5,
+          "reasoning": 6.0,
+          "compute": 4.6,
+          "error": 3.0,
+          "evidence": "三奖项单位1容斥重叠：两分率相加减1"
+        },
+        "normalized": {
+          "prereq": 0.5833,
+          "reasoning": 0.5,
+          "compute": 0.46,
+          "error": 0.5
+        },
+        "composite_D": 50.5,
+        "t_g": 184.8,
+        "r_AI": 0.26635,
+        "r_lower": 1.6436,
+        "tau": 0.9801992063492069,
+        "grade_equivalent_seconds": 181.14,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-练",
+        "star": 5,
+        "role": "练",
+        "stem": "金银奖占3/5，银铜奖占3/4，求银奖占比",
+        "counts": {
+          "prereq": 3.5,
+          "reasoning": 6.0,
+          "compute": 4.6,
+          "error": 3.0,
+          "evidence": "三奖项单位1容斥重叠：两分率相加减1"
+        },
+        "normalized": {
+          "prereq": 0.5833,
+          "reasoning": 0.5,
+          "compute": 0.46,
+          "error": 0.5
+        },
+        "composite_D": 50.5,
+        "t_g": 184.8,
+        "r_AI": 0.26635,
+        "r_lower": 1.6436,
+        "tau": 0.9801992063492069,
+        "grade_equivalent_seconds": 181.14,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-例",
+        "star": 6,
+        "role": "例",
+        "stem": "50米路三天修1/6、1/2、1/5，求剩几分之几及已修米数",
+        "counts": {
+          "prereq": 3.8,
+          "reasoning": 7.0,
+          "compute": 5.8,
+          "error": 3.2,
+          "evidence": "三异分母通分求剩余分率+单位1乘法求具体量双问"
+        },
+        "normalized": {
+          "prereq": 0.6333,
+          "reasoning": 0.5833,
+          "compute": 0.58,
+          "error": 0.5333
+        },
+        "composite_D": 57.85,
+        "t_g": 210.8,
+        "r_AI": 0.286195,
+        "r_lower": 1.69652,
+        "tau": 1.0052942063492067,
+        "grade_equivalent_seconds": 211.92,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-练",
+        "star": 6,
+        "role": "练",
+        "stem": "60米隧道三天修1/4、1/3、1/6，还剩几分之几",
+        "counts": {
+          "prereq": 3.6,
+          "reasoning": 6.5,
+          "compute": 5.2,
+          "error": 3.0,
+          "evidence": "含60米干扰项+三天异分母分率求和与单位1相减"
+        },
+        "normalized": {
+          "prereq": 0.6,
+          "reasoning": 0.5417,
+          "compute": 0.52,
+          "error": 0.5
+        },
+        "composite_D": 53.59,
+        "t_g": 196.4,
+        "r_AI": 0.274698,
+        "r_lower": 1.66586,
+        "tau": 0.9907550396825404,
+        "grade_equivalent_seconds": 194.58,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-例",
+        "star": 7,
+        "role": "例",
+        "stem": "披萨吃1块后吃余下2/7，再拿余下3/5，剩2块，求总块数",
+        "counts": {
+          "prereq": 4.4,
+          "reasoning": 8.5,
+          "compute": 6.8,
+          "error": 4.0,
+          "evidence": "动态单位1两层余下分率逆推还原：(2÷2/5÷5/7)+1"
+        },
+        "normalized": {
+          "prereq": 0.7333,
+          "reasoning": 0.7083,
+          "compute": 0.68,
+          "error": 0.6667
+        },
+        "composite_D": 69.49,
+        "t_g": 249.6,
+        "r_AI": 0.317628,
+        "r_lower": 1.78034,
+        "tau": 1.0450421825396827,
+        "grade_equivalent_seconds": 260.84,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-练",
+        "star": 7,
+        "role": "练",
+        "stem": "蛋糕吃2块后吃余下1/4，再拿余下2/3，剩3块，求总块数",
+        "counts": {
+          "prereq": 4.4,
+          "reasoning": 8.5,
+          "compute": 6.8,
+          "error": 4.0,
+          "evidence": "动态单位1两层余下分率逆推还原：(3÷1/3÷3/4)+2"
+        },
+        "normalized": {
+          "prereq": 0.7333,
+          "reasoning": 0.7083,
+          "compute": 0.68,
+          "error": 0.6667
+        },
+        "composite_D": 69.49,
+        "t_g": 249.6,
+        "r_AI": 0.317628,
+        "r_lower": 1.78034,
+        "tau": 1.0450421825396827,
+        "grade_equivalent_seconds": 260.84,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-例",
+        "star": 8,
+        "role": "例",
+        "stem": "水果分四班：1/3少2/3kg、余下1/4多1/2kg、余下一半、余下一半多1/2kg，剩6kg",
+        "counts": {
+          "prereq": 5.0,
+          "reasoning": 10.5,
+          "compute": 8.5,
+          "error": 5.0,
+          "evidence": "四层动态单位1+每层带加减常数项的连续逆推还原"
+        },
+        "normalized": {
+          "prereq": 0.8333,
+          "reasoning": 0.875,
+          "compute": 0.85,
+          "error": 0.8333
+        },
+        "composite_D": 85.04,
+        "t_g": 302.0,
+        "r_AI": 0.359613,
+        "r_lower": 1.8923,
+        "tau": 1.0981343253968263,
+        "grade_equivalent_seconds": 331.64,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-练",
+        "star": 8,
+        "role": "练",
+        "stem": "蔬菜分四组：1/3少2/3kg、余下1/4多1/2kg、余下一半、余下一半多1/2kg，剩6kg",
+        "counts": {
+          "prereq": 5.0,
+          "reasoning": 10.5,
+          "compute": 8.5,
+          "error": 5.0,
+          "evidence": "四层动态单位1+每层带加减常数项的连续逆推还原"
+        },
+        "normalized": {
+          "prereq": 0.8333,
+          "reasoning": 0.875,
+          "compute": 0.85,
+          "error": 0.8333
+        },
+        "composite_D": 85.04,
+        "t_g": 302.0,
+        "r_AI": 0.359613,
+        "r_lower": 1.8923,
+        "tau": 1.0981343253968263,
+        "grade_equivalent_seconds": 331.64,
+        "source": "derived_from_question_structure"
+      }
+    ]
+  },
+  "W9-zkcc-18": {
+    "question_count": 14,
+    "set_tau": 1.007715,
+    "order_invariant": true,
+    "star_mean_tau": {
+      "2": 0.902595,
+      "3": 0.947365,
+      "4": 0.981821,
+      "5": 1.012578,
+      "6": 1.027416,
+      "7": 1.067263,
+      "8": 1.114964
+    },
+    "strictly_increasing_by_star": true,
+    "problems": [
+      {
+        "problem_id": "2星-例",
+        "star": 2,
+        "role": "例",
+        "stem": "AD是△ABC中线，AB=8，AC=5，已给倍长中线引导求AD范围",
+        "counts": {
+          "prereq": 2.2,
+          "reasoning": 3.0,
+          "compute": 2.5,
+          "error": 1.2,
+          "evidence": "题干已给出延长AD=DE与全等步骤，只需三边关系收尾"
+        },
+        "normalized": {
+          "prereq": 0.3667,
+          "reasoning": 0.25,
+          "compute": 0.25,
+          "error": 0.2
+        },
+        "composite_D": 25.8,
+        "t_g": 103.6,
+        "r_AI": 0.19966,
+        "r_lower": 1.46576,
+        "tau": 0.8958663492063494,
+        "grade_equivalent_seconds": 92.81,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "2星-练",
+        "star": 2,
+        "role": "练",
+        "stem": "AB=5，AC=3，求中线AD的取值范围",
+        "counts": {
+          "prereq": 2.4,
+          "reasoning": 3.5,
+          "compute": 2.8,
+          "error": 1.5,
+          "evidence": "独立完成倍长中线SAS全等+三角形三边不等式折半"
+        },
+        "normalized": {
+          "prereq": 0.4,
+          "reasoning": 0.2917,
+          "compute": 0.28,
+          "error": 0.25
+        },
+        "composite_D": 29.74,
+        "t_g": 116.6,
+        "r_AI": 0.210303,
+        "r_lower": 1.49414,
+        "tau": 0.9093243253968253,
+        "grade_equivalent_seconds": 106.03,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-例",
+        "star": 3,
+        "role": "例",
+        "stem": "AB∥CD，∠BCD=90°，AB=1，BC=CD=2，E为AD中点，求BE",
+        "counts": {
+          "prereq": 3.0,
+          "reasoning": 4.8,
+          "compute": 3.8,
+          "error": 2.0,
+          "evidence": "延长BE交CD构造八字全等+Rt△BCF勾股定理求斜边一半"
+        },
+        "normalized": {
+          "prereq": 0.5,
+          "reasoning": 0.4,
+          "compute": 0.38,
+          "error": 0.3333
+        },
+        "composite_D": 39.57,
+        "t_g": 150.0,
+        "r_AI": 0.23683,
+        "r_lower": 1.56488,
+        "tau": 0.9428696825396825,
+        "grade_equivalent_seconds": 141.43,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "3星-练",
+        "star": 3,
+        "role": "练",
+        "stem": "矩形ABCD，CE=AC，F是AE中点，AB=6，AD=8，求DF",
+        "counts": {
+          "prereq": 3.2,
+          "reasoning": 5.2,
+          "compute": 4.2,
+          "error": 2.0,
+          "evidence": "勾股求AC=10+延长DF构造八字全等+二次勾股求DG"
+        },
+        "normalized": {
+          "prereq": 0.5333,
+          "reasoning": 0.4333,
+          "compute": 0.42,
+          "error": 0.3333
+        },
+        "composite_D": 42.2,
+        "t_g": 159.6,
+        "r_AI": 0.24394,
+        "r_lower": 1.58384,
+        "tau": 0.9518606349206347,
+        "grade_equivalent_seconds": 151.92,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-例",
+        "star": 4,
+        "role": "例",
+        "stem": "AB=AE，AC=AF，∠BAE=∠CAF=90°，D是BC中点，求EF与AD关系",
+        "counts": {
+          "prereq": 3.6,
+          "reasoning": 6.5,
+          "compute": 4.5,
+          "error": 2.8,
+          "evidence": "倍长AD得第一次SAS全等+周角/邻补角导角+第二次SAS全等"
+        },
+        "normalized": {
+          "prereq": 0.6,
+          "reasoning": 0.5417,
+          "compute": 0.45,
+          "error": 0.4667
+        },
+        "composite_D": 50.97,
+        "t_g": 188.8,
+        "r_AI": 0.267632,
+        "r_lower": 1.64702,
+        "tau": 0.9818209920634919,
+        "grade_equivalent_seconds": 185.37,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "4星-练",
+        "star": 4,
+        "role": "练",
+        "stem": "OA=OB，OC=OD，∠AOB与∠COD互补，E是AC中点，求OE与BD关系",
+        "counts": {
+          "prereq": 3.6,
+          "reasoning": 6.5,
+          "compute": 4.5,
+          "error": 2.8,
+          "evidence": "倍长OE得第一次SAS全等+互补角导角+第二次SAS全等"
+        },
+        "normalized": {
+          "prereq": 0.6,
+          "reasoning": 0.5417,
+          "compute": 0.45,
+          "error": 0.4667
+        },
+        "composite_D": 50.97,
+        "t_g": 188.8,
+        "r_AI": 0.267632,
+        "r_lower": 1.64702,
+        "tau": 0.9818209920634919,
+        "grade_equivalent_seconds": 185.37,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-例",
+        "star": 5,
+        "role": "例",
+        "stem": "AB=AD，∠B+∠D=180°，EF=BE+FD，探究∠BAD与∠EAF关系并说明理由",
+        "counts": {
+          "prereq": 4.2,
+          "reasoning": 7.8,
+          "compute": 5.0,
+          "error": 3.4,
+          "evidence": "截长补短延长FD构造SAS全等+由EF=BE+FD证SSS第二次全等"
+        },
+        "normalized": {
+          "prereq": 0.7,
+          "reasoning": 0.65,
+          "compute": 0.5,
+          "error": 0.5667
+        },
+        "composite_D": 59.98,
+        "t_g": 219.2,
+        "r_AI": 0.291955,
+        "r_lower": 1.71188,
+        "tau": 1.0125780158730162,
+        "grade_equivalent_seconds": 221.96,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "5星-练",
+        "star": 5,
+        "role": "练",
+        "stem": "AB=AD，∠EAF=1/2∠DAB，∠ABC+∠ADC=180°，求证EF=BE+DF",
+        "counts": {
+          "prereq": 4.2,
+          "reasoning": 7.8,
+          "compute": 5.0,
+          "error": 3.4,
+          "evidence": "半角模型逆命题：补短延长EB证SAS全等+导半角证第二次SAS全等"
+        },
+        "normalized": {
+          "prereq": 0.7,
+          "reasoning": 0.65,
+          "compute": 0.5,
+          "error": 0.5667
+        },
+        "composite_D": 59.98,
+        "t_g": 219.2,
+        "r_AI": 0.291955,
+        "r_lower": 1.71188,
+        "tau": 1.0125780158730162,
+        "grade_equivalent_seconds": 221.96,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-例",
+        "star": 6,
+        "role": "例",
+        "stem": "AD∥BC，AE平分∠DAB，BE平分∠ABC，判断4个命题正确个数",
+        "counts": {
+          "prereq": 4.5,
+          "reasoning": 8.5,
+          "compute": 5.8,
+          "error": 3.8,
+          "evidence": "截长AF=AD证两次全等+逐一核验边和、中点、垂直、面积4命题"
+        },
+        "normalized": {
+          "prereq": 0.75,
+          "reasoning": 0.7083,
+          "compute": 0.58,
+          "error": 0.6333
+        },
+        "composite_D": 66.42,
+        "t_g": 240.4,
+        "r_AI": 0.309347,
+        "r_lower": 1.75826,
+        "tau": 1.0345717063492061,
+        "grade_equivalent_seconds": 248.71,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "6星-练",
+        "star": 6,
+        "role": "练",
+        "stem": "AD∥BC，AE、BE分别平分∠DAB、∠ABC，判断AB与AD+BC关系",
+        "counts": {
+          "prereq": 4.3,
+          "reasoning": 8.0,
+          "compute": 5.4,
+          "error": 3.5,
+          "evidence": "平行线同旁内角折半得90°+截长构造两次全等证AB=AD+BC"
+        },
+        "normalized": {
+          "prereq": 0.7167,
+          "reasoning": 0.6667,
+          "compute": 0.54,
+          "error": 0.5833
+        },
+        "composite_D": 62.23,
+        "t_g": 226.6,
+        "r_AI": 0.29803,
+        "r_lower": 1.72808,
+        "tau": 1.0202601587301592,
+        "grade_equivalent_seconds": 231.19,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-例",
+        "star": 7,
+        "role": "例",
+        "stem": "矩形ABCD，E、F为AB、BC中点，AF交ED于P，AB=6，BC=8，求AP",
+        "counts": {
+          "prereq": 4.8,
+          "reasoning": 9.2,
+          "compute": 7.0,
+          "error": 4.2,
+          "evidence": "延长DE交CB构造全等得BT=8+勾股求AF=2√13+八字相似按2:3分线段"
+        },
+        "normalized": {
+          "prereq": 0.8,
+          "reasoning": 0.7667,
+          "compute": 0.7,
+          "error": 0.7
+        },
+        "composite_D": 73.87,
+        "t_g": 264.8,
+        "r_AI": 0.32944,
+        "r_lower": 1.81184,
+        "tau": 1.0599796825396834,
+        "grade_equivalent_seconds": 280.68,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "7星-练",
+        "star": 7,
+        "role": "练",
+        "stem": "矩形ABCD，E、F为CD、AD中点，CF交EA、EB于M、N，AB=8，BC=12，求MN",
+        "counts": {
+          "prereq": 5.0,
+          "reasoning": 9.8,
+          "compute": 7.5,
+          "error": 4.4,
+          "evidence": "双向延长构造两组全等与两组八字相似分别求FN、CM再容斥求MN"
+        },
+        "normalized": {
+          "prereq": 0.8333,
+          "reasoning": 0.8167,
+          "compute": 0.75,
+          "error": 0.7333
+        },
+        "composite_D": 78.13,
+        "t_g": 279.6,
+        "r_AI": 0.34096,
+        "r_lower": 1.84256,
+        "tau": 1.0745473015873022,
+        "grade_equivalent_seconds": 300.44,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-例",
+        "star": 8,
+        "role": "例",
+        "stem": "D是BC中点，AE=2ED，AB=6，BE=4，∠BAC+2∠CAD=180°，求BC",
+        "counts": {
+          "prereq": 5.6,
+          "reasoning": 11.5,
+          "compute": 8.8,
+          "error": 5.2,
+          "evidence": "倍长中线+再延长构造等腰得二倍角+子母相似+作高双勾股方程求BD"
+        },
+        "normalized": {
+          "prereq": 0.9333,
+          "reasoning": 0.9583,
+          "compute": 0.88,
+          "error": 0.8667
+        },
+        "composite_D": 91.04,
+        "t_g": 323.2,
+        "r_AI": 0.375812,
+        "r_lower": 1.9355,
+        "tau": 1.11862003968254,
+        "grade_equivalent_seconds": 361.54,
+        "source": "derived_from_question_structure"
+      },
+      {
+        "problem_id": "8星-练",
+        "star": 8,
+        "role": "练",
+        "stem": "D是BC中点，AB=4，BC=8，∠BAC+2∠CAD=180°，求△ABC面积",
+        "counts": {
+          "prereq": 5.6,
+          "reasoning": 11.2,
+          "compute": 8.6,
+          "error": 5.0,
+          "evidence": "倍长中线+二倍角构造相似求AC与AD+作高列勾股方程求高与面积"
+        },
+        "normalized": {
+          "prereq": 0.9333,
+          "reasoning": 0.9333,
+          "compute": 0.86,
+          "error": 0.8333
+        },
+        "composite_D": 88.9,
+        "t_g": 316.0,
+        "r_AI": 0.37003,
+        "r_lower": 1.92008,
+        "tau": 1.111307777777779,
+        "grade_equivalent_seconds": 351.17,
+        "source": "derived_from_question_structure"
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "problem_id": "W5-L3L4-7-03",
+  "title": "竖式填数：好学习（学=5，习=9，好=2）",
+  "unit": "seconds",
+  "source": "derived_from_question_structure",
+  "source_document": "新建 DOCX 文档.docx",
+  "sample_policy": "10 个确定性倍率样本围绕题面推导中心值；题目顺序不参与估计。不是实测。",
+  "question_structure": {
+    "kind": "vertical_multiplication_alphametic",
+    "deduction_steps": 3,
+    "carry_inferences": 2,
+    "verification_multiplication": 1,
+    "grade_time_rule_seconds": "3 × 30（逆推）+ 30（验证）"
+  },
+  "estimated_centers_seconds": {
+    "ai": 18.0,
+    "lower_grade": 168.0,
+    "grade": 120.0
+  },
+  "ai": [
+    16.93,
+    17.2,
+    17.47,
+    17.74,
+    17.92,
+    18.1,
+    18.28,
+    18.55,
+    18.82,
+    19.09
+  ],
+  "lower_grade": [
+    158.03,
+    160.55,
+    163.07,
+    165.59,
+    167.27,
+    168.95,
+    170.64,
+    173.16,
+    175.68,
+    178.2
+  ],
+  "grade": [
+    112.88,
+    114.68,
+    116.48,
+    118.28,
+    119.48,
+    120.68,
+    121.88,
+    123.68,
+    125.49,
+    127.29
+  ],
+  "weight": 1.0
+}

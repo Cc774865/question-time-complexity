@@ -1,0 +1,162 @@
+{
+  "source_document": "W5-L3L4-7.docx",
+  "order_invariant": true,
+  "set_tau": 0.8857142857142856,
+  "grade_equivalent_total_seconds": 1504.3069841269844,
+  "problems": [
+    {
+      "problem_id": "W5-L3L4-7-01",
+      "title": "124×3，235×2，317×3",
+      "kind": "exec",
+      "structure": "3 道一位数乘法，进位 3 次",
+      "grade_seconds": 53.99999999999996,
+      "lower_grade_seconds": 72.89999999999999,
+      "ai_seconds": 8.639999999999997,
+      "tau": 0.8422222222222229,
+      "grade_equivalent_seconds": 45.48
+    },
+    {
+      "problem_id": "W5-L3L4-7-02",
+      "title": "218×4，415×2，214×3",
+      "kind": "exec",
+      "structure": "3 道一位数乘法，进位 3 次",
+      "grade_seconds": 53.99999999999996,
+      "lower_grade_seconds": 72.89999999999999,
+      "ai_seconds": 8.639999999999997,
+      "tau": 0.8422222222222229,
+      "grade_equivalent_seconds": 45.48
+    },
+    {
+      "problem_id": "W5-L3L4-7-03",
+      "title": "275×3，186×4，386×2",
+      "kind": "exec",
+      "structure": "3 道一位数乘法，进位 6 次",
+      "grade_seconds": 62.999999999999936,
+      "lower_grade_seconds": 85.04999999999997,
+      "ai_seconds": 10.079999999999998,
+      "tau": 0.8422222222222229,
+      "grade_equivalent_seconds": 53.05999999999999
+    },
+    {
+      "problem_id": "W5-L3L4-7-04",
+      "title": "354×3，465×4，624×5",
+      "kind": "exec",
+      "structure": "3 道一位数乘法，进位 9 次",
+      "grade_seconds": 72.0,
+      "lower_grade_seconds": 97.19999999999997,
+      "ai_seconds": 11.52,
+      "tau": 0.8422222222222222,
+      "grade_equivalent_seconds": 60.64
+    },
+    {
+      "problem_id": "W5-L3L4-7-05",
+      "title": "车马×车=马车车",
+      "kind": "search1",
+      "structure": "个位约束筛出 14 组两位数乘法，其中 1 组成立",
+      "grade_seconds": 186.00000000000009,
+      "lower_grade_seconds": 269.69999999999993,
+      "ai_seconds": 33.48,
+      "tau": 0.8838095238095236,
+      "grade_equivalent_seconds": 164.38857142857145
+    },
+    {
+      "problem_id": "W5-L3L4-7-06",
+      "title": "学习×学=好习学",
+      "kind": "search1",
+      "structure": "个位约束同样筛出 14 组，与题 05 的搜索宽度相同",
+      "grade_seconds": 186.00000000000009,
+      "lower_grade_seconds": 269.69999999999993,
+      "ai_seconds": 33.48,
+      "tau": 0.8838095238095236,
+      "grade_equivalent_seconds": 164.38857142857145
+    },
+    {
+      "problem_id": "W5-L3L4-7-07",
+      "title": "9□2×□=6□5□",
+      "kind": "search1",
+      "structure": "乘积范围只留下 6、7、8 三个乘数候选",
+      "grade_seconds": 98.00000000000004,
+      "lower_grade_seconds": 142.09999999999997,
+      "ai_seconds": 17.639999999999997,
+      "tau": 0.8838095238095236,
+      "grade_equivalent_seconds": 86.61333333333334
+    },
+    {
+      "problem_id": "W5-L3L4-7-08",
+      "title": "7□6×□=6□1□",
+      "kind": "search1",
+      "structure": "范围留下 3 个乘数，个位奇偶再排除 1 个",
+      "grade_seconds": 105.99999999999997,
+      "lower_grade_seconds": 153.69999999999987,
+      "ai_seconds": 19.080000000000002,
+      "tau": 0.8838095238095238,
+      "grade_equivalent_seconds": 93.6838095238095
+    },
+    {
+      "problem_id": "W5-L3L4-7-09",
+      "title": "□4□8□7×□=4□8□71",
+      "kind": "search1",
+      "structure": "个位 7×□ 的个位是 1，乘数唯一，之后 6 个竖位顺推",
+      "grade_seconds": 123.99999999999991,
+      "lower_grade_seconds": 179.80000000000007,
+      "ai_seconds": 22.31999999999999,
+      "tau": 0.8838095238095245,
+      "grade_equivalent_seconds": 109.59238095238096
+    },
+    {
+      "problem_id": "W5-L3L4-7-10",
+      "title": "□2□9×□=5□96",
+      "kind": "search1",
+      "structure": "个位确定乘数，十位仍有 2 个候选",
+      "grade_seconds": 103.99999999999999,
+      "lower_grade_seconds": 150.79999999999987,
+      "ai_seconds": 18.720000000000002,
+      "tau": 0.8838095238095236,
+      "grade_equivalent_seconds": 91.91619047619044
+    },
+    {
+      "problem_id": "W5-L3L4-7-11",
+      "title": "△△×△2，部分积个位为 8、和的十位为 5",
+      "kind": "search2",
+      "structure": "部分积宽度与末位筛到 5 组",
+      "grade_seconds": 152.0,
+      "lower_grade_seconds": 235.59999999999994,
+      "ai_seconds": 33.44000000000001,
+      "tau": 0.932063492063492,
+      "grade_equivalent_seconds": 141.67365079365078
+    },
+    {
+      "problem_id": "W5-L3L4-7-12",
+      "title": "△△×△3，部分积末位为 8、和的十位为 2",
+      "kind": "search2",
+      "structure": "同样的可见约束筛完后仍有 11 组",
+      "grade_seconds": 200.0000000000001,
+      "lower_grade_seconds": 310.00000000000006,
+      "ai_seconds": 43.99999999999999,
+      "tau": 0.932063492063492,
+      "grade_equivalent_seconds": 186.41269841269852
+    },
+    {
+      "problem_id": "W5-L3L4-7-13",
+      "title": "4□×□□，三处已知数字都是 4",
+      "kind": "search2",
+      "structure": "百位约束先把被乘数收到 45—49，再验 5 组",
+      "grade_seconds": 152.0,
+      "lower_grade_seconds": 235.59999999999994,
+      "ai_seconds": 33.44000000000001,
+      "tau": 0.932063492063492,
+      "grade_equivalent_seconds": 141.67365079365078
+    },
+    {
+      "problem_id": "W5-L3L4-7-14",
+      "title": "7□×□□，三处已知数字都是 7",
+      "kind": "search2",
+      "structure": "同样的竖式骨架，数字 7 把候选收到 2 组",
+      "grade_seconds": 128.00000000000009,
+      "lower_grade_seconds": 198.40000000000006,
+      "ai_seconds": 28.16000000000001,
+      "tau": 0.932063492063492,
+      "grade_equivalent_seconds": 119.30412698412707
+    }
+  ]
+}

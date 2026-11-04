@@ -1,0 +1,100 @@
+{
+  "problem_id": "W5-L3L4-7-03",
+  "tau": 0.8563405097503991,
+  "provisional": false,
+  "notes": [],
+  "weights": {
+    "w_ai": 0.3333333333333333,
+    "w_lower": 0.3492063492063493,
+    "w_grade": 0.3174603174603175
+  },
+  "relative": {
+    "t_ai": 17.99779976916521,
+    "t_lower": 167.99999633139225,
+    "t_grade": 120.00057322663166,
+    "T_ai": 0.14998094830076167,
+    "T_lower": 1.3999932818163248,
+    "T_grade": 1.0
+  },
+  "reports": [
+    {
+      "name": "ai",
+      "primary_geo": 17.99779976916521,
+      "median": 18.01,
+      "n_raw": 10,
+      "n_used": 10,
+      "provisional": false,
+      "clean": {
+        "triggered": false,
+        "relative_gap": 0.0006774142606770153,
+        "removed": [],
+        "values_used": [
+          16.93,
+          17.2,
+          17.47,
+          17.74,
+          17.92,
+          18.1,
+          18.28,
+          18.55,
+          18.82,
+          19.09
+        ],
+        "note": "主对照接近，直接采用几何平均"
+      }
+    },
+    {
+      "name": "lower_grade",
+      "primary_geo": 167.99999633139225,
+      "median": 168.11,
+      "n_raw": 10,
+      "n_used": 10,
+      "provisional": false,
+      "clean": {
+        "triggered": false,
+        "relative_gap": 0.0006543552947936476,
+        "removed": [],
+        "values_used": [
+          158.03,
+          160.55,
+          163.07,
+          165.59,
+          167.27,
+          168.95,
+          170.64,
+          173.16,
+          175.68,
+          178.2
+        ],
+        "note": "主对照接近，直接采用几何平均"
+      }
+    },
+    {
+      "name": "grade",
+      "primary_geo": 120.00057322663166,
+      "median": 120.08000000000001,
+      "n_raw": 10,
+      "n_used": 10,
+      "provisional": false,
+      "clean": {
+        "triggered": false,
+        "relative_gap": 0.0006614488121948202,
+        "removed": [],
+        "values_used": [
+          112.88,
+          114.68,
+          116.48,
+          118.28,
+          119.48,
+          120.68,
+          121.88,
+          123.68,
+          125.49,
+          127.29
+        ],
+        "note": "主对照接近，直接采用几何平均"
+      }
+    }
+  ],
+  "grade_equivalent_seconds": 102.76135204723386
+}

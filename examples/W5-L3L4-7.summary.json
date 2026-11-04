@@ -1,0 +1,51 @@
+{
+  "source": "derived_from_question_structure",
+  "warning": "数据由题面结构推导，不是学生或模型实测。CMATH 仅作三、四年级题型参考，不含耗时。",
+  "docx": "新建 DOCX 文档.docx",
+  "order_invariant": true,
+  "weights": {
+    "w_ai": 0.3333333333333333,
+    "w_lower": 0.3492063492063493,
+    "w_grade": 0.3174603174603175
+  },
+  "set_tau": 0.8469228324047638,
+  "grade_equivalent_total_seconds": 193.72264722254576,
+  "problems": [
+    {
+      "problem_id": "W5-L3L4-7-01",
+      "title": "列竖式计算：124×3，235×2，317×3",
+      "grade_baseline_seconds": 54.001296494880144,
+      "lower_grade_baseline_seconds": 72.89952039730215,
+      "ai_estimate_seconds": 8.641210446860699,
+      "T_ai": 0.16001857377035328,
+      "T_lower": 1.349958707087963,
+      "tau": 0.8422139937319462,
+      "grade_equivalent_seconds": 45.48064758765595,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "W5-L3L4-7-02",
+      "title": "列竖式计算：218×4，415×2，214×3",
+      "grade_baseline_seconds": 54.001296494880144,
+      "lower_grade_baseline_seconds": 72.89952039730215,
+      "ai_estimate_seconds": 8.641210446860699,
+      "T_ai": 0.16001857377035328,
+      "T_lower": 1.349958707087963,
+      "tau": 0.8422139937319462,
+      "grade_equivalent_seconds": 45.48064758765595,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "W5-L3L4-7-03",
+      "title": "竖式填数：好学习（学=5，习=9，好=2）",
+      "grade_baseline_seconds": 120.00057322663166,
+      "lower_grade_baseline_seconds": 167.99999633139225,
+      "ai_estimate_seconds": 17.99779976916521,
+      "T_ai": 0.14998094830076167,
+      "T_lower": 1.3999932818163248,
+      "tau": 0.8563405097503991,
+      "grade_equivalent_seconds": 102.76135204723386,
+      "source": "derived_from_question_structure"
+    }
+  ]
+}

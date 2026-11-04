@@ -1,0 +1,58 @@
+{
+  "problem_id": "W5-L3L4-7-01",
+  "title": "列竖式计算：124×3，235×2，317×3",
+  "unit": "seconds",
+  "source": "derived_from_question_structure",
+  "source_document": "新建 DOCX 文档.docx",
+  "sample_policy": "10 个确定性倍率样本围绕题面推导中心值；题目顺序不参与估计。不是实测。",
+  "question_structure": {
+    "kind": "three_digit_by_one_digit_vertical_multiplication_set",
+    "operation_count": 3,
+    "multiplicand_digits": 3,
+    "multiplier_digits": 1,
+    "carry_count": 3,
+    "grade_time_rule_seconds": "3 × 15（每道竖式）+ 3 × 3（进位）"
+  },
+  "estimated_centers_seconds": {
+    "ai": 8.64,
+    "lower_grade": 72.9,
+    "grade": 54.0
+  },
+  "ai": [
+    8.13,
+    8.26,
+    8.39,
+    8.52,
+    8.6,
+    8.69,
+    8.78,
+    8.91,
+    9.03,
+    9.16
+  ],
+  "lower_grade": [
+    68.57,
+    69.67,
+    70.76,
+    71.86,
+    72.58,
+    73.31,
+    74.04,
+    75.14,
+    76.23,
+    77.33
+  ],
+  "grade": [
+    50.79,
+    51.6,
+    52.42,
+    53.23,
+    53.77,
+    54.31,
+    54.85,
+    55.66,
+    56.47,
+    57.28
+  ],
+  "weight": 1.0
+}

@@ -1,0 +1,432 @@
+{
+  "source": "W3-L7L8L9-4-stem",
+  "grade": "L7L8L9",
+  "formula": "type-rules-v3-four-dimension",
+  "detected_question_count": 14,
+  "scored_count": 14,
+  "blocked_count": 0,
+  "question_count": 14,
+  "set_tau": 0.93746,
+  "shuffled_set_tau": 0.93746,
+  "order_invariant": true,
+  "shuffled_order": [
+    "2星-例",
+    "6星-练",
+    "3星-例",
+    "7星-例",
+    "8星-例",
+    "4星-例",
+    "5星-练",
+    "5星-例",
+    "3星-练",
+    "8星-练",
+    "7星-练",
+    "6星-例",
+    "4星-练",
+    "2星-练"
+  ],
+  "star_mean_tau": {
+    "2": 0.865963,
+    "3": 0.936027,
+    "4": 0.927705,
+    "5": 0.976287,
+    "6": 0.913265,
+    "7": 0.983685,
+    "8": 0.959287
+  },
+  "star_mean_monotonic": false,
+  "problems": [
+    {
+      "problem_id": "2星-例",
+      "star": 2,
+      "role": "例",
+      "stem": "声音速度 v=331+0.6t，求 t=2 与 t=30 时的速度",
+      "counts": {
+        "prereq": 1.5,
+        "reasoning": 2.0,
+        "compute": 3.2,
+        "error": 0.5,
+        "evidence": "代数式求值直接代入两次；0.6×2 与 0.6×30 各一次小数乘加；小数点一位"
+      },
+      "normalized": {
+        "prereq": 0.25,
+        "reasoning": 0.1667,
+        "compute": 0.32,
+        "error": 0.0833
+      },
+      "composite_D": 19.83,
+      "t_g": 84.6,
+      "r_AI": 0.18355,
+      "r_lower": 1.4228,
+      "tau": 0.8754944444444448,
+      "grade_equivalent_seconds": 74.07,
+      "source": "derived_from_question_structure",
+      "source_index": 1,
+      "content_hash": "33da01677705eb2c"
+    },
+    {
+      "problem_id": "2星-练",
+      "star": 2,
+      "role": "练",
+      "stem": "烤制时间 t=10x+10，x=5.5，求 t",
+      "counts": {
+        "prereq": 1.5,
+        "reasoning": 1.0,
+        "compute": 2.0,
+        "error": 0.5,
+        "evidence": "同一求值结构只代入一次；10×5.5+10 两步，含一位小数"
+      },
+      "normalized": {
+        "prereq": 0.25,
+        "reasoning": 0.0833,
+        "compute": 0.2,
+        "error": 0.0833
+      },
+      "composite_D": 14.25,
+      "t_g": 63.0,
+      "r_AI": 0.168475,
+      "r_lower": 1.3826,
+      "tau": 0.85643134920635,
+      "grade_equivalent_seconds": 53.96,
+      "source": "derived_from_question_structure",
+      "source_index": 2,
+      "content_hash": "d354fa59c44297a6"
+    },
+    {
+      "problem_id": "3星-例",
+      "star": 3,
+      "role": "例",
+      "stem": "a、b 互为相反数，c、d 互为倒数，|m|=2，求 (a+b)^2+2m-3cd",
+      "counts": {
+        "prereq": 4.0,
+        "reasoning": 4.5,
+        "compute": 3.2,
+        "error": 2.0,
+        "evidence": "相反数、倒数、绝对值三块+分类；平方与两支代入；漏负支和 -3cd 变号"
+      },
+      "normalized": {
+        "prereq": 0.6667,
+        "reasoning": 0.375,
+        "compute": 0.32,
+        "error": 0.3333
+      },
+      "composite_D": 40.29,
+      "t_g": 149.6,
+      "r_AI": 0.238787,
+      "r_lower": 1.5701,
+      "tau": 0.9453450396825391,
+      "grade_equivalent_seconds": 141.42,
+      "source": "derived_from_question_structure",
+      "source_index": 3,
+      "content_hash": "9bfb9eb4a6768ca1"
+    },
+    {
+      "problem_id": "3星-练",
+      "star": 3,
+      "role": "练",
+      "stem": "a、b 互为相反数，c、d 互为倒数，|m|=3，求 m+2(a+b)-cd",
+      "counts": {
+        "prereq": 4.0,
+        "reasoning": 4.0,
+        "compute": 2.4,
+        "error": 1.5,
+        "evidence": "同上三块+绝对值两支，式子无平方，负支仍须保留"
+      },
+      "normalized": {
+        "prereq": 0.6667,
+        "reasoning": 0.3333,
+        "compute": 0.24,
+        "error": 0.25
+      },
+      "composite_D": 34.83,
+      "t_g": 132.2,
+      "r_AI": 0.22405,
+      "r_lower": 1.5308,
+      "tau": 0.92670873015873,
+      "grade_equivalent_seconds": 122.51,
+      "source": "derived_from_question_structure",
+      "source_index": 4,
+      "content_hash": "4d8fd6111a97c800"
+    },
+    {
+      "problem_id": "4星-例",
+      "star": 4,
+      "role": "例",
+      "stem": "2x-y-1=0，求 3ky-6kx+3k（四选一，含与 k 有关）",
+      "counts": {
+        "prereq": 4.0,
+        "reasoning": 4.5,
+        "compute": 2.0,
+        "error": 2.5,
+        "evidence": "移项得 2x-y=1，逆向提公因式成 -3k(2x-y)+3k 再整体代入；k 消去，D 项是干扰"
+      },
+      "normalized": {
+        "prereq": 0.6667,
+        "reasoning": 0.375,
+        "compute": 0.2,
+        "error": 0.4167
+      },
+      "composite_D": 39.46,
+      "t_g": 145.0,
+      "r_AI": 0.236538,
+      "r_lower": 1.5641,
+      "tau": 0.9424998015873018,
+      "grade_equivalent_seconds": 136.66,
+      "source": "derived_from_question_structure",
+      "source_index": 5,
+      "content_hash": "dd1a3f5a6b9e8ac5"
+    },
+    {
+      "problem_id": "4星-练",
+      "star": 4,
+      "role": "练",
+      "stem": "x^2+x+3=7，求 -2x^2-2x+2026",
+      "counts": {
+        "prereq": 3.0,
+        "reasoning": 3.5,
+        "compute": 2.5,
+        "error": 1.5,
+        "evidence": "移出 x^2+x=4，提 -2 后整体代入；四位数减 8；勿解出 x"
+      },
+      "normalized": {
+        "prereq": 0.5,
+        "reasoning": 0.2917,
+        "compute": 0.25,
+        "error": 0.25
+      },
+      "composite_D": 30.79,
+      "t_g": 119.0,
+      "r_AI": 0.213138,
+      "r_lower": 1.5017,
+      "tau": 0.9129093253968257,
+      "grade_equivalent_seconds": 108.64,
+      "source": "derived_from_question_structure",
+      "source_index": 6,
+      "content_hash": "453dd374d01de35b"
+    },
+    {
+      "problem_id": "5星-例",
+      "star": 5,
+      "role": "例",
+      "stem": "由 2^2-1^2=3 等归纳第 n 式，求 1+3+5+…+2017",
+      "counts": {
+        "prereq": 4.5,
+        "reasoning": 7.5,
+        "compute": 1.5,
+        "error": 2.5,
+        "evidence": "归纳 (n+1)^2-n^2=2n+1，裂项成平方；下标错一位与末项 1008^2/1009^2 两处陷阱"
+      },
+      "normalized": {
+        "prereq": 0.75,
+        "reasoning": 0.625,
+        "compute": 0.15,
+        "error": 0.4167
+      },
+      "composite_D": 47.46,
+      "t_g": 181.0,
+      "r_AI": 0.258138,
+      "r_lower": 1.6217,
+      "tau": 0.9698140873015881,
+      "grade_equivalent_seconds": 175.54,
+      "source": "derived_from_question_structure",
+      "source_index": 7,
+      "content_hash": "6331cf07a59d1981"
+    },
+    {
+      "problem_id": "5星-练",
+      "star": 5,
+      "role": "练",
+      "stem": "由 3^2-1^2=8 等归纳第 n 式，求 8+16+…+800",
+      "counts": {
+        "prereq": 4.5,
+        "reasoning": 8.0,
+        "compute": 2.5,
+        "error": 2.5,
+        "evidence": "通项 (2n+1)^2-(2n-1)^2=8n，再按 1..100 求和；下标、系数 4n、100^2 三个选项陷阱"
+      },
+      "normalized": {
+        "prereq": 0.75,
+        "reasoning": 0.6667,
+        "compute": 0.25,
+        "error": 0.4167
+      },
+      "composite_D": 51.25,
+      "t_g": 195.0,
+      "r_AI": 0.268375,
+      "r_lower": 1.649,
+      "tau": 0.9827599206349211,
+      "grade_equivalent_seconds": 191.64,
+      "source": "derived_from_question_structure",
+      "source_index": 8,
+      "content_hash": "39203e66d4a4d77f"
+    },
+    {
+      "problem_id": "6星-例",
+      "star": 6,
+      "role": "例",
+      "stem": "三角点阵：6、10、15 个点，求第 7 个图的点数",
+      "counts": {
+        "prereq": 3.0,
+        "reasoning": 5.5,
+        "compute": 1.5,
+        "error": 1.5,
+        "evidence": "图中行数=序号+2，点数为 1+…+(n+2)；n=7 时 1..9 求和；少计一行得 36"
+      },
+      "normalized": {
+        "prereq": 0.5,
+        "reasoning": 0.4583,
+        "compute": 0.15,
+        "error": 0.25
+      },
+      "composite_D": 33.46,
+      "t_g": 135.0,
+      "r_AI": 0.220338,
+      "r_lower": 1.5209,
+      "tau": 0.9220140873015874,
+      "grade_equivalent_seconds": 124.47,
+      "source": "derived_from_question_structure",
+      "source_index": 9,
+      "content_hash": "cb23a50681a93737"
+    },
+    {
+      "problem_id": "6星-练",
+      "star": 6,
+      "role": "练",
+      "stem": "正方形点阵：4、9、16，求第 7 个图的正方形数",
+      "counts": {
+        "prereq": 3.0,
+        "reasoning": 4.0,
+        "compute": 1.0,
+        "error": 1.5,
+        "evidence": "观察为 (n+1)^2，n=7 得 64；下标偏成 n^2 或 (n+2)^2"
+      },
+      "normalized": {
+        "prereq": 0.5,
+        "reasoning": 0.3333,
+        "compute": 0.1,
+        "error": 0.25
+      },
+      "composite_D": 28.33,
+      "t_g": 113.0,
+      "r_AI": 0.2065,
+      "r_lower": 1.484,
+      "tau": 0.9045158730158733,
+      "grade_equivalent_seconds": 102.21,
+      "source": "derived_from_question_structure",
+      "source_index": 10,
+      "content_hash": "570a100abf0c0552"
+    },
+    {
+      "problem_id": "7星-例",
+      "star": 7,
+      "role": "例",
+      "stem": "x-3/2025=(4/2025)x+(3/2025)b 的解为 x=-2，求另一关于 y 的方程的解",
+      "counts": {
+        "prereq": 4.5,
+        "reasoning": 7.5,
+        "compute": 2.0,
+        "error": 3.0,
+        "evidence": "把 y 方程收成 (1-y) 再乘 -1，使 y-1 对齐 x；勿解 b；变号与整体差 1"
+      },
+      "normalized": {
+        "prereq": 0.75,
+        "reasoning": 0.625,
+        "compute": 0.2,
+        "error": 0.5
+      },
+      "composite_D": 50.88,
+      "t_g": 190.0,
+      "r_AI": 0.267363,
+      "r_lower": 1.6463,
+      "tau": 0.9814795634920643,
+      "grade_equivalent_seconds": 186.48,
+      "source": "derived_from_question_structure",
+      "source_index": 11,
+      "content_hash": "be7de6466d06ba43"
+    },
+    {
+      "problem_id": "7星-练",
+      "star": 7,
+      "role": "练",
+      "stem": "2x-3/2023=(5/2023)x+(3/2023)b 的解为 x=4，求另一关于 y 的方程的解",
+      "counts": {
+        "prereq": 4.5,
+        "reasoning": 8.0,
+        "compute": 2.0,
+        "error": 3.0,
+        "evidence": "同例，且须先把 2-2y 收成 2(1-y) 才能与 2x 对齐"
+      },
+      "normalized": {
+        "prereq": 0.75,
+        "reasoning": 0.6667,
+        "compute": 0.2,
+        "error": 0.5
+      },
+      "composite_D": 52.17,
+      "t_g": 196.0,
+      "r_AI": 0.27085,
+      "r_lower": 1.6556,
+      "tau": 0.9858896825396823,
+      "grade_equivalent_seconds": 193.23,
+      "source": "derived_from_question_structure",
+      "source_index": 12,
+      "content_hash": "da70670cf999d332"
+    },
+    {
+      "problem_id": "8星-例",
+      "star": 8,
+      "role": "例",
+      "stem": "(1+1/2+…+1/2014)(1/2+…+1/2015)-(1/2+…+1/2014)(1+1/2+…+1/2015)",
+      "counts": {
+        "prereq": 5.0,
+        "reasoning": 7.0,
+        "compute": 1.0,
+        "error": 3.0,
+        "evidence": "设两段和 a、b，展开相消得 a-b=1/2015；逐项通分不可行，端点切错则消不掉"
+      },
+      "normalized": {
+        "prereq": 0.8333,
+        "reasoning": 0.5833,
+        "compute": 0.1,
+        "error": 0.5
+      },
+      "composite_D": 48.58,
+      "t_g": 180.0,
+      "r_AI": 0.261175,
+      "r_lower": 1.6298,
+      "tau": 0.9736551587301587,
+      "grade_equivalent_seconds": 175.26,
+      "source": "derived_from_question_structure",
+      "source_index": 13,
+      "content_hash": "adc91d7e74de35e6"
+    },
+    {
+      "problem_id": "8星-练",
+      "star": 8,
+      "role": "练",
+      "stem": "(1+1/2+1/3)(1/2+1/3+1/4)-(1/2+1/3)(1+1/2+1/3+1/4)",
+      "counts": {
+        "prereq": 4.5,
+        "reasoning": 6.0,
+        "compute": 1.0,
+        "error": 2.0,
+        "evidence": "同一换元相消，项短，硬算仍可行，端点设反的代价更小"
+      },
+      "normalized": {
+        "prereq": 0.75,
+        "reasoning": 0.5,
+        "compute": 0.1,
+        "error": 0.3333
+      },
+      "composite_D": 40.17,
+      "t_g": 154.0,
+      "r_AI": 0.23845,
+      "r_lower": 1.5692,
+      "tau": 0.9449182539682548,
+      "grade_equivalent_seconds": 145.52,
+      "source": "derived_from_question_structure",
+      "source_index": 14,
+      "content_hash": "2bbb9cc1e32a0ca5"
+    }
+  ]
+}

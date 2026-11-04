@@ -1,0 +1,15 @@
+[project]
+name = "problem-time-model"
+version = "0.1.0"
+description = "Grade-relative problem time score: geo mean primary, median cross-check"
+requires-python = ">=3.11"
+dependencies = [
+  "python-docx>=1.1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

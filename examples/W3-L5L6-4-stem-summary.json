@@ -1,0 +1,375 @@
+{
+  "source": "W3-L5L6-4-stem",
+  "grade": "L5L6",
+  "formula": "type-rules-v3-four-dimension",
+  "question_count": 14,
+  "set_tau": 0.937663,
+  "shuffled_set_tau": 0.937663,
+  "order_invariant": true,
+  "problems": [
+    {
+      "problem_id": "2星-例",
+      "star": 2,
+      "role": "例",
+      "stem": "看图填一填：图示同分母分数 5/9、3/9、2/9",
+      "counts": {
+        "prereq": 1.5,
+        "reasoning": 3.0,
+        "compute": 1.0,
+        "error": 0.5,
+        "evidence": "看图数份数写3个同分母分数，直接执行无运算"
+      },
+      "normalized": {
+        "prereq": 0.25,
+        "reasoning": 0.25,
+        "compute": 0.1,
+        "error": 0.0833
+      },
+      "composite_D": 16.92,
+      "t_g": 79.0,
+      "r_AI": 0.175675,
+      "r_lower": 1.4018,
+      "tau": 0.8655361111111111,
+      "grade_equivalent_seconds": 68.38,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "2星-练",
+      "star": 2,
+      "role": "练",
+      "stem": "看图选算式：5/8-2/8，四选一",
+      "counts": {
+        "prereq": 2.0,
+        "reasoning": 4.0,
+        "compute": 1.5,
+        "error": 1.0,
+        "evidence": "数总份数定分母+数涂色格+判断减法动态+四选项匹配"
+      },
+      "normalized": {
+        "prereq": 0.3333,
+        "reasoning": 0.3333,
+        "compute": 0.15,
+        "error": 0.1667
+      },
+      "composite_D": 24.42,
+      "t_g": 104.0,
+      "r_AI": 0.195925,
+      "r_lower": 1.4558,
+      "tau": 0.8911432539682542,
+      "grade_equivalent_seconds": 92.68,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "3星-例",
+      "star": 3,
+      "role": "例",
+      "stem": "求最小公倍数再通分：4组异分母分数",
+      "counts": {
+        "prereq": 2.5,
+        "reasoning": 4.0,
+        "compute": 4.8,
+        "error": 1.0,
+        "evidence": "4组各求LCM(含倍数/互质/一般关系)+扩分通分"
+      },
+      "normalized": {
+        "prereq": 0.4167,
+        "reasoning": 0.3333,
+        "compute": 0.48,
+        "error": 0.1667
+      },
+      "composite_D": 34.17,
+      "t_g": 134.4,
+      "r_AI": 0.22225,
+      "r_lower": 1.526,
+      "tau": 0.9244325396825399,
+      "grade_equivalent_seconds": 124.24,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "3星-练",
+      "star": 3,
+      "role": "练",
+      "stem": "求最小公倍数再通分：3组异分母分数",
+      "counts": {
+        "prereq": 2.5,
+        "reasoning": 4.5,
+        "compute": 3.6,
+        "error": 1.0,
+        "evidence": "3组各求LCM(倍数/互质/质因数分解)+扩分通分"
+      },
+      "normalized": {
+        "prereq": 0.4167,
+        "reasoning": 0.375,
+        "compute": 0.36,
+        "error": 0.1667
+      },
+      "composite_D": 32.46,
+      "t_g": 130.8,
+      "r_AI": 0.217638,
+      "r_lower": 1.5137,
+      "tau": 0.9185998015873016,
+      "grade_equivalent_seconds": 120.15,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "4星-例",
+      "star": 4,
+      "role": "例",
+      "stem": "分数尺选尺子：1/4+1/3，四选一",
+      "counts": {
+        "prereq": 3.5,
+        "reasoning": 5.0,
+        "compute": 3.0,
+        "error": 2.0,
+        "evidence": "求LCM(3,4)=12+四选项逐一核对等分份数排除4/3/7份迷惑项"
+      },
+      "normalized": {
+        "prereq": 0.5833,
+        "reasoning": 0.4167,
+        "compute": 0.3,
+        "error": 0.3333
+      },
+      "composite_D": 39.58,
+      "t_g": 150.0,
+      "r_AI": 0.236875,
+      "r_lower": 1.565,
+      "tau": 0.9429265873015875,
+      "grade_equivalent_seconds": 141.44,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "4星-练",
+      "star": 4,
+      "role": "练",
+      "stem": "分数尺选尺子：4/5+1/2，四选一",
+      "counts": {
+        "prereq": 3.5,
+        "reasoning": 5.0,
+        "compute": 3.0,
+        "error": 2.0,
+        "evidence": "求LCM(5,2)=10+四选项逐一核对等分份数"
+      },
+      "normalized": {
+        "prereq": 0.5833,
+        "reasoning": 0.4167,
+        "compute": 0.3,
+        "error": 0.3333
+      },
+      "composite_D": 39.58,
+      "t_g": 150.0,
+      "r_AI": 0.236875,
+      "r_lower": 1.565,
+      "tau": 0.9429265873015875,
+      "grade_equivalent_seconds": 141.44,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "5星-例",
+      "star": 5,
+      "role": "例",
+      "stem": "直接写出得数：4道异分母分数加减",
+      "counts": {
+        "prereq": 2.5,
+        "reasoning": 5.0,
+        "compute": 6.0,
+        "error": 1.5,
+        "evidence": "4题各通分加减约分，含2/3+3/2假分数处理"
+      },
+      "normalized": {
+        "prereq": 0.4167,
+        "reasoning": 0.4167,
+        "compute": 0.6,
+        "error": 0.25
+      },
+      "composite_D": 41.92,
+      "t_g": 161.0,
+      "r_AI": 0.243175,
+      "r_lower": 1.5818,
+      "tau": 0.9508932539682537,
+      "grade_equivalent_seconds": 153.09,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "5星-练",
+      "star": 5,
+      "role": "练",
+      "stem": "直接写出得数：3道异分母分数加减",
+      "counts": {
+        "prereq": 2.5,
+        "reasoning": 4.5,
+        "compute": 4.5,
+        "error": 1.5,
+        "evidence": "3题各通分加减约分"
+      },
+      "normalized": {
+        "prereq": 0.4167,
+        "reasoning": 0.375,
+        "compute": 0.45,
+        "error": 0.25
+      },
+      "composite_D": 36.88,
+      "t_g": 143.0,
+      "r_AI": 0.229563,
+      "r_lower": 1.5455,
+      "tau": 0.9336795634920629,
+      "grade_equivalent_seconds": 133.52,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "6星-例",
+      "star": 6,
+      "role": "例",
+      "stem": "脱式计算4题：含加法交换律、减法性质、括号",
+      "counts": {
+        "prereq": 4.0,
+        "reasoning": 7.0,
+        "compute": 6.0,
+        "error": 2.5,
+        "evidence": "4题含通分+交换律凑整+减法性质添括号+括号内先算，需选择简算路径"
+      },
+      "normalized": {
+        "prereq": 0.6667,
+        "reasoning": 0.5833,
+        "compute": 0.6,
+        "error": 0.4167
+      },
+      "composite_D": 55.92,
+      "t_g": 207.0,
+      "r_AI": 0.280975,
+      "r_lower": 1.6826,
+      "tau": 0.9986932539682547,
+      "grade_equivalent_seconds": 206.73,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "6星-练",
+      "star": 6,
+      "role": "练",
+      "stem": "脱式计算2题：括号内通分+加法交换结合律",
+      "counts": {
+        "prereq": 3.5,
+        "reasoning": 6.0,
+        "compute": 4.0,
+        "error": 2.0,
+        "evidence": "2题含括号内通分减法+四项交换结合律分组凑整"
+      },
+      "normalized": {
+        "prereq": 0.5833,
+        "reasoning": 0.5,
+        "compute": 0.4,
+        "error": 0.3333
+      },
+      "composite_D": 44.67,
+      "t_g": 170.0,
+      "r_AI": 0.2506,
+      "r_lower": 1.6016,
+      "tau": 0.9602825396825394,
+      "grade_equivalent_seconds": 163.25,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "7星-例",
+      "star": 7,
+      "role": "例",
+      "stem": "选能用1/5+1/3解决的问题：四选一，辨析分率与具体量",
+      "counts": {
+        "prereq": 5.0,
+        "reasoning": 8.0,
+        "compute": 3.0,
+        "error": 3.5,
+        "evidence": "4选项逐一列式辨析：含分率vs吨单位不可加、剩余×1/3动态基准、单位1直接分率相加"
+      },
+      "normalized": {
+        "prereq": 0.8333,
+        "reasoning": 0.6667,
+        "compute": 0.3,
+        "error": 0.5833
+      },
+      "composite_D": 58.33,
+      "t_g": 213.0,
+      "r_AI": 0.2875,
+      "r_lower": 1.7,
+      "tau": 1.0069444444444444,
+      "grade_equivalent_seconds": 214.48,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "7星-练",
+      "star": 7,
+      "role": "练",
+      "stem": "选不能用2/5+3/7的问题：三选一，辨析面积用乘法",
+      "counts": {
+        "prereq": 4.5,
+        "reasoning": 6.0,
+        "compute": 2.5,
+        "error": 3.0,
+        "evidence": "3选项辨析：面积用乘法非加法、分率相加、具体量相加"
+      },
+      "normalized": {
+        "prereq": 0.75,
+        "reasoning": 0.5,
+        "compute": 0.25,
+        "error": 0.5
+      },
+      "composite_D": 48.25,
+      "t_g": 176.0,
+      "r_AI": 0.260275,
+      "r_lower": 1.6274,
+      "tau": 0.9725170634920637,
+      "grade_equivalent_seconds": 171.16,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "8星-例",
+      "star": 8,
+      "role": "例",
+      "stem": "水渠第一天修3/8第二天修1/8，求还剩几分之几",
+      "counts": {
+        "prereq": 3.5,
+        "reasoning": 3.0,
+        "compute": 2.0,
+        "error": 1.5,
+        "evidence": "单位1减两个同分母分率，同分母直接减法无通分"
+      },
+      "normalized": {
+        "prereq": 0.5833,
+        "reasoning": 0.25,
+        "compute": 0.2,
+        "error": 0.25
+      },
+      "composite_D": 29.75,
+      "t_g": 113.0,
+      "r_AI": 0.210325,
+      "r_lower": 1.4942,
+      "tau": 0.9093527777777775,
+      "grade_equivalent_seconds": 102.76,
+      "source": "derived_from_question_structure"
+    },
+    {
+      "problem_id": "8星-练",
+      "star": 8,
+      "role": "练",
+      "stem": "蛋糕妈妈吃1/7爸爸吃2/7，求还剩几分之几",
+      "counts": {
+        "prereq": 3.5,
+        "reasoning": 3.0,
+        "compute": 2.0,
+        "error": 1.5,
+        "evidence": "单位1减两个同分母分率，同分母直接减法无通分"
+      },
+      "normalized": {
+        "prereq": 0.5833,
+        "reasoning": 0.25,
+        "compute": 0.2,
+        "error": 0.25
+      },
+      "composite_D": 29.75,
+      "t_g": 113.0,
+      "r_AI": 0.210325,
+      "r_lower": 1.4942,
+      "tau": 0.9093527777777775,
+      "grade_equivalent_seconds": 102.76,
+      "source": "derived_from_question_structure"
+    }
+  ]
+}
