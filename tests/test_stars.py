@@ -57,3 +57,14 @@ def test_homework_and_promotion_levels() -> None:
     ]
     assert "S" not in {row["level"] for row in promotion}
     assert promotion[0]["stars"] == (5, 6)
+
+
+def test_levels_follow_star_anchors_and_leave_gaps() -> None:
+    star_tau = {2: 0.88, 3: 0.91, 4: 0.94, 5: 0.97, 6: 1.02, 7: 1.06, 8: 1.10}
+    promotion = assign_levels(
+        [{"tau": 0.91}, {"tau": 0.97}, {"tau": 1.02}],
+        "promotion",
+        star_tau,
+    )
+    assert [row["level"] for row in promotion] == ["B", "AA", "AAA"]
+    assert all(row["fit"] == "tight" for row in promotion)
