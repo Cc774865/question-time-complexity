@@ -9,6 +9,10 @@ const clearInput = document.querySelector("#clear-input");
 const startWork = document.querySelector("#start-work");
 const outputBody = document.querySelector("#output-body");
 const reviewBody = document.querySelector("#review-body");
+const progress = document.querySelector("#progress");
+const progressBar = document.querySelector("#progress-bar");
+const progressFill = document.querySelector("#progress-fill");
+const progressLabel = document.querySelector("#progress-label");
 const inputCount = document.querySelector("#input-count");
 const reviewCount = document.querySelector("#review-count");
 
@@ -41,10 +45,12 @@ startWork.addEventListener("click", () => {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ files: names }),
-  }).catch(() => {
-    startWork.disabled = false;
-    startWork.textContent = "开始工作";
-  });
+  })
+    .then(() => showProgress({ running: true, percent: 5, label: "已开始" }))
+    .catch(() => {
+      startWork.disabled = false;
+      startWork.textContent = "开始工作";
+    });
 });
 
 clearInput.addEventListener("click", () => {
@@ -90,6 +96,28 @@ function refreshFiles() {
     .catch(() => {
       onServer = false;
     });
+}
+
+function refreshProgress() {
+  return fetch("/api/progress")
+    .then((response) => (response.ok ? response.json() : null))
+    .then((data) => {
+      if (data) showProgress(data);
+    })
+    .catch(() => {});
+}
+
+function showProgress(data) {
+  const percent = Math.max(0, Math.min(100, Number(data.percent) || 0));
+  const visible = Boolean(data.running) || percent > 0;
+  progress.hidden = !visible;
+  progressBar.setAttribute("aria-valuenow", String(percent));
+  progressFill.style.width = `${percent}%`;
+  progressLabel.textContent = data.label || "";
+  if (data.running && startWork.textContent !== "已开始") {
+    startWork.disabled = true;
+    startWork.textContent = "已开始";
+  }
 }
 
 function refreshResult() {
@@ -176,7 +204,7 @@ function reviewCard(item, index) {
   text.textContent = item.text || item.title || "";
   const pick = document.createElement("select");
   pick.className = "level-pick";
-  pick.append(new Option("版型", ""));
+  pick.append(new Option("班型", ""));
   for (const level of ["B", "A", "AA", "AAA", "S"]) {
     pick.append(new Option(level, level));
   }
@@ -286,6 +314,9 @@ function setClassification(next) {
 
 window.setClassification = setClassification;
 
-refreshFiles().then(() => refreshResult());
-setInterval(refreshResult, 2000);
+refreshFiles().then(() => Promise.all([refreshResult(), refreshProgress()]));
+setInterval(() => {
+  refreshResult();
+  refreshProgress();
+}, 2000);
 render();

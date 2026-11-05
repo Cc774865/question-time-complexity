@@ -35,6 +35,12 @@
       <div class="module-head">
         <h2 id="output-title">输出</h2>
       </div>
+      <div class="progress" id="progress" hidden>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p class="progress-label" id="progress-label"></p>
+      </div>
       <div id="output-body"></div>
     </section>
 
@@ -44,6 +50,9 @@
         <span class="count" id="review-count">0 道</span>
       </div>
       <div id="review-body"></div>
+      <div class="module-foot">
+        <button type="button" class="start-btn" id="review-submit">提交</button>
+      </div>
     </section>
   </main>
   <script src="lesson-file.js"></script>

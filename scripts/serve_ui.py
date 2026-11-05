@@ -23,7 +23,8 @@ INBOX = ROOT / "inbox"
 RESULT = INBOX / "result.json"
 OUTPUT = INBOX / "output.docx"
 START = INBOX / "start.json"
-KEPT = {".gitkeep", "result.json", "start.json", "output.docx"}
+PROGRESS = INBOX / "progress.json"
+KEPT = {".gitkeep", "result.json", "start.json", "output.docx", "progress.json"}
 HOST = "127.0.0.1"
 FIRST_PORT = 8765
 LAST_PORT = 8775
@@ -99,6 +100,12 @@ class Handler(SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(data)
             return
+        if path == "/api/progress":
+            if PROGRESS.is_file():
+                self._json(json.loads(PROGRESS.read_text(encoding="utf-8")))
+            else:
+                self._json({"running": False, "percent": 0, "label": ""})
+            return
         if path == "/api/result":
             if not RESULT.is_file():
                 self.send_error(404)
@@ -138,6 +145,10 @@ class Handler(SimpleHTTPRequestHandler):
         if path == "/api/start":
             length = int(self.headers.get("Content-Length", "0"))
             START.write_bytes(self.rfile.read(length))
+            PROGRESS.write_text(
+                json.dumps({"running": True, "percent": 5, "label": "已开始"}, ensure_ascii=False),
+                encoding="utf-8",
+            )
             self._json({"started": True})
             return
         if path != "/api/files":

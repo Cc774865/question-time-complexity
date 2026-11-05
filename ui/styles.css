@@ -246,6 +246,32 @@ body {
   line-height: 1.6;
 }
 
+.progress {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.progress-track {
+  height: 8px;
+  border-radius: 999px;
+  background: #e4ddd2;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: var(--output);
+}
+
+.progress-label {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
 #output-body,
 #review-body {
   flex: 1;

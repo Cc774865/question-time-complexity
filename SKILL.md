@@ -18,7 +18,9 @@ description: Installs this repository into Cursor and opens the 题目分档 UI,
 
 输出 docx 从输入原件复制。题目、答案、解析里的文字和图片原样保留。能改的只有星级标题、班级标题和题目顺序。用 `problem_time.arrange_docx.arrange_docx` 写到 `inbox/output.docx`，再写 `inbox/result.json`（`filename`、`copied: true`、`bytes`、`source`、`base`、`review`）。不要自己重写解析。
 
-人工审核不收审核意见。每题只有一个版型：B、A、AA、AAA、S。人选中后按 `source` 和 `base` 重排输出，把这一题原段放进所选班级。作业题标题写成 `{版型}-` 加原标题，晋级题标题写成 `{版型}-晋级题`，不另改星级。`review` 每项写 `kind`、`group`（`homework` 或 `promotion`）、`block`、`level`、`text`。
+人工审核不收审核意见。每题只有一个班型：B、A、AA、AAA、S。人选中后按 `source` 和 `base` 重排输出，把这一题原段放进所选班级。作业题标题写成 `{班型}-` 加原标题，晋级题标题写成 `{班型}-晋级题`，不另改星级。`review` 每项写 `kind`、`group`（`homework` 或 `promotion`）、`block`、`level`、`text`。
+
+工作时把进度写到 `inbox/progress.json`：`running`、`percent`（0–100）、`label`（当前这一步的短句）。界面上的进度条读这个文件。写完 `result.json` 时把 `percent` 设为 100、`running` 设为 false。
 
 用户在界面里选的文件存在仓库的 `inbox/`。处理这些文件时按下面的步骤。算完后把一个 JSON 写到 `inbox/result.json`，界面会自己出现一个 docx 下载。`review` 里的题目只出现在人工审核，不写进这个 docx。JSON 形如：`header`（`week`、`grade`、`lesson`）、`lessons`（`star`、`role`、`prompt`、`answer`、`analysis`、`steps`、`method`）。输入 docx 里有作业题才写 `homework`（`level`、`star`、`prompt`、`answer`、`analysis`），有晋级题才写 `promotion`（`star`、`type`、`prompt`、`answer`、`analysis`）。没有的那一块不要写进 JSON，也不要写进 docx。`review`（`kind`、`text`）只在有题被抽出时才写。
 
