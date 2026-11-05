@@ -19,3 +19,6 @@ def test_blocks_follow_the_input_headings() -> None:
     assert found.homework is True
     assert found.promotion is True
     assert paper_sections("N作业题\n题目\n计算：1").homework is True
+    titled = paper_sections("作业题（缩小同一个数）\n题目：计算 1")
+    assert titled.homework is True
+    assert titled.promotion is False

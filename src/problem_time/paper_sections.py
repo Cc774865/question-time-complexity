@@ -6,7 +6,7 @@ import re
 from dataclasses import dataclass
 
 _HOMEWORK_LINE = re.compile(
-    r"^(?:AAA|AA|A|B|S|N|\d+)(?:\s*[-－—]\s*作业题|作业题)(?:（[^）]*）|\([^)]*\))?$"
+    r"^(?:(?:AAA|AA|A|B|S|N|\d+)(?:\s*[-－—]\s*作业题|作业题)|作业题)(?:（[^）]*）|\([^)]*\))?$"
 )
 _PROMOTION_LINE = re.compile(r"^晋级题(?:（[^）]*）|\([^)]*\))?$")
 
