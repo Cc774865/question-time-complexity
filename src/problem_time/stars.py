@@ -60,7 +60,7 @@ def assign_stars(pairs: list[dict[str, Any]]) -> list[dict[str, Any]]:
 HOMEWORK_LEVELS = ("B", "A", "AA", "AAA", "S")
 PROMOTION_LEVELS = ("B", "A", "AA", "AAA")
 
-# 晋级赛对应该等级的两颗正课星。作业题对应该等级的一颗作业星。
+# 班的内容只由已经分配完的 2–8 星决定。这张表写死，不从 τ 推。
 LEVEL_STARS: dict[str, tuple[int, int]] = {
     "B": (2, 3),
     "A": (3, 4),
@@ -68,150 +68,67 @@ LEVEL_STARS: dict[str, tuple[int, int]] = {
     "AAA": (5, 6),
     "S": (7, 8),
 }
-HOMEWORK_STAR: dict[str, int] = {
-    "B": 3,
-    "A": 4,
-    "AA": 5,
-    "AAA": 6,
-    "S": 8,
+
+# 与某颗星的课件内容最像时，归到把这颗星当作上沿的那个班。
+# 共用的下沿星因此归到前一个班。2 星没有更早的班。7 星不是任何班的上沿，只属于 S。
+SIMILAR_STAR_LEVEL: dict[int, str] = {
+    2: "B",
+    3: "B",
+    4: "A",
+    5: "AA",
+    6: "AAA",
+    7: "S",
+    8: "S",
 }
 
 
-def level_anchor(level: str, kind: str, star_tau: dict[int, float]) -> dict[str, Any]:
-    """Anchor τ for one level, taken from the lesson's already assigned stars.
-
-    Homework sits on one star (B→3, A→4, AA→5, AAA→6, S→8).
-    Promotion sits on two stars, folded with the same 0.03 rule as an example pair.
-    """
-    if kind == "homework":
-        star = HOMEWORK_STAR[level]
-        if star not in star_tau:
-            raise KeyError(f"作业锚点缺少 {star} 星")
-        return {
-            "level": level,
-            "anchor_stars": (star,),
-            "anchor_tau": float(star_tau[star]),
-            "anchor_rule": "star",
-        }
-    if kind != "promotion":
-        raise ValueError("kind 只能是 homework 或 promotion")
-    low, high = LEVEL_STARS[level]
-    if low not in star_tau or high not in star_tau:
-        raise KeyError(f"晋级锚点缺少 {low} 星或 {high} 星")
-    folded = pair_tau(float(star_tau[low]), float(star_tau[high]))
-    return {
-        "level": level,
-        "anchor_stars": (low, high),
-        "anchor_tau": float(folded["tau_set"]),
-        "anchor_rule": folded["pair_rule"],
-    }
-
-
-def _match_anchors(item_tau: list[float], anchor_tau: list[float]) -> dict[int, int]:
-    """Map each used item index to an anchor index, minimizing total |τ − anchor|.
-
-    Fewer items than anchors leaves the worse-fitting anchors empty.
-    More items than anchors leaves the worse-fitting items unassigned.
-    Equal cost keeps the smaller τ on the earlier anchor.
-    """
-    from itertools import combinations, permutations
-
-    item_count = len(item_tau)
-    anchor_count = len(anchor_tau)
-    if item_count == 0 or anchor_count == 0:
-        return {}
-
-    order = sorted(range(item_count), key=lambda index: (item_tau[index], index))
-    ordered_tau = [item_tau[index] for index in order]
-    best_key: tuple[float, tuple[int, ...]] | None = None
-    best_map: dict[int, int] = {}
-    seat_count = min(item_count, anchor_count)
-
-    if item_count <= anchor_count:
-        choices = combinations(range(anchor_count), item_count)
-        for chosen in choices:
-            for perm in permutations(chosen):
-                cost = sum(abs(ordered_tau[i] - anchor_tau[perm[i]]) for i in range(item_count))
-                key = (round(cost, 12), perm)
-                if best_key is None or key < best_key:
-                    best_key = key
-                    best_map = {order[i]: perm[i] for i in range(item_count)}
-        return best_map
-
-    for chosen_items in combinations(range(item_count), seat_count):
-        for perm in permutations(chosen_items):
-            cost = sum(abs(ordered_tau[perm[j]] - anchor_tau[j]) for j in range(anchor_count))
-            key = (round(cost, 12), perm)
-            if best_key is None or key < best_key:
-                best_key = key
-                best_map = {order[perm[j]]: j for j in range(anchor_count)}
-    return best_map
+class LevelsBeforeStarsError(RuntimeError):
+    """晋级赛和作业题的等级在 2–8 星分配完成之前禁止计算。"""
 
 
 def assign_levels(
     items: list[dict[str, Any]],
     kind: str,
-    star_tau: dict[int, float] | None = None,
+    assigned_stars: list[dict[str, Any]],
 ) -> list[dict[str, Any]]:
-    """Give each homework or promotion problem one level.
+    """Place homework or promotion problems by content similarity.
 
-    ``kind`` is ``"homework"`` (B, A, AA, AAA, S) or ``"promotion"``
-    (B, A, AA, AAA; no S). Each item needs ``tau``.
-
-    With ``star_tau`` from the lesson's 2–8 pairs, each level has an anchor:
-    homework uses one star, promotion uses two stars folded by ``pair_tau``.
-    Problems are matched to anchors by smallest total absolute gap. A level
-    with no nearby problem stays empty, and a problem that fits none stays
-    unassigned. Gap at or above 0.03 is a loose fit.
-
-    Without ``star_tau``, levels are filled from B upward by τ order.
+    ``assigned_stars`` is the finished return value of ``assign_stars``.
+    Calling this before that list exists raises ``LevelsBeforeStarsError``.
+    Each item must already carry ``similar_star``: the star whose example and
+    practice it resembles. τ is not read and cannot choose the level.
     """
-    if kind == "homework":
-        ladder = HOMEWORK_LEVELS
-    elif kind == "promotion":
-        ladder = PROMOTION_LEVELS
-    else:
+    if kind not in ("homework", "promotion"):
         raise ValueError("kind 只能是 homework 或 promotion")
+    _require_assigned_stars(assigned_stars)
 
     scored: list[dict[str, Any]] = []
     for index, item in enumerate(items):
         row = dict(item)
-        row["tau"] = float(item["tau"])
         row["source_order"] = index
-        scored.append(row)
-
-    if star_tau is None:
-        order = sorted(range(len(scored)), key=lambda index: (scored[index]["tau"], index))
-        for rank, index in enumerate(order):
-            level = ladder[rank] if rank < len(ladder) else None
-            _write_level(scored[index], kind, level, rank)
-        return scored
-
-    anchors = [level_anchor(level, kind, star_tau) for level in ladder]
-    matched = _match_anchors(
-        [row["tau"] for row in scored],
-        [float(anchor["anchor_tau"]) for anchor in anchors],
-    )
-    for index, row in enumerate(scored):
-        anchor_index = matched.get(index)
-        if anchor_index is None:
-            _write_level(row, kind, None, None)
+        if "similar_star" not in row:
+            raise LevelsBeforeStarsError("必须先与各星课件内容比对相似度，得到 similar_star 之后才能判定等级")
+        star = int(row["similar_star"])
+        if star not in SIMILAR_STAR_LEVEL:
+            raise ValueError(f"similar_star 只能是 2–8，当前={star}")
+        level = SIMILAR_STAR_LEVEL[star]
+        if kind == "promotion" and level == "S":
+            row["level"] = None
+            row["similar_star"] = star
+            row["stars"] = LEVEL_STARS["S"]
+            row["rejected"] = "晋级赛没有 S 级"
+            scored.append(row)
             continue
-        anchor = anchors[anchor_index]
-        gap = abs(row["tau"] - float(anchor["anchor_tau"]))
-        _write_level(row, kind, str(anchor["level"]), anchor_index)
-        row["anchor_tau"] = anchor["anchor_tau"]
-        row["anchor_rule"] = anchor["anchor_rule"]
-        row["anchor_gap"] = gap
-        row["fit"] = "tight" if gap < STAR_GAP else "loose"
+        row["similar_star"] = star
+        row["level"] = level
+        row["stars"] = LEVEL_STARS[level]
+        scored.append(row)
     return scored
 
 
-def _write_level(row: dict[str, Any], kind: str, level: str | None, rank: int | None) -> None:
-    row["rank"] = rank
-    row["level"] = level
-    if level is None:
-        return
-    row["stars"] = LEVEL_STARS[level]
-    if kind == "homework":
-        row["homework_star"] = HOMEWORK_STAR[level]
+def _require_assigned_stars(assigned_stars: list[dict[str, Any]] | None) -> None:
+    if not assigned_stars:
+        raise LevelsBeforeStarsError("2–8 星尚未分配，禁止计算晋级赛和作业题的等级")
+    stars = [row.get("star") for row in assigned_stars]
+    if any(star is None for star in stars):
+        raise LevelsBeforeStarsError("2–8 星尚未分配完成，禁止计算晋级赛和作业题的等级")
