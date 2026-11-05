@@ -14,7 +14,7 @@ from pathlib import Path
 from docx import Document
 from docx.oxml.ns import qn
 
-from problem_time.arrange_docx import _classed_homework, split_blocks, write_plan
+from problem_time.arrange_docx import _classed_homework, split_blocks, write_star_preview
 from problem_time.calibration import score_calibrated_problem
 from problem_time.equation_text import equation_text
 from problem_time.grade_use import GradeUseError, read_grade_use
@@ -43,15 +43,12 @@ def run_started(inbox: Path, image_reader=None) -> dict:
         if image_reader is None:
             api_key = _api_key(inbox)
             image_reader = deepseek_reader(api_key) if api_key else None
-        result = run_paper(source, inbox / "output.docx", progress, image_reader)
+        result = run_paper(source, inbox / "preview.docx", progress, image_reader)
         (inbox / "result.json").write_text(
             json.dumps(result, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
-        if result.get("released"):
-            _write_progress(progress, 100, "完成", running=False)
-        else:
-            _write_progress(progress, 100, "2–8 星已完成，请在人工审核里选定班型后提交", running=False)
+        _write_progress(progress, 100, "预览已生成，可拖拽调整星级", running=False)
         return result
     except (PaperRunError, GradeUseError, ImageReadError) as exc:
         _clear_previous(inbox)
@@ -100,11 +97,13 @@ def run_paper(source: Path, dest: Path, progress: Path | None = None, image_read
         lesson_plan.append((int(row["example_block"]), int(row["star"]), "例"))
         if int(row["practice_block"]) != int(row["example_block"]):
             lesson_plan.append((int(row["practice_block"]), int(row["star"]), "练"))
-    released = not review
     result = {
         "filename": f"{week}-{grade.code}-{lesson}.docx",
         "copied": True,
-        "released": released,
+        "released": False,
+        "preview": True,
+        "previewCount": 0,
+        "previewRevisions": [],
         "source": source.name,
         "header": {"week": week, "grade": grade.code, "lesson": lesson},
         "base": {
@@ -114,12 +113,9 @@ def run_paper(source: Path, dest: Path, progress: Path | None = None, image_read
         },
         "review": review,
     }
-    if released:
-        _write_progress(progress, 85, "正在写出文件")
-        write_plan(source, dest, result)
-        result["bytes"] = dest.stat().st_size
-    elif dest.is_file():
-        dest.unlink()
+    _write_progress(progress, 85, "正在写出预览")
+    write_star_preview(source, dest, lesson_plan)
+    result["previewBytes"] = dest.stat().st_size
     return result
 
 
@@ -411,8 +407,11 @@ def _short(stem: str) -> str:
 
 
 def _clear_previous(inbox: Path) -> None:
-    for name in ("result.json", "output.docx"):
+    for name in ("result.json", "output.docx", "preview.docx"):
         path = inbox / name
+        if path.is_file():
+            path.unlink()
+    for path in inbox.glob("preview-*.docx"):
         if path.is_file():
             path.unlink()
 

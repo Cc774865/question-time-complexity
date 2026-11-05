@@ -9,6 +9,23 @@ from problem_time.run_paper import PaperRunError, run_paper, run_started
 from problem_time.structure_counts import structure_counts
 
 
+def test_each_preview_submit_writes_the_next_number() -> None:
+    from problem_time.arrange_docx import production_filename, write_preview_revision
+
+    with tempfile.TemporaryDirectory() as folder:
+        inbox = Path(folder)
+        source = inbox / "W5-L3L4-7.docx"
+        _paper(source)
+        result = run_paper(source, inbox / "preview.docx")
+        assert write_preview_revision(inbox, result) == 1
+        assert write_preview_revision(inbox, result) == 2
+        assert result["previewCount"] == 2
+        assert [item["n"] for item in result["previewRevisions"]] == [1, 2]
+        assert (inbox / "preview-1.docx").is_file()
+        assert (inbox / "preview-2.docx").is_file()
+        assert production_filename(result["filename"]) == "W5-L3L4-7-生产.docx"
+
+
 def test_dragging_a_pair_to_the_top_makes_it_two_stars() -> None:
     from problem_time.arrange_docx import order_lesson_stars
 
@@ -35,10 +52,13 @@ def test_start_writes_one_docx_from_the_clicked_file() -> None:
         result = run_started(inbox)
         assert result["filename"] == "W5-L3L4-7.docx"
         assert result["released"] is False
+        assert (inbox / "preview.docx").is_file()
         assert not (inbox / "output.docx").is_file()
+        preview = "\n".join(paragraph.text for paragraph in Document(inbox / "preview.docx").paragraphs)
+        assert "2星-例" in preview
         assert result["review"][0]["kind"] == "作业题"
         assert result["review"][0]["level"] == ""
-        assert "请在人工审核里选定班型后提交" in (inbox / "progress.json").read_text(encoding="utf-8")
+        assert "预览已生成" in (inbox / "progress.json").read_text(encoding="utf-8")
         result["review"][0]["level"] = "B"
         from problem_time.arrange_docx import apply_review_levels
 
@@ -77,7 +97,10 @@ def test_an_unmatched_homework_stays_in_the_file() -> None:
         dest = root / "out.docx"
         result = run_paper(source, dest)
         assert result["released"] is False
-        assert not dest.is_file()
+        assert dest.is_file()
+        preview = "\n".join(paragraph.text for paragraph in Document(dest).paragraphs)
+        assert "2星" in preview
+        assert "A-作业题（3星　分配律）" in preview
         assert [item["kind"] for item in result["review"]] == ["作业题", "晋级题"]
         assert result["base"]["homework"] == []
         result["review"][0]["level"] = "A"
@@ -228,6 +251,7 @@ def test_picture_numbers_do_not_become_a_file() -> None:
         else:
             raise AssertionError("picture stem was scored")
         assert not (inbox / "output.docx").is_file()
+        assert not (inbox / "preview.docx").is_file()
         assert not (inbox / "result.json").is_file()
 
 

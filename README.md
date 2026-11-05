@@ -6,11 +6,11 @@
 复制 https://github.com/Cc774865/question-time-complexity.git 装到 Cursor 里，并打开界面
 ```
 
-Cursor 会把仓库克隆到个人技能目录 `question-time-complexity`，安装依赖，运行 `python scripts/serve_ui.py`，并在浏览器里打开题目分档。界面只有输入、输出、人工审核。选中的文件写到 `inbox/`。开始工作后，人工审核里从上到下是 2–8 星，可以拖拽改顺序。点提交后，输出模块给出一个 docx。
+Cursor 会把仓库克隆到个人技能目录 `question-time-complexity`，安装依赖，运行 `python scripts/serve_ui.py`，并在浏览器里打开题目分档。界面只有输入、输出、人工审核。选中的文件写到 `inbox/`。开始工作后先生成预览 docx，2–8 星列在输出下面。拖拽只改顺序，点输出区的提交才写出 `预览(n).docx`。人工审核只选作业题和晋级题的班型，点提交后生成 `生产.docx`。
 
 独立项目：按题面数学结构估计一道数学题的相对时间指标 τ。小学、初中、高中都能计。文档顺序、解析字数都不进入公式。星级标签也不进入公式——以后拿到的模板不再带星级。
 
-计算过程的正本是 [`docs/计算方法.md`](docs/计算方法.md)。题目文件版式见 [`docs/题目导入模板.md`](docs/题目导入模板.md)。甄别细则与对照表在 [`spec/type-rules.md`](spec/type-rules.md)。样本索引在 [`docs/样本参考.md`](docs/样本参考.md)。
+给人看的操作步骤在 [`docs/使用说明.md`](docs/使用说明.md)。计算过程的正本是 [`docs/计算方法.md`](docs/计算方法.md)。题目文件版式见 [`docs/题目导入模板.md`](docs/题目导入模板.md)。甄别细则与对照表在 [`spec/type-rules.md`](spec/type-rules.md)。样本索引在 [`docs/样本参考.md`](docs/样本参考.md)。
 
 ## 指标
 
