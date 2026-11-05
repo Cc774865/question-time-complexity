@@ -170,7 +170,23 @@ body {
 .module-foot {
   margin-top: auto;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.start-btn {
+  border: 0;
+  background: var(--output);
+  color: #fff;
+  font: inherit;
+  border-radius: 999px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.start-btn:disabled {
+  opacity: 0.4;
+  cursor: default;
 }
 
 .text-btn,

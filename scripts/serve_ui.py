@@ -19,6 +19,9 @@ ROOT = Path(__file__).resolve().parents[1]
 UI = ROOT / "ui"
 INBOX = ROOT / "inbox"
 RESULT = INBOX / "result.json"
+OUTPUT = INBOX / "output.docx"
+START = INBOX / "start.json"
+KEPT = {".gitkeep", "result.json", "start.json", "output.docx"}
 HOST = "127.0.0.1"
 FIRST_PORT = 8765
 LAST_PORT = 8775
@@ -83,6 +86,17 @@ class Handler(SimpleHTTPRequestHandler):
         if path == "/api/files":
             self._json({"files": list_files()})
             return
+        if path == "/api/output":
+            if not OUTPUT.is_file():
+                self.send_error(404)
+                return
+            data = OUTPUT.read_bytes()
+            self.send_response(200)
+            self.send_header("Content-Type", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+            self.send_header("Content-Length", str(len(data)))
+            self.end_headers()
+            self.wfile.write(data)
+            return
         if path == "/api/result":
             if not RESULT.is_file():
                 self.send_error(404)
@@ -99,6 +113,11 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_POST(self) -> None:
         path = urlparse(self.path).path
+        if path == "/api/start":
+            length = int(self.headers.get("Content-Length", "0"))
+            START.write_bytes(self.rfile.read(length))
+            self._json({"started": True})
+            return
         if path != "/api/files":
             self.send_error(404)
             return
@@ -122,7 +141,7 @@ class Handler(SimpleHTTPRequestHandler):
         query = parse_qs(urlparse(self.path).query)
         if "name" not in query:
             for item in INBOX.iterdir():
-                if item.is_file() and item.name != "result.json" and item.name != ".gitkeep":
+                if item.is_file() and item.name not in KEPT:
                     item.unlink()
             self._json({"cleared": True})
             return
@@ -148,7 +167,7 @@ class Handler(SimpleHTTPRequestHandler):
         query = parse_qs(urlparse(self.path).query)
         raw = query.get("name", [""])[0]
         name = Path(raw).name
-        if not name or name in {".gitkeep", "result.json"} or name.startswith("."):
+        if not name or name in KEPT or name.startswith("."):
             return None
         return name
 
@@ -156,7 +175,7 @@ class Handler(SimpleHTTPRequestHandler):
 def list_files() -> list[dict[str, int | str]]:
     rows = []
     for item in sorted(INBOX.iterdir(), key=lambda path: path.name):
-        if item.is_file() and item.name not in {".gitkeep", "result.json"} and not item.name.startswith("."):
+        if item.is_file() and item.name not in KEPT and not item.name.startswith("."):
             rows.append({"name": item.name, "size": item.stat().st_size})
     return rows
 

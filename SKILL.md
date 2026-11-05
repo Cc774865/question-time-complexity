@@ -14,7 +14,9 @@ description: Installs this repository into Cursor and opens the 题目分档 UI,
 1. 仓库放在 Cursor 个人技能目录的 `question-time-complexity`。Windows 是 `%USERPROFILE%\.cursor\skills\question-time-complexity`，macOS 和 Linux 是 `~/.cursor/skills/question-time-complexity`。不在那里就执行 `git clone https://github.com/Cc774865/question-time-complexity.git` 到这个路径。已经在那里就 `git pull`。
 2. 在该目录执行 `python -m pip install -r requirements.txt`。
 3. 界面没在跑时，于该目录后台执行 `python scripts/serve_ui.py`。脚本会打开浏览器。已经在跑时再执行一次，只打开浏览器。
-4. 把脚本打印的地址告诉用户。界面只有输入、输出、人工审核，不要把计算方法写上去。
+4. 把脚本打印的地址告诉用户。界面只有输入、输出、人工审核，不要把计算方法写上去。输入区有「开始工作」。用户点下去之后，`inbox/start.json` 会写好，随即处理 `inbox/` 里的输入文档。
+
+输出 docx 从输入原件复制。题目、答案、解析里的文字和图片原样保留。能改的只有星级标题、班级标题和题目顺序。用 `problem_time.arrange_docx.arrange_docx` 写到 `inbox/output.docx`，再写 `inbox/result.json`（`filename`、`copied: true`、`bytes`、`review`）。不要自己重写解析。
 
 用户在界面里选的文件存在仓库的 `inbox/`。处理这些文件时按下面的步骤。算完后把一个 JSON 写到 `inbox/result.json`，界面会自己出现一个 docx 下载。`review` 里的题目只出现在人工审核，不写进这个 docx。JSON 形如：`header`（`week`、`grade`、`lesson`）、`lessons`（`star`、`role`、`prompt`、`answer`、`analysis`、`steps`、`method`）。输入 docx 里有作业题才写 `homework`（`level`、`star`、`prompt`、`answer`、`analysis`），有晋级题才写 `promotion`（`star`、`type`、`prompt`、`answer`、`analysis`）。没有的那一块不要写进 JSON，也不要写进 docx。`review`（`kind`、`text`）只在有题被抽出时才写。
 

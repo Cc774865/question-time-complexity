@@ -6,6 +6,7 @@ const drop = document.querySelector("#drop");
 const picker = document.querySelector("#picker");
 const fileList = document.querySelector("#file-list");
 const clearInput = document.querySelector("#clear-input");
+const startWork = document.querySelector("#start-work");
 const outputBody = document.querySelector("#output-body");
 const reviewBody = document.querySelector("#review-body");
 const inputCount = document.querySelector("#input-count");
@@ -29,6 +30,21 @@ drop.addEventListener("drop", (event) => {
   event.preventDefault();
   drop.classList.remove("over");
   addFiles(event.dataTransfer.files);
+});
+
+startWork.addEventListener("click", () => {
+  if (!files.length) return;
+  startWork.disabled = true;
+  startWork.textContent = "已开始";
+  const names = files.map((file) => file.name);
+  fetch("/api/start", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ files: names }),
+  }).catch(() => {
+    startWork.disabled = false;
+    startWork.textContent = "开始工作";
+  });
 });
 
 clearInput.addEventListener("click", () => {
@@ -99,6 +115,7 @@ function render() {
 function renderInput() {
   inputCount.textContent = `${files.length} 个文件`;
   clearInput.disabled = files.length === 0;
+  if (startWork.textContent !== "已开始") startWork.disabled = files.length === 0;
   fileList.replaceChildren();
   for (const [index, file] of files.entries()) {
     const row = document.createElement("li");
@@ -120,16 +137,15 @@ function renderOutput() {
     outputBody.append(emptyLine("分档后会给出一个文件。"));
     return;
   }
-  const name = LessonFile.filename(doc);
-  const bytes = LessonFile.buildDocx(doc);
+  const name = doc.filename || LessonFile.filename(doc);
   const row = document.createElement("div");
   row.className = "out-row";
   const button = document.createElement("button");
   button.type = "button";
   button.className = "small-btn";
   button.textContent = "下载";
-  button.addEventListener("click", () => downloadDocument(name, bytes));
-  row.append(stamp("DOCX"), named(name, "out-name"), sized(bytes.length), button);
+  button.addEventListener("click", () => downloadReadyFile(name));
+  row.append(stamp("DOCX"), named(name, "out-name"), sized(doc.bytes || 0), button);
   outputBody.append(row);
 }
 
@@ -169,15 +185,19 @@ function reviewCard(item, index) {
   return card;
 }
 
-function downloadDocument(name, bytes) {
-  const blob = new Blob([bytes], {
-    type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-  });
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download = name;
-  link.click();
-  URL.revokeObjectURL(link.href);
+function downloadReadyFile(name) {
+  fetch("/api/output")
+    .then((response) => {
+      if (!response.ok) throw new Error("no output");
+      return response.blob();
+    })
+    .then((blob) => {
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = name;
+      link.click();
+      URL.revokeObjectURL(link.href);
+    });
 }
 
 function stamp(label) {
