@@ -28,7 +28,7 @@ description: Installs this repository into Cursor and opens the 题目分档 UI,
 
 ## 先做全量题目清单，后计算
 
-1. 读题之前先认「使用年级」。输入文件只在这一栏标明适用对象，调用 `problem_time.grade_use.read_grade_use`。`L3L4` 是 3年级、4年级共同使用，`L3` 是 3年级使用，`L5` 是 5年级使用，`L7L8L9` 是 7年级、8年级、9年级共同使用；几个 `L` 加数字连写就是这些年级共同使用。`ZKCC` 是中考冲刺，`GKCC` 是高考冲刺。认不出来就停，不开始读题。
+1. 读题之前先认「使用年级」。输入文件只在这一栏标明适用对象，调用 `problem_time.grade_use.read_grade_use`。`L1` 到 `L8` 分别是 1 年级到 8 年级单独使用。几个连写就是这些年级共同使用，例如 `L1L2`、`L3L4`、`L5L6`、`L7L8`。`ZKCC` 是中考冲刺，`GKCC` 是高考冲刺。认不出来就停，不开始读题。
 2. 题目文件按 `docs/题目导入模板.md` 来认：课头是周次、使用年级、课次；正课是 `N星-例` / `N星-练`。作业题和晋级题只在同一份输入 docx 里出现时才读，调用 `problem_time.paper_sections.paper_sections`。没有作业题标题就不读作业题，没有「晋级题」就不读晋级题，输出里也不写缺的那一块。模板 docx 里的算式只是版式示范，不拿来计分。标题里的 `N` 和晋级题的「星级」栏都不读。
 3. 运行 `python scripts/extract_docx.py <文件.docx>`，保存原始段落、表格、图片数。
    - 若文档含 Word 公式（`<m:oMath>`）、MathType OLE（`word/embeddings/oleObject*.bin`）或题干图片，必须一并解码或读图。参考 `examples/W9-zkcc-18/build_calibration_input.py`。只读纯文本会漏掉分数、根号、角符号或整道题干。

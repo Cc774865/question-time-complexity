@@ -20,6 +20,18 @@ def test_joint_and_single_grades() -> None:
     assert middle.label == "7年级、8年级、9年级共同使用"
 
 
+def test_every_grade_from_one_to_eight() -> None:
+    for grade in range(1, 9):
+        found = read_grade_use(f"使用年级：L{grade}")
+        assert found.grades == (grade,)
+        assert found.label == f"{grade}年级使用"
+    pair = read_grade_use("使用年级：L1L2")
+    assert pair.grades == (1, 2)
+    assert pair.label == "1年级、2年级共同使用"
+    upper = read_grade_use("使用年级：L7L8")
+    assert upper.grades == (7, 8)
+
+
 def test_sprint_codes() -> None:
     assert read_grade_use("使用年级：ZKCC").label == "中考冲刺"
     assert read_grade_use("使用年级：zkcc").code == "ZKCC"
