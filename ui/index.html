@@ -24,7 +24,7 @@
           <input id="picker" type="file" multiple accept=".docx,.doc,.md,.markdown,.txt,.pdf,.rtf,.json,.csv,.html,.htm">
         </label>
       </div>
-      <ul class="file-list" id="file-list"></ul>
+      <ul class="file-list module-scroll" id="file-list"></ul>
       <label class="vision">
         <span>读图</span>
         <input id="vision-key" type="password" autocomplete="off" placeholder="DeepSeek API" spellcheck="false">
@@ -47,7 +47,10 @@
       </div>
       <div id="output-body"></div>
       <p class="review-note" id="output-note" hidden></p>
-      <div id="star-board"></div>
+      <div id="star-board" class="module-scroll"></div>
+      <div class="module-foot" id="star-foot" hidden>
+        <button type="button" class="start-btn" id="preview-submit">提交</button>
+      </div>
     </section>
 
     <section class="module" aria-labelledby="review-title">
@@ -55,7 +58,7 @@
         <h2 id="review-title">人工审核</h2>
         <span class="count" id="review-count">0 道</span>
       </div>
-      <div id="review-body"></div>
+      <div id="review-body" class="module-scroll"></div>
       <div class="module-foot">
         <p class="review-note" id="review-note" hidden></p>
         <button type="button" class="start-btn" id="review-submit">提交</button>

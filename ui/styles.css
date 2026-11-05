@@ -15,9 +15,14 @@
 
 * { box-sizing: border-box; }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  min-height: 100vh;
+  overflow: hidden;
 }
 
 .top {
@@ -33,7 +38,9 @@ body {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 16px;
-  padding: 12px 20px 24px;
+  height: calc(100vh - 64px);
+  min-height: 0;
+  padding: 12px 20px 20px;
   align-items: stretch;
 }
 
@@ -41,12 +48,14 @@ body {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 16px;
-  min-height: calc(100vh - 88px);
+  min-height: 0;
+  height: 100%;
   padding: 18px 18px 14px;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 14px;
+  overflow: hidden;
 }
 
 .module-head {
@@ -295,18 +304,31 @@ body {
   font-size: 13px;
 }
 
-#output-body,
-#star-board,
-#review-body {
-  flex: 1;
+#output-body {
+  flex: 0 0 auto;
 }
 
-#star-board {
-  margin-top: 12px;
+.module-scroll {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: #b7aa98 transparent;
 }
 
-.star-submit {
-  margin-top: 12px;
+.module-scroll::-webkit-scrollbar {
+  width: 10px;
+}
+
+.module-scroll::-webkit-scrollbar-thumb {
+  background: #b7aa98;
+  border-radius: 999px;
+  border: 2px solid var(--paper);
+}
+
+.module-scroll::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .review-card {
@@ -353,11 +375,22 @@ button:focus-visible,
 }
 
 @media (max-width: 980px) {
+  body {
+    overflow: auto;
+  }
+
   .board {
     grid-template-columns: 1fr;
+    height: auto;
   }
 
   .module {
-    min-height: 0;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+
+  .module-scroll {
+    max-height: 70vh;
   }
 }
