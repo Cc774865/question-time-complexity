@@ -29,7 +29,8 @@ def read_grade_use(source: str) -> GradeUse:
     """Resolve 使用年级 from a header line or a bare code.
 
     Input files carry the audience only in this field. Question text is not
-    consulted. ``L3`` is grade 3 alone. ``L3L4`` is grades 3 and 4 together.
+    consulted. ``L1`` through ``L8`` are those grades alone. Codes stuck
+    together, such as ``L1L2`` or ``L5L6``, are shared by those grades.
     ``ZKCC`` is 中考冲刺 and ``GKCC`` is 高考冲刺.
     """
     code = _extract_code(source)
