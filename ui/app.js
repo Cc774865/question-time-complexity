@@ -13,8 +13,11 @@ const progress = document.querySelector("#progress");
 const progressBar = document.querySelector("#progress-bar");
 const progressFill = document.querySelector("#progress-fill");
 const progressLabel = document.querySelector("#progress-label");
+const visionKey = document.querySelector("#vision-key");
 const inputCount = document.querySelector("#input-count");
 const reviewCount = document.querySelector("#review-count");
+const reviewSubmit = document.querySelector("#review-submit");
+const reviewNote = document.querySelector("#review-note");
 
 picker.addEventListener("change", () => {
   addFiles(picker.files);
@@ -37,20 +40,20 @@ drop.addEventListener("drop", (event) => {
 });
 
 startWork.addEventListener("click", () => {
-  if (!files.length) return;
-  startWork.disabled = true;
-  startWork.textContent = "已开始";
+  if (!files.length || working) return;
+  setWorking(true);
   const names = files.map((file) => file.name);
   fetch("/api/start", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ files: names }),
+    body: JSON.stringify({ files: names, apiKey: visionKey.value }),
   })
-    .then(() => showProgress({ running: true, percent: 5, label: "已开始" }))
-    .catch(() => {
-      startWork.disabled = false;
-      startWork.textContent = "开始工作";
-    });
+    .then((response) => response.json())
+    .then((data) => {
+      if (!data.started) setWorking(false);
+      return refreshProgress();
+    })
+    .catch(() => setWorking(false));
 });
 
 clearInput.addEventListener("click", () => {
@@ -62,12 +65,19 @@ clearInput.addEventListener("click", () => {
   fetch("/api/files", { method: "DELETE" }).then(() => refreshFiles());
 });
 
+function setWorking(next) {
+  working = next;
+  startWork.textContent = next ? "已开始" : "开始工作";
+  startWork.disabled = next || files.length === 0;
+}
+
 function emptyClassification() {
-  return { document: null, review: [] };
+  return { document: null, review: [], pairs: [] };
 }
 
 let onServer = false;
 let resultStamp = "";
+let working = false;
 
 function addFiles(list) {
   if (!onServer) {
@@ -109,20 +119,22 @@ function refreshProgress() {
 
 function showProgress(data) {
   const percent = Math.max(0, Math.min(100, Number(data.percent) || 0));
-  const visible = Boolean(data.running) || percent > 0;
+  const visible = Boolean(data.running) || percent > 0 || Boolean(data.label);
   progress.hidden = !visible;
   progressBar.setAttribute("aria-valuenow", String(percent));
   progressFill.style.width = `${percent}%`;
   progressLabel.textContent = data.label || "";
-  if (data.running && startWork.textContent !== "已开始") {
-    startWork.disabled = true;
-    startWork.textContent = "已开始";
-  }
+  setWorking(Boolean(data.running));
 }
 
 function refreshResult() {
   return fetch("/api/result")
     .then((response) => {
+      if (response.status === 404) {
+        resultStamp = "";
+        setClassification({});
+        return "";
+      }
       if (!response.ok) return "";
       return response.text();
     })
@@ -143,7 +155,8 @@ function render() {
 function renderInput() {
   inputCount.textContent = `${files.length} 个文件`;
   clearInput.disabled = files.length === 0;
-  if (startWork.textContent !== "已开始") startWork.disabled = files.length === 0;
+  startWork.disabled = working || files.length === 0;
+  if (!working) startWork.textContent = "开始工作";
   fileList.replaceChildren();
   for (const [index, file] of files.entries()) {
     const row = document.createElement("li");
@@ -158,11 +171,37 @@ function renderInput() {
   }
 }
 
+reviewSubmit.addEventListener("click", () => {
+  reviewNote.hidden = true;
+  fetch("/api/submit", { method: "POST" })
+    .then((response) => response.json())
+    .then((data) => {
+      if (!data.ok) {
+        reviewNote.hidden = false;
+        reviewNote.textContent = data.message || "还有题目没选班型";
+        return;
+      }
+      resultStamp = JSON.stringify(data.result);
+      setClassification(data.result);
+      refreshProgress();
+    })
+    .catch(() => {
+      reviewNote.hidden = false;
+      reviewNote.textContent = "提交没有完成";
+    });
+});
+
 function renderOutput() {
   outputBody.replaceChildren();
   const doc = classification.document;
   if (!doc) {
-    outputBody.append(emptyLine("分档后会给出一个文件。"));
+    const waiting = classification.review.length > 0;
+    const ranked = (classification.pairs || []).length > 0;
+    let message = "分档后会给出一个文件。";
+    if (ranked && waiting) message = "排好星级、选定班型并提交后会给出一个文件。";
+    else if (waiting) message = "选定班型并提交后会给出一个文件。";
+    else if (ranked) message = "排好顺序并提交后会给出一个文件。";
+    outputBody.append(emptyLine(message));
     return;
   }
   const name = doc.filename || LessonFile.filename(doc);
@@ -179,18 +218,105 @@ function renderOutput() {
 
 function renderReview() {
   const items = classification.review;
-  reviewCount.textContent = `${items.length} 道`;
+  const pairs = classification.pairs || [];
+  const bits = [];
+  if (pairs.length) bits.push(`${pairs.length} 套`);
+  if (items.length) bits.push(`${items.length} 道`);
+  reviewCount.textContent = bits.join(" · ") || "0 道";
+  reviewSubmit.disabled = pairs.length === 0 && items.length === 0;
   reviewBody.replaceChildren();
-  if (items.length === 0) {
+  if (pairs.length) {
+    const hint = document.createElement("p");
+    hint.className = "empty";
+    hint.textContent = "从上到下是 2 星到 8 星。拖拽调整顺序，提交后生成课件。";
+    reviewBody.append(hint, pairList(pairs));
+  }
+  if (items.length === 0 && pairs.length === 0) {
     reviewBody.append(emptyLine("没有待审核的题目。"));
     return;
   }
+  if (items.length === 0) return;
   const list = document.createElement("ul");
   list.className = "review-list";
   for (const [index, item] of items.entries()) {
     list.append(reviewCard(item, index));
   }
   reviewBody.append(list);
+}
+
+function pairList(pairs) {
+  const list = document.createElement("ul");
+  list.className = "review-list star-order";
+  for (const [index, pair] of pairs.entries()) list.append(pairCard(pair, index));
+  list.addEventListener("dragover", (event) => {
+    event.preventDefault();
+    const dragging = list.querySelector(".dragging");
+    const element = event.target instanceof Element ? event.target : event.target.parentElement;
+    const target = element && element.closest(".star-row");
+    if (!dragging || !target || dragging === target) return;
+    const rect = target.getBoundingClientRect();
+    const after = event.clientY > rect.top + rect.height / 2;
+    list.insertBefore(dragging, after ? target.nextSibling : target);
+    paintStars(list);
+  });
+  list.addEventListener("drop", (event) => {
+    event.preventDefault();
+    const order = [...list.querySelectorAll(".star-row")].map((row) => Number(row.dataset.block));
+    saveStarOrder(order);
+  });
+  return list;
+}
+
+function pairCard(pair, index) {
+  const card = document.createElement("li");
+  card.className = "review-card star-row";
+  card.draggable = true;
+  card.dataset.block = String(pair.example_block);
+  const kind = document.createElement("div");
+  kind.className = "review-kind";
+  kind.textContent = `${index + 2}星`;
+  const text = document.createElement("p");
+  text.className = "review-text";
+  text.textContent = [pair.example, pair.practice ? `练：${pair.practice}` : ""].filter(Boolean).join("\n");
+  card.addEventListener("dragstart", (event) => {
+    card.classList.add("dragging");
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData("text/plain", card.dataset.block);
+  });
+  card.addEventListener("dragend", () => card.classList.remove("dragging"));
+  card.append(kind, text);
+  return card;
+}
+
+function paintStars(list) {
+  [...list.querySelectorAll(".star-row")].forEach((row, index) => {
+    const kind = row.querySelector(".review-kind");
+    if (kind) kind.textContent = `${index + 2}星`;
+  });
+}
+
+function saveStarOrder(order) {
+  reviewNote.hidden = true;
+  fetch("/api/reorder-stars", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ order }),
+  })
+    .then((response) => response.text())
+    .then((text) => {
+      const data = text ? JSON.parse(text) : {};
+      if (data.ok === false) {
+        reviewNote.hidden = false;
+        reviewNote.textContent = data.message || "这份排序和正课对不上";
+        return;
+      }
+      resultStamp = text;
+      setClassification(data);
+    })
+    .catch(() => {
+      reviewNote.hidden = false;
+      reviewNote.textContent = "顺序没有记下";
+    });
 }
 
 function reviewCard(item, index) {
@@ -301,12 +427,11 @@ function formatSize(bytes) {
 }
 
 function setClassification(next) {
-  const hasDocument = Boolean(
-    next.paragraphs || next.sections || next.header || next.lessons || next.homework || next.promotion || next.filename,
-  );
+  const hasDocument = Boolean(next.released);
   classification = {
     document: hasDocument ? next : null,
     review: next.review || [],
+    pairs: next.pairs || [],
   };
   notes.clear();
   render();
@@ -314,9 +439,16 @@ function setClassification(next) {
 
 window.setClassification = setClassification;
 
+fetch("/api/vision")
+  .then((response) => (response.ok ? response.json() : null))
+  .then((data) => {
+    if (data && data.configured) visionKey.placeholder = "已保存，留空则沿用";
+  })
+  .catch(() => {});
+
 refreshFiles().then(() => Promise.all([refreshResult(), refreshProgress()]));
 setInterval(() => {
   refreshResult();
   refreshProgress();
-}, 2000);
+}, 800);
 render();

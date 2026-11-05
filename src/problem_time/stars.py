@@ -1,7 +1,7 @@
 """Assign 2–8 stars after τ is already computed.
 
-Stars are not an input to τ. A lesson's example/practice pairs are ranked
-by a single set τ and then labeled 2 through 8 from small to large.
+Stars are not an input to τ. The pair holding the lowest single-problem τ
+is 2 stars. The other pairs are labeled from 3 upward by set τ.
 """
 
 from __future__ import annotations
@@ -35,12 +35,13 @@ def pair_tau(tau_example: float, tau_practice: float) -> dict[str, float | str]:
 
 
 def assign_stars(pairs: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Rank pair τ from small to large and label them 2, 3, … in that order.
+    """Label pairs 2, 3, … after τ exists.
 
-    ``pairs`` keeps source order. Each item needs ``tau_example`` and
-    ``tau_practice``. Equal τ keeps the earlier pair ahead of the later one.
-    Seven pairs land on stars 2 through 8. A different count still ranks from
-    2 upward; stars past 8 are reported as-is.
+    The pair that contains the lowest single-problem τ is 2 stars, whether
+    that problem is the example or the practice. A tie keeps the earlier pair
+    in the file. Every other pair is ranked by its set τ, smallest first.
+    Equal set τ keeps file order. Seven pairs land on stars 2 through 8.
+    A different count still starts at 2; stars past 8 are reported as-is.
     """
     scored: list[dict[str, Any]] = []
     for index, pair in enumerate(pairs):
@@ -48,12 +49,21 @@ def assign_stars(pairs: list[dict[str, Any]]) -> list[dict[str, Any]]:
         row.update(pair_tau(float(pair["tau_example"]), float(pair["tau_practice"])))
         row["source_order"] = index
         scored.append(row)
+    if not scored:
+        return scored
 
-    order = sorted(range(len(scored)), key=lambda i: (scored[i]["tau_set"], i))
-    for rank, index in enumerate(order):
-        star = STAR_LADDER[0] + rank
+    pinned = min(
+        range(len(scored)),
+        key=lambda i: (min(scored[i]["tau_example"], scored[i]["tau_practice"]), i),
+    )
+    rest = sorted(
+        (i for i in range(len(scored)) if i != pinned),
+        key=lambda i: (scored[i]["tau_set"], i),
+    )
+    for rank, index in enumerate((pinned, *rest)):
         scored[index]["rank"] = rank
-        scored[index]["star"] = star
+        scored[index]["star"] = STAR_LADDER[0] + rank
+        scored[index]["star_rule"] = "lowest" if index == pinned else "set"
     return scored
 
 

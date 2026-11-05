@@ -40,6 +40,24 @@ def test_stars_follow_ascending_pair_tau() -> None:
     assert ranked[5]["pair_rule"] == "higher"
 
 
+def test_the_lowest_problem_puts_its_pair_at_two_stars() -> None:
+    ranked = assign_stars([
+        {"pair_id": "套τ更高", "tau_example": 0.70, "tau_practice": 1.00},
+        {"pair_id": "套τ更低", "tau_example": 0.80, "tau_practice": 0.80},
+        {"pair_id": "居中", "tau_example": 0.90, "tau_practice": 0.90},
+    ])
+    by_star = {row["star"]: row["pair_id"] for row in ranked}
+    assert by_star[2] == "套τ更高"
+    assert ranked[0]["star_rule"] == "lowest"
+    assert [by_star[star] for star in (3, 4)] == ["套τ更低", "居中"]
+
+    practice = assign_stars([
+        {"pair_id": "甲", "tau_example": 0.90, "tau_practice": 0.90},
+        {"pair_id": "乙", "tau_example": 1.00, "tau_practice": 0.70},
+    ])
+    assert {row["pair_id"]: row["star"] for row in practice} == {"乙": 2, "甲": 3}
+
+
 def test_levels_require_finished_stars_and_follow_content() -> None:
     ranked = assign_stars([
         {"pair_id": str(i), "tau_example": 0.8 + i * 0.04, "tau_practice": 0.8 + i * 0.04}

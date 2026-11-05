@@ -6,7 +6,7 @@
 复制 https://github.com/Cc774865/question-time-complexity.git 装到 Cursor 里，并打开界面
 ```
 
-Cursor 会把仓库克隆到个人技能目录 `question-time-complexity`，安装依赖，运行 `python scripts/serve_ui.py`，并在浏览器里打开题目分档。界面只有输入、输出、人工审核。选中的文件写到 `inbox/`，结果写到 `inbox/result.json` 后，输出模块给出一个 docx。
+Cursor 会把仓库克隆到个人技能目录 `question-time-complexity`，安装依赖，运行 `python scripts/serve_ui.py`，并在浏览器里打开题目分档。界面只有输入、输出、人工审核。选中的文件写到 `inbox/`。开始工作后，人工审核里从上到下是 2–8 星，可以拖拽改顺序。点提交后，输出模块给出一个 docx。
 
 独立项目：按题面数学结构估计一道数学题的相对时间指标 τ。小学、初中、高中都能计。文档顺序、解析字数都不进入公式。星级标签也不进入公式——以后拿到的模板不再带星级。
 

@@ -22,7 +22,10 @@ def test_joint_and_single_grades() -> None:
 
 def test_sprint_codes() -> None:
     assert read_grade_use("使用年级：ZKCC").label == "中考冲刺"
+    assert read_grade_use("使用年级：zkcc").code == "ZKCC"
+    assert read_grade_use("使用年级：zkcc").label == "中考冲刺"
     assert read_grade_use("GKCC").label == "高考冲刺"
+    assert read_grade_use("gkcc").code == "GKCC"
     assert read_grade_use("使用年级：ZKCC").grades == ()
 
 

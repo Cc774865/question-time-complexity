@@ -14,15 +14,15 @@ description: Installs this repository into Cursor and opens the 题目分档 UI,
 1. 仓库放在 Cursor 个人技能目录的 `question-time-complexity`。Windows 是 `%USERPROFILE%\.cursor\skills\question-time-complexity`，macOS 和 Linux 是 `~/.cursor/skills/question-time-complexity`。不在那里就执行 `git clone https://github.com/Cc774865/question-time-complexity.git` 到这个路径。已经在那里就 `git pull`。
 2. 在该目录执行 `python -m pip install -r requirements.txt`。
 3. 界面没在跑时，于该目录后台执行 `python scripts/serve_ui.py`。脚本会打开浏览器。已经在跑时再执行一次，只打开浏览器。
-4. 把脚本打印的地址告诉用户。界面只有输入、输出、人工审核，不要把计算方法写上去。输入区有「开始工作」。用户点下去之后，`inbox/start.json` 会写好，随即处理 `inbox/` 里的输入文档。
+4. 把脚本打印的地址告诉用户。界面只有输入、输出、人工审核，不要把计算方法写上去。输入区有「开始工作」。用户点下去之后，页面自己调用 `problem_time.run_paper.run_started` 计算 2–8 星，不要等人在对话里再算一遍。正课顺序显示在人工审核里，拖拽只改顺序。点提交才把最终课件写到 `inbox/output.docx`。
 
-输出 docx 从输入原件复制。题目、答案、解析里的文字和图片原样保留。能改的只有星级标题、班级标题和题目顺序。用 `problem_time.arrange_docx.arrange_docx` 写到 `inbox/output.docx`，再写 `inbox/result.json`（`filename`、`copied: true`、`bytes`、`source`、`base`、`review`）。不要自己重写解析。
+输出 docx 从输入原件复制。题目、答案、解析里的文字和图片原样保留。能改的只有星级标题、班级标题和题目顺序。题干数字若在图片里，用输入区保存的 DeepSeek API 调用 `deepseek-flash` 只做转写，转写只进入计分，不写进 docx。图或公式图片读不出数字时，改读这道题的解析，按 `docs/图形题按解析计分.md` 计四个维度，再按原来的排序写 2–8 星；还原出来的式子只进入计分，不写进 docx。用 `problem_time.arrange_docx.arrange_docx` 写到 `inbox/output.docx`，再写 `inbox/result.json`（`filename`、`copied: true`、`bytes`、`source`、`base`、`review`）。不要自己重写解析。
 
-人工审核不收审核意见。每题只有一个班型：B、A、AA、AAA、S。人选中后按 `source` 和 `base` 重排输出，把这一题原段放进所选班级。作业题标题写成 `{班型}-` 加原标题，晋级题标题写成 `{班型}-晋级题`，不另改星级。`review` 每项写 `kind`、`group`（`homework` 或 `promotion`）、`block`、`level`、`text`。
+人工审核上方是正课 2–8 星，按系统排出的顺序从上到下排列。拖拽改变顺序，最上面是 2 星，往下依次加 1。拖拽先记下新顺序，不写文件。点提交才生成最终课件。人工审核不收审核意见。每题只有一个班型：B、A、AA、AAA、S。人选中后按 `source` 和 `base` 重排输出，把这一题原段放进所选班级。作业题标题只写成 `{班型}-作业题`，晋级题标题写成 `{班型}-晋级题`，不另改星级。`review` 每项写 `kind`、`group`（`homework` 或 `promotion`）、`block`、`level`、`text`。
 
 工作时把进度写到 `inbox/progress.json`：`running`、`percent`（0–100）、`label`（当前这一步的短句）。界面上的进度条读这个文件。写完 `result.json` 时把 `percent` 设为 100、`running` 设为 false。
 
-用户在界面里选的文件存在仓库的 `inbox/`。处理这些文件时按下面的步骤。算完后把一个 JSON 写到 `inbox/result.json`，界面会自己出现一个 docx 下载。`review` 里的题目只出现在人工审核，不写进这个 docx。JSON 形如：`header`（`week`、`grade`、`lesson`）、`lessons`（`star`、`role`、`prompt`、`answer`、`analysis`、`steps`、`method`）。输入 docx 里有作业题才写 `homework`（`level`、`star`、`prompt`、`answer`、`analysis`），有晋级题才写 `promotion`（`star`、`type`、`prompt`、`answer`、`analysis`）。没有的那一块不要写进 JSON，也不要写进 docx。`review`（`kind`、`text`）只在有题被抽出时才写。
+用户在界面里选的文件存在仓库的 `inbox/`。处理这些文件时按下面的步骤。算完后把一个 JSON 写到 `inbox/result.json`，界面会自己出现一个 docx 下载。页面只自动判定正课的 2–8 星。作业题和晋级题不自动归班，全部进 `review`。人选完班型并点提交之后，才写 `inbox/output.docx`。提交之前不要出这个文件。JSON 形如：`header`（`week`、`grade`、`lesson`）、`lessons`（`star`、`role`、`prompt`、`answer`、`analysis`、`steps`、`method`）。输入 docx 里有作业题才写 `homework`（`level`、`star`、`prompt`、`answer`、`analysis`），有晋级题才写 `promotion`（`star`、`type`、`prompt`、`answer`、`analysis`）。没有的那一块不要写进 JSON，也不要写进 docx。`review`（`kind`、`text`）只在有题被抽出时才写。
 
 计分前先读本仓库的 `docs/计算方法.md`（推导、权重、手算例）。题目文件的版式见 `docs/题目导入模板.md`，原件在 `templates/题目导入模板.docx`。甄别细则与对照表在 `spec/type-rules.md`，样本索引在 `docs/样本参考.md`。知识块名称查 `knowledge/`。运行代码时 `PYTHONPATH=src`。
 
@@ -36,7 +36,7 @@ description: Installs this repository into Cursor and opens the 题目分档 UI,
    - `source_index`：原文件位置，只作追溯，不参与计分；
    - `content_hash`：规范化题干 SHA-256 前 16 位；
    - 完整题干转写、四维计数 `(P, R, C, E)` 和一句结构证据。
-5. 核对 `detected = scored + blocked`。题干缺失或图中关键数字不可读则记 `blocked` 并写明原因，不得臆造分数。
+5. 核对 `detected = scored + blocked`。题干缺失则记 `blocked`。图里读不出数字时按 `docs/图形题按解析计分.md` 用解析计分；解析也读不出来则记 `blocked` 并写明原因，不得臆造分数。
 6. 结果按 `content_hash` 或规范化题干排序。打乱清单重算，逐题 τ 与整套 τ 必须相同。
 
 ## 计数与公式
@@ -76,7 +76,7 @@ r_{g-1}=\min(1.28+0.0072D,\,3)
 1. 题目清单与 `detected / scored / blocked`。
 2. 每题的 \((P,R,C,E)\)、\(D\)、\(t_g\)、\(r_{\mathrm{AI}}\)、\(r_{g-1}\)、τ 和结构证据。来源写 `derived_from_question_structure`。
 3. 题序打乱后的等价性结论。
-4. 正课例题和练题的星级。每一对先合成 \(\tau_{\text{套}}\)：差小于 0.03 取平均，差达到 0.03 取较高的 τ。再按 \(\tau_{\text{套}}\) 从小到大依次标 2 到 8 星。调用 `problem_time.stars.assign_stars`。
-5. 输入 docx 里有作业题或晋级题时，才在 2–8 星分配完成之后判断它们。没有的那一块不读、不调用 `assign_levels`、不写进 `inbox/result.json` 和输出 docx。有的那一块先与各星例题、练题比内容相似度，最像哪一星就归那一星所在的班：2 或 3→B，4→A，5→AA，6→AAA，7 或 8→S。班的窗口写死为 B(2,3)、A(3,4)、AA(4,5)、AAA(5,6)、S(7,8)。共用星归把它当作上沿的班。一个班最多留一个内容；落到同一班的题目多于一道时，这些题都不留，全部标成人工审核。晋级赛没有 S，最像 7 星或 8 星时不改判。分配完成之前禁止调用 `assign_levels`，禁止用 τ 选择等级。
+4. 正课例题和练题的星级。每一对先合成 \(\tau_{\text{套}}\)：差小于 0.03 取平均，差达到 0.03 取较高的 τ。全卷 τ 最低的那一道题，不论例题还是练题，所在的一套标 2 星。其余各套按 \(\tau_{\text{套}}\) 从小到大标 3 到 8 星。调用 `problem_time.stars.assign_stars`。
+5. 输入 docx 里有作业题或晋级题时，才在 2–8 星分配完成之后判断它们。没有的那一块不读、不调用 `assign_levels`、不写进 `inbox/result.json` 和输出 docx。有的那一块先与各星例题、练题比内容相似度，最像哪一星就归那一星所在的班：2 或 3→B，4→A，5→AA，6→AAA，7 或 8→S。班的窗口写死为 B(2,3)、A(3,4)、AA(4,5)、AAA(5,6)、S(7,8)。共用星归把它当作上沿的班。作业题和晋级题不自动归班，全部交给人工审核。人选完班型并提交后才写输出文件。晋级赛没有 S，最像 7 星或 8 星时不改判。分配完成之前禁止调用 `assign_levels`，禁止用 τ 选择等级。
 
 以后拿到的题目模板不再带星级。τ 的计算只依赖题面结构和知识库，不需要、也不接受星级作为输入。星级只在 τ 算完后按上一款写回。

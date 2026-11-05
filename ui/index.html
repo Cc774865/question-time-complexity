@@ -25,6 +25,10 @@
         </label>
       </div>
       <ul class="file-list" id="file-list"></ul>
+      <label class="vision">
+        <span>读图</span>
+        <input id="vision-key" type="password" autocomplete="off" placeholder="DeepSeek API" spellcheck="false">
+      </label>
       <div class="module-foot">
         <button type="button" class="start-btn" id="start-work" disabled>开始工作</button>
         <button type="button" class="text-btn" id="clear-input" disabled>清空</button>
@@ -51,6 +55,7 @@
       </div>
       <div id="review-body"></div>
       <div class="module-foot">
+        <p class="review-note" id="review-note" hidden></p>
         <button type="button" class="start-btn" id="review-submit">提交</button>
       </div>
     </section>
