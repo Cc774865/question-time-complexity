@@ -55,3 +55,57 @@ def assign_stars(pairs: list[dict[str, Any]]) -> list[dict[str, Any]]:
         scored[index]["rank"] = rank
         scored[index]["star"] = star
     return scored
+
+
+HOMEWORK_LEVELS = ("B", "A", "AA", "AAA", "S")
+PROMOTION_LEVELS = ("B", "A", "AA", "AAA")
+
+# 晋级赛对应该等级的两颗正课星。作业题对应该等级的一颗作业星。
+LEVEL_STARS: dict[str, tuple[int, int]] = {
+    "B": (2, 3),
+    "A": (3, 4),
+    "AA": (4, 5),
+    "AAA": (5, 6),
+    "S": (7, 8),
+}
+HOMEWORK_STAR: dict[str, int] = {
+    "B": 3,
+    "A": 4,
+    "AA": 5,
+    "AAA": 6,
+    "S": 8,
+}
+
+
+def assign_levels(items: list[dict[str, Any]], kind: str) -> list[dict[str, Any]]:
+    """Rank homework or promotion problems into one level each.
+
+    ``kind`` is ``"homework"`` (B, A, AA, AAA, S) or ``"promotion"``
+    (B, A, AA, AAA; no S). Each item needs ``tau``. Equal τ keeps source order.
+    A count other than the ladder length still ranks from B upward; extras get
+    ``level=None``.
+    """
+    if kind == "homework":
+        ladder = HOMEWORK_LEVELS
+    elif kind == "promotion":
+        ladder = PROMOTION_LEVELS
+    else:
+        raise ValueError("kind 只能是 homework 或 promotion")
+
+    scored: list[dict[str, Any]] = []
+    for index, item in enumerate(items):
+        row = dict(item)
+        row["tau"] = float(item["tau"])
+        row["source_order"] = index
+        scored.append(row)
+
+    order = sorted(range(len(scored)), key=lambda i: (scored[i]["tau"], i))
+    for rank, index in enumerate(order):
+        level = ladder[rank] if rank < len(ladder) else None
+        scored[index]["rank"] = rank
+        scored[index]["level"] = level
+        if level is not None:
+            scored[index]["stars"] = LEVEL_STARS[level]
+            if kind == "homework":
+                scored[index]["homework_star"] = HOMEWORK_STAR[level]
+    return scored

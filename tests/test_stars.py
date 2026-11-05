@@ -1,4 +1,4 @@
-from problem_time.stars import assign_stars, pair_tau
+from problem_time.stars import assign_levels, assign_stars, pair_tau
 
 
 def test_pair_tau_uses_mean_below_gap() -> None:
@@ -38,3 +38,22 @@ def test_stars_follow_ascending_pair_tau() -> None:
     ]
     assert ranked[4]["pair_rule"] == "higher"
     assert ranked[5]["pair_rule"] == "higher"
+
+
+def test_homework_and_promotion_levels() -> None:
+    homework = assign_levels(
+        [{"tau": 0.99}, {"tau": 0.90}, {"tau": 0.95}, {"tau": 0.93}, {"tau": 1.05}],
+        "homework",
+    )
+    assert [row["level"] for row in sorted(homework, key=lambda row: row["rank"])] == [
+        "B", "A", "AA", "AAA", "S",
+    ]
+    promotion = assign_levels(
+        [{"tau": 1.02}, {"tau": 0.91}, {"tau": 0.96}, {"tau": 0.94}],
+        "promotion",
+    )
+    assert [row["level"] for row in sorted(promotion, key=lambda row: row["tau"])] == [
+        "B", "A", "AA", "AAA",
+    ]
+    assert "S" not in {row["level"] for row in promotion}
+    assert promotion[0]["stars"] == (5, 6)

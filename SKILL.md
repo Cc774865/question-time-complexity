@@ -58,6 +58,7 @@ r_{g-1}=\min(1.28+0.0072D,\,3)
 1. 题目清单与 `detected / scored / blocked`。
 2. 每题的 \((P,R,C,E)\)、\(D\)、\(t_g\)、\(r_{\mathrm{AI}}\)、\(r_{g-1}\)、τ 和结构证据。来源写 `derived_from_question_structure`。
 3. 题序打乱后的等价性结论。
-4. 正课例题和练题的星级。每一对先合成 \(\tau_{\text{套}}\)：差小于 0.03 取平均，差达到 0.03 取较高的 τ。再按 \(\tau_{\text{套}}\) 从小到大依次标 2 到 8 星。调用 `problem_time.stars.assign_stars`。作业题和晋级题不进这七档。
+4. 正课例题和练题的星级。每一对先合成 \(\tau_{\text{套}}\)：差小于 0.03 取平均，差达到 0.03 取较高的 τ。再按 \(\tau_{\text{套}}\) 从小到大依次标 2 到 8 星。调用 `problem_time.stars.assign_stars`。
+5. 作业题 5 道，按各自的 τ 从小到大标 B、A、AA、AAA、S 各一道。晋级赛 4 道，按各自的 τ 从小到大标 B、A、AA、AAA 各一道，没有 S。调用 `problem_time.stars.assign_levels`。
 
 以后拿到的题目模板不再带星级。τ 的计算只依赖题面结构和知识库，不需要、也不接受星级作为输入。星级只在 τ 算完后按上一款写回。
