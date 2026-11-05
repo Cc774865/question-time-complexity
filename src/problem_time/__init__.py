@@ -2,12 +2,15 @@
 
 from .calibration import FourDimCounts, score_calibrated_problem
 from .score import ProblemSamples, ProblemTimeResult, aggregate_set, score_problem
+from .stars import assign_stars, pair_tau
 
 __all__ = [
     "FourDimCounts",
     "ProblemSamples",
     "ProblemTimeResult",
     "aggregate_set",
+    "assign_stars",
+    "pair_tau",
     "score_calibrated_problem",
     "score_problem",
 ]
