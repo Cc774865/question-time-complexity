@@ -97,6 +97,8 @@ def assign_levels(
     Calling this before that list exists raises ``LevelsBeforeStarsError``.
     Each item must already carry ``similar_star``: the star whose example and
     practice it resembles. τ is not read and cannot choose the level.
+    A class keeps one item. Two or more items that land on the same class are
+    all removed and marked ``review`` = ``人工审核``.
     """
     if kind not in ("homework", "promotion"):
         raise ValueError("kind 只能是 homework 或 promotion")
@@ -112,17 +114,34 @@ def assign_levels(
         if star not in SIMILAR_STAR_LEVEL:
             raise ValueError(f"similar_star 只能是 2–8，当前={star}")
         level = SIMILAR_STAR_LEVEL[star]
-        if kind == "promotion" and level == "S":
-            row["level"] = None
-            row["similar_star"] = star
-            row["stars"] = LEVEL_STARS["S"]
-            row["rejected"] = "晋级赛没有 S 级"
-            scored.append(row)
-            continue
         row["similar_star"] = star
-        row["level"] = level
+        row["contested_level"] = level
         row["stars"] = LEVEL_STARS[level]
         scored.append(row)
+
+    grouped: dict[str, list[int]] = {}
+    for index, row in enumerate(scored):
+        grouped.setdefault(row["contested_level"], []).append(index)
+
+    for level, indexes in grouped.items():
+        if len(indexes) == 1:
+            row = scored[indexes[0]]
+            if kind == "promotion" and level == "S":
+                row["level"] = None
+                row["rejected"] = "晋级赛没有 S 级"
+            else:
+                row["level"] = level
+            continue
+        stars = sorted({scored[index]["similar_star"] for index in indexes})
+        shown = "、".join(f"{star} 星" for star in stars)
+        reason = f"{level} 班只能留一个内容（最像 {shown}），全部交给人工审核"
+        for index in indexes:
+            row = scored[index]
+            row["level"] = None
+            row["review"] = "人工审核"
+            row["review_reason"] = reason
+            if kind == "promotion" and level == "S":
+                row["rejected"] = "晋级赛没有 S 级"
     return scored
 
 

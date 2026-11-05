@@ -60,3 +60,32 @@ def test_levels_require_finished_stars_and_follow_content() -> None:
     promotion = assign_levels([{"similar_star": 7}], "promotion", ranked)
     assert promotion[0]["level"] is None
     assert promotion[0]["rejected"] == "晋级赛没有 S 级"
+    assert "review" not in promotion[0]
+
+
+def test_same_class_items_go_to_human_review() -> None:
+    ranked = assign_stars([
+        {"pair_id": str(i), "tau_example": 0.8 + i * 0.04, "tau_practice": 0.8 + i * 0.04}
+        for i in range(7)
+    ])
+    same_star = assign_levels(
+        [{"id": "甲", "similar_star": 6}, {"id": "乙", "similar_star": 6}],
+        "homework",
+        ranked,
+    )
+    assert [row["level"] for row in same_star] == [None, None]
+    assert [row["review"] for row in same_star] == ["人工审核", "人工审核"]
+    assert same_star[0]["contested_level"] == "AAA"
+    assert "6 星" in same_star[0]["review_reason"]
+
+    same_class = assign_levels(
+        [{"id": "丙", "similar_star": 2}, {"id": "丁", "similar_star": 3}, {"id": "戊", "similar_star": 4}],
+        "homework",
+        ranked,
+    )
+    assert same_class[0]["level"] is None
+    assert same_class[1]["level"] is None
+    assert same_class[0]["review"] == "人工审核"
+    assert same_class[1]["review"] == "人工审核"
+    assert same_class[2]["level"] == "A"
+    assert "review" not in same_class[2]
