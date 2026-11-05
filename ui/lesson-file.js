@@ -40,6 +40,7 @@
       });
     }
     for (const item of doc.homework || []) {
+      if (!hasQuestion(item)) continue;
       const star = item.star == null ? "" : `（${item.star}星）`;
       sections.push({
         heading: item.heading || `${item.level}-作业题${star}`,
@@ -47,12 +48,24 @@
       });
     }
     for (const item of doc.promotion || []) {
+      if (!hasQuestion(item)) continue;
       sections.push({
         heading: "晋级题",
         lines: item.lines || promotionLines(item, header),
       });
     }
     return sections;
+  }
+
+  function hasQuestion(item) {
+    return Boolean(
+      (item.lines && item.lines.length)
+      || (item.body && item.body.length)
+      || (item.steps && item.steps.length)
+      || item.prompt
+      || item.answer
+      || item.analysis,
+    );
   }
 
   function lessonLines(item) {

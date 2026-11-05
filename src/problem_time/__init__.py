@@ -2,6 +2,7 @@
 
 from .calibration import FourDimCounts, score_calibrated_problem
 from .grade_use import read_grade_use
+from .paper_sections import paper_sections
 from .score import ProblemSamples, ProblemTimeResult, aggregate_set, score_problem
 from .stars import assign_levels, assign_stars, pair_tau
 
@@ -13,6 +14,7 @@ __all__ = [
     "assign_levels",
     "assign_stars",
     "pair_tau",
+    "paper_sections",
     "read_grade_use",
     "score_calibrated_problem",
     "score_problem",
