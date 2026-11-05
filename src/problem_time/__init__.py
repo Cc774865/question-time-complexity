@@ -1,6 +1,7 @@
 """做题时间模型：几何平均为主，中位数对照，三因子加权。"""
 
 from .calibration import FourDimCounts, score_calibrated_problem
+from .grade_use import read_grade_use
 from .score import ProblemSamples, ProblemTimeResult, aggregate_set, score_problem
 from .stars import assign_levels, assign_stars, pair_tau
 
@@ -12,6 +13,7 @@ __all__ = [
     "assign_levels",
     "assign_stars",
     "pair_tau",
+    "read_grade_use",
     "score_calibrated_problem",
     "score_problem",
 ]

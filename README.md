@@ -1,5 +1,13 @@
 # 题目时间复杂度 τ
 
+装进 Cursor 并打开界面：把下面这句发给 Cursor。
+
+```text
+复制 https://github.com/Cc774865/question-time-complexity.git 装到 Cursor 里，并打开界面
+```
+
+Cursor 会把仓库克隆到个人技能目录 `question-time-complexity`，安装依赖，运行 `python scripts/serve_ui.py`，并在浏览器里打开题目分档。界面只有输入、输出、人工审核。选中的文件写到 `inbox/`，结果写到 `inbox/result.json` 后，输出模块给出一个 docx。
+
 独立项目：按题面数学结构估计一道数学题的相对时间指标 τ。小学、初中、高中都能计。文档顺序、解析字数都不进入公式。星级标签也不进入公式——以后拿到的模板不再带星级。
 
 计算过程的正本是 [`docs/计算方法.md`](docs/计算方法.md)。题目文件版式见 [`docs/题目导入模板.md`](docs/题目导入模板.md)。甄别细则与对照表在 [`spec/type-rules.md`](spec/type-rules.md)。样本索引在 [`docs/样本参考.md`](docs/样本参考.md)。
@@ -22,7 +30,9 @@
 ## 目录
 
 ```text
-├── SKILL.md                 # Cursor 技能入口
+├── SKILL.md                 # Cursor 技能入口（含打开界面）
+├── scripts/serve_ui.py      # 打开题目分档界面
+├── ui/                      # 输入、输出、人工审核
 ├── docs/计算方法.md          # 公式、计数规则、手算例
 ├── docs/样本参考.md
 ├── docs/题目导入模板.md
