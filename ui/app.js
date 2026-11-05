@@ -20,6 +20,8 @@ const inputCount = document.querySelector("#input-count");
 const reviewCount = document.querySelector("#review-count");
 const reviewSubmit = document.querySelector("#review-submit");
 const reviewNote = document.querySelector("#review-note");
+const starFoot = document.querySelector("#star-foot");
+const previewSubmit = document.querySelector("#preview-submit");
 
 picker.addEventListener("change", () => {
   addFiles(picker.files);
@@ -243,19 +245,12 @@ function fileRow(label, name, bytes, onClick) {
 function renderStars() {
   const pairs = classification.pairs || [];
   starBoard.replaceChildren();
+  starFoot.hidden = pairs.length === 0;
   if (!pairs.length) return;
   const hint = document.createElement("p");
   hint.className = "empty";
   hint.textContent = "从上到下是 2 星到 8 星。换完顺序后点提交，生成新的预览。";
-  const foot = document.createElement("div");
-  foot.className = "star-submit";
-  const button = document.createElement("button");
-  button.type = "button";
-  button.className = "start-btn";
-  button.textContent = "提交";
-  button.addEventListener("click", submitPreview);
-  foot.append(button);
-  starBoard.append(hint, pairList(pairs), foot);
+  starBoard.append(hint, pairList(pairs));
 }
 
 function renderReview() {
@@ -330,6 +325,8 @@ function paintStars(list) {
     if (kind) kind.textContent = `${index + 2}星`;
   });
 }
+
+previewSubmit.addEventListener("click", submitPreview);
 
 function submitPreview() {
   outputNote.hidden = true;
