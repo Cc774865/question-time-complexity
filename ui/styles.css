@@ -167,6 +167,29 @@ body {
   font-variant-numeric: tabular-nums;
 }
 
+.vision {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vision span {
+  flex: 0 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.vision input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: inherit;
+  background: #fff;
+  color: var(--ink);
+}
+
 .module-foot {
   margin-top: auto;
   display: flex;
@@ -281,6 +304,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.star-row {
+  cursor: grab;
+}
+
+.star-row.dragging {
+  opacity: 0.45;
 }
 
 .review-kind {

@@ -47,7 +47,7 @@ def _extract_code(source: str) -> str:
     text = source.replace("\u200b", "").strip()
     found = _GRADE_LINE.search(text)
     token = found.group(1) if found else text
-    token = token.replace("\u200b", "").strip()
+    token = token.replace("\u200b", "").strip().upper()
     if not _CODE.fullmatch(token):
         raise GradeUseError("读题之前必须先认出使用年级")
     return token

@@ -24,7 +24,8 @@ RESULT = INBOX / "result.json"
 OUTPUT = INBOX / "output.docx"
 START = INBOX / "start.json"
 PROGRESS = INBOX / "progress.json"
-KEPT = {".gitkeep", "result.json", "start.json", "output.docx", "progress.json"}
+VISION = INBOX / "vision.json"
+KEPT = {".gitkeep", "result.json", "start.json", "output.docx", "progress.json", "vision.json"}
 HOST = "127.0.0.1"
 FIRST_PORT = 8765
 LAST_PORT = 8775
@@ -77,6 +78,16 @@ def first_free_port() -> int:
     raise SystemExit("8765–8775 都已被占用")
 
 
+def _with_pairs(result: dict) -> dict:
+    from problem_time.run_paper import lesson_cards
+
+    shown = dict(result)
+    source = INBOX / str(result.get("source") or "")
+    lessons = result.get("base", {}).get("lessons") or []
+    shown["pairs"] = lesson_cards(source, lessons)
+    return shown
+
+
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(UI), **kwargs)
@@ -100,6 +111,9 @@ class Handler(SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(data)
             return
+        if path == "/api/vision":
+            self._json({"configured": _vision_key() != ""})
+            return
         if path == "/api/progress":
             if PROGRESS.is_file():
                 self._json(json.loads(PROGRESS.read_text(encoding="utf-8")))
@@ -110,13 +124,7 @@ class Handler(SimpleHTTPRequestHandler):
             if not RESULT.is_file():
                 self.send_error(404)
                 return
-            data = RESULT.read_bytes()
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json; charset=utf-8")
-            self.send_header("Cache-Control", "no-store")
-            self.send_header("Content-Length", str(len(data)))
-            self.end_headers()
-            self.wfile.write(data)
+            self._result(json.loads(RESULT.read_text(encoding="utf-8")))
             return
         super().do_GET()
 
@@ -131,25 +139,71 @@ class Handler(SimpleHTTPRequestHandler):
                 self.send_error(400)
                 return
             result["review"][int(payload["index"])]["level"] = level
+            result["released"] = False
+            RESULT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+            self._result(result)
+            return
+        if path == "/api/reorder-stars":
+            if not RESULT.is_file():
+                self._json({"ok": False, "message": "还没有开始"})
+                return
+            payload = self._body()
+            result = json.loads(RESULT.read_text(encoding="utf-8"))
+            from problem_time.arrange_docx import order_lesson_stars
+
+            try:
+                order_lesson_stars(result, list(payload.get("order") or []))
+            except (TypeError, ValueError) as exc:
+                self._json({"ok": False, "message": str(exc) or "这份排序和正课对不上"})
+                return
+            result["released"] = False
+            if OUTPUT.is_file():
+                OUTPUT.unlink()
+            RESULT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+            self._result(result)
+            return
+        if path == "/api/submit":
+            if not RESULT.is_file():
+                self._json({"ok": False, "message": "还没有开始"})
+                return
+            result = json.loads(RESULT.read_text(encoding="utf-8"))
+            if any(not item.get("level") for item in result.get("review") or []):
+                self._json({"ok": False, "message": "还有题目没选班型"})
+                return
             from problem_time.arrange_docx import apply_review_levels
 
             apply_review_levels(INBOX, result)
-            data = json.dumps(result, ensure_ascii=False, indent=2).encode("utf-8")
-            RESULT.write_bytes(data)
-            self.send_response(200)
-            self.send_header("Content-Type", "application/json; charset=utf-8")
-            self.send_header("Content-Length", str(len(data)))
-            self.end_headers()
-            self.wfile.write(data)
-            return
-        if path == "/api/start":
-            length = int(self.headers.get("Content-Length", "0"))
-            START.write_bytes(self.rfile.read(length))
+            result["released"] = True
+            RESULT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
             PROGRESS.write_text(
-                json.dumps({"running": True, "percent": 5, "label": "已开始"}, ensure_ascii=False),
+                json.dumps({"running": False, "percent": 100, "label": "完成"}, ensure_ascii=False),
                 encoding="utf-8",
             )
-            self._json({"started": True})
+            shown = _with_pairs(result)
+            self._json({"ok": True, "result": shown})
+            return
+        if path == "/api/vision":
+            payload = self._body()
+            _save_vision_key(str(payload.get("apiKey") or ""))
+            self._json({"configured": _vision_key() != ""})
+            return
+        if path == "/api/start":
+            payload = self._body()
+            if payload.get("apiKey"):
+                _save_vision_key(str(payload["apiKey"]))
+            START.write_text(
+                json.dumps({"files": payload.get("files") or []}, ensure_ascii=False),
+                encoding="utf-8",
+            )
+            if _JOB.acquire(blocking=False):
+                PROGRESS.write_text(
+                    json.dumps({"running": True, "percent": 5, "label": "已开始"}, ensure_ascii=False),
+                    encoding="utf-8",
+                )
+                threading.Thread(target=_run_job, daemon=True).start()
+                self._json({"started": True})
+            else:
+                self._json({"started": False})
             return
         if path != "/api/files":
             self.send_error(404)
@@ -164,6 +218,7 @@ class Handler(SimpleHTTPRequestHandler):
             return
         target = INBOX / name
         target.write_bytes(self.rfile.read(length))
+        _clear_previous_output()
         self._json({"name": name, "size": target.stat().st_size})
 
     def do_DELETE(self) -> None:
@@ -182,11 +237,26 @@ class Handler(SimpleHTTPRequestHandler):
         target = INBOX / name
         if target.is_file() and target.name != "result.json":
             target.unlink()
+        _clear_previous_output()
         self._json({"removed": name})
 
     def end_headers(self) -> None:
         self.send_header("Cache-Control", "no-store")
         super().end_headers()
+
+    def _body(self) -> dict:
+        length = int(self.headers.get("Content-Length", "0"))
+        if length <= 0:
+            return {}
+        return json.loads(self.rfile.read(length).decode("utf-8"))
+
+    def _result(self, result: dict) -> None:
+        data = json.dumps(_with_pairs(result), ensure_ascii=False).encode("utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
 
     def _json(self, payload: dict) -> None:
         data = json.dumps(payload).encode("utf-8")
@@ -203,6 +273,46 @@ class Handler(SimpleHTTPRequestHandler):
         if not name or name in KEPT or name.startswith("."):
             return None
         return name
+
+
+_JOB = threading.Lock()
+
+
+def _vision_key() -> str:
+    if not VISION.is_file():
+        return ""
+    payload = json.loads(VISION.read_text(encoding="utf-8"))
+    return str(payload.get("api_key") or "").strip()
+
+
+def _save_vision_key(api_key: str) -> None:
+    key = api_key.strip()
+    if not key:
+        if VISION.is_file():
+            VISION.unlink()
+        return
+    VISION.write_text(json.dumps({"api_key": key}, ensure_ascii=False), encoding="utf-8")
+
+
+def _clear_previous_output() -> None:
+    for path in (RESULT, OUTPUT):
+        if path.is_file():
+            path.unlink()
+    PROGRESS.write_text(
+        json.dumps({"running": False, "percent": 0, "label": ""}, ensure_ascii=False),
+        encoding="utf-8",
+    )
+
+
+def _run_job() -> None:
+    try:
+        from problem_time.run_paper import run_started
+
+        run_started(INBOX)
+    except Exception:
+        return
+    finally:
+        _JOB.release()
 
 
 def list_files() -> list[dict[str, int | str]]:
