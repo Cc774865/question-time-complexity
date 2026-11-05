@@ -23,6 +23,7 @@ def arrange_docx(
     lessons: list[tuple[int, int, str]],
     homework: list[tuple[int, str]],
     promotion: list[tuple[int, int]],
+    promotion_classes: list[tuple[int, str]] | None = None,
 ) -> None:
     """Write ``dest`` from ``source``.
 
@@ -56,6 +57,11 @@ def arrange_docx(
         for element in block:
             if _plain_text(element).startswith("星级"):
                 _set_plain_text(element, f"星级：{star}star")
+            body.append(element)
+    for index, level in promotion_classes or []:
+        block = promotion_blocks[index]
+        _set_plain_text(block[0], _with_level(_plain_text(block[0]), level, "晋级题"))
+        for element in block:
             body.append(element)
     if sect is not None:
         body.append(sect)
@@ -107,6 +113,14 @@ def _classed_homework(text: str) -> bool:
     return False
 
 
+def _with_level(original: str, level: str, marker: str) -> str:
+    for prefix in ("AAA-", "AA-", "A-", "B-", "S-"):
+        if original.startswith(prefix) and marker in original:
+            original = original[len(prefix):]
+            break
+    return f"{level}-{original}"
+
+
 def _classed_heading(original: str, level: str) -> str:
     for prefix in ("AAA-", "AA-", "A-", "B-", "S-", "AAA", "AA", "A", "B", "S"):
         if original.startswith(prefix) and "作业题" in original[len(prefix):len(prefix) + 4]:
@@ -135,6 +149,37 @@ def _set_plain_text(element, text: str) -> None:
     nodes[0].text = text
     for extra in nodes[1:]:
         extra.text = ""
+
+
+_LEVEL_ORDER = {"B": 0, "A": 1, "AA": 2, "AAA": 3, "S": 4}
+
+
+def apply_review_levels(inbox: Path, result: dict) -> None:
+    """Rebuild the output from the source, adding any class a person picked."""
+    source = inbox / result["source"]
+    dest = inbox / "output.docx"
+    base = result["base"]
+    homework = [tuple(item) for item in base["homework"]]
+    classes: list[tuple[int, str]] = []
+    for item in result["review"]:
+        level = item.get("level") or ""
+        if not level:
+            continue
+        if item["group"] == "homework":
+            homework.append((int(item["block"]), level))
+        else:
+            classes.append((int(item["block"]), level))
+    homework.sort(key=lambda item: _LEVEL_ORDER[item[1]])
+    classes.sort(key=lambda item: _LEVEL_ORDER[item[1]])
+    arrange_docx(
+        source,
+        dest,
+        [tuple(item) for item in base["lessons"]],
+        homework,
+        [tuple(item) for item in base["promotion"]],
+        classes,
+    )
+    result["bytes"] = dest.stat().st_size
 
 
 def _heading(text: str) -> etree._Element:

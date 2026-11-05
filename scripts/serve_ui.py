@@ -7,6 +7,7 @@ Usage (from the repository root):
 from __future__ import annotations
 
 import json
+import sys
 import threading
 import webbrowser
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
@@ -16,6 +17,7 @@ from urllib.parse import parse_qs, urlparse
 from urllib.request import urlopen
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "src"))
 UI = ROOT / "ui"
 INBOX = ROOT / "inbox"
 RESULT = INBOX / "result.json"
@@ -113,6 +115,26 @@ class Handler(SimpleHTTPRequestHandler):
 
     def do_POST(self) -> None:
         path = urlparse(self.path).path
+        if path == "/api/review":
+            length = int(self.headers.get("Content-Length", "0"))
+            payload = json.loads(self.rfile.read(length).decode("utf-8"))
+            result = json.loads(RESULT.read_text(encoding="utf-8"))
+            level = payload.get("level") or ""
+            if level not in {"", "B", "A", "AA", "AAA", "S"}:
+                self.send_error(400)
+                return
+            result["review"][int(payload["index"])]["level"] = level
+            from problem_time.arrange_docx import apply_review_levels
+
+            apply_review_levels(INBOX, result)
+            data = json.dumps(result, ensure_ascii=False, indent=2).encode("utf-8")
+            RESULT.write_bytes(data)
+            self.send_response(200)
+            self.send_header("Content-Type", "application/json; charset=utf-8")
+            self.send_header("Content-Length", str(len(data)))
+            self.end_headers()
+            self.wfile.write(data)
+            return
         if path == "/api/start":
             length = int(self.headers.get("Content-Length", "0"))
             START.write_bytes(self.rfile.read(length))

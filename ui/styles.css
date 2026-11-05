@@ -269,10 +269,8 @@ body {
   white-space: pre-wrap;
 }
 
-.note {
+.level-pick {
   width: 100%;
-  min-height: 64px;
-  resize: vertical;
   border: 1px solid var(--line);
   border-radius: 8px;
   padding: 8px 10px;
@@ -283,7 +281,7 @@ body {
 
 button:focus-visible,
 .pick:focus-within,
-.note:focus-visible {
+.level-pick:focus-visible {
   outline: 2px solid var(--input);
   outline-offset: 2px;
 }

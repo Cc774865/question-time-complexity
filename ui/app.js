@@ -174,15 +174,30 @@ function reviewCard(item, index) {
   const text = document.createElement("p");
   text.className = "review-text";
   text.textContent = item.text || item.title || "";
-  const note = document.createElement("textarea");
-  note.className = "note";
-  note.placeholder = "审核意见";
-  note.value = notes.get(index) || "";
-  note.addEventListener("input", () => {
-    notes.set(index, note.value);
-  });
-  card.append(kind, text, note);
+  const pick = document.createElement("select");
+  pick.className = "level-pick";
+  pick.append(new Option("版型", ""));
+  for (const level of ["B", "A", "AA", "AAA", "S"]) {
+    pick.append(new Option(level, level));
+  }
+  pick.value = item.level || "";
+  pick.addEventListener("change", () => saveReviewLevel(index, pick.value));
+  card.append(kind, text, pick);
   return card;
+}
+
+function saveReviewLevel(index, level) {
+  fetch("/api/review", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ index, level }),
+  })
+    .then((response) => response.text())
+    .then((text) => {
+      if (!text) return;
+      resultStamp = text;
+      setClassification(JSON.parse(text));
+    });
 }
 
 function downloadReadyFile(name) {
