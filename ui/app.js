@@ -8,6 +8,8 @@ const fileList = document.querySelector("#file-list");
 const clearInput = document.querySelector("#clear-input");
 const startWork = document.querySelector("#start-work");
 const outputBody = document.querySelector("#output-body");
+const starBoard = document.querySelector("#star-board");
+const outputNote = document.querySelector("#output-note");
 const reviewBody = document.querySelector("#review-body");
 const progress = document.querySelector("#progress");
 const progressBar = document.querySelector("#progress-bar");
@@ -72,7 +74,7 @@ function setWorking(next) {
 }
 
 function emptyClassification() {
-  return { document: null, review: [], pairs: [] };
+  return { document: null, preview: null, review: [], pairs: [] };
 }
 
 let onServer = false;
@@ -149,6 +151,7 @@ function refreshResult() {
 function render() {
   renderInput();
   renderOutput();
+  renderStars();
   renderReview();
 }
 
@@ -193,49 +196,82 @@ reviewSubmit.addEventListener("click", () => {
 
 function renderOutput() {
   outputBody.replaceChildren();
+  const preview = classification.preview;
   const doc = classification.document;
-  if (!doc) {
-    const waiting = classification.review.length > 0;
-    const ranked = (classification.pairs || []).length > 0;
-    let message = "分档后会给出一个文件。";
-    if (ranked && waiting) message = "排好星级、选定班型并提交后会给出一个文件。";
-    else if (waiting) message = "选定班型并提交后会给出一个文件。";
-    else if (ranked) message = "排好顺序并提交后会给出一个文件。";
-    outputBody.append(emptyLine(message));
+  if (!preview && !doc) {
+    outputBody.append(emptyLine("开始工作后会先给出预览文档。"));
     return;
   }
-  const name = doc.filename || LessonFile.filename(doc);
+  if (preview) {
+    const name = previewName(preview.filename || LessonFile.filename(preview));
+    outputBody.append(fileRow("预览", name, preview.previewBytes || 0, () => downloadFile("/api/preview", name)));
+    for (const revision of preview.previewRevisions || []) {
+      const revisionLabel = previewRevisionName(preview.filename || LessonFile.filename(preview), revision.n);
+      outputBody.append(fileRow("预览", revisionLabel, revision.bytes || 0, () => downloadFile(`/api/preview?n=${revision.n}`, revisionLabel)));
+    }
+  }
+  if (doc) {
+    const name = doc.productionName || productionName(doc.filename || LessonFile.filename(doc));
+    outputBody.append(fileRow("生产", name, doc.bytes || 0, () => downloadFile("/api/output", name)));
+  }
+}
+
+function previewName(filename) {
+  return String(filename || "预览.docx").replace(/\.docx$/i, "") + "-预览.docx";
+}
+
+function previewRevisionName(filename, count) {
+  return String(filename || "预览.docx").replace(/\.docx$/i, "") + `-预览(${count}).docx`;
+}
+
+function productionName(filename) {
+  return String(filename || "生产.docx").replace(/\.docx$/i, "") + "-生产.docx";
+}
+
+function fileRow(label, name, bytes, onClick) {
   const row = document.createElement("div");
   row.className = "out-row";
   const button = document.createElement("button");
   button.type = "button";
   button.className = "small-btn";
   button.textContent = "下载";
-  button.addEventListener("click", () => downloadReadyFile(name));
-  row.append(stamp("DOCX"), named(name, "out-name"), sized(doc.bytes || 0), button);
-  outputBody.append(row);
+  button.addEventListener("click", onClick);
+  row.append(stamp(label), named(name, "out-name"), sized(bytes), button);
+  return row;
+}
+
+function renderStars() {
+  const pairs = classification.pairs || [];
+  starBoard.replaceChildren();
+  if (!pairs.length) return;
+  const hint = document.createElement("p");
+  hint.className = "empty";
+  hint.textContent = "从上到下是 2 星到 8 星。换完顺序后点提交，生成新的预览。";
+  const foot = document.createElement("div");
+  foot.className = "star-submit";
+  const button = document.createElement("button");
+  button.type = "button";
+  button.className = "start-btn";
+  button.textContent = "提交";
+  button.addEventListener("click", submitPreview);
+  foot.append(button);
+  starBoard.append(hint, pairList(pairs), foot);
 }
 
 function renderReview() {
   const items = classification.review;
   const pairs = classification.pairs || [];
-  const bits = [];
-  if (pairs.length) bits.push(`${pairs.length} 套`);
-  if (items.length) bits.push(`${items.length} 道`);
-  reviewCount.textContent = bits.join(" · ") || "0 道";
-  reviewSubmit.disabled = pairs.length === 0 && items.length === 0;
+  reviewCount.textContent = `${items.length} 道`;
+  reviewSubmit.disabled = pairs.length === 0;
   reviewBody.replaceChildren();
-  if (pairs.length) {
-    const hint = document.createElement("p");
-    hint.className = "empty";
-    hint.textContent = "从上到下是 2 星到 8 星。拖拽调整顺序，提交后生成课件。";
-    reviewBody.append(hint, pairList(pairs));
-  }
   if (items.length === 0 && pairs.length === 0) {
     reviewBody.append(emptyLine("没有待审核的题目。"));
     return;
   }
-  if (items.length === 0) return;
+  if (items.length === 0) {
+    reviewBody.append(emptyLine("没有作业题和晋级题。提交后生成生产文档。"));
+    return;
+  }
   const list = document.createElement("ul");
   list.className = "review-list";
   for (const [index, item] of items.entries()) {
@@ -295,8 +331,32 @@ function paintStars(list) {
   });
 }
 
+function submitPreview() {
+  outputNote.hidden = true;
+  fetch("/api/preview-submit", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: "{}",
+  })
+    .then((response) => response.text())
+    .then((text) => {
+      const data = text ? JSON.parse(text) : {};
+      if (data.ok === false) {
+        outputNote.hidden = false;
+        outputNote.textContent = data.message || "预览没有写出";
+        return;
+      }
+      resultStamp = text;
+      setClassification(data);
+    })
+    .catch(() => {
+      outputNote.hidden = false;
+      outputNote.textContent = "预览没有写出";
+    });
+}
+
 function saveStarOrder(order) {
-  reviewNote.hidden = true;
+  outputNote.hidden = true;
   fetch("/api/reorder-stars", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -306,16 +366,16 @@ function saveStarOrder(order) {
     .then((text) => {
       const data = text ? JSON.parse(text) : {};
       if (data.ok === false) {
-        reviewNote.hidden = false;
-        reviewNote.textContent = data.message || "这份排序和正课对不上";
+        outputNote.hidden = false;
+        outputNote.textContent = data.message || "这份排序和正课对不上";
         return;
       }
       resultStamp = text;
       setClassification(data);
     })
     .catch(() => {
-      reviewNote.hidden = false;
-      reviewNote.textContent = "顺序没有记下";
+      outputNote.hidden = false;
+      outputNote.textContent = "顺序没有记下";
     });
 }
 
@@ -354,8 +414,8 @@ function saveReviewLevel(index, level) {
     });
 }
 
-function downloadReadyFile(name) {
-  fetch("/api/output")
+function downloadFile(url, name) {
+  fetch(url)
     .then((response) => {
       if (!response.ok) throw new Error("no output");
       return response.blob();
@@ -430,6 +490,7 @@ function setClassification(next) {
   const hasDocument = Boolean(next.released);
   classification = {
     document: hasDocument ? next : null,
+    preview: next.preview ? next : null,
     review: next.review || [],
     pairs: next.pairs || [],
   };

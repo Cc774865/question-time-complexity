@@ -189,6 +189,33 @@ def _set_plain_text(element, text: str) -> None:
 _LEVEL_ORDER = {"B": 0, "A": 1, "AA": 2, "AAA": 3, "S": 4, "N": 5}
 
 
+def write_star_preview(source: Path, dest: Path, lessons: list) -> None:
+    """Write a preview with the star order. Homework and promotion headings stay as they are."""
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(source, dest)
+    document = Document(dest)
+    header, lesson_blocks, homework_blocks, promotion_blocks = split_blocks(document)
+    body = document.element.body
+    sect = body.find(qn("w:sectPr"))
+    for child in list(body):
+        if child is not sect:
+            body.remove(child)
+    for element in header:
+        body.append(element)
+    for index, star, role in _by_star(lessons):
+        block = lesson_blocks[index]
+        if not block or not _retitle_lesson(block[0], star, role):
+            body.append(_heading(f"{star}星-{role}"))
+        for element in block:
+            body.append(element)
+    for block in homework_blocks + promotion_blocks:
+        for element in block:
+            body.append(element)
+    if sect is not None:
+        body.append(sect)
+    document.save(dest)
+
+
 def write_plan(source: Path, dest: Path, result: dict) -> None:
     """Write the docx from a scored plan.
 
@@ -209,11 +236,16 @@ def write_plan(source: Path, dest: Path, result: dict) -> None:
     arrange_docx(
         source,
         dest,
-        [tuple(item) for item in base["lessons"]],
+        _by_star([tuple(item) for item in base["lessons"]]),
         homework,
         [tuple(item) for item in base["promotion"]],
         classes,
     )
+
+
+def _by_star(lessons: list) -> list[tuple[int, int, str]]:
+    rows = [tuple(item) for item in lessons]
+    return sorted(rows, key=lambda item: (int(item[1]), 0 if str(item[2]) == "例" else 1, int(item[0])))
 
 
 def order_lesson_stars(result: dict, example_blocks: list[int]) -> None:
@@ -230,6 +262,24 @@ def order_lesson_stars(result: dict, example_blocks: list[int]) -> None:
     old_to_new = {star_by_example[block]: new_star[block] for block in blocks}
     for item in lessons:
         item[1] = old_to_new[int(item[1])]
+
+
+def production_filename(filename: str) -> str:
+    return f"{Path(filename).stem}-生产.docx"
+
+
+def write_preview_revision(inbox: Path, result: dict) -> int:
+    """Write the next numbered preview. The count is how many times this was called."""
+    count = int(result.get("previewCount") or 0) + 1
+    source = inbox / str(result.get("source") or "")
+    dest = inbox / f"preview-{count}.docx"
+    write_star_preview(source, dest, [tuple(item) for item in result["base"]["lessons"]])
+    result["previewCount"] = count
+    result["preview"] = True
+    revisions = list(result.get("previewRevisions") or [])
+    revisions.append({"n": count, "bytes": dest.stat().st_size})
+    result["previewRevisions"] = revisions
+    return count
 
 
 def apply_review_levels(inbox: Path, result: dict) -> None:

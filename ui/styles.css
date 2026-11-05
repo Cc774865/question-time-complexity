@@ -296,8 +296,17 @@ body {
 }
 
 #output-body,
+#star-board,
 #review-body {
   flex: 1;
+}
+
+#star-board {
+  margin-top: 12px;
+}
+
+.star-submit {
+  margin-top: 12px;
 }
 
 .review-card {

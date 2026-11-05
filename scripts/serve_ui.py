@@ -22,10 +22,11 @@ UI = ROOT / "ui"
 INBOX = ROOT / "inbox"
 RESULT = INBOX / "result.json"
 OUTPUT = INBOX / "output.docx"
+PREVIEW = INBOX / "preview.docx"
 START = INBOX / "start.json"
 PROGRESS = INBOX / "progress.json"
 VISION = INBOX / "vision.json"
-KEPT = {".gitkeep", "result.json", "start.json", "output.docx", "progress.json", "vision.json"}
+KEPT = {".gitkeep", "result.json", "start.json", "output.docx", "preview.docx", "progress.json", "vision.json"}
 HOST = "127.0.0.1"
 FIRST_PORT = 8765
 LAST_PORT = 8775
@@ -79,12 +80,18 @@ def first_free_port() -> int:
 
 
 def _with_pairs(result: dict) -> dict:
+    from problem_time.arrange_docx import write_star_preview
     from problem_time.run_paper import lesson_cards
 
     shown = dict(result)
     source = INBOX / str(result.get("source") or "")
     lessons = result.get("base", {}).get("lessons") or []
     shown["pairs"] = lesson_cards(source, lessons)
+    if source.is_file() and lessons and not PREVIEW.is_file():
+        write_star_preview(source, PREVIEW, [tuple(item) for item in lessons])
+    if PREVIEW.is_file():
+        shown["preview"] = True
+        shown["previewBytes"] = PREVIEW.stat().st_size
     return shown
 
 
@@ -100,16 +107,24 @@ class Handler(SimpleHTTPRequestHandler):
         if path == "/api/files":
             self._json({"files": list_files()})
             return
+        if path == "/api/preview":
+            token = (parse_qs(urlparse(self.path).query).get("n") or [""])[0]
+            target = PREVIEW
+            if token:
+                if not token.isdigit():
+                    self.send_error(404)
+                    return
+                target = INBOX / f"preview-{int(token)}.docx"
+            if not target.is_file():
+                self.send_error(404)
+                return
+            self._docx(target)
+            return
         if path == "/api/output":
             if not OUTPUT.is_file():
                 self.send_error(404)
                 return
-            data = OUTPUT.read_bytes()
-            self.send_response(200)
-            self.send_header("Content-Type", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
-            self.send_header("Content-Length", str(len(data)))
-            self.end_headers()
-            self.wfile.write(data)
+            self._docx(OUTPUT)
             return
         if path == "/api/vision":
             self._json({"configured": _vision_key() != ""})
@@ -140,6 +155,8 @@ class Handler(SimpleHTTPRequestHandler):
                 return
             result["review"][int(payload["index"])]["level"] = level
             result["released"] = False
+            if OUTPUT.is_file():
+                OUTPUT.unlink()
             RESULT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
             self._result(result)
             return
@@ -162,6 +179,21 @@ class Handler(SimpleHTTPRequestHandler):
             RESULT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
             self._result(result)
             return
+        if path == "/api/preview-submit":
+            if not RESULT.is_file():
+                self._json({"ok": False, "message": "还没有开始"})
+                return
+            result = json.loads(RESULT.read_text(encoding="utf-8"))
+            from problem_time.arrange_docx import write_preview_revision
+
+            try:
+                write_preview_revision(INBOX, result)
+            except (OSError, ValueError, KeyError) as exc:
+                self._json({"ok": False, "message": str(exc) or "预览没有写出"})
+                return
+            RESULT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
+            self._result(result)
+            return
         if path == "/api/submit":
             if not RESULT.is_file():
                 self._json({"ok": False, "message": "还没有开始"})
@@ -170,13 +202,15 @@ class Handler(SimpleHTTPRequestHandler):
             if any(not item.get("level") for item in result.get("review") or []):
                 self._json({"ok": False, "message": "还有题目没选班型"})
                 return
-            from problem_time.arrange_docx import apply_review_levels
+            from problem_time.arrange_docx import apply_review_levels, production_filename
 
             apply_review_levels(INBOX, result)
+            result["productionName"] = production_filename(str(result.get("filename") or "生产.docx"))
             result["released"] = True
+            result["bytes"] = OUTPUT.stat().st_size
             RESULT.write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
             PROGRESS.write_text(
-                json.dumps({"running": False, "percent": 100, "label": "完成"}, ensure_ascii=False),
+                json.dumps({"running": False, "percent": 100, "label": "生产文档已生成"}, ensure_ascii=False),
                 encoding="utf-8",
             )
             shown = _with_pairs(result)
@@ -250,6 +284,14 @@ class Handler(SimpleHTTPRequestHandler):
             return {}
         return json.loads(self.rfile.read(length).decode("utf-8"))
 
+    def _docx(self, path: Path) -> None:
+        data = path.read_bytes()
+        self.send_response(200)
+        self.send_header("Content-Type", "application/vnd.openxmlformats-officedocument.wordprocessingml.document")
+        self.send_header("Content-Length", str(len(data)))
+        self.end_headers()
+        self.wfile.write(data)
+
     def _result(self, result: dict) -> None:
         data = json.dumps(_with_pairs(result), ensure_ascii=False).encode("utf-8")
         self.send_response(200)
@@ -295,7 +337,10 @@ def _save_vision_key(api_key: str) -> None:
 
 
 def _clear_previous_output() -> None:
-    for path in (RESULT, OUTPUT):
+    for path in (RESULT, OUTPUT, PREVIEW):
+        if path.is_file():
+            path.unlink()
+    for path in INBOX.glob("preview-*.docx"):
         if path.is_file():
             path.unlink()
     PROGRESS.write_text(
@@ -315,10 +360,17 @@ def _run_job() -> None:
         _JOB.release()
 
 
+def _private_inbox_file(name: str) -> bool:
+    if name in KEPT or name.startswith("."):
+        return True
+    stem, dot, suffix = name.rpartition(".")
+    return dot == "." and suffix == "docx" and stem.startswith("preview-") and stem.removeprefix("preview-").isdigit()
+
+
 def list_files() -> list[dict[str, int | str]]:
     rows = []
     for item in sorted(INBOX.iterdir(), key=lambda path: path.name):
-        if item.is_file() and item.name not in KEPT and not item.name.startswith("."):
+        if item.is_file() and not _private_inbox_file(item.name):
             rows.append({"name": item.name, "size": item.stat().st_size})
     return rows
 
