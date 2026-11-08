@@ -16,6 +16,7 @@ from docx.oxml.ns import qn
 
 from problem_time.arrange_docx import _classed_homework, split_blocks, write_star_preview
 from problem_time.calibration import score_calibrated_problem
+from problem_time.early_number_counts import early_number_counts, uses_early_picture_numbers
 from problem_time.equation_text import equation_text
 from problem_time.grade_use import GradeUseError, read_grade_use
 from problem_time.paper_sections import paper_sections
@@ -69,13 +70,20 @@ def run_paper(source: Path, dest: Path, progress: Path | None = None, image_read
     week, lesson = _week_and_lesson(header_text)
     if not lessons:
         raise PaperRunError("这份稿里没有题目")
-    lesson_rows = _with_pictures(document, lessons, image_reader, progress)
+    lesson_rows = _with_pictures(document, lessons, image_reader, progress, grade.grades)
 
-    from_solution = any(solution for _, solution in lesson_rows)
-    _write_progress(progress, 45, "正在按解析计算 τ" if from_solution else "正在计算 τ")
+    from_solution = any(solution for _, solution, _mode in lesson_rows)
+    from_early = any(mode == "early" for _stem, _solution, mode in lesson_rows)
+    if from_early:
+        label = "正在按看图认数计算 τ"
+    elif from_solution:
+        label = "正在按解析计算 τ"
+    else:
+        label = "正在计算 τ"
+    _write_progress(progress, 45, label)
     scored = [
-        _score_block(index, stem, solution)
-        for index, (stem, solution) in enumerate(lesson_rows)
+        _score_block(index, stem, solution, mode)
+        for index, (stem, solution, mode) in enumerate(lesson_rows)
     ]
     ranked = assign_stars(_pairs(scored))
 
@@ -134,11 +142,19 @@ def _source_from_start(inbox: Path) -> Path:
     return source
 
 
-def _with_pictures(document, blocks: list[list], image_reader, progress: Path | None) -> list[tuple[str, str | None]]:
-    rows: list[tuple[str, str | None]] = []
+def _with_pictures(document, blocks: list[list], image_reader, progress: Path | None, grades: tuple[int, ...] = ()) -> list[tuple[str, str | None, str]]:
+    rows: list[tuple[str, str | None, str]] = []
     total = len(blocks)
     for index, block in enumerate(blocks):
         text = _stem_text(block)
+        if _early_picture(grades, text, block):
+            _write_progress(
+                progress,
+                15 + int(25 * index / max(total, 1)),
+                f"正在按看图认数计算 {index + 1}/{total}",
+            )
+            rows.append((text, None, "early"))
+            continue
         if _digits_missing(text) and _has_figure_or_formula(block):
             solution = _solution_text(document, block)
             if _usable_solution(solution):
@@ -147,7 +163,7 @@ def _with_pictures(document, blocks: list[list], image_reader, progress: Path | 
                     15 + int(25 * index / max(total, 1)),
                     f"正在按解析计算 {index + 1}/{total}",
                 )
-                rows.append((text, solution))
+                rows.append((text, solution, ""))
                 continue
         images = stem_images(document, block)
         written = text
@@ -158,8 +174,12 @@ def _with_pictures(document, blocks: list[list], image_reader, progress: Path | 
             raise PaperRunError("题干里的数字在图片中。请先在输入区填写 DeepSeek 读图 API")
         if images and _digits_missing(text) and _needs_a_digit(written):
             raise PaperRunError("读图之后仍然没有数字，所以没有出文件")
-        rows.append((text, None))
+        rows.append((text, None, ""))
     return rows
+
+
+def _early_picture(grades: tuple[int, ...], text: str, block: list) -> bool:
+    return uses_early_picture_numbers(grades, text) and _has_figure_or_formula(block)
 
 
 def _digits_missing(text: str) -> bool:
@@ -258,8 +278,13 @@ def lesson_cards(source: Path, lessons: list) -> list[dict]:
     return [grouped[star] for star in sorted(grouped)]
 
 
-def _score_block(index: int, stem: str, solution: str | None) -> dict:
-    counts = solution_counts(solution, stem) if solution else structure_counts(stem)
+def _score_block(index: int, stem: str, solution: str | None, mode: str = "") -> dict:
+    if mode == "early":
+        counts = early_number_counts(stem)
+    elif solution:
+        counts = solution_counts(solution, stem)
+    else:
+        counts = structure_counts(stem)
     scored = score_calibrated_problem(f"lesson-{index}", stem, counts, role="例" if index % 2 == 0 else "练")
     return {"block": index, "stem": stem, "tau": scored["tau"]}
 
