@@ -237,6 +237,96 @@ def test_a_figure_without_digits_is_scored_from_the_solution() -> None:
         assert "代入得6" in text
 
 
+def test_the_early_counter_does_not_touch_other_questions() -> None:
+    import problem_time.run_paper as paper
+
+    original = paper.early_number_counts
+
+    def boom(stem: str):
+        raise AssertionError(stem)
+
+    paper.early_number_counts = boom
+    try:
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            source = root / "in.docx"
+            document = Document()
+            document.add_paragraph("周次：W1")
+            document.add_paragraph("使用年级：L1")
+            document.add_paragraph("课次：2")
+            document.add_paragraph("题目")
+            document.add_paragraph("124 × 3 ＝")
+            document.add_paragraph("答案：372")
+            document.add_paragraph("题目")
+            document.add_paragraph("看图写数。")
+            document.add_paragraph("答案：6")
+            document.save(source)
+            run_paper(source, root / "out.docx")
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            source = root / "in.docx"
+            picture = root / "dot.png"
+            _write_png(picture)
+            document = Document()
+            document.add_paragraph("周次：W1")
+            document.add_paragraph("使用年级：L6")
+            document.add_paragraph("课次：2")
+            _lesson(document, picture, "数一数，图里一共有几个。", "看图即可")
+            _lesson(document, picture, "再数一数，图里一共有几只。", "看图即可")
+            document.save(source)
+            try:
+                run_paper(source, root / "out.docx")
+            except PaperRunError as exc:
+                assert "图片" in str(exc)
+            else:
+                raise AssertionError("grade 6 counting used the early counter")
+    finally:
+        paper.early_number_counts = original
+
+
+def test_grade_one_picture_counting_does_not_ask_for_a_reader() -> None:
+    with tempfile.TemporaryDirectory() as folder:
+        root = Path(folder)
+        source = root / "in.docx"
+        picture = root / "dot.png"
+        _write_png(picture)
+        document = Document()
+        document.add_paragraph("周次：W1")
+        document.add_paragraph("使用年级：L1")
+        document.add_paragraph("课次：1")
+        _lesson(document, picture, "数一数，图里一共有几个。", "看图即可")
+        _lesson(document, picture, "有的小动物挡住了，数一数一共有几只。", "看图即可")
+        document.save(source)
+
+        def reader(images, context):
+            raise AssertionError("grade 1 counting does not read the picture")
+
+        result = run_paper(source, root / "out.docx", image_reader=reader)
+        assert result["header"]["grade"] == "L1"
+        assert (root / "out.docx").is_file()
+
+
+def test_grade_four_picture_counting_still_needs_a_digit() -> None:
+    with tempfile.TemporaryDirectory() as folder:
+        root = Path(folder)
+        source = root / "in.docx"
+        picture = root / "dot.png"
+        _write_png(picture)
+        document = Document()
+        document.add_paragraph("周次：W1")
+        document.add_paragraph("使用年级：L4")
+        document.add_paragraph("课次：1")
+        _lesson(document, picture, "数一数，图里一共有几个。", "看图即可")
+        _lesson(document, picture, "再数一数，图里一共有几只。", "看图即可")
+        document.save(source)
+        try:
+            run_paper(source, root / "out.docx")
+        except PaperRunError as exc:
+            assert "图片" in str(exc)
+        else:
+            raise AssertionError("grade 4 counting was scored as an early picture")
+
+
 def test_picture_numbers_do_not_become_a_file() -> None:
     with tempfile.TemporaryDirectory() as folder:
         inbox = Path(folder)
