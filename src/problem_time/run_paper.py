@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import re
+import shutil
 from pathlib import Path
 
 from docx import Document
@@ -36,24 +37,49 @@ class PaperRunError(RuntimeError):
 
 
 def run_started(inbox: Path, image_reader=None) -> dict:
-    """Score the docx named in ``inbox/start.json`` and write the output there."""
+    """Score every docx or markdown named in ``inbox/start.json``."""
     progress = inbox / "progress.json"
+    current = ""
     try:
-        _write_progress(progress, 8, "正在读课头")
-        source = _source_from_start(inbox)
+        sources = _sources_from_start(inbox)
         if image_reader is None:
             api_key = _api_key(inbox)
             image_reader = deepseek_reader(api_key) if api_key else None
-        result = run_paper(source, inbox / "preview.docx", progress, image_reader)
+        batch: list[dict] = []
+        used: set[str] = set()
+        primary: dict | None = None
+        total = len(sources)
+        for index, (original, source) in enumerate(sources):
+            current = original
+            _write_progress(progress, 8 + int(70 * index / total), f"正在计算 {index + 1}/{total}")
+            scratch = inbox / f".batch-{index}.docx"
+            result = run_paper(source, scratch, progress, image_reader)
+            preview_name = _unique_preview_name(str(result["filename"]), used)
+            scratch.replace(inbox / preview_name)
+            result["previewName"] = preview_name
+            result["previewBytes"] = (inbox / preview_name).stat().st_size
+            result["inputName"] = original
+            if index == 0:
+                shutil.copyfile(inbox / preview_name, inbox / "preview.docx")
+                primary = result
+            batch.append({
+                "filename": result["filename"],
+                "previewName": preview_name,
+                "previewBytes": result["previewBytes"],
+                "inputName": original,
+            })
+        assert primary is not None
+        primary["batch"] = batch
         (inbox / "result.json").write_text(
-            json.dumps(result, ensure_ascii=False, indent=2),
+            json.dumps(primary, ensure_ascii=False, indent=2),
             encoding="utf-8",
         )
         _write_progress(progress, 100, "预览已生成，可拖拽调整星级", running=False)
-        return result
+        return primary
     except (PaperRunError, GradeUseError, ImageReadError) as exc:
         _clear_previous(inbox)
-        _write_progress(progress, 0, str(exc), running=False)
+        message = f"{current}：{exc}" if current else str(exc)
+        _write_progress(progress, 0, message, running=False)
         raise
     except Exception as exc:
         _clear_previous(inbox)
@@ -127,6 +153,46 @@ def run_paper(source: Path, dest: Path, progress: Path | None = None, image_read
     return result
 
 
+def _sources_from_start(inbox: Path) -> list[tuple[str, Path]]:
+    start = inbox / "start.json"
+    if not start.is_file():
+        raise PaperRunError("还没有开始")
+    payload = json.loads(start.read_text(encoding="utf-8"))
+    names = [str(name) for name in payload.get("files", [])]
+    sources: list[tuple[str, Path]] = []
+    for name in names:
+        source = inbox / Path(name).name
+        lower = source.name.lower()
+        if lower.endswith(".docx"):
+            if not source.is_file():
+                raise PaperRunError("找不到这份输入")
+            sources.append((source.name, source))
+            continue
+        if not lower.endswith((".md", ".markdown")):
+            continue
+        if not source.is_file():
+            raise PaperRunError("找不到这份输入")
+        from problem_time.markdown_docx import write_markdown_docx
+
+        working = inbox / f".{source.stem}.docx"
+        write_markdown_docx(source, working)
+        sources.append((source.name, working))
+    if not sources:
+        raise PaperRunError("开始工作需要一份 docx 或 md")
+    return sources
+
+
+def _unique_preview_name(filename: str, used: set[str]) -> str:
+    stem = Path(filename).stem or "预览"
+    name = f"{stem}-预览.docx"
+    serial = 2
+    while name in used:
+        name = f"{stem}-预览-{serial}.docx"
+        serial += 1
+    used.add(name)
+    return name
+
+
 def _source_from_start(inbox: Path) -> Path:
     start = inbox / "start.json"
     if not start.is_file():
@@ -134,12 +200,22 @@ def _source_from_start(inbox: Path) -> Path:
     payload = json.loads(start.read_text(encoding="utf-8"))
     names = [str(name) for name in payload.get("files", [])]
     chosen = next((name for name in names if name.lower().endswith(".docx")), "")
-    if not chosen:
-        raise PaperRunError("开始工作需要一份 docx")
-    source = inbox / Path(chosen).name
+    if chosen:
+        source = inbox / Path(chosen).name
+        if not source.is_file():
+            raise PaperRunError("找不到这份输入")
+        return source
+    markdown = next((name for name in names if name.lower().endswith((".md", ".markdown"))), "")
+    if not markdown:
+        raise PaperRunError("开始工作需要一份 docx 或 md")
+    source = inbox / Path(markdown).name
     if not source.is_file():
         raise PaperRunError("找不到这份输入")
-    return source
+    from problem_time.markdown_docx import write_markdown_docx
+
+    working = inbox / f".{source.stem}.docx"
+    write_markdown_docx(source, working)
+    return working
 
 
 def _with_pictures(document, blocks: list[list], image_reader, progress: Path | None, grades: tuple[int, ...] = ()) -> list[tuple[str, str | None, str]]:
@@ -437,6 +513,12 @@ def _clear_previous(inbox: Path) -> None:
         if path.is_file():
             path.unlink()
     for path in inbox.glob("preview-*.docx"):
+        if path.is_file():
+            path.unlink()
+    for path in inbox.glob("*-预览*.docx"):
+        if path.is_file():
+            path.unlink()
+    for path in inbox.glob(".batch-*.docx"):
         if path.is_file():
             path.unlink()
 

@@ -17,12 +17,18 @@
         <span class="count" id="input-count">0 个文件</span>
       </div>
       <div class="drop" id="drop">
-        <p class="drop-title">把文件拖到这里</p>
-        <p class="drop-note">docx、md 等文档，可一次选多个</p>
-        <label class="pick">
-          选择文件
-          <input id="picker" type="file" multiple accept=".docx,.doc,.md,.markdown,.txt,.pdf,.rtf,.json,.csv,.html,.htm">
-        </label>
+        <p class="drop-title">把文件或文件夹拖到这里</p>
+        <p class="drop-note">文件夹里的文档会全部放进来</p>
+        <div class="drop-actions">
+          <label class="pick">
+            选择文件
+            <input id="picker" type="file" multiple accept=".docx,.doc,.md,.markdown,.txt,.pdf,.rtf,.json,.csv,.html,.htm">
+          </label>
+          <label class="pick ghost">
+            选择文件夹
+            <input id="folder-picker" type="file" webkitdirectory directory multiple>
+          </label>
+        </div>
       </div>
       <ul class="file-list module-scroll" id="file-list"></ul>
       <label class="vision">

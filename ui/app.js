@@ -4,6 +4,7 @@ const notes = new Map();
 
 const drop = document.querySelector("#drop");
 const picker = document.querySelector("#picker");
+const folderPicker = document.querySelector("#folder-picker");
 const fileList = document.querySelector("#file-list");
 const clearInput = document.querySelector("#clear-input");
 const startWork = document.querySelector("#start-work");
@@ -28,6 +29,11 @@ picker.addEventListener("change", () => {
   picker.value = "";
 });
 
+folderPicker.addEventListener("change", () => {
+  addFiles(folderPicker.files);
+  folderPicker.value = "";
+});
+
 drop.addEventListener("dragover", (event) => {
   event.preventDefault();
   drop.classList.add("over");
@@ -40,7 +46,7 @@ drop.addEventListener("dragleave", () => {
 drop.addEventListener("drop", (event) => {
   event.preventDefault();
   drop.classList.remove("over");
-  addFiles(event.dataTransfer.files);
+  filesFromDrop(event.dataTransfer).then((list) => addFiles(list));
 });
 
 startWork.addEventListener("click", () => {
@@ -83,13 +89,65 @@ let onServer = false;
 let resultStamp = "";
 let working = false;
 
+const KEPT_EXTENSION = /\.(docx|doc|md|markdown|txt|pdf|rtf|json|csv|html|htm)$/i;
+
+function keepFile(name) {
+  const base = String(name || "").split(/[/\\]/).pop();
+  if (!base || base.startsWith(".") || base.startsWith("~$")) return false;
+  return KEPT_EXTENSION.test(base);
+}
+
+function uploadName(file) {
+  const relative = String(file.webkitRelativePath || "").split("/").filter(Boolean);
+  if (relative.length > 1) return relative.slice(-2).join("__");
+  return file.name;
+}
+
+function filesFromDrop(dataTransfer) {
+  const items = [...(dataTransfer.items || [])];
+  if (!items.length || !items[0].webkitGetAsEntry) return Promise.resolve([...dataTransfer.files]);
+  const collected = [];
+  return Promise.all(items.map((item) => {
+    const entry = item.webkitGetAsEntry && item.webkitGetAsEntry();
+    return entry ? walkEntry(entry, collected) : Promise.resolve();
+  })).then(() => collected);
+}
+
+function walkEntry(entry, collected) {
+  return new Promise((resolve) => {
+    if (entry.isFile) {
+      entry.file((file) => {
+        if (keepFile(file.name)) collected.push(file);
+        resolve();
+      }, () => resolve());
+      return;
+    }
+    if (!entry.isDirectory) {
+      resolve();
+      return;
+    }
+    const reader = entry.createReader();
+    const read = () => {
+      reader.readEntries((entries) => {
+        if (!entries.length) {
+          resolve();
+          return;
+        }
+        Promise.all(entries.map((child) => walkEntry(child, collected))).then(read, () => resolve());
+      }, () => resolve());
+    };
+    read();
+  });
+}
+
 function addFiles(list) {
+  const chosen = [...list].filter((file) => keepFile(uploadName(file)));
   if (!onServer) {
-    for (const file of list) files.push(file);
+    for (const file of chosen) files.push(file);
     render();
     return;
   }
-  const uploads = [...list].map((file) => fetch(`/api/files?name=${encodeURIComponent(file.name)}`, {
+  const uploads = chosen.map((file) => fetch(`/api/files?name=${encodeURIComponent(uploadName(file))}`, {
     method: "POST",
     body: file,
   }));
@@ -204,17 +262,52 @@ function renderOutput() {
     outputBody.append(emptyLine("开始工作后会先给出预览文档。"));
     return;
   }
-  if (preview) {
+  const names = outputNames(preview, doc);
+  if (names.length > 1) {
+    const batch = document.createElement("button");
+    batch.type = "button";
+    batch.className = "start-btn batch-download";
+    batch.textContent = `批量下载 ${names.length} 份`;
+    batch.addEventListener("click", () => downloadFile("/api/previews.zip", "预览.zip"));
+    outputBody.append(batch);
+  }
+  if (preview && (preview.batch || []).length) {
+    preview.batch.forEach((paper, index) => {
+      const name = paper.previewName || previewName(paper.filename);
+      outputBody.append(fileRow("预览", name, paper.previewBytes || 0, () => downloadFile(`/api/preview?name=${encodeURIComponent(name)}`, name)));
+      if (index === 0) appendPreviewRevisions(preview);
+    });
+  } else if (preview) {
     const name = previewName(preview.filename || LessonFile.filename(preview));
     outputBody.append(fileRow("预览", name, preview.previewBytes || 0, () => downloadFile("/api/preview", name)));
-    for (const revision of preview.previewRevisions || []) {
-      const revisionLabel = previewRevisionName(preview.filename || LessonFile.filename(preview), revision.n);
-      outputBody.append(fileRow("预览", revisionLabel, revision.bytes || 0, () => downloadFile(`/api/preview?n=${revision.n}`, revisionLabel)));
-    }
+    appendPreviewRevisions(preview);
   }
   if (doc) {
     const name = doc.productionName || productionName(doc.filename || LessonFile.filename(doc));
     outputBody.append(fileRow("生产", name, doc.bytes || 0, () => downloadFile("/api/output", name)));
+  }
+}
+
+function outputNames(preview, doc) {
+  const names = [];
+  if (preview && (preview.batch || []).length) {
+    for (const paper of preview.batch) names.push(paper.previewName || previewName(paper.filename));
+  } else if (preview) {
+    names.push(previewName(preview.filename || LessonFile.filename(preview)));
+  }
+  if (preview) {
+    for (const revision of preview.previewRevisions || []) {
+      names.push(previewRevisionName(preview.filename || LessonFile.filename(preview), revision.n));
+    }
+  }
+  if (doc) names.push(doc.productionName || productionName(doc.filename || LessonFile.filename(doc)));
+  return names;
+}
+
+function appendPreviewRevisions(preview) {
+  for (const revision of preview.previewRevisions || []) {
+    const revisionLabel = previewRevisionName(preview.filename || LessonFile.filename(preview), revision.n);
+    outputBody.append(fileRow("预览", revisionLabel, revision.bytes || 0, () => downloadFile(`/api/preview?n=${revision.n}`, revisionLabel)));
   }
 }
 
@@ -249,7 +342,9 @@ function renderStars() {
   if (!pairs.length) return;
   const hint = document.createElement("p");
   hint.className = "empty";
-  hint.textContent = "从上到下是 2 星到 8 星。换完顺序后点提交，生成新的预览。";
+  const batch = (classification.preview && classification.preview.batch) || [];
+  const subject = batch.length > 1 ? `${batch[0].previewName} 的星级。` : "";
+  hint.textContent = `${subject}从上到下是 2 星到 8 星。换完顺序后点提交，生成新的预览。`;
   starBoard.append(hint, pairList(pairs));
 }
 
@@ -267,12 +362,29 @@ function renderReview() {
     reviewBody.append(emptyLine("没有作业题和晋级题。提交后生成生产文档。"));
     return;
   }
+  const hint = document.createElement("p");
+  hint.className = "empty";
+  hint.textContent = "作业题和晋级题分开。每道点一个班型，选完再提交。";
+  reviewBody.append(hint);
+  const homework = [];
+  const promotion = [];
+  items.forEach((item, index) => {
+    (item.group === "promotion" || item.kind === "晋级题" ? promotion : homework).push({ item, index });
+  });
+  if (homework.length) reviewBody.append(reviewGroup("作业题", homework));
+  if (promotion.length) reviewBody.append(reviewGroup("晋级题", promotion));
+}
+
+function reviewGroup(title, rows) {
+  const group = document.createElement("section");
+  group.className = "review-group";
+  const heading = document.createElement("h3");
+  heading.textContent = `${title} · ${rows.length} 道`;
   const list = document.createElement("ul");
   list.className = "review-list";
-  for (const [index, item] of items.entries()) {
-    list.append(reviewCard(item, index));
-  }
-  reviewBody.append(list);
+  for (const row of rows) list.append(reviewCard(row.item, row.index));
+  group.append(heading, list);
+  return group;
 }
 
 function pairList(pairs) {
@@ -385,15 +497,18 @@ function reviewCard(item, index) {
   const text = document.createElement("p");
   text.className = "review-text";
   text.textContent = item.text || item.title || "";
-  const pick = document.createElement("select");
-  pick.className = "level-pick";
-  pick.append(new Option("班型", ""));
+  const choices = document.createElement("div");
+  choices.className = "level-choices";
   for (const level of ["B", "A", "AA", "AAA", "S"]) {
-    pick.append(new Option(level, level));
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "level-choice";
+    if (item.level === level) button.classList.add("chosen");
+    button.textContent = level;
+    button.addEventListener("click", () => saveReviewLevel(index, item.level === level ? "" : level));
+    choices.append(button);
   }
-  pick.value = item.level || "";
-  pick.addEventListener("change", () => saveReviewLevel(index, pick.value));
-  card.append(kind, text, pick);
+  card.append(kind, text, choices);
   return card;
 }
 

@@ -6,10 +6,12 @@ Usage (from the repository root):
 
 from __future__ import annotations
 
+import io
 import json
 import sys
 import threading
 import webbrowser
+import zipfile
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 from urllib.error import URLError
@@ -108,9 +110,17 @@ class Handler(SimpleHTTPRequestHandler):
             self._json({"files": list_files()})
             return
         if path == "/api/preview":
-            token = (parse_qs(urlparse(self.path).query).get("n") or [""])[0]
+            query = parse_qs(urlparse(self.path).query)
+            token = (query.get("n") or [""])[0]
+            chosen = (query.get("name") or [""])[0]
             target = PREVIEW
-            if token:
+            if chosen:
+                safe = Path(chosen).name
+                if safe != chosen or not safe.endswith(".docx") or "预览" not in safe:
+                    self.send_error(404)
+                    return
+                target = INBOX / safe
+            elif token:
                 if not token.isdigit():
                     self.send_error(404)
                     return
@@ -119,6 +129,17 @@ class Handler(SimpleHTTPRequestHandler):
                 self.send_error(404)
                 return
             self._docx(target)
+            return
+        if path == "/api/previews.zip":
+            payload = _zip_previews()
+            if payload is None:
+                self.send_error(404)
+                return
+            self.send_response(200)
+            self.send_header("Content-Type", "application/zip")
+            self.send_header("Content-Length", str(len(payload)))
+            self.end_headers()
+            self.wfile.write(payload)
             return
         if path == "/api/output":
             if not OUTPUT.is_file():
@@ -336,11 +357,49 @@ def _save_vision_key(api_key: str) -> None:
     VISION.write_text(json.dumps({"api_key": key}, ensure_ascii=False), encoding="utf-8")
 
 
+def _zip_previews() -> bytes | None:
+    if not RESULT.is_file():
+        return None
+    result = json.loads(RESULT.read_text(encoding="utf-8"))
+    entries: list[tuple[str, Path]] = []
+    seen: set[str] = set()
+
+    def add(name: str, path: Path) -> None:
+        safe = Path(name).name
+        if not safe or safe in seen or safe != name or not path.is_file():
+            return
+        entries.append((safe, path))
+        seen.add(safe)
+
+    for item in result.get("batch") or []:
+        add(str(item.get("previewName") or ""), INBOX / str(item.get("previewName") or ""))
+    if not entries and PREVIEW.is_file():
+        stem = Path(str(result.get("filename") or "预览.docx")).stem
+        add(f"{stem}-预览.docx", PREVIEW)
+    for revision in result.get("previewRevisions") or []:
+        number = revision.get("n")
+        if isinstance(number, int) or (isinstance(number, str) and str(number).isdigit()):
+            stem = Path(str(result.get("filename") or "预览.docx")).stem
+            add(f"{stem}-预览({int(number)}).docx", INBOX / f"preview-{int(number)}.docx")
+    if result.get("released") and OUTPUT.is_file():
+        add(str(result.get("productionName") or "生产.docx"), OUTPUT)
+    if not entries:
+        return None
+    buffer = io.BytesIO()
+    with zipfile.ZipFile(buffer, "w", compression=zipfile.ZIP_DEFLATED) as archive:
+        for name, path in entries:
+            archive.write(path, arcname=name)
+    return buffer.getvalue()
+
+
 def _clear_previous_output() -> None:
     for path in (RESULT, OUTPUT, PREVIEW):
         if path.is_file():
             path.unlink()
     for path in INBOX.glob("preview-*.docx"):
+        if path.is_file():
+            path.unlink()
+    for path in INBOX.glob("*-预览*.docx"):
         if path.is_file():
             path.unlink()
     PROGRESS.write_text(
@@ -364,6 +423,8 @@ def _private_inbox_file(name: str) -> bool:
     if name in KEPT or name.startswith("."):
         return True
     stem, dot, suffix = name.rpartition(".")
+    if dot == "." and suffix == "docx" and "预览" in stem:
+        return True
     return dot == "." and suffix == "docx" and stem.startswith("preview-") and stem.removeprefix("preview-").isdigit()
 
 
