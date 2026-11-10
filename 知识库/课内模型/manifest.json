@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "grades": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "source_file": "sources.json",
+  "model_files": [
+    "grade-1/models.json",
+    "grade-2/models.json",
+    "grade-3/models.json",
+    "grade-4/models.json",
+    "grade-5/models.json",
+    "grade-6/models.json",
+    "grade-7/models.json",
+    "grade-8/models.json",
+    "grade-9/models.json"
+  ],
+  "seed_file": "model-seeds.json",
+  "model_count": 119,
+  "generated_by": "scripts/build_textbook_models.py",
+  "generated_at": "2026-11-09",
+  "formal_scoring": false
+}

@@ -1,0 +1,827 @@
+{
+  "grade": 2,
+  "publisher": "人民教育出版社",
+  "school_system": "六三制",
+  "scope": "教材模型摘要；不含教材题目原文",
+  "models": [
+    {
+      "id": "pep-g2-add-sub-estimate",
+      "name": "几百几十加减与估算",
+      "grade": 2,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p064",
+        "cnm_p065",
+        "cnm_p066",
+        "cnm_p071",
+        "cnm_p072"
+      ],
+      "model_summary": "口算对齐；笔算竖式；估算验合理性",
+      "trigger_features": {
+        "stem_terms": [
+          "估算",
+          "几百几十"
+        ],
+        "solution_terms": [
+          "竖式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "口算对齐；笔算竖式；估算验合理性",
+      "common_variants": [
+        "不进退位",
+        "连续运算"
+      ],
+      "uncommon_transforms": [
+        "关系式填空"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-l",
+      "item_refs": [
+        {
+          "chapter": "二年级下册 第4单元 万以内的加法和减法",
+          "section": "二年级下册 第4单元 万以内的加法和减法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-average-division",
+      "name": "平均分（等分/包含）",
+      "grade": 2,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p263",
+        "cnm_p264"
+      ],
+      "model_summary": "画圈分；除法列式",
+      "trigger_features": {
+        "stem_terms": [
+          "平均分",
+          "每份同样多"
+        ],
+        "solution_terms": [
+          "画圈分",
+          "除法列式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "画圈分；除法列式",
+      "common_variants": [
+        "等分",
+        "包含"
+      ],
+      "uncommon_transforms": [
+        "有余不可整除预告"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-u",
+      "item_refs": [
+        {
+          "chapter": "二年级上册 第3单元 1～6的表内除法",
+          "section": "二年级上册 第3单元 1～6的表内除法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-classify-tally",
+      "name": "分类与整理",
+      "grade": 2,
+      "semester": "上",
+      "domain": "统计与概率",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p037",
+        "cnm_p261"
+      ],
+      "model_summary": "定标准；分组记录；读表",
+      "trigger_features": {
+        "stem_terms": [
+          "分类",
+          "整理",
+          "统计表"
+        ],
+        "solution_terms": [
+          "定标准",
+          "分组记录"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "定标准；分组记录；读表",
+      "common_variants": [
+        "单标准",
+        "逐层分类"
+      ],
+      "uncommon_transforms": [
+        "双标准交叉"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-u",
+      "item_refs": [
+        {
+          "chapter": "二年级上册 第1单元 分类与整理",
+          "section": "二年级上册 第1单元 分类与整理",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-compass-route",
+      "name": "东东南西北与路线",
+      "grade": 2,
+      "semester": "上",
+      "domain": "综合与实践",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p049",
+        "cnm_p267"
+      ],
+      "model_summary": "定观测点；按方向转折；描述路径",
+      "trigger_features": {
+        "stem_terms": [
+          "向东",
+          "路线",
+          "导游"
+        ],
+        "solution_terms": [
+          "定观测点",
+          "按方向转折"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "定观测点；按方向转折；描述路径",
+      "common_variants": [
+        "网格图",
+        "实地"
+      ],
+      "uncommon_transforms": [
+        "逆路线"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-u",
+      "item_refs": [
+        {
+          "chapter": "二年级上册 综合与实践 校园小导游",
+          "section": "二年级上册 综合与实践 校园小导游",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-division-meaning",
+      "name": "除法意义与口诀求商",
+      "grade": 2,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p043",
+        "cnm_p044",
+        "cnm_p046"
+      ],
+      "model_summary": "分物或包含；口诀求商",
+      "trigger_features": {
+        "stem_terms": [
+          "平均分",
+          "每份",
+          "除法"
+        ],
+        "solution_terms": [
+          "口诀"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "分物或包含；口诀求商",
+      "common_variants": [
+        "等分",
+        "包含求份数"
+      ],
+      "uncommon_transforms": [
+        "乘除互逆填空"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-u",
+      "item_refs": [
+        {
+          "chapter": "二年级上册 第3单元 1～6的表内除法",
+          "section": "二年级上册 第3单元 1～6的表内除法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-measure-cm-m",
+      "name": "厘米米测量",
+      "grade": 2,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p040",
+        "cnm_p041",
+        "cnm_p265",
+        "cnm_p266"
+      ],
+      "model_summary": "选单位；尺量/估量；单位比较",
+      "trigger_features": {
+        "stem_terms": [
+          "量",
+          "估测",
+          "线段"
+        ],
+        "solution_terms": [
+          "选单位",
+          "尺量/估量"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "选单位；尺量/估量；单位比较",
+      "common_variants": [
+        "身体尺",
+        "比长短"
+      ],
+      "uncommon_transforms": [
+        "两次测量求差"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-u",
+      "item_refs": [
+        {
+          "chapter": "二年级上册 第4单元 厘米和米",
+          "section": "二年级上册 第4单元 厘米和米",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-multi-step-two-questions",
+      "name": "连续两问",
+      "grade": 2,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p268",
+        "cnm_p219"
+      ],
+      "model_summary": "拆两小问；第一问结果作第二问条件",
+      "trigger_features": {
+        "stem_terms": [
+          "先…再…",
+          "两问"
+        ],
+        "solution_terms": [
+          "拆两小问",
+          "第一问结果作第二问条件"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "拆两小问；第一问结果作第二问条件",
+      "common_variants": [
+        "乘除交替"
+      ],
+      "uncommon_transforms": [
+        "图表读数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-u",
+      "item_refs": [
+        {
+          "chapter": "二年级上册 第5单元 7～9的表内乘、除法",
+          "section": "二年级上册 第5单元 7～9的表内乘、除法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-pattern-table",
+      "name": "简单排列规律",
+      "grade": 2,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "introduced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p060",
+        "cnm_p271"
+      ],
+      "model_summary": "找重复单元；填后续",
+      "trigger_features": {
+        "stem_terms": [
+          "规律",
+          "接着",
+          "数独"
+        ],
+        "solution_terms": [
+          "找重复单元",
+          "填后续"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "找重复单元；填后续",
+      "common_variants": [
+        "图形周期",
+        "数列周期"
+      ],
+      "uncommon_transforms": [
+        "二阶规律"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-l",
+      "item_refs": [
+        {
+          "chapter": "二年级下册 第5单元 复习与关联",
+          "section": "二年级下册 第5单元 复习与关联",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-remainder-division",
+      "name": "有余数的除法",
+      "grade": 2,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p050",
+        "cnm_p051",
+        "cnm_p052"
+      ],
+      "model_summary": "除法试商；余数小于除数；答带余数单位",
+      "trigger_features": {
+        "stem_terms": [
+          "余数",
+          "商",
+          "剩下"
+        ],
+        "solution_terms": [
+          "试商"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "除法试商；余数小于除数；答带余数单位",
+      "common_variants": [
+        "竖式",
+        "应用"
+      ],
+      "uncommon_transforms": [
+        "余数取舍"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-l",
+      "item_refs": [
+        {
+          "chapter": "二年级下册 第1单元 有余数的除法",
+          "section": "二年级下册 第1单元 有余数的除法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-time-clock",
+      "name": "认识时间（时、分）",
+      "grade": 2,
+      "semester": "下",
+      "domain": "综合与实践",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p061",
+        "cnm_p062",
+        "cnm_p273"
+      ],
+      "model_summary": "整点→半时→分；60进率；时间差",
+      "trigger_features": {
+        "stem_terms": [
+          "几时几分",
+          "经过",
+          "钟表"
+        ],
+        "solution_terms": [
+          "整点→半时→分",
+          "60进率"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "整点→半时→分；60进率；时间差",
+      "common_variants": [
+        "电子表",
+        "作息表"
+      ],
+      "uncommon_transforms": [
+        "跨时"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-l",
+      "item_refs": [
+        {
+          "chapter": "二年级下册 综合与实践 时间在哪里",
+          "section": "二年级下册 综合与实践 时间在哪里",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-times-add-sub",
+      "name": "乘加乘减",
+      "grade": 2,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p057"
+      ],
+      "model_summary": "先乘后加减；列综合算式",
+      "trigger_features": {
+        "stem_terms": [
+          "乘加",
+          "乘减",
+          "先算"
+        ],
+        "solution_terms": [
+          "先乘后加减",
+          "列综合算式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "先乘后加减；列综合算式",
+      "common_variants": [
+        "图意两步"
+      ],
+      "uncommon_transforms": [
+        "括号提示"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-u",
+      "item_refs": [
+        {
+          "chapter": "二年级上册 第2单元 1～6的表内乘法",
+          "section": "二年级上册 第2单元 1～6的表内乘法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-times-meaning",
+      "name": "乘法意义与口诀",
+      "grade": 2,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p038",
+        "cnm_p039",
+        "cnm_p042"
+      ],
+      "model_summary": "相同加数→乘法；口诀求积",
+      "trigger_features": {
+        "stem_terms": [
+          "几个几"
+        ],
+        "solution_terms": [
+          "乘法口诀",
+          "口诀"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "相同加数→乘法；口诀求积",
+      "common_variants": [
+        "2～6口诀",
+        "7～9口诀"
+      ],
+      "uncommon_transforms": [
+        "0、1特例"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-u",
+      "item_refs": [
+        {
+          "chapter": "二年级上册 第2单元 1～6的表内乘法",
+          "section": "二年级上册 第2单元 1～6的表内乘法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g2-within-10000-number",
+      "name": "万以内数的读写与比较",
+      "grade": 2,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 2,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "core",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p053",
+        "cnm_p054",
+        "cnm_p055",
+        "cnm_p269"
+      ],
+      "model_summary": "数位表；读写作；比大小",
+      "trigger_features": {
+        "stem_terms": [
+          "万以内",
+          "组成",
+          "比较"
+        ],
+        "solution_terms": [
+          "数位表",
+          "读写作"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "数位表；读写作；比大小",
+      "common_variants": [
+        "整千整百",
+        "近似"
+      ],
+      "uncommon_transforms": [
+        "算盘/数轴"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g2-l",
+      "item_refs": [
+        {
+          "chapter": "二年级下册 第3单元 万以内数的认识",
+          "section": "二年级下册 第3单元 万以内数的认识",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    }
+  ]
+}

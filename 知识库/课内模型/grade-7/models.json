@@ -1,0 +1,947 @@
+{
+  "grade": 7,
+  "publisher": "人民教育出版社",
+  "school_system": "六三制",
+  "scope": "教材模型摘要；不含教材题目原文",
+  "models": [
+    {
+      "id": "pep-g7-algebraic-expression",
+      "name": "代数式列式与求值",
+      "grade": 7,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_025",
+        "cnm_026",
+        "cnm_027",
+        "cnm_028",
+        "cnm_029",
+        "cnm_030"
+      ],
+      "model_summary": "文字↔式；规范书写；求值",
+      "trigger_features": {
+        "stem_terms": [
+          "列代数式",
+          "规律",
+          "代入"
+        ],
+        "solution_terms": [
+          "文字↔式",
+          "规范书写"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "文字↔式；规范书写；求值",
+      "common_variants": [
+        "图形规律"
+      ],
+      "uncommon_transforms": [
+        "参数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-u",
+      "item_refs": [
+        {
+          "chapter": "七上 第三章 代数式 3.1",
+          "section": "七上 第三章 代数式 3.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-coordinate-plane",
+      "name": "平面直角坐标系",
+      "grade": 7,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_081",
+        "cnm_082",
+        "cnm_083",
+        "cnm_084",
+        "cnm_085",
+        "cnm_086"
+      ],
+      "model_summary": "写坐标；对称平移；图形",
+      "trigger_features": {
+        "stem_terms": [
+          "坐标",
+          "象限",
+          "平移"
+        ],
+        "solution_terms": [
+          "写坐标",
+          "对称平移"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "写坐标；对称平移；图形",
+      "common_variants": [
+        "面积格点"
+      ],
+      "uncommon_transforms": [
+        "参数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-l",
+      "item_refs": [
+        {
+          "chapter": "七下 第九章 平面直角坐标系 9.1.1",
+          "section": "七下 第九章 平面直角坐标系 9.1.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-geometry-basic",
+      "name": "几何图形与线段角",
+      "grade": 7,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_050",
+        "cnm_051",
+        "cnm_052",
+        "cnm_053",
+        "cnm_054",
+        "cnm_055",
+        "cnm_056",
+        "cnm_057",
+        "cnm_058",
+        "cnm_059",
+        "cnm_060"
+      ],
+      "model_summary": "概念；度量；推理短证",
+      "trigger_features": {
+        "stem_terms": [
+          "展开图",
+          "角平分线",
+          "余角"
+        ],
+        "solution_terms": [
+          "概念",
+          "度量"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "概念；度量；推理短证",
+      "common_variants": [
+        "视图",
+        "最短路径触点"
+      ],
+      "uncommon_transforms": [
+        "动角"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-u",
+      "item_refs": [
+        {
+          "chapter": "七上 第六章 几何图形初步 6.1.1",
+          "section": "七上 第六章 几何图形初步 6.1.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-inequality-system",
+      "name": "不等式与不等式组",
+      "grade": 7,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_094",
+        "cnm_095",
+        "cnm_096",
+        "cnm_097",
+        "cnm_098",
+        "cnm_099",
+        "cnm_100"
+      ],
+      "model_summary": "性质；变形；公共部分",
+      "trigger_features": {
+        "stem_terms": [
+          "不等式",
+          "解集"
+        ],
+        "solution_terms": [
+          "数轴"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "性质；变形；公共部分",
+      "common_variants": [
+        "方案",
+        "范围"
+      ],
+      "uncommon_transforms": [
+        "含参"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-l",
+      "item_refs": [
+        {
+          "chapter": "七下 第十一章 不等式与不等式组 11.1.1",
+          "section": "七下 第十一章 不等式与不等式组 11.1.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-linear-equation",
+      "name": "一元一次方程",
+      "grade": 7,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_039",
+        "cnm_040",
+        "cnm_041",
+        "cnm_042",
+        "cnm_043",
+        "cnm_044"
+      ],
+      "model_summary": "等式性质；标准化；验根",
+      "trigger_features": {
+        "stem_terms": [
+          "分母"
+        ],
+        "solution_terms": [
+          "解方程",
+          "移项"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "等式性质；标准化；验根",
+      "common_variants": [
+        "含括号",
+        "分数系数"
+      ],
+      "uncommon_transforms": [
+        "参数方程"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-u",
+      "item_refs": [
+        {
+          "chapter": "七上 第五章 一元一次方程 5.1.1",
+          "section": "七上 第五章 一元一次方程 5.1.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-linear-equation-app",
+      "name": "一元一次方程应用",
+      "grade": 7,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_045",
+        "cnm_046",
+        "cnm_047",
+        "cnm_048",
+        "cnm_049"
+      ],
+      "model_summary": "设元；等量关系；列方程；检验合理性",
+      "trigger_features": {
+        "stem_terms": [
+          "配套",
+          "行程",
+          "利润",
+          "分段"
+        ],
+        "solution_terms": [
+          "方程"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "设元；等量关系；列方程；检验合理性",
+      "common_variants": [
+        "工程",
+        "方案"
+      ],
+      "uncommon_transforms": [
+        "图表"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-u",
+      "item_refs": [
+        {
+          "chapter": "七上 第五章 一元一次方程 5.3",
+          "section": "七上 第五章 一元一次方程 5.3",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-linear-system",
+      "name": "二元一次方程组",
+      "grade": 7,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_087",
+        "cnm_088",
+        "cnm_089",
+        "cnm_090",
+        "cnm_091",
+        "cnm_092"
+      ],
+      "model_summary": "代入/加减；解集；应用",
+      "trigger_features": {
+        "stem_terms": [
+          "方程组",
+          "消元"
+        ],
+        "solution_terms": [
+          "方程组",
+          "消元"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "代入/加减；解集；应用",
+      "common_variants": [
+        "配套",
+        "行程"
+      ],
+      "uncommon_transforms": [
+        "三方程"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-l",
+      "item_refs": [
+        {
+          "chapter": "七下 第十章 二元一次方程组 10.1",
+          "section": "七下 第十章 二元一次方程组 10.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-number-line-abs",
+      "name": "数轴、相反数、绝对值",
+      "grade": 7,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_004",
+        "cnm_005",
+        "cnm_006",
+        "cnm_007",
+        "cnm_008",
+        "cnm_009"
+      ],
+      "model_summary": "几何意义；化简绝对值；比较",
+      "trigger_features": {
+        "stem_terms": [
+          "相反数"
+        ],
+        "solution_terms": [
+          "数轴",
+          "绝对值"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "几何意义；化简绝对值；比较",
+      "common_variants": [
+        "|a+b|",
+        "分类讨论触点"
+      ],
+      "uncommon_transforms": [
+        "动点"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-u",
+      "item_refs": [
+        {
+          "chapter": "七上 第一章 有理数 1.2.2",
+          "section": "七上 第一章 有理数 1.2.2",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-parallel-lines",
+      "name": "相交线与平行线",
+      "grade": 7,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_062",
+        "cnm_063",
+        "cnm_064",
+        "cnm_065",
+        "cnm_066",
+        "cnm_067",
+        "cnm_068",
+        "cnm_069",
+        "cnm_070"
+      ],
+      "model_summary": "三线八角；判定↔性质",
+      "trigger_features": {
+        "stem_terms": [
+          "平行",
+          "判定",
+          "性质",
+          "同位角"
+        ],
+        "solution_terms": [
+          "三线八角",
+          "判定↔性质"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "三线八角；判定↔性质",
+      "common_variants": [
+        "拐点辅助线"
+      ],
+      "uncommon_transforms": [
+        "折叠"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "过拐点作已知平行线的平行线；同类重复线只算执行",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g7-l",
+      "item_refs": [
+        {
+          "chapter": "七下 第七章 相交线与平行线 7.1.1",
+          "section": "七下 第七章 相交线与平行线 7.1.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-polynomial-ops",
+      "name": "整式加减与化简",
+      "grade": 7,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_031",
+        "cnm_032",
+        "cnm_033",
+        "cnm_034",
+        "cnm_035",
+        "cnm_036",
+        "cnm_037",
+        "cnm_038"
+      ],
+      "model_summary": "同类项；去括号变号；化简求值",
+      "trigger_features": {
+        "stem_terms": [
+          "整式",
+          "合并",
+          "去括号"
+        ],
+        "solution_terms": [
+          "同类项",
+          "去括号变号"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "同类项；去括号变号；化简求值",
+      "common_variants": [
+        "字母取值"
+      ],
+      "uncommon_transforms": [
+        "整体代入"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-u",
+      "item_refs": [
+        {
+          "chapter": "七上 第四章 整式的加减 4.1",
+          "section": "七上 第四章 整式的加减 4.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-rational-number-system",
+      "name": "有理数概念与运算体系",
+      "grade": 7,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_001",
+        "cnm_002",
+        "cnm_003",
+        "cnm_010",
+        "cnm_012",
+        "cnm_018",
+        "cnm_021"
+      ],
+      "model_summary": "分类；法则；混合顺序",
+      "trigger_features": {
+        "stem_terms": [
+          "有理数",
+          "混合运算",
+          "符号"
+        ],
+        "solution_terms": [
+          "分类",
+          "法则"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "分类；法则；混合顺序",
+      "common_variants": [
+        "加减",
+        "乘除",
+        "乘方"
+      ],
+      "uncommon_transforms": [
+        "多重括号"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-u",
+      "item_refs": [
+        {
+          "chapter": "七上 第一章 有理数 1.1",
+          "section": "七上 第一章 有理数 1.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-real-numbers",
+      "name": "实数与平方根",
+      "grade": 7,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_074",
+        "cnm_075",
+        "cnm_076",
+        "cnm_077",
+        "cnm_078",
+        "cnm_079",
+        "cnm_080"
+      ],
+      "model_summary": "定义域；估算；实数运算",
+      "trigger_features": {
+        "stem_terms": [
+          "平方根",
+          "立方根",
+          "无理数"
+        ],
+        "solution_terms": [
+          "定义域",
+          "估算"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "定义域；估算；实数运算",
+      "common_variants": [
+        "化简根式预告"
+      ],
+      "uncommon_transforms": [
+        "数轴实数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-l",
+      "item_refs": [
+        {
+          "chapter": "七下 第八章 实数 8.1",
+          "section": "七下 第八章 实数 8.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-scientific-notation",
+      "name": "科学记数法与近似数",
+      "grade": 7,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_022",
+        "cnm_023",
+        "cnm_024"
+      ],
+      "model_summary": "a×10^n；四舍五入；单位",
+      "trigger_features": {
+        "stem_terms": [
+          "科学记数",
+          "有效数字",
+          "进位制"
+        ],
+        "solution_terms": [
+          "a×10^n",
+          "四舍五入"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "a×10^n；四舍五入；单位",
+      "common_variants": [
+        "大数小数"
+      ],
+      "uncommon_transforms": [
+        "混合运算"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-u",
+      "item_refs": [
+        {
+          "chapter": "七上 第二章 有理数的运算 2.3.2",
+          "section": "七上 第二章 有理数的运算 2.3.2",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g7-statistics-intro",
+      "name": "数据收集与统计图表",
+      "grade": 7,
+      "semester": "下",
+      "domain": "统计与概率",
+      "introduced_grade": 7,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "core",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_102",
+        "cnm_103",
+        "cnm_104",
+        "cnm_105",
+        "cnm_106",
+        "cnm_107",
+        "cnm_292",
+        "cnm_293",
+        "cnm_294",
+        "cnm_295"
+      ],
+      "model_summary": "概念；作图；读图",
+      "trigger_features": {
+        "stem_terms": [
+          "抽样",
+          "条形",
+          "扇形",
+          "直方图"
+        ],
+        "solution_terms": [
+          "作图"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "概念；作图；读图",
+      "common_variants": [
+        "误导辨析"
+      ],
+      "uncommon_transforms": [
+        "趋势图"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g7-l",
+      "item_refs": [
+        {
+          "chapter": "七下 第十二章 数据的收集、整理与描述 12.1.1",
+          "section": "七下 第十二章 数据的收集、整理与描述 12.1.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    }
+  ]
+}

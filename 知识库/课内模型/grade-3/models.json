@@ -1,0 +1,953 @@
+{
+  "grade": 3,
+  "publisher": "人民教育出版社",
+  "school_system": "六三制",
+  "scope": "教材模型摘要；不含教材题目原文",
+  "models": [
+    {
+      "id": "pep-g3-angle-kind",
+      "name": "角的认识与分类",
+      "grade": 3,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p225",
+        "cnm_p101",
+        "cnm_p099",
+        "cnm_p277"
+      ],
+      "model_summary": "认角；与直角比；直角谱系分类",
+      "trigger_features": {
+        "stem_terms": [
+          "直角",
+          "锐角",
+          "钝角"
+        ],
+        "solution_terms": [
+          "认角",
+          "与直角比"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "认角；与直角比；直角谱系分类",
+      "common_variants": [
+        "三角尺拼角"
+      ],
+      "uncommon_transforms": [
+        "量角器前估角"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-u",
+      "item_refs": [
+        {
+          "chapter": "三年级上册 第5单元 线和角",
+          "section": "三年级上册 第5单元 线和角",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-area-rect",
+      "name": "长方形正方形面积",
+      "grade": 3,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p088",
+        "cnm_p089",
+        "cnm_p090"
+      ],
+      "model_summary": "数格子→公式；单位进率；面积大小编排",
+      "trigger_features": {
+        "stem_terms": [
+          "面积",
+          "平方",
+          "铺砖"
+        ],
+        "solution_terms": [
+          "公式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "数格子→公式；单位进率；面积大小编排",
+      "common_variants": [
+        "周长面积辨析"
+      ],
+      "uncommon_transforms": [
+        "缺边反求"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-l",
+      "item_refs": [
+        {
+          "chapter": "三年级下册 第4单元 图形的面积",
+          "section": "三年级下册 第4单元 图形的面积",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-combination-overlap",
+      "name": "搭配与集合重叠",
+      "grade": 3,
+      "semester": "上",
+      "domain": "综合与实践",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "introduced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p095",
+        "cnm_p081"
+      ],
+      "model_summary": "枚举或列表；韦恩图计数",
+      "trigger_features": {
+        "stem_terms": [
+          "搭配",
+          "重叠",
+          "集合"
+        ],
+        "solution_terms": [
+          "列表"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "枚举或列表；韦恩图计数",
+      "common_variants": [
+        "衣着搭配",
+        "重叠人次"
+      ],
+      "uncommon_transforms": [
+        "乘法原理过渡"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-u",
+      "item_refs": [
+        {
+          "chapter": "三年级上册 第7单元 复习与关联",
+          "section": "三年级上册 第7单元 复习与关联",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-data-collect",
+      "name": "数据收集与整理",
+      "grade": 3,
+      "semester": "下",
+      "domain": "统计与概率",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p085"
+      ],
+      "model_summary": "设计调查；分类划记；作图读图",
+      "trigger_features": {
+        "stem_terms": [
+          "调查",
+          "统计表",
+          "条形"
+        ],
+        "solution_terms": [
+          "作图"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "设计调查；分类划记；作图读图",
+      "common_variants": [
+        "单变量",
+        "比较"
+      ],
+      "uncommon_transforms": [
+        "复式预习"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-l",
+      "item_refs": [
+        {
+          "chapter": "三年级下册 第5单元 数据的收集与整理",
+          "section": "三年级下册 第5单元 数据的收集与整理",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-datetime-calendar",
+      "name": "年历与时钟秘密",
+      "grade": 3,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p091",
+        "cnm_p092",
+        "cnm_p285"
+      ],
+      "model_summary": "日历规则；时间线段；24时法过渡",
+      "trigger_features": {
+        "stem_terms": [
+          "闰年",
+          "月份",
+          "经过时间"
+        ],
+        "solution_terms": [
+          "日历规则",
+          "时间线段"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "日历规则；时间线段；24时法过渡",
+      "common_variants": [
+        "算天数",
+        "作息表"
+      ],
+      "uncommon_transforms": [
+        "跨月跨年"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-l",
+      "item_refs": [
+        {
+          "chapter": "三年级下册 综合与实践 年、月、日的秘密",
+          "section": "三年级下册 综合与实践 年、月、日的秘密",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-decimal-intro",
+      "name": "小数认识与加减",
+      "grade": 3,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p093",
+        "cnm_p094",
+        "cnm_p284"
+      ],
+      "model_summary": "数位对齐；比大小；竖式加减",
+      "trigger_features": {
+        "stem_terms": [
+          "小数",
+          "一位小数"
+        ],
+        "solution_terms": [
+          "竖式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "数位对齐；比大小；竖式加减",
+      "common_variants": [
+        "元角分联系"
+      ],
+      "uncommon_transforms": [
+        "测量情境"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-l",
+      "item_refs": [
+        {
+          "chapter": "三年级下册 第6单元 小数的初步认识",
+          "section": "三年级下册 第6单元 小数的初步认识",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-direction-8",
+      "name": "八个方向与位置",
+      "grade": 3,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p082"
+      ],
+      "model_summary": "上北下南；相对方向；画图指方向",
+      "trigger_features": {
+        "stem_terms": [
+          "东北",
+          "西南",
+          "方向"
+        ],
+        "solution_terms": [
+          "上北下南",
+          "相对方向"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "上北下南；相对方向；画图指方向",
+      "common_variants": [
+        "路线",
+        "地标"
+      ],
+      "uncommon_transforms": [
+        "旋转参照"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-l",
+      "item_refs": [
+        {
+          "chapter": "三年级下册 第7单元 复习与关联",
+          "section": "三年级下册 第7单元 复习与关联",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-fraction-intro",
+      "name": "分数初步（几分之一及加减）",
+      "grade": 3,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p079",
+        "cnm_p226",
+        "cnm_p227",
+        "cnm_p080",
+        "cnm_p278"
+      ],
+      "model_summary": "平均分份；写分数；同分母加减",
+      "trigger_features": {
+        "stem_terms": [
+          "几分之一",
+          "同分母"
+        ],
+        "solution_terms": [
+          "平均分份",
+          "写分数"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "平均分份；写分数；同分母加减",
+      "common_variants": [
+        "分数比大小",
+        "分子1特例"
+      ],
+      "uncommon_transforms": [
+        "“1个整体”变体"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-u",
+      "item_refs": [
+        {
+          "chapter": "三年级上册 第6单元 分数的初步认识",
+          "section": "三年级上册 第6单元 分数的初步认识",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-length-convert",
+      "name": "毫米分米千米换算",
+      "grade": 3,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p067",
+        "cnm_p068",
+        "cnm_p069",
+        "cnm_p279"
+      ],
+      "model_summary": "牢记进率；大化小乘；小化大除；估测",
+      "trigger_features": {
+        "stem_terms": [
+          "毫米",
+          "分米",
+          "千米",
+          "换算"
+        ],
+        "solution_terms": [
+          "牢记进率",
+          "大化小乘"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "牢记进率；大化小乘；小化大除；估测",
+      "common_variants": [
+        "单换算",
+        "多步换算"
+      ],
+      "uncommon_transforms": [
+        "行程估距离"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-u",
+      "item_refs": [
+        {
+          "chapter": "三年级上册 第3单元 毫米、分米和千米",
+          "section": "三年级上册 第3单元 毫米、分米和千米",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-mass-ton",
+      "name": "质量单位与吨",
+      "grade": 3,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p056",
+        "cnm_p070",
+        "cnm_p224"
+      ],
+      "model_summary": "单位递进；实物感知；代换推理",
+      "trigger_features": {
+        "stem_terms": [
+          "千克",
+          "吨",
+          "等量代换"
+        ],
+        "solution_terms": [
+          "单位递进",
+          "实物感知"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "单位递进；实物感知；代换推理",
+      "common_variants": [
+        "比较重轻",
+        "载重"
+      ],
+      "uncommon_transforms": [
+        "跨单位复合"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-u",
+      "item_refs": [
+        {
+          "chapter": "三年级上册 综合与实践 曹冲称象的故事",
+          "section": "三年级上册 综合与实践 曹冲称象的故事",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-mixed-ops-paren",
+      "name": "两级运算与括号",
+      "grade": 3,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p223",
+        "cnm_p058",
+        "cnm_p059"
+      ],
+      "model_summary": "定运算顺序；分步计算；验算",
+      "trigger_features": {
+        "stem_terms": [
+          "先算",
+          "括号",
+          "混合运算"
+        ],
+        "solution_terms": [
+          "定运算顺序",
+          "分步计算"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "定运算顺序；分步计算；验算",
+      "common_variants": [
+        "乘除在前",
+        "括号优先"
+      ],
+      "uncommon_transforms": [
+        "情境列综合式"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-u",
+      "item_refs": [
+        {
+          "chapter": "三年级上册 第2单元 混合运算",
+          "section": "三年级上册 第2单元 混合运算",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-perimeter",
+      "name": "长方形正方形周长",
+      "grade": 3,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p078",
+        "cnm_p077"
+      ],
+      "model_summary": "周长公式；单位统一；拼图周长",
+      "trigger_features": {
+        "stem_terms": [
+          "周长",
+          "围一圈",
+          "靠墙"
+        ],
+        "solution_terms": [
+          "公式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "周长公式；单位统一；拼图周长",
+      "common_variants": [
+        "已知周长反求边"
+      ],
+      "uncommon_transforms": [
+        "组合图形"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-l",
+      "item_refs": [
+        {
+          "chapter": "三年级下册 第3单元 长方形和正方形",
+          "section": "三年级下册 第3单元 长方形和正方形",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-times-multiple",
+      "name": "倍的认识",
+      "grade": 3,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p073"
+      ],
+      "model_summary": "一倍量→几倍量；乘法或除法互求",
+      "trigger_features": {
+        "stem_terms": [
+          "几倍",
+          "倍数"
+        ],
+        "solution_terms": [
+          "一倍量→几倍量",
+          "乘法或除法互求"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "一倍量→几倍量；乘法或除法互求",
+      "common_variants": [
+        "图线段",
+        "文字"
+      ],
+      "uncommon_transforms": [
+        "和差倍预告"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-u",
+      "item_refs": [
+        {
+          "chapter": "三年级上册 第7单元 复习与关联",
+          "section": "三年级上册 第7单元 复习与关联",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-written-divide",
+      "name": "笔算除法应用",
+      "grade": 3,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p083",
+        "cnm_p084",
+        "cnm_p282"
+      ],
+      "model_summary": "试商；余数处理；商的意义回读",
+      "trigger_features": {
+        "stem_terms": [
+          "除法",
+          "商",
+          "验算"
+        ],
+        "solution_terms": [
+          "试商"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "试商；余数处理；商的意义回读",
+      "common_variants": [
+        "整除",
+        "有余"
+      ],
+      "uncommon_transforms": [
+        "估算商"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-l",
+      "item_refs": [
+        {
+          "chapter": "三年级下册 第2单元 除数是一位数的除法",
+          "section": "三年级下册 第2单元 除数是一位数的除法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g3-written-multiply",
+      "name": "笔算乘法与估算",
+      "grade": 3,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 3,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "core",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p074",
+        "cnm_p075",
+        "cnm_p275",
+        "cnm_p276"
+      ],
+      "model_summary": "位值对齐；部分积相加；估算调商/校验",
+      "trigger_features": {
+        "stem_terms": [
+          "笔算",
+          "因数末尾0",
+          "估算"
+        ],
+        "solution_terms": [
+          "位值对齐",
+          "部分积相加"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "位值对齐；部分积相加；估算调商/校验",
+      "common_variants": [
+        "三位×一位",
+        "两位×两位"
+      ],
+      "uncommon_transforms": [
+        "0中间末尾"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g3-u",
+      "item_refs": [
+        {
+          "chapter": "三年级上册 第4单元 多位数乘一位数",
+          "section": "三年级上册 第4单元 多位数乘一位数",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    }
+  ]
+}

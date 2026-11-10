@@ -1,0 +1,803 @@
+{
+  "grade": 8,
+  "publisher": "人民教育出版社",
+  "school_system": "六三制",
+  "scope": "教材模型摘要；不含教材题目原文",
+  "models": [
+    {
+      "id": "pep-g8-axisymmetric-isosceles",
+      "name": "轴对称与等腰等边",
+      "grade": 8,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_131",
+        "cnm_132",
+        "cnm_133",
+        "cnm_137",
+        "cnm_138",
+        "cnm_139",
+        "cnm_140"
+      ],
+      "model_summary": "性质判定；作图；最短路径",
+      "trigger_features": {
+        "stem_terms": [
+          "对称",
+          "等腰",
+          "垂直平分线"
+        ],
+        "solution_terms": [
+          "作图"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "性质判定；作图；最短路径",
+      "common_variants": [
+        "坐标对称"
+      ],
+      "uncommon_transforms": [
+        "折叠"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "作目标点关于直线的对称点并连接",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g8-u",
+      "item_refs": [
+        {
+          "chapter": "八上 第十五章 轴对称 15.1",
+          "section": "八上 第十五章 轴对称 15.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-congruent-triangle",
+      "name": "全等三角形判定",
+      "grade": 8,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_120",
+        "cnm_121",
+        "cnm_122",
+        "cnm_123",
+        "cnm_124",
+        "cnm_125",
+        "cnm_126"
+      ],
+      "model_summary": "选判定；对应；书写",
+      "trigger_features": {
+        "stem_terms": [
+          "SSS",
+          "SAS",
+          "证明"
+        ],
+        "solution_terms": [
+          "全等"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "选判定；对应；书写",
+      "common_variants": [
+        "HL",
+        "拼三角"
+      ],
+      "uncommon_transforms": [
+        "一线三等角模型"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "连接关键点或补公共边以凑齐判定条件",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g8-u",
+      "item_refs": [
+        {
+          "chapter": "八上 第十四章 全等三角形 14.1",
+          "section": "八上 第十四章 全等三角形 14.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-data-analysis",
+      "name": "数据的集中趋势与离散程度",
+      "grade": 8,
+      "semester": "下",
+      "domain": "统计与概率",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_211",
+        "cnm_212",
+        "cnm_213",
+        "cnm_214",
+        "cnm_215",
+        "cnm_305"
+      ],
+      "model_summary": "选统计量；稳定性；读箱线",
+      "trigger_features": {
+        "stem_terms": [
+          "平均数",
+          "方差",
+          "箱线图"
+        ],
+        "solution_terms": [
+          "选统计量",
+          "稳定性"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "选统计量；稳定性；读箱线",
+      "common_variants": [
+        "加权"
+      ],
+      "uncommon_transforms": [
+        "分组估计"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g8-l",
+      "item_refs": [
+        {
+          "chapter": "八下 第二十四章 数据的分析 24.1",
+          "section": "八下 第二十四章 数据的分析 24.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-factorization",
+      "name": "因式分解",
+      "grade": 8,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_150",
+        "cnm_151",
+        "cnm_152",
+        "cnm_153",
+        "cnm_154",
+        "cnm_155"
+      ],
+      "model_summary": "判类型；分解；验乘",
+      "trigger_features": {
+        "stem_terms": [
+          "提公因式"
+        ],
+        "solution_terms": [
+          "因式分解",
+          "公式法"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "判类型；分解；验乘",
+      "common_variants": [
+        "分组",
+        "十字"
+      ],
+      "uncommon_transforms": [
+        "应用求值"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g8-u",
+      "item_refs": [
+        {
+          "chapter": "八上 第十七章 因式分解 17",
+          "section": "八上 第十七章 因式分解 17",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-fraction-ops",
+      "name": "分式运算",
+      "grade": 8,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_156",
+        "cnm_157",
+        "cnm_158",
+        "cnm_159",
+        "cnm_160",
+        "cnm_161",
+        "cnm_162",
+        "cnm_163",
+        "cnm_164"
+      ],
+      "model_summary": "有意义条件；乘除→加减",
+      "trigger_features": {
+        "stem_terms": [
+          "分式"
+        ],
+        "solution_terms": [
+          "约分",
+          "通分"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "有意义条件；乘除→加减",
+      "common_variants": [
+        "化简求值"
+      ],
+      "uncommon_transforms": [
+        "与方程混合预告"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g8-u",
+      "item_refs": [
+        {
+          "chapter": "八上 第十八章 分式 18.1",
+          "section": "八上 第十八章 分式 18.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-fractional-equation",
+      "name": "分式方程应用",
+      "grade": 8,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_165",
+        "cnm_166"
+      ],
+      "model_summary": "去分母；检验；应用",
+      "trigger_features": {
+        "stem_terms": [
+          "增根"
+        ],
+        "solution_terms": [
+          "分式方程"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "去分母；检验；应用",
+      "common_variants": [
+        "工程",
+        "行程"
+      ],
+      "uncommon_transforms": [
+        "参数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g8-u",
+      "item_refs": [
+        {
+          "chapter": "八上 第十八章 分式 18.5",
+          "section": "八上 第十八章 分式 18.5",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-linear-function",
+      "name": "一次函数与方程不等式",
+      "grade": 8,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_193",
+        "cnm_194",
+        "cnm_201",
+        "cnm_202",
+        "cnm_203",
+        "cnm_205",
+        "cnm_206",
+        "cnm_207",
+        "cnm_208",
+        "cnm_209"
+      ],
+      "model_summary": "待定系数；性质；与方程不等式联动",
+      "trigger_features": {
+        "stem_terms": [
+          "一次函数",
+          "k与b",
+          "图象"
+        ],
+        "solution_terms": [
+          "待定系数",
+          "方程"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "待定系数；性质；与方程不等式联动",
+      "common_variants": [
+        "实际"
+      ],
+      "uncommon_transforms": [
+        "平移"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g8-l",
+      "item_refs": [
+        {
+          "chapter": "八下 第二十二章 函数 22.1",
+          "section": "八下 第二十二章 函数 22.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-polynomial-multiply",
+      "name": "整式乘法与乘法公式",
+      "grade": 8,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_142",
+        "cnm_143",
+        "cnm_144",
+        "cnm_145",
+        "cnm_146",
+        "cnm_147",
+        "cnm_148",
+        "cnm_149"
+      ],
+      "model_summary": "法则；公式识别；几何背景",
+      "trigger_features": {
+        "stem_terms": [
+          "平方差",
+          "完全平方"
+        ],
+        "solution_terms": [
+          "公式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "法则；公式识别；几何背景",
+      "common_variants": [
+        "整体代换"
+      ],
+      "uncommon_transforms": [
+        "高次"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g8-u",
+      "item_refs": [
+        {
+          "chapter": "八上 第十六章 整式的乘法 16.1",
+          "section": "八上 第十六章 整式的乘法 16.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-pythagorean",
+      "name": "勾股定理及应用",
+      "grade": 8,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_174",
+        "cnm_175",
+        "cnm_176",
+        "cnm_177",
+        "cnm_178",
+        "cnm_179"
+      ],
+      "model_summary": "识别直角；列a²+b²=c²；数轴无理数",
+      "trigger_features": {
+        "stem_terms": [
+          "逆定理"
+        ],
+        "solution_terms": [
+          "勾股",
+          "数轴"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "识别直角；列a²+b²=c²；数轴无理数",
+      "common_variants": [
+        "勾股数",
+        "立体展开"
+      ],
+      "uncommon_transforms": [
+        "折叠"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "补直角三角形或作高，把目标线段放入勾股结构",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g8-l",
+      "item_refs": [
+        {
+          "chapter": "八下 第二十章 勾股定理 20.1",
+          "section": "八下 第二十章 勾股定理 20.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-quadrilateral",
+      "name": "平行四边形与特殊四边形",
+      "grade": 8,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_183",
+        "cnm_184",
+        "cnm_185",
+        "cnm_186",
+        "cnm_188",
+        "cnm_189",
+        "cnm_191",
+        "cnm_192"
+      ],
+      "model_summary": "性质判定；中位线；折叠动点",
+      "trigger_features": {
+        "stem_terms": [
+          "平行四边形",
+          "矩形",
+          "菱形",
+          "正方形"
+        ],
+        "solution_terms": [
+          "性质判定",
+          "中位线"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "性质判定；中位线；折叠动点",
+      "common_variants": [
+        "面积"
+      ],
+      "uncommon_transforms": [
+        "证正方形"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "连接对角线或中点，转成全等或中位线结构",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g8-l",
+      "item_refs": [
+        {
+          "chapter": "八下 第二十一章 四边形 21.2",
+          "section": "八下 第二十一章 四边形 21.2",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-radical-ops",
+      "name": "二次根式运算",
+      "grade": 8,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_167",
+        "cnm_168",
+        "cnm_169",
+        "cnm_170",
+        "cnm_171",
+        "cnm_172",
+        "cnm_173"
+      ],
+      "model_summary": "有意义；性质；同类合并",
+      "trigger_features": {
+        "stem_terms": [
+          "二次根式",
+          "化简",
+          "有理化"
+        ],
+        "solution_terms": [
+          "有意义",
+          "性质"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "有意义；性质；同类合并",
+      "common_variants": [
+        "混合运算"
+      ],
+      "uncommon_transforms": [
+        "参数范围"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g8-l",
+      "item_refs": [
+        {
+          "chapter": "八下 第十九章 二次根式 19.1",
+          "section": "八下 第十九章 二次根式 19.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g8-triangle-proof",
+      "name": "三角形性质与内角外角",
+      "grade": 8,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 8,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "core",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_110",
+        "cnm_111",
+        "cnm_112",
+        "cnm_115",
+        "cnm_117",
+        "cnm_118"
+      ],
+      "model_summary": "证角关系；分类讨论；规范表述",
+      "trigger_features": {
+        "stem_terms": [
+          "内角和",
+          "外角",
+          "三边"
+        ],
+        "solution_terms": [
+          "证角关系",
+          "分类讨论"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "证角关系；分类讨论；规范表述",
+      "common_variants": [
+        "角平分线",
+        "高线"
+      ],
+      "uncommon_transforms": [
+        "多结论"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g8-u",
+      "item_refs": [
+        {
+          "chapter": "八上 第十三章 三角形 13.1",
+          "section": "八上 第十三章 三角形 13.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    }
+  ]
+}

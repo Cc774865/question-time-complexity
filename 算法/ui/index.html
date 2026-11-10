@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>题目分档</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">题目分档</div>
+  </header>
+  <main class="board">
+    <section class="module" aria-labelledby="input-title">
+      <div class="module-head">
+        <h2 id="input-title">输入</h2>
+        <span class="count" id="input-count">0 个文件</span>
+      </div>
+      <div class="drop" id="drop">
+        <p class="drop-title">把文件或文件夹拖到这里</p>
+        <p class="drop-note">文件夹里的文档会全部放进来</p>
+        <div class="drop-actions">
+          <label class="pick">
+            选择文件
+            <input id="picker" type="file" multiple accept=".docx,.doc,.md,.markdown,.txt,.pdf,.rtf,.json,.csv,.html,.htm">
+          </label>
+          <label class="pick ghost">
+            选择文件夹
+            <input id="folder-picker" type="file" webkitdirectory directory multiple>
+          </label>
+        </div>
+      </div>
+      <ul class="file-list module-scroll" id="file-list"></ul>
+      <label class="vision">
+        <span>读图</span>
+        <input id="vision-key" type="password" autocomplete="off" placeholder="DeepSeek API" spellcheck="false">
+      </label>
+      <div class="module-foot">
+        <button type="button" class="start-btn" id="start-work" disabled>开始工作</button>
+        <button type="button" class="text-btn" id="clear-input" disabled>清空</button>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="output-title">
+      <div class="module-head">
+        <h2 id="output-title">输出</h2>
+      </div>
+      <div class="progress" id="progress" hidden>
+        <div class="progress-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-bar">
+          <div class="progress-fill" id="progress-fill"></div>
+        </div>
+        <p class="progress-label" id="progress-label"></p>
+      </div>
+      <div id="output-body"></div>
+      <p class="review-note" id="output-note" hidden></p>
+      <div id="star-board" class="module-scroll"></div>
+      <div class="module-foot" id="star-foot" hidden>
+        <button type="button" class="start-btn" id="preview-submit">提交</button>
+      </div>
+    </section>
+
+    <section class="module" aria-labelledby="review-title">
+      <div class="module-head">
+        <h2 id="review-title">人工审核</h2>
+        <span class="count" id="review-count">0 道</span>
+      </div>
+      <div id="review-body" class="module-scroll"></div>
+      <div class="module-foot">
+        <p class="review-note" id="review-note" hidden></p>
+        <button type="button" class="start-btn" id="review-submit">提交</button>
+      </div>
+    </section>
+  </main>
+  <script src="lesson-file.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,829 @@
+{
+  "grade": 5,
+  "publisher": "人民教育出版社",
+  "school_system": "六三制",
+  "scope": "教材模型摘要；不含教材题目原文",
+  "models": [
+    {
+      "id": "pep-g5-decimal-divide",
+      "name": "小数除法",
+      "grade": 5,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p137",
+        "cnm_p138",
+        "cnm_p139"
+      ],
+      "model_summary": "化除数为整数；试商；余与近似",
+      "trigger_features": {
+        "stem_terms": [
+          "除以小数",
+          "商"
+        ],
+        "solution_terms": [
+          "试商"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "化除数为整数；试商；余与近似",
+      "common_variants": [
+        "循环预告点"
+      ],
+      "uncommon_transforms": [
+        "应用"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-u",
+      "item_refs": [
+        {
+          "chapter": "五年级上册 第3单元 小数除法",
+          "section": "五年级上册 第3单元 小数除法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-decimal-multiply",
+      "name": "小数乘法",
+      "grade": 5,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p132",
+        "cnm_p133",
+        "cnm_p134",
+        "cnm_p135"
+      ],
+      "model_summary": "按整数乘；点小数点；估算验",
+      "trigger_features": {
+        "stem_terms": [
+          "小数乘",
+          "积的近似"
+        ],
+        "solution_terms": [
+          "按整数乘",
+          "点小数点"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "按整数乘；点小数点；估算验",
+      "common_variants": [
+        "乘小数",
+        "应用"
+      ],
+      "uncommon_transforms": [
+        "近似"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-u",
+      "item_refs": [
+        {
+          "chapter": "五年级上册 第2单元 小数乘法",
+          "section": "五年级上册 第2单元 小数乘法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-factor-multiple",
+      "name": "因数倍数与2/3/5特征",
+      "grade": 5,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p153",
+        "cnm_p154",
+        "cnm_p155",
+        "cnm_p156",
+        "cnm_p157"
+      ],
+      "model_summary": "列举；筛法；整除特征",
+      "trigger_features": {
+        "stem_terms": [
+          "因数",
+          "倍数",
+          "质数"
+        ],
+        "solution_terms": [
+          "列举",
+          "筛法"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "列举；筛法；整除特征",
+      "common_variants": [
+        "最大公因",
+        "最小公倍触点"
+      ],
+      "uncommon_transforms": [
+        "密码"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-l",
+      "item_refs": [
+        {
+          "chapter": "五年级下册 第2单元 因数与倍数",
+          "section": "五年级下册 第2单元 因数与倍数",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-fraction-add-sub",
+      "name": "分数加减混合",
+      "grade": 5,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p168",
+        "cnm_p172",
+        "cnm_p173",
+        "cnm_p174",
+        "cnm_p243"
+      ],
+      "model_summary": "通分→同分母加减；约分；括号",
+      "trigger_features": {
+        "stem_terms": [
+          "异分母"
+        ],
+        "solution_terms": [
+          "通分",
+          "约分"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "通分→同分母加减；约分；括号",
+      "common_variants": [
+        "混合",
+        "文字"
+      ],
+      "uncommon_transforms": [
+        "多重通分"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-l",
+      "item_refs": [
+        {
+          "chapter": "五年级下册 第4单元 分数的意义和性质",
+          "section": "五年级下册 第4单元 分数的意义和性质",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-fraction-meaning",
+      "name": "分数意义与性质",
+      "grade": 5,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p165",
+        "cnm_p166",
+        "cnm_p167",
+        "cnm_p169"
+      ],
+      "model_summary": "等分与单位1；性质变形；大小比较",
+      "trigger_features": {
+        "stem_terms": [
+          "假分数"
+        ],
+        "solution_terms": [
+          "约分",
+          "通分"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "等分与单位1；性质变形；大小比较",
+      "common_variants": [
+        "带分数",
+        "与小数互化"
+      ],
+      "uncommon_transforms": [],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-l",
+      "item_refs": [
+        {
+          "chapter": "五年级下册 第4单元 分数的意义和性质",
+          "section": "五年级下册 第4单元 分数的意义和性质",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-gcd-lcm",
+      "name": "最大公因数与最小公倍数",
+      "grade": 5,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p158",
+        "cnm_p159"
+      ],
+      "model_summary": "列举→分解→短除；结合情境",
+      "trigger_features": {
+        "stem_terms": [
+          "公因",
+          "公倍",
+          "短除"
+        ],
+        "solution_terms": [
+          "列举→分解→短除",
+          "结合情境"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "列举→分解→短除；结合情境",
+      "common_variants": [
+        "裁剪",
+        "发车"
+      ],
+      "uncommon_transforms": [
+        "三数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-l",
+      "item_refs": [
+        {
+          "chapter": "五年级下册 第4单元 分数的意义和性质",
+          "section": "五年级下册 第4单元 分数的意义和性质",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-ha-km2",
+      "name": "公顷与平方千米",
+      "grade": 5,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p098"
+      ],
+      "model_summary": "面积单位换算；选合适单位",
+      "trigger_features": {
+        "stem_terms": [
+          "公顷",
+          "平方千米"
+        ],
+        "solution_terms": [
+          "面积单位换算",
+          "选合适单位"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "面积单位换算；选合适单位",
+      "common_variants": [
+        "土地情境"
+      ],
+      "uncommon_transforms": [
+        "复合图形"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-u",
+      "item_refs": [
+        {
+          "chapter": "五年级上册 第6单元 多边形的面积",
+          "section": "五年级上册 第6单元 多边形的面积",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-line-chart",
+      "name": "折线统计图",
+      "grade": 5,
+      "semester": "下",
+      "domain": "统计与概率",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p175"
+      ],
+      "model_summary": "描点连线；比增减",
+      "trigger_features": {
+        "stem_terms": [
+          "折线",
+          "趋势"
+        ],
+        "solution_terms": [
+          "描点连线",
+          "比增减"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "描点连线；比增减",
+      "common_variants": [
+        "复式折线"
+      ],
+      "uncommon_transforms": [
+        "预测"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-l",
+      "item_refs": [
+        {
+          "chapter": "五年级下册 第7单元 折线统计图",
+          "section": "五年级下册 第7单元 折线统计图",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-planting-tree",
+      "name": "植树问题",
+      "grade": 5,
+      "semester": "上",
+      "domain": "综合与实践",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "introduced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p151"
+      ],
+      "model_summary": "端点情形；÷间距；加1或减1",
+      "trigger_features": {
+        "stem_terms": [
+          "间隔",
+          "棵数",
+          "路长"
+        ],
+        "solution_terms": [
+          "端点情形",
+          "÷间距"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "端点情形；÷间距；加1或减1",
+      "common_variants": [
+        "环形",
+        "双侧"
+      ],
+      "uncommon_transforms": [
+        "方阵"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-u",
+      "item_refs": [
+        {
+          "chapter": "五年级上册 第8单元 复习与关联",
+          "section": "五年级上册 第8单元 复习与关联",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-polygon-area",
+      "name": "平行四边形梯形面积",
+      "grade": 5,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p147",
+        "cnm_p148",
+        "cnm_p149",
+        "cnm_p150",
+        "cnm_p240"
+      ],
+      "model_summary": "公式；割补；单位",
+      "trigger_features": {
+        "stem_terms": [
+          "面积",
+          "底高",
+          "组合"
+        ],
+        "solution_terms": [
+          "公式",
+          "割补"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "公式；割补；单位",
+      "common_variants": [
+        "已知面积反求",
+        "组合图形"
+      ],
+      "uncommon_transforms": [
+        "坐标格"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "补线或移动一块，把图形转成已知面积模型",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g5-u",
+      "item_refs": [
+        {
+          "chapter": "五年级上册 第6单元 多边形的面积",
+          "section": "五年级上册 第6单元 多边形的面积",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-possibility",
+      "name": "可能性",
+      "grade": 5,
+      "semester": "上",
+      "domain": "统计与概率",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p140",
+        "cnm_p141"
+      ],
+      "model_summary": "枚举；定性比较。按课内标准步骤完成。",
+      "trigger_features": {
+        "stem_terms": [
+          "可能",
+          "概率大小"
+        ],
+        "solution_terms": [
+          "枚举",
+          "定性比较"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "枚举；定性比较。按课内标准步骤完成。",
+      "common_variants": [
+        "游戏公平"
+      ],
+      "uncommon_transforms": [
+        "实验频率"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-u",
+      "item_refs": [
+        {
+          "chapter": "五年级上册 第7单元 可能性",
+          "section": "五年级上册 第7单元 可能性",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-simple-equation",
+      "name": "简易方程与列式",
+      "grade": 5,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p142",
+        "cnm_p143",
+        "cnm_p144",
+        "cnm_p145",
+        "cnm_p146"
+      ],
+      "model_summary": "找等量关系；等式性质变形；检验",
+      "trigger_features": {
+        "stem_terms": [
+          "方程",
+          "解方程",
+          "列方程"
+        ],
+        "solution_terms": [
+          "方程",
+          "解方程",
+          "列方程"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "找等量关系；等式性质变形；检验",
+      "common_variants": [
+        "和差倍",
+        "几何量"
+      ],
+      "uncommon_transforms": [
+        "多未知数约简"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-u",
+      "item_refs": [
+        {
+          "chapter": "五年级上册 第5单元 用字母表示数和数量关系",
+          "section": "五年级上册 第5单元 用字母表示数和数量关系",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g5-volume-rect",
+      "name": "长方体表面积与体积",
+      "grade": 5,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 5,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "core",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p160",
+        "cnm_p161",
+        "cnm_p162",
+        "cnm_p163",
+        "cnm_p164"
+      ],
+      "model_summary": "展开图；V=abh；单位进率",
+      "trigger_features": {
+        "stem_terms": [
+          "体积",
+          "容积",
+          "表面积"
+        ],
+        "solution_terms": [
+          "展开图",
+          "V=abh"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "展开图；V=abh；单位进率",
+      "common_variants": [
+        "排水",
+        "堆叠"
+      ],
+      "uncommon_transforms": [
+        "缺面"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g5-l",
+      "item_refs": [
+        {
+          "chapter": "五年级下册 第3单元 长方体和正方体",
+          "section": "五年级下册 第3单元 长方体和正方体",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    }
+  ]
+}

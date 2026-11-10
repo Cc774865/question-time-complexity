@@ -1,0 +1,3841 @@
+{
+  "version": 1,
+  "generated_from": "pep-model-seed-catalog 0.1.0-seed",
+  "model_count": 119,
+  "models": [
+    {
+      "grade": 1,
+      "slug": "break-ten-sub",
+      "name": "破十/想加算减（20以内退位）",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p025",
+        "cnm_p026",
+        "cnm_p027"
+      ],
+      "stem_terms": [
+        "十几减",
+        "想加算减"
+      ],
+      "solution_terms": [
+        "拆十",
+        "先减到10"
+      ],
+      "standard_method": "拆十；先减到10；再减个位",
+      "common_variants": [
+        "减9",
+        "减8、7、6",
+        "减5～2"
+      ],
+      "uncommon_transforms": [
+        "混合",
+        "求未知数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "compare-difference-app",
+      "name": "比多少与相差几",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p217",
+        "cnm_p218",
+        "cnm_p253",
+        "cnm_p252"
+      ],
+      "stem_terms": [
+        "多多少",
+        "少多少",
+        "相差"
+      ],
+      "solution_terms": [
+        "对齐比较",
+        "减法求差"
+      ],
+      "standard_method": "对齐比较；减法求差；或加法补大数",
+      "common_variants": [
+        "两量差",
+        "求较大/较小量"
+      ],
+      "uncommon_transforms": [
+        "两步",
+        "逆向求加数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "compare-order-within-10",
+      "name": "5～10比大小与排序",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p002",
+        "cnm_p009"
+      ],
+      "stem_terms": [
+        "比大小",
+        "谁大",
+        "排列",
+        "＞＜"
+      ],
+      "solution_terms": [
+        "比较两数",
+        "用符号记录"
+      ],
+      "standard_method": "比较两数；用符号记录；按序排列",
+      "common_variants": [
+        "三数排序"
+      ],
+      "uncommon_transforms": [
+        "与序数综合"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "compose-decompose",
+      "name": "数的分与合",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p004",
+        "cnm_p017"
+      ],
+      "stem_terms": [
+        "分成",
+        "合成",
+        "组成"
+      ],
+      "solution_terms": [
+        "分合"
+      ],
+      "standard_method": "总数拆两部分；两部分合并；画图/摆一摆",
+      "common_variants": [
+        "5以内",
+        "10以内",
+        "十几的组成"
+      ],
+      "uncommon_transforms": [
+        "未知部分"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "count-read-1to20",
+      "name": "看图认数与读写得数",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p001",
+        "cnm_p005",
+        "cnm_p008",
+        "cnm_p016"
+      ],
+      "stem_terms": [
+        "数一数",
+        "有几个",
+        "读作",
+        "写作"
+      ],
+      "solution_terms": [
+        "观察图→一一对应点数",
+        "口头/书面表示数量"
+      ],
+      "standard_method": "观察图→一一对应点数；口头/书面表示数量；必要时区分十位个位",
+      "common_variants": [
+        "单场景计数",
+        "11-20摆小棒图"
+      ],
+      "uncommon_transforms": [
+        "遮挡要推断",
+        "双图对照"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "extra-info-chain-sub",
+      "name": "多余信息与连减应用",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p256",
+        "cnm_p259",
+        "cnm_p035"
+      ],
+      "stem_terms": [
+        "多余",
+        "每次",
+        "还剩"
+      ],
+      "solution_terms": [
+        "筛有效信息",
+        "连续去掉"
+      ],
+      "standard_method": "筛有效信息；连续去掉；列连减或分步",
+      "common_variants": [
+        "圈多余条件"
+      ],
+      "uncommon_transforms": [
+        "部分整体"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "hundred-ops",
+      "name": "100以内认识与加减",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p028",
+        "cnm_p029",
+        "cnm_p031",
+        "cnm_p032",
+        "cnm_p033",
+        "cnm_p034",
+        "cnm_p258",
+        "cnm_p257"
+      ],
+      "stem_terms": [
+        "100以内",
+        "口算"
+      ],
+      "solution_terms": [
+        "竖式"
+      ],
+      "standard_method": "数位与顺序；比大小；口算/竖式对齐",
+      "common_variants": [
+        "整十",
+        "两位数±一位"
+      ],
+      "uncommon_transforms": [
+        "连减",
+        "验算"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "make-ten-add",
+      "name": "凑十法（20以内进位加）",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p019",
+        "cnm_p020",
+        "cnm_p021",
+        "cnm_p251",
+        "cnm_p018"
+      ],
+      "stem_terms": [
+        "9加几",
+        "8加几"
+      ],
+      "solution_terms": [
+        "凑十"
+      ],
+      "standard_method": "拆小数补大数到10；10加余数；口述过程",
+      "common_variants": [
+        "9+？",
+        "8/7/6加几",
+        "5～2加几"
+      ],
+      "uncommon_transforms": [
+        "想加算减互逆"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "merge-take-within-10",
+      "name": "合并与去掉（10以内加减）",
+      "domain": "数与代数",
+      "semester": "跨册",
+      "topic_ids": [
+        "cnm_p006",
+        "cnm_p007",
+        "cnm_p010",
+        "cnm_p011",
+        "cnm_p012",
+        "cnm_p013"
+      ],
+      "stem_terms": [
+        "合起来",
+        "又",
+        "飞走",
+        "去掉",
+        "还剩"
+      ],
+      "solution_terms": [
+        "判合并/去掉",
+        "列式"
+      ],
+      "standard_method": "判合并/去掉；列式；口算或图意验证",
+      "common_variants": [
+        "纯算式",
+        "图画情境"
+      ],
+      "uncommon_transforms": [
+        "连加连减",
+        "加减混合"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "ordinal-vs-cardinal",
+      "name": "总数与第几",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p003"
+      ],
+      "stem_terms": [
+        "第几个",
+        "排队",
+        "从左数"
+      ],
+      "solution_terms": [
+        "区分有几个与第几个",
+        "按方向数数"
+      ],
+      "standard_method": "区分有几个与第几个；按方向数数；回答序数",
+      "common_variants": [
+        "整队",
+        "找第n个"
+      ],
+      "uncommon_transforms": [
+        "跳号",
+        "反向数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "plane-puzzle",
+      "name": "平面图形拼组",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p023",
+        "cnm_p024",
+        "cnm_p254",
+        "cnm_p255"
+      ],
+      "stem_terms": [
+        "拼一拼",
+        "七巧板",
+        "长方形"
+      ],
+      "solution_terms": [
+        "辨认基本图形",
+        "拼图案"
+      ],
+      "standard_method": "辨认基本图形；拼图案",
+      "common_variants": [
+        "折纸得形"
+      ],
+      "uncommon_transforms": [
+        "创意拼"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "position-relative",
+      "name": "上下前后左右",
+      "domain": "综合与实践",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p015"
+      ],
+      "stem_terms": [
+        "上面",
+        "前面",
+        "左边"
+      ],
+      "solution_terms": [
+        "定参照物",
+        "描述相对位置"
+      ],
+      "standard_method": "定参照物；描述相对位置",
+      "common_variants": [
+        "两物",
+        "链式三物"
+      ],
+      "uncommon_transforms": [
+        "换参照物"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 1,
+      "slug": "rmb-context",
+      "name": "人民币情境",
+      "domain": "综合与实践",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p036",
+        "cnm_p260"
+      ],
+      "stem_terms": [
+        "元角分",
+        "找零"
+      ],
+      "solution_terms": [
+        "单位换算",
+        "凑整"
+      ],
+      "standard_method": "单位换算；凑整；简单购物列式",
+      "common_variants": [
+        "单物品"
+      ],
+      "uncommon_transforms": [
+        "组合面额"
+      ],
+      "introduced_familiarity": "introduced",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "add-sub-estimate",
+      "name": "几百几十加减与估算",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p064",
+        "cnm_p065",
+        "cnm_p066",
+        "cnm_p071",
+        "cnm_p072"
+      ],
+      "stem_terms": [
+        "估算",
+        "几百几十"
+      ],
+      "solution_terms": [
+        "竖式"
+      ],
+      "standard_method": "口算对齐；笔算竖式；估算验合理性",
+      "common_variants": [
+        "不进退位",
+        "连续运算"
+      ],
+      "uncommon_transforms": [
+        "关系式填空"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "average-division",
+      "name": "平均分（等分/包含）",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p263",
+        "cnm_p264"
+      ],
+      "stem_terms": [
+        "平均分",
+        "每份同样多"
+      ],
+      "solution_terms": [
+        "画圈分",
+        "除法列式"
+      ],
+      "standard_method": "画圈分；除法列式",
+      "common_variants": [
+        "等分",
+        "包含"
+      ],
+      "uncommon_transforms": [
+        "有余不可整除预告"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "classify-tally",
+      "name": "分类与整理",
+      "domain": "统计与概率",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p037",
+        "cnm_p261"
+      ],
+      "stem_terms": [
+        "分类",
+        "整理",
+        "统计表"
+      ],
+      "solution_terms": [
+        "定标准",
+        "分组记录"
+      ],
+      "standard_method": "定标准；分组记录；读表",
+      "common_variants": [
+        "单标准",
+        "逐层分类"
+      ],
+      "uncommon_transforms": [
+        "双标准交叉"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "compass-route",
+      "name": "东东南西北与路线",
+      "domain": "综合与实践",
+      "semester": "跨册",
+      "topic_ids": [
+        "cnm_p049",
+        "cnm_p267"
+      ],
+      "stem_terms": [
+        "向东",
+        "路线",
+        "导游"
+      ],
+      "solution_terms": [
+        "定观测点",
+        "按方向转折"
+      ],
+      "standard_method": "定观测点；按方向转折；描述路径",
+      "common_variants": [
+        "网格图",
+        "实地"
+      ],
+      "uncommon_transforms": [
+        "逆路线"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "division-meaning",
+      "name": "除法意义与口诀求商",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p043",
+        "cnm_p044",
+        "cnm_p046"
+      ],
+      "stem_terms": [
+        "平均分",
+        "每份",
+        "除法"
+      ],
+      "solution_terms": [
+        "口诀"
+      ],
+      "standard_method": "分物或包含；口诀求商",
+      "common_variants": [
+        "等分",
+        "包含求份数"
+      ],
+      "uncommon_transforms": [
+        "乘除互逆填空"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "measure-cm-m",
+      "name": "厘米米测量",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p040",
+        "cnm_p041",
+        "cnm_p265",
+        "cnm_p266"
+      ],
+      "stem_terms": [
+        "量",
+        "估测",
+        "线段"
+      ],
+      "solution_terms": [
+        "选单位",
+        "尺量/估量"
+      ],
+      "standard_method": "选单位；尺量/估量；单位比较",
+      "common_variants": [
+        "身体尺",
+        "比长短"
+      ],
+      "uncommon_transforms": [
+        "两次测量求差"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "multi-step-two-questions",
+      "name": "连续两问",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p268",
+        "cnm_p219"
+      ],
+      "stem_terms": [
+        "先…再…",
+        "两问"
+      ],
+      "solution_terms": [
+        "拆两小问",
+        "第一问结果作第二问条件"
+      ],
+      "standard_method": "拆两小问；第一问结果作第二问条件",
+      "common_variants": [
+        "乘除交替"
+      ],
+      "uncommon_transforms": [
+        "图表读数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "pattern-table",
+      "name": "简单排列规律",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p060",
+        "cnm_p271"
+      ],
+      "stem_terms": [
+        "规律",
+        "接着",
+        "数独"
+      ],
+      "solution_terms": [
+        "找重复单元",
+        "填后续"
+      ],
+      "standard_method": "找重复单元；填后续",
+      "common_variants": [
+        "图形周期",
+        "数列周期"
+      ],
+      "uncommon_transforms": [
+        "二阶规律"
+      ],
+      "introduced_familiarity": "introduced",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "remainder-division",
+      "name": "有余数的除法",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p050",
+        "cnm_p051",
+        "cnm_p052"
+      ],
+      "stem_terms": [
+        "余数",
+        "商",
+        "剩下"
+      ],
+      "solution_terms": [
+        "试商"
+      ],
+      "standard_method": "除法试商；余数小于除数；答带余数单位",
+      "common_variants": [
+        "竖式",
+        "应用"
+      ],
+      "uncommon_transforms": [
+        "余数取舍"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "time-clock",
+      "name": "认识时间（时、分）",
+      "domain": "综合与实践",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p061",
+        "cnm_p062",
+        "cnm_p273"
+      ],
+      "stem_terms": [
+        "几时几分",
+        "经过",
+        "钟表"
+      ],
+      "solution_terms": [
+        "整点→半时→分",
+        "60进率"
+      ],
+      "standard_method": "整点→半时→分；60进率；时间差",
+      "common_variants": [
+        "电子表",
+        "作息表"
+      ],
+      "uncommon_transforms": [
+        "跨时"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "times-add-sub",
+      "name": "乘加乘减",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p057"
+      ],
+      "stem_terms": [
+        "乘加",
+        "乘减",
+        "先算"
+      ],
+      "solution_terms": [
+        "先乘后加减",
+        "列综合算式"
+      ],
+      "standard_method": "先乘后加减；列综合算式",
+      "common_variants": [
+        "图意两步"
+      ],
+      "uncommon_transforms": [
+        "括号提示"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "times-meaning",
+      "name": "乘法意义与口诀",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p038",
+        "cnm_p039",
+        "cnm_p042"
+      ],
+      "stem_terms": [
+        "几个几"
+      ],
+      "solution_terms": [
+        "乘法口诀",
+        "口诀"
+      ],
+      "standard_method": "相同加数→乘法；口诀求积",
+      "common_variants": [
+        "2～6口诀",
+        "7～9口诀"
+      ],
+      "uncommon_transforms": [
+        "0、1特例"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 2,
+      "slug": "within-10000-number",
+      "name": "万以内数的读写与比较",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p053",
+        "cnm_p054",
+        "cnm_p055",
+        "cnm_p269"
+      ],
+      "stem_terms": [
+        "万以内",
+        "组成",
+        "比较"
+      ],
+      "solution_terms": [
+        "数位表",
+        "读写作"
+      ],
+      "standard_method": "数位表；读写作；比大小",
+      "common_variants": [
+        "整千整百",
+        "近似"
+      ],
+      "uncommon_transforms": [
+        "算盘/数轴"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "angle-kind",
+      "name": "角的认识与分类",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p225",
+        "cnm_p101",
+        "cnm_p099",
+        "cnm_p277"
+      ],
+      "stem_terms": [
+        "直角",
+        "锐角",
+        "钝角"
+      ],
+      "solution_terms": [
+        "认角",
+        "与直角比"
+      ],
+      "standard_method": "认角；与直角比；直角谱系分类",
+      "common_variants": [
+        "三角尺拼角"
+      ],
+      "uncommon_transforms": [
+        "量角器前估角"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "area-rect",
+      "name": "长方形正方形面积",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p088",
+        "cnm_p089",
+        "cnm_p090"
+      ],
+      "stem_terms": [
+        "面积",
+        "平方",
+        "铺砖"
+      ],
+      "solution_terms": [
+        "公式"
+      ],
+      "standard_method": "数格子→公式；单位进率；面积大小编排",
+      "common_variants": [
+        "周长面积辨析"
+      ],
+      "uncommon_transforms": [
+        "缺边反求"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "combination-overlap",
+      "name": "搭配与集合重叠",
+      "domain": "综合与实践",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p095",
+        "cnm_p081"
+      ],
+      "stem_terms": [
+        "搭配",
+        "重叠",
+        "集合"
+      ],
+      "solution_terms": [
+        "列表"
+      ],
+      "standard_method": "枚举或列表；韦恩图计数",
+      "common_variants": [
+        "衣着搭配",
+        "重叠人次"
+      ],
+      "uncommon_transforms": [
+        "乘法原理过渡"
+      ],
+      "introduced_familiarity": "introduced",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "data-collect",
+      "name": "数据收集与整理",
+      "domain": "统计与概率",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p085"
+      ],
+      "stem_terms": [
+        "调查",
+        "统计表",
+        "条形"
+      ],
+      "solution_terms": [
+        "作图"
+      ],
+      "standard_method": "设计调查；分类划记；作图读图",
+      "common_variants": [
+        "单变量",
+        "比较"
+      ],
+      "uncommon_transforms": [
+        "复式预习"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "datetime-calendar",
+      "name": "年历与时钟秘密",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p091",
+        "cnm_p092",
+        "cnm_p285"
+      ],
+      "stem_terms": [
+        "闰年",
+        "月份",
+        "经过时间"
+      ],
+      "solution_terms": [
+        "日历规则",
+        "时间线段"
+      ],
+      "standard_method": "日历规则；时间线段；24时法过渡",
+      "common_variants": [
+        "算天数",
+        "作息表"
+      ],
+      "uncommon_transforms": [
+        "跨月跨年"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "decimal-intro",
+      "name": "小数认识与加减",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p093",
+        "cnm_p094",
+        "cnm_p284"
+      ],
+      "stem_terms": [
+        "小数",
+        "一位小数"
+      ],
+      "solution_terms": [
+        "竖式"
+      ],
+      "standard_method": "数位对齐；比大小；竖式加减",
+      "common_variants": [
+        "元角分联系"
+      ],
+      "uncommon_transforms": [
+        "测量情境"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "direction-8",
+      "name": "八个方向与位置",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p082"
+      ],
+      "stem_terms": [
+        "东北",
+        "西南",
+        "方向"
+      ],
+      "solution_terms": [
+        "上北下南",
+        "相对方向"
+      ],
+      "standard_method": "上北下南；相对方向；画图指方向",
+      "common_variants": [
+        "路线",
+        "地标"
+      ],
+      "uncommon_transforms": [
+        "旋转参照"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "fraction-intro",
+      "name": "分数初步（几分之一及加减）",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p079",
+        "cnm_p226",
+        "cnm_p227",
+        "cnm_p080",
+        "cnm_p278"
+      ],
+      "stem_terms": [
+        "几分之一",
+        "同分母"
+      ],
+      "solution_terms": [
+        "平均分份",
+        "写分数"
+      ],
+      "standard_method": "平均分份；写分数；同分母加减",
+      "common_variants": [
+        "分数比大小",
+        "分子1特例"
+      ],
+      "uncommon_transforms": [
+        "“1个整体”变体"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "length-convert",
+      "name": "毫米分米千米换算",
+      "domain": "图形与几何",
+      "semester": "跨册",
+      "topic_ids": [
+        "cnm_p067",
+        "cnm_p068",
+        "cnm_p069",
+        "cnm_p279"
+      ],
+      "stem_terms": [
+        "毫米",
+        "分米",
+        "千米",
+        "换算"
+      ],
+      "solution_terms": [
+        "牢记进率",
+        "大化小乘"
+      ],
+      "standard_method": "牢记进率；大化小乘；小化大除；估测",
+      "common_variants": [
+        "单换算",
+        "多步换算"
+      ],
+      "uncommon_transforms": [
+        "行程估距离"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "mass-ton",
+      "name": "质量单位与吨",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p056",
+        "cnm_p070",
+        "cnm_p224"
+      ],
+      "stem_terms": [
+        "千克",
+        "吨",
+        "等量代换"
+      ],
+      "solution_terms": [
+        "单位递进",
+        "实物感知"
+      ],
+      "standard_method": "单位递进；实物感知；代换推理",
+      "common_variants": [
+        "比较重轻",
+        "载重"
+      ],
+      "uncommon_transforms": [
+        "跨单位复合"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "mixed-ops-paren",
+      "name": "两级运算与括号",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p223",
+        "cnm_p058",
+        "cnm_p059"
+      ],
+      "stem_terms": [
+        "先算",
+        "括号",
+        "混合运算"
+      ],
+      "solution_terms": [
+        "定运算顺序",
+        "分步计算"
+      ],
+      "standard_method": "定运算顺序；分步计算；验算",
+      "common_variants": [
+        "乘除在前",
+        "括号优先"
+      ],
+      "uncommon_transforms": [
+        "情境列综合式"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "perimeter",
+      "name": "长方形正方形周长",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p078",
+        "cnm_p077"
+      ],
+      "stem_terms": [
+        "周长",
+        "围一圈",
+        "靠墙"
+      ],
+      "solution_terms": [
+        "公式"
+      ],
+      "standard_method": "周长公式；单位统一；拼图周长",
+      "common_variants": [
+        "已知周长反求边"
+      ],
+      "uncommon_transforms": [
+        "组合图形"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "times-multiple",
+      "name": "倍的认识",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p073"
+      ],
+      "stem_terms": [
+        "几倍",
+        "倍数"
+      ],
+      "solution_terms": [
+        "一倍量→几倍量",
+        "乘法或除法互求"
+      ],
+      "standard_method": "一倍量→几倍量；乘法或除法互求",
+      "common_variants": [
+        "图线段",
+        "文字"
+      ],
+      "uncommon_transforms": [
+        "和差倍预告"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "written-divide",
+      "name": "笔算除法应用",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p083",
+        "cnm_p084",
+        "cnm_p282"
+      ],
+      "stem_terms": [
+        "除法",
+        "商",
+        "验算"
+      ],
+      "solution_terms": [
+        "试商"
+      ],
+      "standard_method": "试商；余数处理；商的意义回读",
+      "common_variants": [
+        "整除",
+        "有余"
+      ],
+      "uncommon_transforms": [
+        "估算商"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 3,
+      "slug": "written-multiply",
+      "name": "笔算乘法与估算",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p074",
+        "cnm_p075",
+        "cnm_p275",
+        "cnm_p276"
+      ],
+      "stem_terms": [
+        "笔算",
+        "因数末尾0",
+        "估算"
+      ],
+      "solution_terms": [
+        "位值对齐",
+        "部分积相加"
+      ],
+      "standard_method": "位值对齐；部分积相加；估算调商/校验",
+      "common_variants": [
+        "三位×一位",
+        "两位×两位"
+      ],
+      "uncommon_transforms": [
+        "0中间末尾"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "angle-measure",
+      "name": "角的度量与分类",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p100",
+        "cnm_p232"
+      ],
+      "stem_terms": [
+        "量角器",
+        "平角",
+        "周角"
+      ],
+      "solution_terms": [
+        "对齐顶点与边",
+        "读度数"
+      ],
+      "standard_method": "对齐顶点与边；读度数；作角",
+      "common_variants": [
+        "拼特殊角"
+      ],
+      "uncommon_transforms": [
+        "扇形分角"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "bar-chart",
+      "name": "条形统计图",
+      "domain": "统计与概率",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p108",
+        "cnm_p130"
+      ],
+      "stem_terms": [
+        "条形图",
+        "复式"
+      ],
+      "solution_terms": [
+        "标轴",
+        "画条"
+      ],
+      "standard_method": "标轴；画条；比读",
+      "common_variants": [
+        "单式",
+        "复式对比"
+      ],
+      "uncommon_transforms": [
+        "平均数衔接"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "big-number",
+      "name": "亿以内数与改写近似",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p096",
+        "cnm_p097",
+        "cnm_p236"
+      ],
+      "stem_terms": [
+        "亿",
+        "省略",
+        "近似"
+      ],
+      "solution_terms": [
+        "数位分段",
+        "四舍五入"
+      ],
+      "standard_method": "数位分段；四舍五入；单位改写",
+      "common_variants": [
+        "读作写作",
+        "蛋糕图估1亿"
+      ],
+      "uncommon_transforms": [],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "chicken-rabbit",
+      "name": "假设调整法（鸡兔同笼型）",
+      "domain": "综合与实践",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p131"
+      ],
+      "stem_terms": [
+        "头脚",
+        "假设"
+      ],
+      "solution_terms": [
+        "假设全一类→算差额",
+        "调整"
+      ],
+      "standard_method": "假设全一类→算差额；调整",
+      "common_variants": [
+        "不同动物"
+      ],
+      "uncommon_transforms": [
+        "简化表"
+      ],
+      "introduced_familiarity": "introduced",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "decimal-add-sub",
+      "name": "小数加减与应用",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p125",
+        "cnm_p126"
+      ],
+      "stem_terms": [
+        "小数加减"
+      ],
+      "solution_terms": [
+        "竖式"
+      ],
+      "standard_method": "小数点对齐；单位；验算",
+      "common_variants": [
+        "购物",
+        "测量"
+      ],
+      "uncommon_transforms": [
+        "多步"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "decimal-meaning",
+      "name": "小数的意义与性质",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p118",
+        "cnm_p119",
+        "cnm_p120",
+        "cnm_p121"
+      ],
+      "stem_terms": [
+        "小数点",
+        "近似",
+        "移动"
+      ],
+      "solution_terms": [
+        "数位表",
+        "比大小"
+      ],
+      "standard_method": "数位表；比大小；扩缩倍数",
+      "common_variants": [
+        "复名数",
+        "求近似"
+      ],
+      "uncommon_transforms": [
+        "科学记数过渡"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "divide-2digit",
+      "name": "除数是两位数",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p106",
+        "cnm_p107"
+      ],
+      "stem_terms": [
+        "商不变"
+      ],
+      "solution_terms": [
+        "试商"
+      ],
+      "standard_method": "估商；调商；简算商不变",
+      "common_variants": [
+        "有余",
+        "验乘"
+      ],
+      "uncommon_transforms": [
+        "简便规律"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "four-ops-law",
+      "name": "四则关系与运算律",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p110",
+        "cnm_p112",
+        "cnm_p114",
+        "cnm_p115",
+        "cnm_p116",
+        "cnm_p117"
+      ],
+      "stem_terms": [
+        "简便",
+        "交换",
+        "结合",
+        "分配"
+      ],
+      "solution_terms": [
+        "识别结构",
+        "选律"
+      ],
+      "standard_method": "识别结构；选律；脱式简算",
+      "common_variants": [
+        "凑整",
+        "拆乘"
+      ],
+      "uncommon_transforms": [
+        "逆运算验算"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "mean-average",
+      "name": "平均数",
+      "domain": "统计与概率",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p129"
+      ],
+      "stem_terms": [
+        "平均",
+        "代表"
+      ],
+      "solution_terms": [
+        "总数量÷份数",
+        "加权情境"
+      ],
+      "standard_method": "总数量÷份数；加权情境",
+      "common_variants": [
+        "移多补少"
+      ],
+      "uncommon_transforms": [
+        "加权预告"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "multiply-2digit",
+      "name": "两位/多位数乘法",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p086",
+        "cnm_p087",
+        "cnm_p102",
+        "cnm_p233"
+      ],
+      "stem_terms": [
+        "两位数乘",
+        "估算"
+      ],
+      "solution_terms": [
+        "竖式"
+      ],
+      "standard_method": "分步竖式；积的位置；估算范围",
+      "common_variants": [
+        "进位",
+        "应用"
+      ],
+      "uncommon_transforms": [
+        "多位数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "parallel-perpendicular",
+      "name": "平行垂直与四边形",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p103",
+        "cnm_p104",
+        "cnm_p105",
+        "cnm_p234"
+      ],
+      "stem_terms": [
+        "平行",
+        "垂直",
+        "梯形"
+      ],
+      "solution_terms": [
+        "平行线"
+      ],
+      "standard_method": "概念辨析；画垂线平行线；图形特征",
+      "common_variants": [
+        "高与底"
+      ],
+      "uncommon_transforms": [
+        "组合"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "经过点向指定边作垂线或平行线"
+    },
+    {
+      "grade": 4,
+      "slug": "quantity-relation",
+      "name": "单价数量总价等关系",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p111",
+        "cnm_p230",
+        "cnm_p231"
+      ],
+      "stem_terms": [
+        "单价",
+        "速度",
+        "路程",
+        "模型图"
+      ],
+      "solution_terms": [
+        "画线段/表格",
+        "任知二求一"
+      ],
+      "standard_method": "画线段/表格；任知二求一",
+      "common_variants": [
+        "买几样",
+        "往返"
+      ],
+      "uncommon_transforms": [
+        "倍→积模型"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "symmetry-translate",
+      "name": "轴对称与平移",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p127",
+        "cnm_p128"
+      ],
+      "stem_terms": [
+        "对称轴",
+        "平移",
+        "方向格数"
+      ],
+      "solution_terms": [
+        "找对称",
+        "描点平移"
+      ],
+      "standard_method": "找对称；描点平移；画完整图形",
+      "common_variants": [
+        "补轴对称",
+        "组合"
+      ],
+      "uncommon_transforms": [
+        "旋转对比"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 4,
+      "slug": "triangle-property",
+      "name": "三角形特性",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p122",
+        "cnm_p123",
+        "cnm_p124"
+      ],
+      "stem_terms": [
+        "内角和",
+        "三边",
+        "分类"
+      ],
+      "solution_terms": [
+        "作图"
+      ],
+      "standard_method": "边角关系；作图；角度计算",
+      "common_variants": [
+        "等腰等边触点"
+      ],
+      "uncommon_transforms": [
+        "多角"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "decimal-divide",
+      "name": "小数除法",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p137",
+        "cnm_p138",
+        "cnm_p139"
+      ],
+      "stem_terms": [
+        "除以小数",
+        "商"
+      ],
+      "solution_terms": [
+        "试商"
+      ],
+      "standard_method": "化除数为整数；试商；余与近似",
+      "common_variants": [
+        "循环预告点"
+      ],
+      "uncommon_transforms": [
+        "应用"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "decimal-multiply",
+      "name": "小数乘法",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p132",
+        "cnm_p133",
+        "cnm_p134",
+        "cnm_p135"
+      ],
+      "stem_terms": [
+        "小数乘",
+        "积的近似"
+      ],
+      "solution_terms": [
+        "按整数乘",
+        "点小数点"
+      ],
+      "standard_method": "按整数乘；点小数点；估算验",
+      "common_variants": [
+        "乘小数",
+        "应用"
+      ],
+      "uncommon_transforms": [
+        "近似"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "factor-multiple",
+      "name": "因数倍数与2/3/5特征",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p153",
+        "cnm_p154",
+        "cnm_p155",
+        "cnm_p156",
+        "cnm_p157"
+      ],
+      "stem_terms": [
+        "因数",
+        "倍数",
+        "质数"
+      ],
+      "solution_terms": [
+        "列举",
+        "筛法"
+      ],
+      "standard_method": "列举；筛法；整除特征",
+      "common_variants": [
+        "最大公因",
+        "最小公倍触点"
+      ],
+      "uncommon_transforms": [
+        "密码"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "fraction-add-sub",
+      "name": "分数加减混合",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p168",
+        "cnm_p172",
+        "cnm_p173",
+        "cnm_p174",
+        "cnm_p243"
+      ],
+      "stem_terms": [
+        "异分母"
+      ],
+      "solution_terms": [
+        "通分",
+        "约分"
+      ],
+      "standard_method": "通分→同分母加减；约分；括号",
+      "common_variants": [
+        "混合",
+        "文字"
+      ],
+      "uncommon_transforms": [
+        "多重通分"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "fraction-meaning",
+      "name": "分数意义与性质",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p165",
+        "cnm_p166",
+        "cnm_p167",
+        "cnm_p169"
+      ],
+      "stem_terms": [
+        "假分数"
+      ],
+      "solution_terms": [
+        "约分",
+        "通分"
+      ],
+      "standard_method": "等分与单位1；性质变形；大小比较",
+      "common_variants": [
+        "带分数",
+        "与小数互化"
+      ],
+      "uncommon_transforms": [],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "gcd-lcm",
+      "name": "最大公因数与最小公倍数",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p158",
+        "cnm_p159"
+      ],
+      "stem_terms": [
+        "公因",
+        "公倍",
+        "短除"
+      ],
+      "solution_terms": [
+        "列举→分解→短除",
+        "结合情境"
+      ],
+      "standard_method": "列举→分解→短除；结合情境",
+      "common_variants": [
+        "裁剪",
+        "发车"
+      ],
+      "uncommon_transforms": [
+        "三数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "ha-km2",
+      "name": "公顷与平方千米",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p098"
+      ],
+      "stem_terms": [
+        "公顷",
+        "平方千米"
+      ],
+      "solution_terms": [
+        "面积单位换算",
+        "选合适单位"
+      ],
+      "standard_method": "面积单位换算；选合适单位",
+      "common_variants": [
+        "土地情境"
+      ],
+      "uncommon_transforms": [
+        "复合图形"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "line-chart",
+      "name": "折线统计图",
+      "domain": "统计与概率",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p175"
+      ],
+      "stem_terms": [
+        "折线",
+        "趋势"
+      ],
+      "solution_terms": [
+        "描点连线",
+        "比增减"
+      ],
+      "standard_method": "描点连线；比增减",
+      "common_variants": [
+        "复式折线"
+      ],
+      "uncommon_transforms": [
+        "预测"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "planting-tree",
+      "name": "植树问题",
+      "domain": "综合与实践",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p151"
+      ],
+      "stem_terms": [
+        "间隔",
+        "棵数",
+        "路长"
+      ],
+      "solution_terms": [
+        "端点情形",
+        "÷间距"
+      ],
+      "standard_method": "端点情形；÷间距；加1或减1",
+      "common_variants": [
+        "环形",
+        "双侧"
+      ],
+      "uncommon_transforms": [
+        "方阵"
+      ],
+      "introduced_familiarity": "introduced",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "polygon-area",
+      "name": "平行四边形梯形面积",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p147",
+        "cnm_p148",
+        "cnm_p149",
+        "cnm_p150",
+        "cnm_p240"
+      ],
+      "stem_terms": [
+        "面积",
+        "底高",
+        "组合"
+      ],
+      "solution_terms": [
+        "公式",
+        "割补"
+      ],
+      "standard_method": "公式；割补；单位",
+      "common_variants": [
+        "已知面积反求",
+        "组合图形"
+      ],
+      "uncommon_transforms": [
+        "坐标格"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "补线或移动一块，把图形转成已知面积模型"
+    },
+    {
+      "grade": 5,
+      "slug": "possibility",
+      "name": "可能性",
+      "domain": "统计与概率",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p140",
+        "cnm_p141"
+      ],
+      "stem_terms": [
+        "可能",
+        "概率大小"
+      ],
+      "solution_terms": [
+        "枚举",
+        "定性比较"
+      ],
+      "standard_method": "枚举；定性比较。按课内标准步骤完成。",
+      "common_variants": [
+        "游戏公平"
+      ],
+      "uncommon_transforms": [
+        "实验频率"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "simple-equation",
+      "name": "简易方程与列式",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p142",
+        "cnm_p143",
+        "cnm_p144",
+        "cnm_p145",
+        "cnm_p146"
+      ],
+      "stem_terms": [
+        "方程",
+        "解方程",
+        "列方程"
+      ],
+      "solution_terms": [
+        "方程",
+        "解方程",
+        "列方程"
+      ],
+      "standard_method": "找等量关系；等式性质变形；检验",
+      "common_variants": [
+        "和差倍",
+        "几何量"
+      ],
+      "uncommon_transforms": [
+        "多未知数约简"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 5,
+      "slug": "volume-rect",
+      "name": "长方体表面积与体积",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p160",
+        "cnm_p161",
+        "cnm_p162",
+        "cnm_p163",
+        "cnm_p164"
+      ],
+      "stem_terms": [
+        "体积",
+        "容积",
+        "表面积"
+      ],
+      "solution_terms": [
+        "展开图",
+        "V=abh"
+      ],
+      "standard_method": "展开图；V=abh；单位进率",
+      "common_variants": [
+        "排水",
+        "堆叠"
+      ],
+      "uncommon_transforms": [
+        "缺面"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "circle-measure",
+      "name": "圆的周长与面积",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p188",
+        "cnm_p189",
+        "cnm_p190",
+        "cnm_p191",
+        "cnm_p192"
+      ],
+      "stem_terms": [
+        "圆周率",
+        "C=πd",
+        "面积"
+      ],
+      "solution_terms": [
+        "公式"
+      ],
+      "standard_method": "半径直径；公式；半圆扇形",
+      "common_variants": [
+        "跑道",
+        "最大圆"
+      ],
+      "uncommon_transforms": [
+        "组合留白"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "补半径、直径或连接圆心以显出基本结构"
+    },
+    {
+      "grade": 6,
+      "slug": "coordinate-direction",
+      "name": "方向距离与有序数对",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p136",
+        "cnm_p180",
+        "cnm_p181"
+      ],
+      "stem_terms": [
+        "有序数对",
+        "北偏东",
+        "路线图"
+      ],
+      "solution_terms": [
+        "坐标/角度+距离",
+        "描路线"
+      ],
+      "standard_method": "坐标/角度+距离；描路线",
+      "common_variants": [
+        "平移衔接"
+      ],
+      "uncommon_transforms": [
+        "比例尺配路线"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "cylinder-cone",
+      "name": "圆柱圆锥体积表面积",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p206",
+        "cnm_p207",
+        "cnm_p208",
+        "cnm_p248",
+        "cnm_p209"
+      ],
+      "stem_terms": [
+        "圆柱",
+        "圆锥",
+        "侧面积"
+      ],
+      "solution_terms": [
+        "比例"
+      ],
+      "standard_method": "展开侧面；V=Sh；比例堆",
+      "common_variants": [
+        "削切",
+        "灌水"
+      ],
+      "uncommon_transforms": [
+        "组合体"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "fraction-decimal-ops",
+      "name": "分数小数四则混合",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p247"
+      ],
+      "stem_terms": [
+        "混合运算",
+        "运算律"
+      ],
+      "solution_terms": [
+        "统一分数或小数",
+        "按律简算"
+      ],
+      "standard_method": "统一分数或小数；按律简算",
+      "common_variants": [
+        "括号多层"
+      ],
+      "uncommon_transforms": [
+        "巧算"
+      ],
+      "introduced_familiarity": "introduced",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "fraction-divide",
+      "name": "分数除法",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p182",
+        "cnm_p183",
+        "cnm_p184"
+      ],
+      "stem_terms": [
+        "除以分数",
+        "倒数"
+      ],
+      "solution_terms": [
+        "转化×倒数",
+        "单位1"
+      ],
+      "standard_method": "转化×倒数；单位1；分数应用",
+      "common_variants": [
+        "含括号"
+      ],
+      "uncommon_transforms": [
+        "工程类"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "fraction-multiply",
+      "name": "分数乘法",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p177",
+        "cnm_p178",
+        "cnm_p179",
+        "cnm_p246"
+      ],
+      "stem_terms": [
+        "分数乘",
+        "倒数"
+      ],
+      "solution_terms": [
+        "约分"
+      ],
+      "standard_method": "约分再乘；求一个数的几分之几",
+      "common_variants": [
+        "整数×分数",
+        "应用"
+      ],
+      "uncommon_transforms": [
+        "连乘"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "negative-number",
+      "name": "负数与数轴",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p201",
+        "cnm_p202"
+      ],
+      "stem_terms": [
+        "零下",
+        "相反意义",
+        "负数"
+      ],
+      "solution_terms": [
+        "定基准",
+        "比较大小"
+      ],
+      "standard_method": "定基准；比较大小；加减情境",
+      "common_variants": [
+        "海拔",
+        "账户"
+      ],
+      "uncommon_transforms": [
+        "数轴复合"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "percent-app",
+      "name": "百分数及折扣利率",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p194",
+        "cnm_p195",
+        "cnm_p196",
+        "cnm_p197",
+        "cnm_p198",
+        "cnm_p203",
+        "cnm_p204",
+        "cnm_p205"
+      ],
+      "stem_terms": [
+        "百分数",
+        "折扣",
+        "利率",
+        "增长率"
+      ],
+      "solution_terms": [
+        "互化",
+        "求率/求数"
+      ],
+      "standard_method": "互化；求率/求数；变化率",
+      "common_variants": [
+        "成数",
+        "提价降价"
+      ],
+      "uncommon_transforms": [
+        "连续变化"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "pigeonhole",
+      "name": "鸽巢（抽屉）原理型",
+      "domain": "综合与实践",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_p216"
+      ],
+      "stem_terms": [
+        "至少",
+        "保证",
+        "抽屉"
+      ],
+      "solution_terms": [
+        "对象数>盒子数",
+        "最不利"
+      ],
+      "standard_method": "对象数>盒子数；最不利",
+      "common_variants": [
+        "扑克",
+        "配色"
+      ],
+      "uncommon_transforms": [
+        "构造盒子"
+      ],
+      "introduced_familiarity": "introduced",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "proportion",
+      "name": "比例与正反比例",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p210",
+        "cnm_p211",
+        "cnm_p213",
+        "cnm_p214",
+        "cnm_p215"
+      ],
+      "stem_terms": [
+        "成正",
+        "成反"
+      ],
+      "solution_terms": [
+        "比例",
+        "解比例"
+      ],
+      "standard_method": "写比例式；交叉相乘；判k恒定",
+      "common_variants": [
+        "行程",
+        "工程"
+      ],
+      "uncommon_transforms": [
+        "比例尺结合"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "ratio-allocate",
+      "name": "比化简与按比分配",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p185",
+        "cnm_p186",
+        "cnm_p187"
+      ],
+      "stem_terms": [
+        "比",
+        "化简",
+        "分配"
+      ],
+      "solution_terms": [
+        "比例"
+      ],
+      "standard_method": "写比；求比值；按比例分",
+      "common_variants": [
+        "连比"
+      ],
+      "uncommon_transforms": [
+        "变化比"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "scale-drawing",
+      "name": "比例尺与放大缩小",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p212",
+        "cnm_p249"
+      ],
+      "stem_terms": [
+        "图上距离"
+      ],
+      "solution_terms": [
+        "比例尺",
+        "比例",
+        "作图"
+      ],
+      "standard_method": "线段比例尺；求实际；作图",
+      "common_variants": [
+        "放大缩倍"
+      ],
+      "uncommon_transforms": [
+        "半图"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 6,
+      "slug": "sector-pie-chart",
+      "name": "扇形统计图",
+      "domain": "统计与概率",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_p199"
+      ],
+      "stem_terms": [
+        "扇形",
+        "圆心角",
+        "占比"
+      ],
+      "solution_terms": [
+        "百分比↔角",
+        "读图补表"
+      ],
+      "standard_method": "百分比↔角；读图补表",
+      "common_variants": [
+        "复式"
+      ],
+      "uncommon_transforms": [
+        "与其他图互转"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "algebraic-expression",
+      "name": "代数式列式与求值",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_025",
+        "cnm_026",
+        "cnm_027",
+        "cnm_028",
+        "cnm_029",
+        "cnm_030"
+      ],
+      "stem_terms": [
+        "列代数式",
+        "规律",
+        "代入"
+      ],
+      "solution_terms": [
+        "文字↔式",
+        "规范书写"
+      ],
+      "standard_method": "文字↔式；规范书写；求值",
+      "common_variants": [
+        "图形规律"
+      ],
+      "uncommon_transforms": [
+        "参数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "coordinate-plane",
+      "name": "平面直角坐标系",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_081",
+        "cnm_082",
+        "cnm_083",
+        "cnm_084",
+        "cnm_085",
+        "cnm_086"
+      ],
+      "stem_terms": [
+        "坐标",
+        "象限",
+        "平移"
+      ],
+      "solution_terms": [
+        "写坐标",
+        "对称平移"
+      ],
+      "standard_method": "写坐标；对称平移；图形",
+      "common_variants": [
+        "面积格点"
+      ],
+      "uncommon_transforms": [
+        "参数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "geometry-basic",
+      "name": "几何图形与线段角",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_050",
+        "cnm_051",
+        "cnm_052",
+        "cnm_053",
+        "cnm_054",
+        "cnm_055",
+        "cnm_056",
+        "cnm_057",
+        "cnm_058",
+        "cnm_059",
+        "cnm_060"
+      ],
+      "stem_terms": [
+        "展开图",
+        "角平分线",
+        "余角"
+      ],
+      "solution_terms": [
+        "概念",
+        "度量"
+      ],
+      "standard_method": "概念；度量；推理短证",
+      "common_variants": [
+        "视图",
+        "最短路径触点"
+      ],
+      "uncommon_transforms": [
+        "动角"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "inequality-system",
+      "name": "不等式与不等式组",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_094",
+        "cnm_095",
+        "cnm_096",
+        "cnm_097",
+        "cnm_098",
+        "cnm_099",
+        "cnm_100"
+      ],
+      "stem_terms": [
+        "不等式",
+        "解集"
+      ],
+      "solution_terms": [
+        "数轴"
+      ],
+      "standard_method": "性质；变形；公共部分",
+      "common_variants": [
+        "方案",
+        "范围"
+      ],
+      "uncommon_transforms": [
+        "含参"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "linear-equation",
+      "name": "一元一次方程",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_039",
+        "cnm_040",
+        "cnm_041",
+        "cnm_042",
+        "cnm_043",
+        "cnm_044"
+      ],
+      "stem_terms": [
+        "分母"
+      ],
+      "solution_terms": [
+        "解方程",
+        "移项"
+      ],
+      "standard_method": "等式性质；标准化；验根",
+      "common_variants": [
+        "含括号",
+        "分数系数"
+      ],
+      "uncommon_transforms": [
+        "参数方程"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "linear-equation-app",
+      "name": "一元一次方程应用",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_045",
+        "cnm_046",
+        "cnm_047",
+        "cnm_048",
+        "cnm_049"
+      ],
+      "stem_terms": [
+        "配套",
+        "行程",
+        "利润",
+        "分段"
+      ],
+      "solution_terms": [
+        "方程"
+      ],
+      "standard_method": "设元；等量关系；列方程；检验合理性",
+      "common_variants": [
+        "工程",
+        "方案"
+      ],
+      "uncommon_transforms": [
+        "图表"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "linear-system",
+      "name": "二元一次方程组",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_087",
+        "cnm_088",
+        "cnm_089",
+        "cnm_090",
+        "cnm_091",
+        "cnm_092"
+      ],
+      "stem_terms": [
+        "方程组",
+        "消元"
+      ],
+      "solution_terms": [
+        "方程组",
+        "消元"
+      ],
+      "standard_method": "代入/加减；解集；应用",
+      "common_variants": [
+        "配套",
+        "行程"
+      ],
+      "uncommon_transforms": [
+        "三方程"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "number-line-abs",
+      "name": "数轴、相反数、绝对值",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_004",
+        "cnm_005",
+        "cnm_006",
+        "cnm_007",
+        "cnm_008",
+        "cnm_009"
+      ],
+      "stem_terms": [
+        "相反数"
+      ],
+      "solution_terms": [
+        "数轴",
+        "绝对值"
+      ],
+      "standard_method": "几何意义；化简绝对值；比较",
+      "common_variants": [
+        "|a+b|",
+        "分类讨论触点"
+      ],
+      "uncommon_transforms": [
+        "动点"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "parallel-lines",
+      "name": "相交线与平行线",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_062",
+        "cnm_063",
+        "cnm_064",
+        "cnm_065",
+        "cnm_066",
+        "cnm_067",
+        "cnm_068",
+        "cnm_069",
+        "cnm_070"
+      ],
+      "stem_terms": [
+        "平行",
+        "判定",
+        "性质",
+        "同位角"
+      ],
+      "solution_terms": [
+        "三线八角",
+        "判定↔性质"
+      ],
+      "standard_method": "三线八角；判定↔性质",
+      "common_variants": [
+        "拐点辅助线"
+      ],
+      "uncommon_transforms": [
+        "折叠"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "过拐点作已知平行线的平行线；同类重复线只算执行"
+    },
+    {
+      "grade": 7,
+      "slug": "polynomial-ops",
+      "name": "整式加减与化简",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_031",
+        "cnm_032",
+        "cnm_033",
+        "cnm_034",
+        "cnm_035",
+        "cnm_036",
+        "cnm_037",
+        "cnm_038"
+      ],
+      "stem_terms": [
+        "整式",
+        "合并",
+        "去括号"
+      ],
+      "solution_terms": [
+        "同类项",
+        "去括号变号"
+      ],
+      "standard_method": "同类项；去括号变号；化简求值",
+      "common_variants": [
+        "字母取值"
+      ],
+      "uncommon_transforms": [
+        "整体代入"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "rational-number-system",
+      "name": "有理数概念与运算体系",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_001",
+        "cnm_002",
+        "cnm_003",
+        "cnm_010",
+        "cnm_012",
+        "cnm_018",
+        "cnm_021"
+      ],
+      "stem_terms": [
+        "有理数",
+        "混合运算",
+        "符号"
+      ],
+      "solution_terms": [
+        "分类",
+        "法则"
+      ],
+      "standard_method": "分类；法则；混合顺序",
+      "common_variants": [
+        "加减",
+        "乘除",
+        "乘方"
+      ],
+      "uncommon_transforms": [
+        "多重括号"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "real-numbers",
+      "name": "实数与平方根",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_074",
+        "cnm_075",
+        "cnm_076",
+        "cnm_077",
+        "cnm_078",
+        "cnm_079",
+        "cnm_080"
+      ],
+      "stem_terms": [
+        "平方根",
+        "立方根",
+        "无理数"
+      ],
+      "solution_terms": [
+        "定义域",
+        "估算"
+      ],
+      "standard_method": "定义域；估算；实数运算",
+      "common_variants": [
+        "化简根式预告"
+      ],
+      "uncommon_transforms": [
+        "数轴实数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "scientific-notation",
+      "name": "科学记数法与近似数",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_022",
+        "cnm_023",
+        "cnm_024"
+      ],
+      "stem_terms": [
+        "科学记数",
+        "有效数字",
+        "进位制"
+      ],
+      "solution_terms": [
+        "a×10^n",
+        "四舍五入"
+      ],
+      "standard_method": "a×10^n；四舍五入；单位",
+      "common_variants": [
+        "大数小数"
+      ],
+      "uncommon_transforms": [
+        "混合运算"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 7,
+      "slug": "statistics-intro",
+      "name": "数据收集与统计图表",
+      "domain": "统计与概率",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_102",
+        "cnm_103",
+        "cnm_104",
+        "cnm_105",
+        "cnm_106",
+        "cnm_107",
+        "cnm_292",
+        "cnm_293",
+        "cnm_294",
+        "cnm_295"
+      ],
+      "stem_terms": [
+        "抽样",
+        "条形",
+        "扇形",
+        "直方图"
+      ],
+      "solution_terms": [
+        "作图"
+      ],
+      "standard_method": "概念；作图；读图",
+      "common_variants": [
+        "误导辨析"
+      ],
+      "uncommon_transforms": [
+        "趋势图"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 8,
+      "slug": "axisymmetric-isosceles",
+      "name": "轴对称与等腰等边",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_131",
+        "cnm_132",
+        "cnm_133",
+        "cnm_137",
+        "cnm_138",
+        "cnm_139",
+        "cnm_140"
+      ],
+      "stem_terms": [
+        "对称",
+        "等腰",
+        "垂直平分线"
+      ],
+      "solution_terms": [
+        "作图"
+      ],
+      "standard_method": "性质判定；作图；最短路径",
+      "common_variants": [
+        "坐标对称"
+      ],
+      "uncommon_transforms": [
+        "折叠"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "作目标点关于直线的对称点并连接"
+    },
+    {
+      "grade": 8,
+      "slug": "congruent-triangle",
+      "name": "全等三角形判定",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_120",
+        "cnm_121",
+        "cnm_122",
+        "cnm_123",
+        "cnm_124",
+        "cnm_125",
+        "cnm_126"
+      ],
+      "stem_terms": [
+        "SSS",
+        "SAS",
+        "证明"
+      ],
+      "solution_terms": [
+        "全等"
+      ],
+      "standard_method": "选判定；对应；书写",
+      "common_variants": [
+        "HL",
+        "拼三角"
+      ],
+      "uncommon_transforms": [
+        "一线三等角模型"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "连接关键点或补公共边以凑齐判定条件"
+    },
+    {
+      "grade": 8,
+      "slug": "data-analysis",
+      "name": "数据的集中趋势与离散程度",
+      "domain": "统计与概率",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_211",
+        "cnm_212",
+        "cnm_213",
+        "cnm_214",
+        "cnm_215",
+        "cnm_305"
+      ],
+      "stem_terms": [
+        "平均数",
+        "方差",
+        "箱线图"
+      ],
+      "solution_terms": [
+        "选统计量",
+        "稳定性"
+      ],
+      "standard_method": "选统计量；稳定性；读箱线",
+      "common_variants": [
+        "加权"
+      ],
+      "uncommon_transforms": [
+        "分组估计"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 8,
+      "slug": "factorization",
+      "name": "因式分解",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_150",
+        "cnm_151",
+        "cnm_152",
+        "cnm_153",
+        "cnm_154",
+        "cnm_155"
+      ],
+      "stem_terms": [
+        "提公因式"
+      ],
+      "solution_terms": [
+        "因式分解",
+        "公式法"
+      ],
+      "standard_method": "判类型；分解；验乘",
+      "common_variants": [
+        "分组",
+        "十字"
+      ],
+      "uncommon_transforms": [
+        "应用求值"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 8,
+      "slug": "fraction-ops",
+      "name": "分式运算",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_156",
+        "cnm_157",
+        "cnm_158",
+        "cnm_159",
+        "cnm_160",
+        "cnm_161",
+        "cnm_162",
+        "cnm_163",
+        "cnm_164"
+      ],
+      "stem_terms": [
+        "分式"
+      ],
+      "solution_terms": [
+        "约分",
+        "通分"
+      ],
+      "standard_method": "有意义条件；乘除→加减",
+      "common_variants": [
+        "化简求值"
+      ],
+      "uncommon_transforms": [
+        "与方程混合预告"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 8,
+      "slug": "fractional-equation",
+      "name": "分式方程应用",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_165",
+        "cnm_166"
+      ],
+      "stem_terms": [
+        "增根"
+      ],
+      "solution_terms": [
+        "分式方程"
+      ],
+      "standard_method": "去分母；检验；应用",
+      "common_variants": [
+        "工程",
+        "行程"
+      ],
+      "uncommon_transforms": [
+        "参数"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 8,
+      "slug": "linear-function",
+      "name": "一次函数与方程不等式",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_193",
+        "cnm_194",
+        "cnm_201",
+        "cnm_202",
+        "cnm_203",
+        "cnm_205",
+        "cnm_206",
+        "cnm_207",
+        "cnm_208",
+        "cnm_209"
+      ],
+      "stem_terms": [
+        "一次函数",
+        "k与b",
+        "图象"
+      ],
+      "solution_terms": [
+        "待定系数",
+        "方程"
+      ],
+      "standard_method": "待定系数；性质；与方程不等式联动",
+      "common_variants": [
+        "实际"
+      ],
+      "uncommon_transforms": [
+        "平移"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 8,
+      "slug": "polynomial-multiply",
+      "name": "整式乘法与乘法公式",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_142",
+        "cnm_143",
+        "cnm_144",
+        "cnm_145",
+        "cnm_146",
+        "cnm_147",
+        "cnm_148",
+        "cnm_149"
+      ],
+      "stem_terms": [
+        "平方差",
+        "完全平方"
+      ],
+      "solution_terms": [
+        "公式"
+      ],
+      "standard_method": "法则；公式识别；几何背景",
+      "common_variants": [
+        "整体代换"
+      ],
+      "uncommon_transforms": [
+        "高次"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 8,
+      "slug": "pythagorean",
+      "name": "勾股定理及应用",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_174",
+        "cnm_175",
+        "cnm_176",
+        "cnm_177",
+        "cnm_178",
+        "cnm_179"
+      ],
+      "stem_terms": [
+        "逆定理"
+      ],
+      "solution_terms": [
+        "勾股",
+        "数轴"
+      ],
+      "standard_method": "识别直角；列a²+b²=c²；数轴无理数",
+      "common_variants": [
+        "勾股数",
+        "立体展开"
+      ],
+      "uncommon_transforms": [
+        "折叠"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "补直角三角形或作高，把目标线段放入勾股结构"
+    },
+    {
+      "grade": 8,
+      "slug": "quadrilateral",
+      "name": "平行四边形与特殊四边形",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_183",
+        "cnm_184",
+        "cnm_185",
+        "cnm_186",
+        "cnm_188",
+        "cnm_189",
+        "cnm_191",
+        "cnm_192"
+      ],
+      "stem_terms": [
+        "平行四边形",
+        "矩形",
+        "菱形",
+        "正方形"
+      ],
+      "solution_terms": [
+        "性质判定",
+        "中位线"
+      ],
+      "standard_method": "性质判定；中位线；折叠动点",
+      "common_variants": [
+        "面积"
+      ],
+      "uncommon_transforms": [
+        "证正方形"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "连接对角线或中点，转成全等或中位线结构"
+    },
+    {
+      "grade": 8,
+      "slug": "radical-ops",
+      "name": "二次根式运算",
+      "domain": "数与代数",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_167",
+        "cnm_168",
+        "cnm_169",
+        "cnm_170",
+        "cnm_171",
+        "cnm_172",
+        "cnm_173"
+      ],
+      "stem_terms": [
+        "二次根式",
+        "化简",
+        "有理化"
+      ],
+      "solution_terms": [
+        "有意义",
+        "性质"
+      ],
+      "standard_method": "有意义；性质；同类合并",
+      "common_variants": [
+        "混合运算"
+      ],
+      "uncommon_transforms": [
+        "参数范围"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 8,
+      "slug": "triangle-proof",
+      "name": "三角形性质与内角外角",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_110",
+        "cnm_111",
+        "cnm_112",
+        "cnm_115",
+        "cnm_117",
+        "cnm_118"
+      ],
+      "stem_terms": [
+        "内角和",
+        "外角",
+        "三边"
+      ],
+      "solution_terms": [
+        "证角关系",
+        "分类讨论"
+      ],
+      "standard_method": "证角关系；分类讨论；规范表述",
+      "common_variants": [
+        "角平分线",
+        "高线"
+      ],
+      "uncommon_transforms": [
+        "多结论"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 9,
+      "slug": "arc-sector",
+      "name": "弧长扇形与圆锥侧面",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_256",
+        "cnm_257",
+        "cnm_258"
+      ],
+      "stem_terms": [
+        "弧长",
+        "扇形",
+        "侧面积"
+      ],
+      "solution_terms": [
+        "公式"
+      ],
+      "standard_method": "公式；母线半径；展开",
+      "common_variants": [
+        "组合回转"
+      ],
+      "uncommon_transforms": [
+        "最值触点"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 9,
+      "slug": "circle-position-tangent",
+      "name": "点线圆位置与切线",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_259",
+        "cnm_260",
+        "cnm_261",
+        "cnm_262",
+        "cnm_263",
+        "cnm_264",
+        "cnm_265",
+        "cnm_266"
+      ],
+      "stem_terms": [
+        "切线",
+        "切线长",
+        "内切外接圆"
+      ],
+      "solution_terms": [
+        "判切",
+        "性质"
+      ],
+      "standard_method": "判切；性质；圆幂触点",
+      "common_variants": [
+        "证明"
+      ],
+      "uncommon_transforms": [
+        "尺规作图"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "连接圆心与切点，或向直线作垂线"
+    },
+    {
+      "grade": 9,
+      "slug": "circle-theorem",
+      "name": "圆的性质（垂径、圆周角）",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_250",
+        "cnm_251",
+        "cnm_252",
+        "cnm_253",
+        "cnm_254",
+        "cnm_255"
+      ],
+      "stem_terms": [
+        "垂径",
+        "圆周角",
+        "圆内接四边形"
+      ],
+      "solution_terms": [
+        "连半径",
+        "直角对直径"
+      ],
+      "standard_method": "连半径；直角对直径；角弧关系",
+      "common_variants": [
+        "证明链"
+      ],
+      "uncommon_transforms": [
+        "折叠圆"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "连接圆心、半径或弦，显出等腰与同弧关系"
+    },
+    {
+      "grade": 9,
+      "slug": "inverse-proportion",
+      "name": "反比例函数",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_237",
+        "cnm_238",
+        "cnm_239",
+        "cnm_240",
+        "cnm_241",
+        "cnm_242"
+      ],
+      "stem_terms": [
+        "双曲线",
+        "k"
+      ],
+      "solution_terms": [
+        "反比例",
+        "待定系数"
+      ],
+      "standard_method": "待定系数；性质；与一次函数交",
+      "common_variants": [
+        "几何意义矩形"
+      ],
+      "uncommon_transforms": [
+        "行程"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 9,
+      "slug": "probability-count",
+      "name": "概率（列举与频率）",
+      "domain": "统计与概率",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_284",
+        "cnm_285",
+        "cnm_286",
+        "cnm_287",
+        "cnm_288",
+        "cnm_309",
+        "cnm_310",
+        "cnm_311"
+      ],
+      "stem_terms": [
+        "频率"
+      ],
+      "solution_terms": [
+        "列表",
+        "树状图"
+      ],
+      "standard_method": "等可能；不重不漏；游戏公平",
+      "common_variants": [
+        "放回不放回"
+      ],
+      "uncommon_transforms": [
+        "多步"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 9,
+      "slug": "projection-view",
+      "name": "投影与三视图",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_281",
+        "cnm_282",
+        "cnm_283"
+      ],
+      "stem_terms": [
+        "三视图",
+        "正投影"
+      ],
+      "solution_terms": [
+        "主俯左对应",
+        "想象立体"
+      ],
+      "standard_method": "主俯左对应；想象立体",
+      "common_variants": [
+        "补线",
+        "小立方体堆"
+      ],
+      "uncommon_transforms": [
+        "展开拼体"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 9,
+      "slug": "quadratic-equation",
+      "name": "一元二次方程解法",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_219",
+        "cnm_220",
+        "cnm_221",
+        "cnm_222",
+        "cnm_223",
+        "cnm_224",
+        "cnm_225"
+      ],
+      "stem_terms": [
+        "一元二次",
+        "判别式"
+      ],
+      "solution_terms": [
+        "配方法"
+      ],
+      "standard_method": "选法；求根；检验",
+      "common_variants": [
+        "因式分解",
+        "公式"
+      ],
+      "uncommon_transforms": [
+        "含参"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 9,
+      "slug": "quadratic-equation-app",
+      "name": "一元二次方程应用",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_227",
+        "cnm_228",
+        "cnm_226"
+      ],
+      "stem_terms": [
+        "增长率",
+        "面积",
+        "利润"
+      ],
+      "solution_terms": [
+        "方程"
+      ],
+      "standard_method": "设元；列方程；舍根",
+      "common_variants": [
+        "传播",
+        "围矩形"
+      ],
+      "uncommon_transforms": [
+        "函数关联"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 9,
+      "slug": "quadratic-function",
+      "name": "二次函数图象与性质",
+      "domain": "数与代数",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_229",
+        "cnm_230",
+        "cnm_231",
+        "cnm_232",
+        "cnm_233",
+        "cnm_234",
+        "cnm_235",
+        "cnm_236"
+      ],
+      "stem_terms": [
+        "抛物线",
+        "顶点",
+        "最值"
+      ],
+      "solution_terms": [
+        "配方",
+        "方程"
+      ],
+      "standard_method": "配方法；平移；与方程交点",
+      "common_variants": [
+        "实际问题"
+      ],
+      "uncommon_transforms": [
+        "区间最值"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": false,
+      "auxiliary_strategy": ""
+    },
+    {
+      "grade": 9,
+      "slug": "rotation-symmetry",
+      "name": "旋转与中心对称",
+      "domain": "图形与几何",
+      "semester": "上",
+      "topic_ids": [
+        "cnm_244",
+        "cnm_245",
+        "cnm_246",
+        "cnm_247",
+        "cnm_248",
+        "cnm_249"
+      ],
+      "stem_terms": [
+        "旋转",
+        "中心对称",
+        "坐标"
+      ],
+      "solution_terms": [
+        "作图"
+      ],
+      "standard_method": "旋转中心角；作图；性质证",
+      "common_variants": [
+        "格点旋转"
+      ],
+      "uncommon_transforms": [
+        "组合变换"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "连接旋转中心与对应点，显出等长和旋转角"
+    },
+    {
+      "grade": 9,
+      "slug": "similarity",
+      "name": "相似三角形",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_268",
+        "cnm_269",
+        "cnm_270",
+        "cnm_271",
+        "cnm_272",
+        "cnm_273",
+        "cnm_274",
+        "cnm_275"
+      ],
+      "stem_terms": [
+        "位似"
+      ],
+      "solution_terms": [
+        "相似",
+        "平行线分比"
+      ],
+      "standard_method": "判定；性质；模型A字影子",
+      "common_variants": [
+        "测量",
+        "网格位似"
+      ],
+      "uncommon_transforms": [
+        "旋转相似"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "补平行线、延长相交或连接线段，构造标准相似结构"
+    },
+    {
+      "grade": 9,
+      "slug": "trig-right-triangle",
+      "name": "锐角三角函数与解直角三角形",
+      "domain": "图形与几何",
+      "semester": "下",
+      "topic_ids": [
+        "cnm_276",
+        "cnm_277",
+        "cnm_278",
+        "cnm_279",
+        "cnm_280"
+      ],
+      "stem_terms": [
+        "仰角",
+        "俯角",
+        "坡度",
+        "sin cos tan"
+      ],
+      "solution_terms": [
+        "选关系式",
+        "求边"
+      ],
+      "standard_method": "选关系式；求边；仰俯转换",
+      "common_variants": [
+        "双直角",
+        "折叠"
+      ],
+      "uncommon_transforms": [
+        "方位角"
+      ],
+      "introduced_familiarity": "core",
+      "auxiliary_required": true,
+      "auxiliary_strategy": "作高或垂线，把实际图形拆成直角三角形"
+    }
+  ]
+}

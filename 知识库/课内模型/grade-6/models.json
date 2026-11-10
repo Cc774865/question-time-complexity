@@ -1,0 +1,830 @@
+{
+  "grade": 6,
+  "publisher": "人民教育出版社",
+  "school_system": "六三制",
+  "scope": "教材模型摘要；不含教材题目原文",
+  "models": [
+    {
+      "id": "pep-g6-circle-measure",
+      "name": "圆的周长与面积",
+      "grade": 6,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p188",
+        "cnm_p189",
+        "cnm_p190",
+        "cnm_p191",
+        "cnm_p192"
+      ],
+      "model_summary": "半径直径；公式；半圆扇形",
+      "trigger_features": {
+        "stem_terms": [
+          "圆周率",
+          "C=πd",
+          "面积"
+        ],
+        "solution_terms": [
+          "公式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "半径直径；公式；半圆扇形",
+      "common_variants": [
+        "跑道",
+        "最大圆"
+      ],
+      "uncommon_transforms": [
+        "组合留白"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "补半径、直径或连接圆心以显出基本结构",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g6-u",
+      "item_refs": [
+        {
+          "chapter": "六年级上册 第4单元 圆",
+          "section": "六年级上册 第4单元 圆",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-coordinate-direction",
+      "name": "方向距离与有序数对",
+      "grade": 6,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p136",
+        "cnm_p180",
+        "cnm_p181"
+      ],
+      "model_summary": "坐标/角度+距离；描路线",
+      "trigger_features": {
+        "stem_terms": [
+          "有序数对",
+          "北偏东",
+          "路线图"
+        ],
+        "solution_terms": [
+          "坐标/角度+距离",
+          "描路线"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "坐标/角度+距离；描路线",
+      "common_variants": [
+        "平移衔接"
+      ],
+      "uncommon_transforms": [
+        "比例尺配路线"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-u",
+      "item_refs": [
+        {
+          "chapter": "六年级上册 第1单元 确定位置",
+          "section": "六年级上册 第1单元 确定位置",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-cylinder-cone",
+      "name": "圆柱圆锥体积表面积",
+      "grade": 6,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p206",
+        "cnm_p207",
+        "cnm_p208",
+        "cnm_p248",
+        "cnm_p209"
+      ],
+      "model_summary": "展开侧面；V=Sh；比例堆",
+      "trigger_features": {
+        "stem_terms": [
+          "圆柱",
+          "圆锥",
+          "侧面积"
+        ],
+        "solution_terms": [
+          "比例"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "展开侧面；V=Sh；比例堆",
+      "common_variants": [
+        "削切",
+        "灌水"
+      ],
+      "uncommon_transforms": [
+        "组合体"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-l",
+      "item_refs": [
+        {
+          "chapter": "六年级下册 第3单元 圆柱与圆锥",
+          "section": "六年级下册 第3单元 圆柱与圆锥",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-fraction-decimal-ops",
+      "name": "分数小数四则混合",
+      "grade": 6,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "introduced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p247"
+      ],
+      "model_summary": "统一分数或小数；按律简算",
+      "trigger_features": {
+        "stem_terms": [
+          "混合运算",
+          "运算律"
+        ],
+        "solution_terms": [
+          "统一分数或小数",
+          "按律简算"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "统一分数或小数；按律简算",
+      "common_variants": [
+        "括号多层"
+      ],
+      "uncommon_transforms": [
+        "巧算"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-u",
+      "item_refs": [
+        {
+          "chapter": "六年级上册 第2单元 分数乘法",
+          "section": "六年级上册 第2单元 分数乘法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-fraction-divide",
+      "name": "分数除法",
+      "grade": 6,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p182",
+        "cnm_p183",
+        "cnm_p184"
+      ],
+      "model_summary": "转化×倒数；单位1；分数应用",
+      "trigger_features": {
+        "stem_terms": [
+          "除以分数",
+          "倒数"
+        ],
+        "solution_terms": [
+          "转化×倒数",
+          "单位1"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "转化×倒数；单位1；分数应用",
+      "common_variants": [
+        "含括号"
+      ],
+      "uncommon_transforms": [
+        "工程类"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-u",
+      "item_refs": [
+        {
+          "chapter": "六年级上册 第3单元 分数除法",
+          "section": "六年级上册 第3单元 分数除法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-fraction-multiply",
+      "name": "分数乘法",
+      "grade": 6,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p177",
+        "cnm_p178",
+        "cnm_p179",
+        "cnm_p246"
+      ],
+      "model_summary": "约分再乘；求一个数的几分之几",
+      "trigger_features": {
+        "stem_terms": [
+          "分数乘",
+          "倒数"
+        ],
+        "solution_terms": [
+          "约分"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "约分再乘；求一个数的几分之几",
+      "common_variants": [
+        "整数×分数",
+        "应用"
+      ],
+      "uncommon_transforms": [
+        "连乘"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-u",
+      "item_refs": [
+        {
+          "chapter": "六年级上册 第2单元 分数乘法",
+          "section": "六年级上册 第2单元 分数乘法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-negative-number",
+      "name": "负数与数轴",
+      "grade": 6,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p201",
+        "cnm_p202"
+      ],
+      "model_summary": "定基准；比较大小；加减情境",
+      "trigger_features": {
+        "stem_terms": [
+          "零下",
+          "相反意义",
+          "负数"
+        ],
+        "solution_terms": [
+          "定基准",
+          "比较大小"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "定基准；比较大小；加减情境",
+      "common_variants": [
+        "海拔",
+        "账户"
+      ],
+      "uncommon_transforms": [
+        "数轴复合"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-u",
+      "item_refs": [
+        {
+          "chapter": "六年级上册 综合与实践 生活中的负数",
+          "section": "六年级上册 综合与实践 生活中的负数",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-percent-app",
+      "name": "百分数及折扣利率",
+      "grade": 6,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p194",
+        "cnm_p195",
+        "cnm_p196",
+        "cnm_p197",
+        "cnm_p198",
+        "cnm_p203",
+        "cnm_p204",
+        "cnm_p205"
+      ],
+      "model_summary": "互化；求率/求数；变化率",
+      "trigger_features": {
+        "stem_terms": [
+          "百分数",
+          "折扣",
+          "利率",
+          "增长率"
+        ],
+        "solution_terms": [
+          "互化",
+          "求率/求数"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "互化；求率/求数；变化率",
+      "common_variants": [
+        "成数",
+        "提价降价"
+      ],
+      "uncommon_transforms": [
+        "连续变化"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-u",
+      "item_refs": [
+        {
+          "chapter": "六年级上册 第5单元 百分数",
+          "section": "六年级上册 第5单元 百分数",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-pigeonhole",
+      "name": "鸽巢（抽屉）原理型",
+      "grade": 6,
+      "semester": "上",
+      "domain": "综合与实践",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "introduced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p216"
+      ],
+      "model_summary": "对象数>盒子数；最不利",
+      "trigger_features": {
+        "stem_terms": [
+          "至少",
+          "保证",
+          "抽屉"
+        ],
+        "solution_terms": [
+          "对象数>盒子数",
+          "最不利"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "对象数>盒子数；最不利",
+      "common_variants": [
+        "扑克",
+        "配色"
+      ],
+      "uncommon_transforms": [
+        "构造盒子"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-u",
+      "item_refs": [
+        {
+          "chapter": "六年级上册 第6单元 复习与关联",
+          "section": "六年级上册 第6单元 复习与关联",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-proportion",
+      "name": "比例与正反比例",
+      "grade": 6,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p210",
+        "cnm_p211",
+        "cnm_p213",
+        "cnm_p214",
+        "cnm_p215"
+      ],
+      "model_summary": "写比例式；交叉相乘；判k恒定",
+      "trigger_features": {
+        "stem_terms": [
+          "成正",
+          "成反"
+        ],
+        "solution_terms": [
+          "比例",
+          "解比例"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "写比例式；交叉相乘；判k恒定",
+      "common_variants": [
+        "行程",
+        "工程"
+      ],
+      "uncommon_transforms": [
+        "比例尺结合"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-l",
+      "item_refs": [
+        {
+          "chapter": "六年级下册 第4单元 比例",
+          "section": "六年级下册 第4单元 比例",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-ratio-allocate",
+      "name": "比化简与按比分配",
+      "grade": 6,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p185",
+        "cnm_p186",
+        "cnm_p187"
+      ],
+      "model_summary": "写比；求比值；按比例分",
+      "trigger_features": {
+        "stem_terms": [
+          "比",
+          "化简",
+          "分配"
+        ],
+        "solution_terms": [
+          "比例"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "写比；求比值；按比例分",
+      "common_variants": [
+        "连比"
+      ],
+      "uncommon_transforms": [
+        "变化比"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-l",
+      "item_refs": [
+        {
+          "chapter": "六年级下册 第4单元 比例",
+          "section": "六年级下册 第4单元 比例",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-scale-drawing",
+      "name": "比例尺与放大缩小",
+      "grade": 6,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p212",
+        "cnm_p249"
+      ],
+      "model_summary": "线段比例尺；求实际；作图",
+      "trigger_features": {
+        "stem_terms": [
+          "图上距离"
+        ],
+        "solution_terms": [
+          "比例尺",
+          "比例",
+          "作图"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "线段比例尺；求实际；作图",
+      "common_variants": [
+        "放大缩倍"
+      ],
+      "uncommon_transforms": [
+        "半图"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-l",
+      "item_refs": [
+        {
+          "chapter": "六年级下册 第4单元 比例",
+          "section": "六年级下册 第4单元 比例",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g6-sector-pie-chart",
+      "name": "扇形统计图",
+      "grade": 6,
+      "semester": "下",
+      "domain": "统计与概率",
+      "introduced_grade": 6,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "core",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p199"
+      ],
+      "model_summary": "百分比↔角；读图补表",
+      "trigger_features": {
+        "stem_terms": [
+          "扇形",
+          "圆心角",
+          "占比"
+        ],
+        "solution_terms": [
+          "百分比↔角",
+          "读图补表"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "百分比↔角；读图补表",
+      "common_variants": [
+        "复式"
+      ],
+      "uncommon_transforms": [
+        "与其他图互转"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g6-l",
+      "item_refs": [
+        {
+          "chapter": "六年级下册 第6单元 整理和复习",
+          "section": "六年级下册 第6单元 整理和复习",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    }
+  ]
+}

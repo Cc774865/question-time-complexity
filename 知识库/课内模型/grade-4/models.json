@@ -1,0 +1,883 @@
+{
+  "grade": 4,
+  "publisher": "人民教育出版社",
+  "school_system": "六三制",
+  "scope": "教材模型摘要；不含教材题目原文",
+  "models": [
+    {
+      "id": "pep-g4-angle-measure",
+      "name": "角的度量与分类",
+      "grade": 4,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p100",
+        "cnm_p232"
+      ],
+      "model_summary": "对齐顶点与边；读度数；作角",
+      "trigger_features": {
+        "stem_terms": [
+          "量角器",
+          "平角",
+          "周角"
+        ],
+        "solution_terms": [
+          "对齐顶点与边",
+          "读度数"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "对齐顶点与边；读度数；作角",
+      "common_variants": [
+        "拼特殊角"
+      ],
+      "uncommon_transforms": [
+        "扇形分角"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-u",
+      "item_refs": [
+        {
+          "chapter": "四年级上册 第2单元 角的度量",
+          "section": "四年级上册 第2单元 角的度量",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-bar-chart",
+      "name": "条形统计图",
+      "grade": 4,
+      "semester": "上",
+      "domain": "统计与概率",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p108",
+        "cnm_p130"
+      ],
+      "model_summary": "标轴；画条；比读",
+      "trigger_features": {
+        "stem_terms": [
+          "条形图",
+          "复式"
+        ],
+        "solution_terms": [
+          "标轴",
+          "画条"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "标轴；画条；比读",
+      "common_variants": [
+        "单式",
+        "复式对比"
+      ],
+      "uncommon_transforms": [
+        "平均数衔接"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-u",
+      "item_refs": [
+        {
+          "chapter": "四年级上册 第6单元 条形统计图",
+          "section": "四年级上册 第6单元 条形统计图",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-big-number",
+      "name": "亿以内数与改写近似",
+      "grade": 4,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p096",
+        "cnm_p097",
+        "cnm_p236"
+      ],
+      "model_summary": "数位分段；四舍五入；单位改写",
+      "trigger_features": {
+        "stem_terms": [
+          "亿",
+          "省略",
+          "近似"
+        ],
+        "solution_terms": [
+          "数位分段",
+          "四舍五入"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "数位分段；四舍五入；单位改写",
+      "common_variants": [
+        "读作写作",
+        "蛋糕图估1亿"
+      ],
+      "uncommon_transforms": [],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-u",
+      "item_refs": [
+        {
+          "chapter": "四年级上册 第1单元 万以上数的认识",
+          "section": "四年级上册 第1单元 万以上数的认识",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-chicken-rabbit",
+      "name": "假设调整法（鸡兔同笼型）",
+      "grade": 4,
+      "semester": "上",
+      "domain": "综合与实践",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "introduced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p131"
+      ],
+      "model_summary": "假设全一类→算差额；调整",
+      "trigger_features": {
+        "stem_terms": [
+          "头脚",
+          "假设"
+        ],
+        "solution_terms": [
+          "假设全一类→算差额",
+          "调整"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "假设全一类→算差额；调整",
+      "common_variants": [
+        "不同动物"
+      ],
+      "uncommon_transforms": [
+        "简化表"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-u",
+      "item_refs": [
+        {
+          "chapter": "四年级上册 第8单元 数学广角——鸡兔同笼",
+          "section": "四年级上册 第8单元 数学广角——鸡兔同笼",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-decimal-add-sub",
+      "name": "小数加减与应用",
+      "grade": 4,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p125",
+        "cnm_p126"
+      ],
+      "model_summary": "小数点对齐；单位；验算",
+      "trigger_features": {
+        "stem_terms": [
+          "小数加减"
+        ],
+        "solution_terms": [
+          "竖式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "小数点对齐；单位；验算",
+      "common_variants": [
+        "购物",
+        "测量"
+      ],
+      "uncommon_transforms": [
+        "多步"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-l",
+      "item_refs": [
+        {
+          "chapter": "四年级下册 第6单元 小数的加法和减法",
+          "section": "四年级下册 第6单元 小数的加法和减法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-decimal-meaning",
+      "name": "小数的意义与性质",
+      "grade": 4,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p118",
+        "cnm_p119",
+        "cnm_p120",
+        "cnm_p121"
+      ],
+      "model_summary": "数位表；比大小；扩缩倍数",
+      "trigger_features": {
+        "stem_terms": [
+          "小数点",
+          "近似",
+          "移动"
+        ],
+        "solution_terms": [
+          "数位表",
+          "比大小"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "数位表；比大小；扩缩倍数",
+      "common_variants": [
+        "复名数",
+        "求近似"
+      ],
+      "uncommon_transforms": [
+        "科学记数过渡"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-l",
+      "item_refs": [
+        {
+          "chapter": "四年级下册 第4单元 小数的意义和性质",
+          "section": "四年级下册 第4单元 小数的意义和性质",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-divide-2digit",
+      "name": "除数是两位数",
+      "grade": 4,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p106",
+        "cnm_p107"
+      ],
+      "model_summary": "估商；调商；简算商不变",
+      "trigger_features": {
+        "stem_terms": [
+          "商不变"
+        ],
+        "solution_terms": [
+          "试商"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "估商；调商；简算商不变",
+      "common_variants": [
+        "有余",
+        "验乘"
+      ],
+      "uncommon_transforms": [
+        "简便规律"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-u",
+      "item_refs": [
+        {
+          "chapter": "四年级上册 第6单元 除数是两位数的除法",
+          "section": "四年级上册 第6单元 除数是两位数的除法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-four-ops-law",
+      "name": "四则关系与运算律",
+      "grade": 4,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p110",
+        "cnm_p112",
+        "cnm_p114",
+        "cnm_p115",
+        "cnm_p116",
+        "cnm_p117"
+      ],
+      "model_summary": "识别结构；选律；脱式简算",
+      "trigger_features": {
+        "stem_terms": [
+          "简便",
+          "交换",
+          "结合",
+          "分配"
+        ],
+        "solution_terms": [
+          "识别结构",
+          "选律"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "识别结构；选律；脱式简算",
+      "common_variants": [
+        "凑整",
+        "拆乘"
+      ],
+      "uncommon_transforms": [
+        "逆运算验算"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-l",
+      "item_refs": [
+        {
+          "chapter": "四年级下册 第1单元 四则运算",
+          "section": "四年级下册 第1单元 四则运算",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-mean-average",
+      "name": "平均数",
+      "grade": 4,
+      "semester": "下",
+      "domain": "统计与概率",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p129"
+      ],
+      "model_summary": "总数量÷份数；加权情境",
+      "trigger_features": {
+        "stem_terms": [
+          "平均",
+          "代表"
+        ],
+        "solution_terms": [
+          "总数量÷份数",
+          "加权情境"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "总数量÷份数；加权情境",
+      "common_variants": [
+        "移多补少"
+      ],
+      "uncommon_transforms": [
+        "加权预告"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-l",
+      "item_refs": [
+        {
+          "chapter": "四年级下册 第8单元 平均数与条形统计图",
+          "section": "四年级下册 第8单元 平均数与条形统计图",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-multiply-2digit",
+      "name": "两位/多位数乘法",
+      "grade": 4,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p086",
+        "cnm_p087",
+        "cnm_p102",
+        "cnm_p233"
+      ],
+      "model_summary": "分步竖式；积的位置；估算范围",
+      "trigger_features": {
+        "stem_terms": [
+          "两位数乘",
+          "估算"
+        ],
+        "solution_terms": [
+          "竖式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "分步竖式；积的位置；估算范围",
+      "common_variants": [
+        "进位",
+        "应用"
+      ],
+      "uncommon_transforms": [
+        "多位数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-u",
+      "item_refs": [
+        {
+          "chapter": "四年级上册 第3单元 多位数乘两位数",
+          "section": "四年级上册 第3单元 多位数乘两位数",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-parallel-perpendicular",
+      "name": "平行垂直与四边形",
+      "grade": 4,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p103",
+        "cnm_p104",
+        "cnm_p105",
+        "cnm_p234"
+      ],
+      "model_summary": "概念辨析；画垂线平行线；图形特征",
+      "trigger_features": {
+        "stem_terms": [
+          "平行",
+          "垂直",
+          "梯形"
+        ],
+        "solution_terms": [
+          "平行线"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "概念辨析；画垂线平行线；图形特征",
+      "common_variants": [
+        "高与底"
+      ],
+      "uncommon_transforms": [
+        "组合"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "经过点向指定边作垂线或平行线",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g4-u",
+      "item_refs": [
+        {
+          "chapter": "四年级上册 第5单元 平行四边形和梯形",
+          "section": "四年级上册 第5单元 平行四边形和梯形",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-quantity-relation",
+      "name": "单价数量总价等关系",
+      "grade": 4,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p111",
+        "cnm_p230",
+        "cnm_p231"
+      ],
+      "model_summary": "画线段/表格；任知二求一",
+      "trigger_features": {
+        "stem_terms": [
+          "单价",
+          "速度",
+          "路程",
+          "模型图"
+        ],
+        "solution_terms": [
+          "画线段/表格",
+          "任知二求一"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "画线段/表格；任知二求一",
+      "common_variants": [
+        "买几样",
+        "往返"
+      ],
+      "uncommon_transforms": [
+        "倍→积模型"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-u",
+      "item_refs": [
+        {
+          "chapter": "四年级上册 第4单元 加法模型和乘法模型",
+          "section": "四年级上册 第4单元 加法模型和乘法模型",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-symmetry-translate",
+      "name": "轴对称与平移",
+      "grade": 4,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p127",
+        "cnm_p128"
+      ],
+      "model_summary": "找对称；描点平移；画完整图形",
+      "trigger_features": {
+        "stem_terms": [
+          "对称轴",
+          "平移",
+          "方向格数"
+        ],
+        "solution_terms": [
+          "找对称",
+          "描点平移"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "找对称；描点平移；画完整图形",
+      "common_variants": [
+        "补轴对称",
+        "组合"
+      ],
+      "uncommon_transforms": [
+        "旋转对比"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-l",
+      "item_refs": [
+        {
+          "chapter": "四年级下册 第7单元 图形的运动（二）",
+          "section": "四年级下册 第7单元 图形的运动（二）",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g4-triangle-property",
+      "name": "三角形特性",
+      "grade": 4,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 4,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "core",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p122",
+        "cnm_p123",
+        "cnm_p124"
+      ],
+      "model_summary": "边角关系；作图；角度计算",
+      "trigger_features": {
+        "stem_terms": [
+          "内角和",
+          "三边",
+          "分类"
+        ],
+        "solution_terms": [
+          "作图"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "边角关系；作图；角度计算",
+      "common_variants": [
+        "等腰等边触点"
+      ],
+      "uncommon_transforms": [
+        "多角"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g4-l",
+      "item_refs": [
+        {
+          "chapter": "四年级下册 第5单元 三角形",
+          "section": "四年级下册 第5单元 三角形",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    }
+  ]
+}

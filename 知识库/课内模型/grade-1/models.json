@@ -1,0 +1,848 @@
+{
+  "grade": 1,
+  "publisher": "人民教育出版社",
+  "school_system": "六三制",
+  "scope": "教材模型摘要；不含教材题目原文",
+  "models": [
+    {
+      "id": "pep-g1-break-ten-sub",
+      "name": "破十/想加算减（20以内退位）",
+      "grade": 1,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p025",
+        "cnm_p026",
+        "cnm_p027"
+      ],
+      "model_summary": "拆十；先减到10；再减个位",
+      "trigger_features": {
+        "stem_terms": [
+          "十几减",
+          "想加算减"
+        ],
+        "solution_terms": [
+          "拆十",
+          "先减到10"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "拆十；先减到10；再减个位",
+      "common_variants": [
+        "减9",
+        "减8、7、6",
+        "减5～2"
+      ],
+      "uncommon_transforms": [
+        "混合",
+        "求未知数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-l",
+      "item_refs": [
+        {
+          "chapter": "一年级下册 第2单元 20以内的退位减法",
+          "section": "一年级下册 第2单元 20以内的退位减法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-compare-difference-app",
+      "name": "比多少与相差几",
+      "grade": 1,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p217",
+        "cnm_p218",
+        "cnm_p253",
+        "cnm_p252"
+      ],
+      "model_summary": "对齐比较；减法求差；或加法补大数",
+      "trigger_features": {
+        "stem_terms": [
+          "多多少",
+          "少多少",
+          "相差"
+        ],
+        "solution_terms": [
+          "对齐比较",
+          "减法求差"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "对齐比较；减法求差；或加法补大数",
+      "common_variants": [
+        "两量差",
+        "求较大/较小量"
+      ],
+      "uncommon_transforms": [
+        "两步",
+        "逆向求加数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-l",
+      "item_refs": [
+        {
+          "chapter": "一年级下册 第6单元 数量间的加减关系",
+          "section": "一年级下册 第6单元 数量间的加减关系",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-compare-order-within-10",
+      "name": "5～10比大小与排序",
+      "grade": 1,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p002",
+        "cnm_p009"
+      ],
+      "model_summary": "比较两数；用符号记录；按序排列",
+      "trigger_features": {
+        "stem_terms": [
+          "比大小",
+          "谁大",
+          "排列",
+          "＞＜"
+        ],
+        "solution_terms": [
+          "比较两数",
+          "用符号记录"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "比较两数；用符号记录；按序排列",
+      "common_variants": [
+        "三数排序"
+      ],
+      "uncommon_transforms": [
+        "与序数综合"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-u",
+      "item_refs": [
+        {
+          "chapter": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "section": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-compose-decompose",
+      "name": "数的分与合",
+      "grade": 1,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p004",
+        "cnm_p017"
+      ],
+      "model_summary": "总数拆两部分；两部分合并；画图/摆一摆",
+      "trigger_features": {
+        "stem_terms": [
+          "分成",
+          "合成",
+          "组成"
+        ],
+        "solution_terms": [
+          "分合"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "总数拆两部分；两部分合并；画图/摆一摆",
+      "common_variants": [
+        "5以内",
+        "10以内",
+        "十几的组成"
+      ],
+      "uncommon_transforms": [
+        "未知部分"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-u",
+      "item_refs": [
+        {
+          "chapter": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "section": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-count-read-1to20",
+      "name": "看图认数与读写得数",
+      "grade": 1,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p001",
+        "cnm_p005",
+        "cnm_p008",
+        "cnm_p016"
+      ],
+      "model_summary": "观察图→一一对应点数；口头/书面表示数量；必要时区分十位个位",
+      "trigger_features": {
+        "stem_terms": [
+          "数一数",
+          "有几个",
+          "读作",
+          "写作"
+        ],
+        "solution_terms": [
+          "观察图→一一对应点数",
+          "口头/书面表示数量"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "观察图→一一对应点数；口头/书面表示数量；必要时区分十位个位",
+      "common_variants": [
+        "单场景计数",
+        "11-20摆小棒图"
+      ],
+      "uncommon_transforms": [
+        "遮挡要推断",
+        "双图对照"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-u",
+      "item_refs": [
+        {
+          "chapter": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "section": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-extra-info-chain-sub",
+      "name": "多余信息与连减应用",
+      "grade": 1,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p256",
+        "cnm_p259",
+        "cnm_p035"
+      ],
+      "model_summary": "筛有效信息；连续去掉；列连减或分步",
+      "trigger_features": {
+        "stem_terms": [
+          "多余",
+          "每次",
+          "还剩"
+        ],
+        "solution_terms": [
+          "筛有效信息",
+          "连续去掉"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "筛有效信息；连续去掉；列连减或分步",
+      "common_variants": [
+        "圈多余条件"
+      ],
+      "uncommon_transforms": [
+        "部分整体"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-l",
+      "item_refs": [
+        {
+          "chapter": "一年级下册 第2单元 20以内的退位减法",
+          "section": "一年级下册 第2单元 20以内的退位减法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-hundred-ops",
+      "name": "100以内认识与加减",
+      "grade": 1,
+      "semester": "下",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p028",
+        "cnm_p029",
+        "cnm_p031",
+        "cnm_p032",
+        "cnm_p033",
+        "cnm_p034",
+        "cnm_p258",
+        "cnm_p257"
+      ],
+      "model_summary": "数位与顺序；比大小；口算/竖式对齐",
+      "trigger_features": {
+        "stem_terms": [
+          "100以内",
+          "口算"
+        ],
+        "solution_terms": [
+          "竖式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "数位与顺序；比大小；口算/竖式对齐",
+      "common_variants": [
+        "整十",
+        "两位数±一位"
+      ],
+      "uncommon_transforms": [
+        "连减",
+        "验算"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-l",
+      "item_refs": [
+        {
+          "chapter": "一年级下册 第3单元 100以内数的认识",
+          "section": "一年级下册 第3单元 100以内数的认识",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-make-ten-add",
+      "name": "凑十法（20以内进位加）",
+      "grade": 1,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p019",
+        "cnm_p020",
+        "cnm_p021",
+        "cnm_p251",
+        "cnm_p018"
+      ],
+      "model_summary": "拆小数补大数到10；10加余数；口述过程",
+      "trigger_features": {
+        "stem_terms": [
+          "9加几",
+          "8加几"
+        ],
+        "solution_terms": [
+          "凑十"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "拆小数补大数到10；10加余数；口述过程",
+      "common_variants": [
+        "9+？",
+        "8/7/6加几",
+        "5～2加几"
+      ],
+      "uncommon_transforms": [
+        "想加算减互逆"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-u",
+      "item_refs": [
+        {
+          "chapter": "一年级上册 第5单元 20以内的进位加法",
+          "section": "一年级上册 第5单元 20以内的进位加法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-merge-take-within-10",
+      "name": "合并与去掉（10以内加减）",
+      "grade": 1,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p006",
+        "cnm_p007",
+        "cnm_p010",
+        "cnm_p011",
+        "cnm_p012",
+        "cnm_p013"
+      ],
+      "model_summary": "判合并/去掉；列式；口算或图意验证",
+      "trigger_features": {
+        "stem_terms": [
+          "合起来",
+          "又",
+          "飞走",
+          "去掉",
+          "还剩"
+        ],
+        "solution_terms": [
+          "判合并/去掉",
+          "列式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "判合并/去掉；列式；口算或图意验证",
+      "common_variants": [
+        "纯算式",
+        "图画情境"
+      ],
+      "uncommon_transforms": [
+        "连加连减",
+        "加减混合"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-u",
+      "item_refs": [
+        {
+          "chapter": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "section": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-ordinal-vs-cardinal",
+      "name": "总数与第几",
+      "grade": 1,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p003"
+      ],
+      "model_summary": "区分有几个与第几个；按方向数数；回答序数",
+      "trigger_features": {
+        "stem_terms": [
+          "第几个",
+          "排队",
+          "从左数"
+        ],
+        "solution_terms": [
+          "区分有几个与第几个",
+          "按方向数数"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "区分有几个与第几个；按方向数数；回答序数",
+      "common_variants": [
+        "整队",
+        "找第n个"
+      ],
+      "uncommon_transforms": [
+        "跳号",
+        "反向数"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-u",
+      "item_refs": [
+        {
+          "chapter": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "section": "一年级上册 第1单元 5以内数的认识和加、减法",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-plane-puzzle",
+      "name": "平面图形拼组",
+      "grade": 1,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p023",
+        "cnm_p024",
+        "cnm_p254",
+        "cnm_p255"
+      ],
+      "model_summary": "辨认基本图形；拼图案",
+      "trigger_features": {
+        "stem_terms": [
+          "拼一拼",
+          "七巧板",
+          "长方形"
+        ],
+        "solution_terms": [
+          "辨认基本图形",
+          "拼图案"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "辨认基本图形；拼图案",
+      "common_variants": [
+        "折纸得形"
+      ],
+      "uncommon_transforms": [
+        "创意拼"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-l",
+      "item_refs": [
+        {
+          "chapter": "一年级下册 第1单元 认识平面图形",
+          "section": "一年级下册 第1单元 认识平面图形",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-position-relative",
+      "name": "上下前后左右",
+      "grade": 1,
+      "semester": "上",
+      "domain": "综合与实践",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "core",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p015"
+      ],
+      "model_summary": "定参照物；描述相对位置",
+      "trigger_features": {
+        "stem_terms": [
+          "上面",
+          "前面",
+          "左边"
+        ],
+        "solution_terms": [
+          "定参照物",
+          "描述相对位置"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "定参照物；描述相对位置",
+      "common_variants": [
+        "两物",
+        "链式三物"
+      ],
+      "uncommon_transforms": [
+        "换参照物"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-u",
+      "item_refs": [
+        {
+          "chapter": "一年级上册 综合与实践 数学游戏",
+          "section": "一年级上册 综合与实践 数学游戏",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g1-rmb-context",
+      "name": "人民币情境",
+      "grade": 1,
+      "semester": "下",
+      "domain": "综合与实践",
+      "introduced_grade": 1,
+      "familiarity_by_grade": {
+        "1": "introduced",
+        "2": "reinforced",
+        "3": "reinforced",
+        "4": "reinforced",
+        "5": "reinforced",
+        "6": "reinforced",
+        "7": "reinforced",
+        "8": "reinforced",
+        "9": "reinforced"
+      },
+      "topic_ids": [
+        "cnm_p036",
+        "cnm_p260"
+      ],
+      "model_summary": "单位换算；凑整；简单购物列式",
+      "trigger_features": {
+        "stem_terms": [
+          "元角分",
+          "找零"
+        ],
+        "solution_terms": [
+          "单位换算",
+          "凑整"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "单位换算；凑整；简单购物列式",
+      "common_variants": [
+        "单物品"
+      ],
+      "uncommon_transforms": [
+        "组合面额"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g1-l",
+      "item_refs": [
+        {
+          "chapter": "一年级下册 综合与实践 欢乐购物街",
+          "section": "一年级下册 综合与实践 欢乐购物街",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    }
+  ]
+}

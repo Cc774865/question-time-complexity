@@ -1,0 +1,794 @@
+{
+  "grade": 9,
+  "publisher": "人民教育出版社",
+  "school_system": "六三制",
+  "scope": "教材模型摘要；不含教材题目原文",
+  "models": [
+    {
+      "id": "pep-g9-arc-sector",
+      "name": "弧长扇形与圆锥侧面",
+      "grade": 9,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_256",
+        "cnm_257",
+        "cnm_258"
+      ],
+      "model_summary": "公式；母线半径；展开",
+      "trigger_features": {
+        "stem_terms": [
+          "弧长",
+          "扇形",
+          "侧面积"
+        ],
+        "solution_terms": [
+          "公式"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "公式；母线半径；展开",
+      "common_variants": [
+        "组合回转"
+      ],
+      "uncommon_transforms": [
+        "最值触点"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g9-u",
+      "item_refs": [
+        {
+          "chapter": "九上 第二十九章 圆 29.3",
+          "section": "九上 第二十九章 圆 29.3",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-circle-position-tangent",
+      "name": "点线圆位置与切线",
+      "grade": 9,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_259",
+        "cnm_260",
+        "cnm_261",
+        "cnm_262",
+        "cnm_263",
+        "cnm_264",
+        "cnm_265",
+        "cnm_266"
+      ],
+      "model_summary": "判切；性质；圆幂触点",
+      "trigger_features": {
+        "stem_terms": [
+          "切线",
+          "切线长",
+          "内切外接圆"
+        ],
+        "solution_terms": [
+          "判切",
+          "性质"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "判切；性质；圆幂触点",
+      "common_variants": [
+        "证明"
+      ],
+      "uncommon_transforms": [
+        "尺规作图"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "连接圆心与切点，或向直线作垂线",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g9-u",
+      "item_refs": [
+        {
+          "chapter": "九上 第三十章 直线与圆的位置关系 30.1",
+          "section": "九上 第三十章 直线与圆的位置关系 30.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-circle-theorem",
+      "name": "圆的性质（垂径、圆周角）",
+      "grade": 9,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_250",
+        "cnm_251",
+        "cnm_252",
+        "cnm_253",
+        "cnm_254",
+        "cnm_255"
+      ],
+      "model_summary": "连半径；直角对直径；角弧关系",
+      "trigger_features": {
+        "stem_terms": [
+          "垂径",
+          "圆周角",
+          "圆内接四边形"
+        ],
+        "solution_terms": [
+          "连半径",
+          "直角对直径"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "连半径；直角对直径；角弧关系",
+      "common_variants": [
+        "证明链"
+      ],
+      "uncommon_transforms": [
+        "折叠圆"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "连接圆心、半径或弦，显出等腰与同弧关系",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g9-u",
+      "item_refs": [
+        {
+          "chapter": "九上 第二十九章 圆 29.1",
+          "section": "九上 第二十九章 圆 29.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-inverse-proportion",
+      "name": "反比例函数",
+      "grade": 9,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_237",
+        "cnm_238",
+        "cnm_239",
+        "cnm_240",
+        "cnm_241",
+        "cnm_242"
+      ],
+      "model_summary": "待定系数；性质；与一次函数交",
+      "trigger_features": {
+        "stem_terms": [
+          "双曲线",
+          "k"
+        ],
+        "solution_terms": [
+          "反比例",
+          "待定系数"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "待定系数；性质；与一次函数交",
+      "common_variants": [
+        "几何意义矩形"
+      ],
+      "uncommon_transforms": [
+        "行程"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g9-u",
+      "item_refs": [
+        {
+          "chapter": "九上 第二十七章 反比例函数 27.1",
+          "section": "九上 第二十七章 反比例函数 27.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-probability-count",
+      "name": "概率（列举与频率）",
+      "grade": 9,
+      "semester": "下",
+      "domain": "统计与概率",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_284",
+        "cnm_285",
+        "cnm_286",
+        "cnm_287",
+        "cnm_288",
+        "cnm_309",
+        "cnm_310",
+        "cnm_311"
+      ],
+      "model_summary": "等可能；不重不漏；游戏公平",
+      "trigger_features": {
+        "stem_terms": [
+          "频率"
+        ],
+        "solution_terms": [
+          "列表",
+          "树状图"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "等可能；不重不漏；游戏公平",
+      "common_variants": [
+        "放回不放回"
+      ],
+      "uncommon_transforms": [
+        "多步"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g9-l",
+      "item_refs": [
+        {
+          "chapter": "九下 第三十四章 随机事件的概率 34.1.1",
+          "section": "九下 第三十四章 随机事件的概率 34.1.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-projection-view",
+      "name": "投影与三视图",
+      "grade": 9,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_281",
+        "cnm_282",
+        "cnm_283"
+      ],
+      "model_summary": "主俯左对应；想象立体",
+      "trigger_features": {
+        "stem_terms": [
+          "三视图",
+          "正投影"
+        ],
+        "solution_terms": [
+          "主俯左对应",
+          "想象立体"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "主俯左对应；想象立体",
+      "common_variants": [
+        "补线",
+        "小立方体堆"
+      ],
+      "uncommon_transforms": [
+        "展开拼体"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g9-l",
+      "item_refs": [
+        {
+          "chapter": "九下 第三十三章 投影与视图",
+          "section": "九下 第三十三章 投影与视图",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-quadratic-equation",
+      "name": "一元二次方程解法",
+      "grade": 9,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_219",
+        "cnm_220",
+        "cnm_221",
+        "cnm_222",
+        "cnm_223",
+        "cnm_224",
+        "cnm_225"
+      ],
+      "model_summary": "选法；求根；检验",
+      "trigger_features": {
+        "stem_terms": [
+          "一元二次",
+          "判别式"
+        ],
+        "solution_terms": [
+          "配方法"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "选法；求根；检验",
+      "common_variants": [
+        "因式分解",
+        "公式"
+      ],
+      "uncommon_transforms": [
+        "含参"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g9-u",
+      "item_refs": [
+        {
+          "chapter": "九上 第二十五章 一元二次方程 25.1",
+          "section": "九上 第二十五章 一元二次方程 25.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-quadratic-equation-app",
+      "name": "一元二次方程应用",
+      "grade": 9,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_227",
+        "cnm_228",
+        "cnm_226"
+      ],
+      "model_summary": "设元；列方程；舍根",
+      "trigger_features": {
+        "stem_terms": [
+          "增长率",
+          "面积",
+          "利润"
+        ],
+        "solution_terms": [
+          "方程"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "设元；列方程；舍根",
+      "common_variants": [
+        "传播",
+        "围矩形"
+      ],
+      "uncommon_transforms": [
+        "函数关联"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g9-u",
+      "item_refs": [
+        {
+          "chapter": "九上 第二十五章 一元二次方程 25.3",
+          "section": "九上 第二十五章 一元二次方程 25.3",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-quadratic-function",
+      "name": "二次函数图象与性质",
+      "grade": 9,
+      "semester": "上",
+      "domain": "数与代数",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_229",
+        "cnm_230",
+        "cnm_231",
+        "cnm_232",
+        "cnm_233",
+        "cnm_234",
+        "cnm_235",
+        "cnm_236"
+      ],
+      "model_summary": "配方法；平移；与方程交点",
+      "trigger_features": {
+        "stem_terms": [
+          "抛物线",
+          "顶点",
+          "最值"
+        ],
+        "solution_terms": [
+          "配方",
+          "方程"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "配方法；平移；与方程交点",
+      "common_variants": [
+        "实际问题"
+      ],
+      "uncommon_transforms": [
+        "区间最值"
+      ],
+      "auxiliary_line": {
+        "required": false,
+        "strategy": "",
+        "repetition_policy": ""
+      },
+      "source_id": "pep-math-g9-u",
+      "item_refs": [
+        {
+          "chapter": "九上 第二十六章 二次函数 26.1",
+          "section": "九上 第二十六章 二次函数 26.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-rotation-symmetry",
+      "name": "旋转与中心对称",
+      "grade": 9,
+      "semester": "上",
+      "domain": "图形与几何",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_244",
+        "cnm_245",
+        "cnm_246",
+        "cnm_247",
+        "cnm_248",
+        "cnm_249"
+      ],
+      "model_summary": "旋转中心角；作图；性质证",
+      "trigger_features": {
+        "stem_terms": [
+          "旋转",
+          "中心对称",
+          "坐标"
+        ],
+        "solution_terms": [
+          "作图"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "旋转中心角；作图；性质证",
+      "common_variants": [
+        "格点旋转"
+      ],
+      "uncommon_transforms": [
+        "组合变换"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "连接旋转中心与对应点，显出等长和旋转角",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g9-u",
+      "item_refs": [
+        {
+          "chapter": "九上 第二十八章 旋转 28.1",
+          "section": "九上 第二十八章 旋转 28.1",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-similarity",
+      "name": "相似三角形",
+      "grade": 9,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_268",
+        "cnm_269",
+        "cnm_270",
+        "cnm_271",
+        "cnm_272",
+        "cnm_273",
+        "cnm_274",
+        "cnm_275"
+      ],
+      "model_summary": "判定；性质；模型A字影子",
+      "trigger_features": {
+        "stem_terms": [
+          "位似"
+        ],
+        "solution_terms": [
+          "相似",
+          "平行线分比"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "判定；性质；模型A字影子",
+      "common_variants": [
+        "测量",
+        "网格位似"
+      ],
+      "uncommon_transforms": [
+        "旋转相似"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "补平行线、延长相交或连接线段，构造标准相似结构",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g9-l",
+      "item_refs": [
+        {
+          "chapter": "九下 第三十一章 相似",
+          "section": "九下 第三十一章 相似",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    },
+    {
+      "id": "pep-g9-trig-right-triangle",
+      "name": "锐角三角函数与解直角三角形",
+      "grade": 9,
+      "semester": "下",
+      "domain": "图形与几何",
+      "introduced_grade": 9,
+      "familiarity_by_grade": {
+        "1": "out_of_scope",
+        "2": "out_of_scope",
+        "3": "out_of_scope",
+        "4": "out_of_scope",
+        "5": "out_of_scope",
+        "6": "out_of_scope",
+        "7": "out_of_scope",
+        "8": "out_of_scope",
+        "9": "core"
+      },
+      "topic_ids": [
+        "cnm_276",
+        "cnm_277",
+        "cnm_278",
+        "cnm_279",
+        "cnm_280"
+      ],
+      "model_summary": "选关系式；求边；仰俯转换",
+      "trigger_features": {
+        "stem_terms": [
+          "仰角",
+          "俯角",
+          "坡度",
+          "sin cos tan"
+        ],
+        "solution_terms": [
+          "选关系式",
+          "求边"
+        ],
+        "minimum_term_hits": 1
+      },
+      "standard_method": "选关系式；求边；仰俯转换",
+      "common_variants": [
+        "双直角",
+        "折叠"
+      ],
+      "uncommon_transforms": [
+        "方位角"
+      ],
+      "auxiliary_line": {
+        "required": true,
+        "strategy": "作高或垂线，把实际图形拆成直角三角形",
+        "repetition_policy": "同一模型内重复作同方向、同用途的线，只增加执行负荷；不能按新模型重复增加熟悉度难度。"
+      },
+      "source_id": "pep-math-g9-l",
+      "item_refs": [
+        {
+          "chapter": "九下 第三十二章 锐角三角函数",
+          "section": "九下 第三十二章 锐角三角函数",
+          "page": null,
+          "item_type": "model_summary",
+          "item_number": null,
+          "verification_status": "chapter_only_page_pending"
+        }
+      ],
+      "summary_author": "AIClass production workflow",
+      "summary_version": 1,
+      "rights_status": "independent_non_reconstructive_summary"
+    }
+  ]
+}
