@@ -17,7 +17,7 @@ from docx import Document
 from docx.oxml.ns import qn
 
 from problem_time.arrange_docx import _classed_homework, split_blocks, write_star_preview
-from problem_time.calibration import score_calibrated_problem
+from problem_time.calibration import dimension_weights_for, score_calibrated_problem, uses_upper_grade_weights
 from problem_time.early_number_counts import early_number_counts, uses_early_picture_numbers
 from problem_time.equation_text import equation_text
 from problem_time.grade_context import load_grade_context
@@ -111,8 +111,9 @@ def run_paper(source: Path, dest: Path, progress: Path | None = None, image_read
     else:
         label = "正在计算 τ"
     _write_progress(progress, 45, label)
+    weights = dimension_weights_for(grade.code, grade.grades)
     scored = [
-        _score_block(index, stem, solution, mode, grade.grades)
+        _score_block(index, stem, solution, mode, grade.grades, weights)
         for index, (stem, solution, mode) in enumerate(lesson_rows)
     ]
     ranked = assign_stars(_pairs(scored))
@@ -145,6 +146,10 @@ def run_paper(source: Path, dest: Path, progress: Path | None = None, image_read
         "source": source.name,
         "header": {"week": week, "grade": grade.code, "lesson": lesson},
         "knowledgeContext": knowledge_context.report(),
+        "weightRule": "upper" if uses_upper_grade_weights(grade.code, grade.grades) else "standard",
+        "dimensionWeights": {
+            key: weights[key] for key in ("prereq", "reasoning", "compute", "error")
+        },
         "base": {
             "lessons": [list(item) for item in lesson_plan],
             "homework": [],
@@ -373,6 +378,7 @@ def _score_block(
     solution: str | None,
     mode: str = "",
     grades: tuple[int, ...] = (),
+    weights: dict[str, float] | None = None,
 ) -> dict:
     if mode == "early":
         counts = early_number_counts(stem)
@@ -383,7 +389,13 @@ def _score_block(
     familiarity = shadow_familiarity(stem, solution or "", grades, counts)
     if familiarity["affectsFormalTau"]:
         counts = replace(counts, familiarity=float(familiarity["formalF"]))
-    scored = score_calibrated_problem(f"lesson-{index}", stem, counts, role="例" if index % 2 == 0 else "练")
+    scored = score_calibrated_problem(
+        f"lesson-{index}",
+        stem,
+        counts,
+        role="例" if index % 2 == 0 else "练",
+        weights=weights,
+    )
     return {
         "block": index,
         "stem": stem,

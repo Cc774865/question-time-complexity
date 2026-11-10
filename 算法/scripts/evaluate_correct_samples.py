@@ -19,7 +19,7 @@ import joblib
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from problem_time.calibration import score_calibrated_problem
+from problem_time.calibration import dimension_weights_for, score_calibrated_problem
 from problem_time.solution_counts import solution_counts
 from problem_time.structure_counts import structure_counts
 from problem_time.textbook_models import shadow_familiarity
@@ -35,23 +35,32 @@ def main() -> int:
         payload = joblib.load(path)
         grade_name = str(payload["grade"])
         if grade_name == "中考冲刺":
-            grade = (7, 8, 9)
+            code, grade = "ZKCC", (7, 8, 9)
+        elif grade_name == "高考冲刺":
+            code, grade = "GKCC", ()
         elif grade_name and grade_name[0].isdigit():
-            grade = (int(grade_name[0]),)
+            number = int(grade_name[0])
+            code, grade = f"L{number}", (number,)
         else:
-            grade = None
+            code, grade = "", ()
+        weights = dimension_weights_for(code, grade)
         rows: list[tuple[float, float]] = []
         matched = 0
         for index, item in enumerate(payload["items"]):
             stem = str(item["processed_text"])
             solution = str(item["model_response"])
             counts = solution_counts(solution, stem) if solution.strip() else structure_counts(stem)
-            if grade is not None:
+            if grade:
                 familiarity = shadow_familiarity(stem, solution, grade, counts)
                 if familiarity["affectsFormalTau"]:
                     counts = replace(counts, familiarity=float(familiarity["formalF"]))
                     matched += 1
-            score = score_calibrated_problem(f"{path.stem}-{index}", stem, counts)
+            score = score_calibrated_problem(
+                f"{path.stem}-{index}",
+                stem,
+                counts,
+                weights=weights,
+            )
             rows.append((float(item["difficulty"]), float(score["composite_D"])))
         all_rows.extend(rows)
         summary[grade_name] = {
